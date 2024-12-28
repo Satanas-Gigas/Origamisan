@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render, redirect
 from .models import Post
 from django.shortcuts import render, get_object_or_404
