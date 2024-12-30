@@ -16,8 +16,21 @@ class Post(models.Model):
     def __str__(self):
         return self.title
     
-    
+class Grammar(models.Model):
+    level = models.IntegerField()
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    explain_ru = models.TextField()
+    explain_en = models.TextField()
 
-# from django.db import models
+    def __str__(self):
+        return self.title
 
-# # Create your models here.
+class Example(models.Model):
+    grammar = models.ForeignKey(Grammar, related_name='examples', on_delete=models.CASCADE)
+    example_jp = models.TextField()  # Пример на японском
+    example_ru = models.TextField()  # Пример на русском
+    example_en = models.TextField()  # Пример на английском
+
+    def __str__(self):
+        return f"Example for {self.grammar.title}"
