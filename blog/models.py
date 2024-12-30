@@ -19,18 +19,25 @@ class Post(models.Model):
 class Grammar(models.Model):
     level = models.IntegerField(default=5)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    explain_ru = models.TextField()
-    explain_en = models.TextField()
+    title_ru = models.CharField(max_length=200, default="Des")
+    title_en = models.CharField(max_length=200, default="Des")
+    explain_ru = models.TextField (blank=True, null=True)
+    explain_en = models.TextField (blank=True, null=True)
+    example_jp_kanji = models.TextField (blank=True, null=True)  # Пример на японском
+    example_ru_kana = models.TextField (blank=True, null=True) # Пример на русском
+    example_ru = models.TextField (blank=True, null=True) # Пример на английском
+    example_en = models.TextField (blank=True, null=True)  # Пример на английском
+
 
     def __str__(self):
-        return self.title
+        return self.title_ru
 
 class Example(models.Model):
     grammar = models.ForeignKey(Grammar, related_name='examples', on_delete=models.CASCADE)
-    example_jp = models.TextField()  # Пример на японском
-    example_ru = models.TextField()  # Пример на русском
-    example_en = models.TextField()  # Пример на английском
+    add_example_jp_kanji = models.TextField (blank=True, null=True) # Пример на японском
+    add_example_ru_kana = models.TextField (blank=True, null=True)  # Пример на русском
+    add_example_en_ru = models.TextField (blank=True, null=True) # Пример на английском
+    add_example_en_en = models.TextField (blank=True, null=True)  # Пример на английском
 
     def __str__(self):
-        return f"Example for {self.grammar.title}"
+        return f"Example for {self.grammar.title_ru}"
