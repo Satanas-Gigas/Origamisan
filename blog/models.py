@@ -17,7 +17,7 @@ class Post(models.Model):
         return self.title
     
 class Grammar(models.Model):
-    level = models.IntegerField()
+    level = models.IntegerField(default=5)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     explain_ru = models.TextField()

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание грамматики</title>
+</head>
+<body>
+    <h1>Создание грамматики и примеров</h1>
+
+    <h2>Форма для грамматики</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ grammar_form.as_p }}  <!-- Отображение формы грамматики -->
+        <button type="submit">Сохранить грамматику</button>
+    </form>
+
+    <h2>Форма для примера</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ example_form.as_p }}  <!-- Отображение формы примера -->
+        <button type="submit">Добавить пример</button>
+    </form>
+
+</body>
+</html>
