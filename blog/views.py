@@ -40,29 +40,40 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
-def about(request):
+def grammar(request):
     return render(request, 'blog/grammar.html')  # Вернёт страницу about.html
 
 
 
+from django.shortcuts import render, redirect
+from .forms import GrammarForm, ExampleForm
+
 def create_grammar(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         grammar_form = GrammarForm(request.POST)
         example_form = ExampleForm(request.POST)
-       
-        if grammar_form.is_valid():
-            grammar = grammar_form.save(commit=False)
-            grammar.author = request.user  # Устанавливаем автора
-            grammar.save()
 
-            if example_form.is_valid():
-                example = example_form.save(commit=False)
-                example.grammar = grammar  # Связываем пример с грамматикой
-                example.save()
+        if grammar_form.is_valid() and example_form.is_valid():
+            # Сохраняем данные формы Grammar
+            grammar_instance = grammar_form.save()
 
-            return redirect('grammar')
+            # Добавляем ссылку на Grammar в Example
+            example_instance = example_form.save(commit=False)
+            example_instance.grammar = grammar_instance
+            example_instance.save()
+
+            return redirect('grammar')  # Поменяйте на вашу страницу успешного завершения
+        else:
+            # Если есть ошибки, они будут переданы обратно в шаблон
+            return render(request, 'blog/create_grammar.html', {
+                'grammar_form': grammar_form,
+                'example_form': example_form
+            })
+
     else:
         grammar_form = GrammarForm()
         example_form = ExampleForm()
-
-    return render(request, 'blog/create_grammar.html', {'grammar_form': grammar_form, 'example_form': example_form})
+        return render(request, 'blog/create_grammar.html', {
+            'grammar_form': grammar_form,
+            'example_form': example_form
+        })
