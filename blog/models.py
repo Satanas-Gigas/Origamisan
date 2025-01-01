@@ -34,10 +34,10 @@ class Grammar(models.Model):
 
 class Example(models.Model):
     grammar = models.ForeignKey(Grammar, related_name='examples', on_delete=models.CASCADE)
-    add_example_jp_kanji = models.TextField (blank=True, null=True, default="Des") # Пример на японском
-    add_example_jp_kana = models.TextField (blank=True, null=True, default="Des")  # Пример на русском
-    add_example_ru = models.TextField (blank=True, null=True, default="Des") # Пример на английском
-    add_example_en = models.TextField (blank=True, null=True, default="Des")  # Пример на английском
+    add_example_jp_kanji = models.TextField (blank=True, null=True) # Пример на японском
+    add_example_jp_kana = models.TextField (blank=True, null=True)  # Пример на русском
+    add_example_ru = models.TextField (blank=True, null=True) # Пример на английском
+    add_example_en = models.TextField (blank=True, null=True)  # Пример на английском
 
     def __str__(self):
         return f"Example for {self.grammar.title_ru}"

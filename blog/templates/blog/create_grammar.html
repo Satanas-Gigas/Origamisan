@@ -4,14 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Создать грамматику</title>
+    <script>
+        function toggleExampleForm() {
+            var exampleForm = document.getElementById("example_form");
+            var btnText = document.getElementById("toggle_button");
+
+            if (exampleForm.style.display === "none") {
+                exampleForm.style.display = "block";
+                btnText.innerText = "Скрыть форму примера";
+            } else {
+                exampleForm.style.display = "none";
+                btnText.innerText = "Показать форму примера";
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Создать новую грамматику</h1>
 
     <form method="POST" action="{% url 'create_grammar' %}">
         {% csrf_token %}
-        {{ grammar_form.as_p }}
-        {{ example_form.as_p }}
+        
+        <!-- Форма для создания грамматики -->
+        <h2>Грамматика</h2>
+        <div>
+            <label for="id_level">Уровень</label>
+            {{ grammar_form.level }}
+            {% if grammar_form.level.errors %}
+                <ul>
+                    {% for error in grammar_form.level.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="id_author">Автор</label>
+            {{ grammar_form.author }}
+            {% if grammar_form.author.errors %}
+                <ul>
+                    {% for error in grammar_form.author.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="id_title_ru">Название на русском</label>
+            {{ grammar_form.title_ru }}
+            {% if grammar_form.title_ru.errors %}
+                <ul>
+                    {% for error in grammar_form.title_ru.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="id_title_en">Название на английском</label>
+            {{ grammar_form.title_en }}
+            {% if grammar_form.title_en.errors %}
+                <ul>
+                    {% for error in grammar_form.title_en.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="id_explain_ru">Объяснение на русском</label>
+            {{ grammar_form.explain_ru }}
+            {% if grammar_form.explain_ru.errors %}
+                <ul>
+                    {% for error in grammar_form.explain_ru.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+
+        <div>
+            <label for="id_explain_en">Объяснение на английском</label>
+            {{ grammar_form.explain_en }}
+            {% if grammar_form.explain_en.errors %}
+                <ul>
+                    {% for error in grammar_form.explain_en.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+
+        <div>
+            <label for="id_example_jp_kanji">Пример на кандзи</label>
+            {{ grammar_form.example_jp_kanji }}
+            {% if grammar_form.example_jp_kanji.errors %}
+                <ul>
+                    {% for error in grammar_form.example_jp_kanji.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="id_example_jp_kana">Пример на кане</label>
+            {{ grammar_form.example_jp_kana }}
+            {% if grammar_form.example_jp_kana.errors %}
+                <ul>
+                    {% for error in grammar_form.example_jp_kana.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="id_example_ru">Пример на русском</label>
+            {{ grammar_form.example_ru }}
+            {% if grammar_form.example_ru.errors %}
+                <ul>
+                    {% for error in grammar_form.example_ru.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            <label for="id_example_en">Пример на английском</label>
+            {{ grammar_form.example_en }}
+            {% if grammar_form.example_en.errors %}
+                <ul>
+                    {% for error in grammar_form.example_en.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <!-- Кнопка для отображения формы примера -->
+        <button type="button" id="toggle_button" onclick="toggleExampleForm()">Показать форму примера</button>
+        
+        <!-- Форма для добавления примера (по умолчанию скрыта) -->
+        <div id="example_form" style="display: none;">
+            <h2>Добавить пример</h2>
+            
+            <div>
+                <label for="id_add_example_jp_kanji">Пример на японском (кандзи)</label>
+                {{ example_form.add_example_jp_kanji }}
+                {% if example_form.add_example_jp_kanji.errors %}
+                    <ul>
+                        {% for error in example_form.add_example_jp_kanji.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div>
+                <label for="id_add_example_jp_kana">Пример на японском (кана)</label>
+                {{ example_form.add_example_jp_kana }}
+                {% if example_form.add_example_jp_kana.errors %}
+                    <ul>
+                        {% for error in example_form.add_example_jp_kana.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div>
+                <label for="id_add_example_ru">Пример на русском</label>
+                {{ example_form.add_example_ru }}
+                {% if example_form.add_example_ru.errors %}
+                    <ul>
+                        {% for error in example_form.add_example_ru.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div>
+                <label for="id_add_example_en">Пример на английском</label>
+                {{ example_form.add_example_en }}
+                {% if example_form.add_example_en.errors %}
+                    <ul>
+                        {% for error in example_form.add_example_en.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+
         <button type="submit">Сохранить грамматику</button>
     </form>
 </body>
