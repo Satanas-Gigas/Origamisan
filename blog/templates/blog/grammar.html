@@ -1,122 +1,60 @@
+{% extends 'blog/base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="ru" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+{% block content %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.122.0">
-    <title>Всё лучшее здесь!</title>
-    <link href="{% static 'bootstrap\dist\css\bootstrap.css' %}" rel="stylesheet">
-    <link href="{% static 'bootstrap\example_css\pricing.css' %}" rel="stylesheet">
-  </head>
-  <body>     
-
-  <div class="container py-3">
-    <header>
-
-      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal text-body-emphasis">Грамматика N5</h1>
-        <p class="fs-5 text-body-secondary">Быстрая грамматика на уроваень N5</p>
-      </div>
-    </header>
-
+<div class="container py-3">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-body-emphasis">Грамматика N5</h1>
+      <p class="fs-5 text-body-secondary">Быстрая грамматика на уровень N5</p>
+    </div>
 
     {% for grammar in grammars %}
-    <main>
-      <div class="row row-cols-1 row-cols-md-1 mb-1 text-center d-flex justify-content-center align-items-center">
-        <div class="card text-center">
-          <div class="card-header">
-            <ul class="nav nav-pills card-header-pills">
-              <li class="nav-item">
-                <a class="nav-link" href="#">{{ forloop.counter }}</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">{{ grammar.title_ru }}</a>
-              </li>
-            </ul>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{{ grammar.explain_ru }}</h5>
-          </div>
-          <ul class="list-group list-group-horizontal text-center d-flex justify-content-center align-items-center w-100" style="margin: 0;">
-            <li class="list-group-item w-100 text-center">{{ grammar.example_jp_kanji }}</li>
-          </ul>
-          <ul class="list-group list-group-horizontal-sm text-center d-flex justify-content-center align-items-center">
-            <li class="list-group-item w-100 text-center">{{ grammar.example_jp_kana }}</li>
-          </ul>
-          <ul class="list-group list-group-horizontal-sm text-center d-flex justify-content-center align-items-center">
-            <li class="list-group-item w-100 text-center">{{ grammar.example_ru }}</li>
-          </ul>
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Ещё примеры:
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body p-0">
-                  <ul class="list-group list-group-horizontal text-center d-flex justify-content-center align-items-center w-100" >
-                    <li class="list-group-item w-100 text-center">へや　で　おどります </li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal-sm text-center d-flex justify-content-center align-items-center" >
-                    <li class="list-group-item w-100 text-center">heya de odorimasu</li>
-                  </ul>
-                  <ul class="list-group list-group-horizontal-md text-center d-flex justify-content-center align-items-center ">
-                    <li class="list-group-item w-100 text-center" >Танцую в комнате</li>
-                  </ul>
+    <div class="row mb-4">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                  
+                    <!-- Номер урока в виде красивого значка -->
+      
+                    <h5 class="card-title mb-0">{{ grammar.title_ru }}</h5>
+                    <span class="badge p-2 fs-4">{{ forloop.counter }}</span>
                 </div>
-              </div>      
+                <div class="card-body">
+                    <p class="card-text"><strong>{{ grammar.explain_ru }}</strong></p>
+                </div>
+
+                <!-- Основные примеры -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-center"> {{ grammar.example_jp_kanji }}</li>
+                    <li class="list-group-item text-center"> {{ grammar.example_jp_kana }}</li>
+                    <li class="list-group-item text-center"> {{ grammar.example_ru }}</li>
+                </ul>
+
+                <!-- Если есть дополнительные примеры, показываем аккордеон -->
+                {% if grammar.examples.exists %}
+                    <div class="accordion" id="accordionExample{{ forloop.counter }}">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo{{ forloop.counter }}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ forloop.counter }}" aria-expanded="false" aria-controls="collapseTwo{{ forloop.counter }}">
+                                    Ещё примеры
+                                </button>
+                            </h2>
+                            <div id="collapseTwo{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="headingTwo{{ forloop.counter }}" data-bs-parent="#accordionExample{{ forloop.counter }}">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">へや　で　おどります</li>
+                                        <li class="list-group-item">heya de odorimasu</li>
+                                        <li class="list-group-item">Танцую в комнате</li>
+                                    </ul>
+                                </div>
+                            </div>      
+                        </div>
+                    </div>
+                {% endif %}
             </div>
-          </div> 
         </div>
-      </div>
-    </main>
+    </div>
     {% endfor %}
+</div>
 
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
-      <div class="row">
-        <div class="col-12 col-md">
-          <img class="mb-2" src="../assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
-          <small class="d-block mb-3 text-body-secondary">&copy; 2017–2024</small>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Features</h5>
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <script src="{% static 'bootstrap\dist\js\bootstrap.bundle.min.js' %}"></script>
-
-      </body>
-  </html>
+{% endblock %}

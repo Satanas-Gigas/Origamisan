@@ -41,16 +41,12 @@ def post_edit(request, pk):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 def grammar(request):
-    grammars = Grammar.objects.filter(level=5)
+    grammars = Grammar.objects.prefetch_related('examples').filter(level=5)  # Предзагрузка примеров
     return render(request, 'blog/grammar.html', {'grammars': grammars})
 
 
-
-from django.shortcuts import render, redirect
-from .forms import GrammarForm, ExampleForm
-
-from django.shortcuts import render, redirect
-from .forms import GrammarForm, ExampleForm
+def mainpanel(request):
+    return render(request, 'blog/mainpanel.html')
 
 def create_grammar(request):
     if request.method == 'POST':

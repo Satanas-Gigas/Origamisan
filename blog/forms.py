@@ -1,18 +1,28 @@
 from django import forms
 
 from .models import Post, Grammar, Example
+from django.contrib.auth.models import User
 
 class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
         fields = ('title', 'text')
-
     
 class GrammarForm(forms.ModelForm):
     class Meta:
         model = Grammar
         fields = ['level', 'author', 'title_ru', 'title_en', 'explain_ru', 'explain_en', 'example_jp_kanji', 'example_jp_kana', 'example_ru', 'example_en']
+
+    author = forms.ModelChoiceField(queryset=User.objects.all(), empty_label="Выберите автора", widget=forms.Select(attrs={'class': 'form-select'}))
+
+        # def __init__(self, *args, **kwargs):
+        #     super().__init__(*args, **kwargs)
+        #     # Применяем rows="3" ко всем полям Textarea
+        #     for field_name, field in self.fields.items():
+        #         if isinstance(field.widget, forms.Textarea):
+        #             field.widget.attrs['rows'] = '1'
+
 
 class ExampleForm(forms.ModelForm):
     class Meta:

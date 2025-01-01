@@ -19,14 +19,14 @@ class Post(models.Model):
 class Grammar(models.Model):
     level = models.IntegerField(default=5)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title_ru = models.CharField(max_length=200, default="Des")
-    title_en = models.CharField(max_length=200, default="Des")
-    explain_ru = models.TextField (blank=True, null=True, default="Des")
-    explain_en = models.TextField (blank=True, null=True, default="Des")
-    example_jp_kanji = models.TextField (blank=True, null=True, default="Des")  # Пример на японском
-    example_jp_kana = models.TextField (blank=True, null=True, default="Des") # Пример на русском
-    example_ru = models.TextField (blank=True, null=True, default="Des") # Пример на английском
-    example_en = models.TextField (blank=True, null=True, default="Des")  # Пример на английском
+    title_ru = models.CharField(max_length=200)
+    title_en = models.CharField(max_length=200)
+    explain_ru = models.TextField (blank=True, null=True)
+    explain_en = models.TextField (blank=True, null=True)
+    example_jp_kanji = models.TextField (blank=True, null=True)  # Пример на японском
+    example_jp_kana = models.TextField (blank=True, null=True) # Пример на русском
+    example_ru = models.TextField (blank=True, null=True) # Пример на английском
+    example_en = models.TextField (blank=True, null=True)  # Пример на английском
 
 
     def __str__(self):
