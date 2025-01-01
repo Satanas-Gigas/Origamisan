@@ -16,12 +16,15 @@ class GrammarForm(forms.ModelForm):
 
     author = forms.ModelChoiceField(queryset=User.objects.all(), empty_label="Выберите автора", widget=forms.Select(attrs={'class': 'form-select'}))
 
-        # def __init__(self, *args, **kwargs):
-        #     super().__init__(*args, **kwargs)
-        #     # Применяем rows="3" ко всем полям Textarea
-        #     for field_name, field in self.fields.items():
-        #         if isinstance(field.widget, forms.Textarea):
-        #             field.widget.attrs['rows'] = '1'
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Применяем rows="3" ко всем полям Textarea и устанавливаем пустые значения
+        for field_name, field in self.fields.items():
+            if isinstance(field.widget, forms.Textarea):
+                field.widget.attrs['rows'] = '3'
+                # Устанавливаем пустое значение для textarea, если оно None
+                if field.initial is None:
+                    field.initial = ""
 
 
 class ExampleForm(forms.ModelForm):
