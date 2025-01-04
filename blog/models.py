@@ -30,7 +30,11 @@ class Grammar(models.Model):
 
 
     def __str__(self):
-        return self.title_ru
+        return f'{self.example_ru} ({self.level})'
+    
+    class Meta:
+    # Дополнительно можно указать порядок сортировки или уникальные ограничения
+        ordering = ['level', 'title_ru', 'title_en']
 
 class Example(models.Model):
     grammar = models.ForeignKey(Grammar, related_name='examples', on_delete=models.CASCADE)
@@ -41,3 +45,38 @@ class Example(models.Model):
 
     def __str__(self):
         return f"Example for {self.grammar.title_ru}"
+    
+class Word(models.Model):
+    level = models.IntegerField(default=5)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    kanji = models.CharField(max_length=100, blank=True, null=True)
+    kana = models.CharField(max_length=100, blank=True, null=True)
+    romaji = models.CharField(max_length=100, blank=True, null=True)
+    translate_ru = models.CharField(max_length=200, blank=True, null=True)
+    translate_en = models.CharField(max_length=200, blank=True, null=True)
+
+
+    def __str__(self):
+            return f'{self.kanji} ({self.kana})'
+    class Meta:
+    # Дополнительно можно указать порядок сортировки или уникальные ограничения
+        ordering = ['level', 'kanji', 'kana']
+
+
+
+
+class Kanji(models.Model):
+    level = models.IntegerField(default=5)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    kanji = models.CharField(max_length=100)
+    onyomi = models.CharField(max_length=100, blank=True, null=True)
+    kunyomi = models.CharField(max_length=100, blank=True, null=True)
+    meaning_ru = models.CharField(max_length=200, blank=True, null=True)
+    meaning_en = models.CharField(max_length=200, blank=True, null=True)
+
+
+    def __str__(self):
+            return f'{self.kanji} ({self.level})'
+    class Meta:
+    # Дополнительно можно указать порядок сортировки или уникальные ограничения
+        ordering = ['level', 'kanji']

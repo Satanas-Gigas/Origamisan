@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Post, Grammar, Example
+from .models import Post, Grammar, Example, Word
 from django.contrib.auth.models import User
 
 class PostForm(forms.ModelForm):
@@ -45,4 +45,47 @@ class ExampleForm(forms.ModelForm):
         }
         if not any(non_grammar_fields.values()):
             raise forms.ValidationError("Заполните хотя бы одно поле примера или не отправляйте форму.")
+        return cleaned_data
+
+
+class WordForm(forms.ModelForm):
+    class Meta:
+        model = Word
+        fields = ['level', 'author', 'kanji', 'kana', 'romaji', 'translate_ru', 'translate_en']
+        
+        widgets = {
+            'level': forms.NumberInput(attrs={'class': 'form-control'}),
+            'author': forms.Select(attrs={'class': 'form-control'}),
+            'kanji': forms.TextInput(attrs={'class': 'form-control'}),
+            'kana': forms.TextInput(attrs={'class': 'form-control'}),
+            'romaji': forms.TextInput(attrs={'class': 'form-control'}),
+            'translate_ru': forms.TextInput(attrs={'class': 'form-control'}),
+            'translate_en': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Устанавливаем значение по умолчанию для уровня
+        self.fields['level'].initial = 5
+
+    # def clean_kana(self):
+    #     kana = self.cleaned_data.get('kana')
+    #     if not kana:
+    #         raise forms.ValidationError(_('Поле Кана не может быть пустым.'))
+    #     return kana
+
+    # def clean_romaji(self):
+    #     romaji = self.cleaned_data.get('romaji')
+    #     if not romaji:
+    #         raise forms.ValidationError(_('Поле Ромадзи не может быть пустым.'))
+    #     return romaji
+
+    def clean(self):
+        cleaned_data = super().clean()
+        kana = cleaned_data.get('kana')
+        romaji = cleaned_data.get('romaji')
+
+        if not kana and not romaji:
+            raise forms.ValidationError('По крайней мере одно из полей Kana или Romaji должно быть заполнено.')
+
         return cleaned_data

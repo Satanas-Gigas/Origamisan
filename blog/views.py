@@ -1,8 +1,8 @@
 from django.conf import settings
 from django.shortcuts import render, redirect
-from .models import Post, Grammar
+from .models import Post, Grammar, Word, Kanji
 from django.shortcuts import render, get_object_or_404
-from .forms import PostForm, GrammarForm, ExampleForm
+from .forms import PostForm, GrammarForm, ExampleForm, WordForm
 from django.utils import timezone
 
 def post_list(request):
@@ -44,6 +44,10 @@ def grammar(request):
     grammars = Grammar.objects.prefetch_related('examples').filter(level=5)  # Предзагрузка примеров
     return render(request, 'blog/grammar.html', {'grammars': grammars})
 
+def word(request):
+    words = Word.objects.filter(level=5)  # Предзагрузка примеров
+    return render(request, 'blog/word.html', {'words': words})
+
 
 def mainpanel(request):
     return render(request, 'blog/mainpanel.html')
@@ -74,3 +78,26 @@ def create_grammar(request):
         'grammar_form': grammar_form,
         'example_form': example_form,
     })
+
+def create_word(request):
+    """
+    View to handle creation of a new Word object.
+    """
+    if request.method == 'POST':
+        word_form = WordForm(request.POST)
+        if word_form.is_valid():
+            # Сохраняем слово
+            word_form.save()
+            # messages.success(request, 'Слово успешно сохранено!')
+            return redirect('word')  # Замените на ваш URL списка слов или другую нужную страницу
+        # else:
+        #     messages.error(request, 'Пожалуйста, исправьте ошибки в форме.')
+    else:
+        word_form = WordForm()
+
+    context = {'form': word_form,}
+    return render(request, 'blog/create_word.html', context)
+
+def kanji(request):
+    kanjis = Kanji.objects.filter(level=5)  # Предзагрузка примеров
+    return render(request, 'blog/kanji.html', {'kanjis': kanjis})
