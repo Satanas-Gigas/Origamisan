@@ -44,7 +44,7 @@ class Example(models.Model):
     add_example_en = models.TextField (blank=True, null=True)  # Пример на английском
 
     def __str__(self):
-        return f"Example for {self.grammar.title_ru} ({self.level})"
+        return f"Example for {self.grammar.title_ru} ({self.grammar.level})"
     
 class Word(models.Model):
     level = models.IntegerField(default=5)
@@ -66,14 +66,14 @@ class Word_kana_variant(models.Model):
     add_kana = models.TextField (blank=True, null=True)
 
     def __str__(self):
-        return f"Example for {self.word.kana} ({self.level})"    
+        return f"Example for {self.word.kana} ({self.word.level})"    
 
 class Word_kanji_variant(models.Model):
     word = models.ForeignKey(Word, related_name='fake_kanji', on_delete=models.CASCADE)
     add_kanji = models.TextField (blank=True, null=True)
     
     def __str__(self):
-        return f"Example for {self.word.kanji} ({self.level})"
+        return f"Example for {self.word.kanji} ({self.word.level})"
     
 
 class Word_translate_variant(models.Model):
@@ -82,7 +82,7 @@ class Word_translate_variant(models.Model):
     add_translate_en = models.TextField (blank=True, null=True)
     
     def __str__(self):
-        return f"Example for {self.word.translate_ru} ({self.level})"
+        return f"Example for {self.word.translate_ru} ({self.word.level})"
    
 
 class Kanji(models.Model):
