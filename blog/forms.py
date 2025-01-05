@@ -1,10 +1,8 @@
 from django import forms
-
-from .models import Post, Grammar, Example, Word
+from .models import Post, Grammar, Example, Word, Kanji
 from django.contrib.auth.models import User
 
 class PostForm(forms.ModelForm):
-
     class Meta:
         model = Post
         fields = ('title', 'text')
@@ -68,18 +66,6 @@ class WordForm(forms.ModelForm):
         # Устанавливаем значение по умолчанию для уровня
         self.fields['level'].initial = 5
 
-    # def clean_kana(self):
-    #     kana = self.cleaned_data.get('kana')
-    #     if not kana:
-    #         raise forms.ValidationError(_('Поле Кана не может быть пустым.'))
-    #     return kana
-
-    # def clean_romaji(self):
-    #     romaji = self.cleaned_data.get('romaji')
-    #     if not romaji:
-    #         raise forms.ValidationError(_('Поле Ромадзи не может быть пустым.'))
-    #     return romaji
-
     def clean(self):
         cleaned_data = super().clean()
         kana = cleaned_data.get('kana')
@@ -89,3 +75,20 @@ class WordForm(forms.ModelForm):
             raise forms.ValidationError('По крайней мере одно из полей Kana или Romaji должно быть заполнено.')
 
         return cleaned_data
+
+class KanjiForm(forms.ModelForm):
+    class Meta:
+        model = Kanji
+        fields = ['level', 'author', 'kanji', 'onyomi', 'kunyomi', 'meaning_ru', 'meaning_en']
+
+    author = forms.ModelChoiceField(queryset=User.objects.all(), empty_label="Выберите автора", widget=forms.Select(attrs={'class': 'form-select'}))
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Применяем rows="3" ко всем полям Textarea и устанавливаем пустые значения
+        for field_name, field in self.fields.items():
+            if isinstance(field.widget, forms.Textarea):
+                field.widget.attrs['rows'] = '1'
+                # Устанавливаем пустое значение для textarea, если оно None
+                if field.initial is None:
+                    field.initial = ""

@@ -1,0 +1,103 @@
+安	AN	yasu(i)	peace, cheap, safety	Мир, дешевый, безопасность
+一	ICHI, ITSU	hito(tsu), hito-	one	один
+飲	IN	no(mu)	to drink	выпить
+右	U, YUU	migi	right	верно
+雨	U	ame	rain	дождь
+駅	EKI		station	станция
+円	EN	maru(i)	circle, Yen, round	Круг, иена, круглый
+火	KA	hi	fire	огонь
+花	KA	hana	flower, blossom	Цветок, цветение
+下	KA, GE	shimo, sa(geru), o(rosu), ku(daru)	below, down	ниже, вниз
+何	KA	nani	what, how many, which	Что, сколько, что
+会	KAI, E	a(u)	to meet, to come together, society	встретиться, собраться вместе, общество
+外	GAI, GE	soto, hoka, hazu(reru), hazu(su)	outside, other, disconnect	снаружи, другие, отключите
+学	GAKU	mana(bu)	school, science, learning	Перевод недоступен
+間	KAN, KEN	aida	time, time span	Время, промежуток времени
+気	KI, KE		soul, spirit	душа, дух
+九	KYUU, KU	kokono(tsu), kokono-	nine	девять
+休	KYUU	yasu(mu)	to rest	отдыхать
+魚	GYO	sakana, uo	fish	рыба
+金	KIN, KON	kane	gold, metal, money	Золото, металл, деньги
+空	KUU	sora, a(keru), kara	sky, to become free, empty	Небо, стать свободным, пустым
+月	GETSU, GATSU	tsuki	month, moon	месяц, луна
+見	KEN	mi(ru), mi(eru), mi(seru)	to see, to be visible, to show	увидеть, быть видимым, чтобы показать
+言	GEN, GON	i(u)	word, to talk	Слово, чтобы поговорить
+古	KO	furu(i)	old, used	старый, используется
+五	GO	itsu(tsu), itsu-	five	пять
+後	GO, KOU	ato, oku(reru), nochi	after, later, back, to stay behind	после, позже, назад, чтобы остаться позади
+午	GO		noon	полдень
+語	GO	kata(ru), kata(rau)	word, to talk	Слово, чтобы поговорить
+校	KOU		school	школа
+口	KOU, KU	kuchi	mouth	рот
+行	KOU	i(ku), yu(ku), okona(u)	to walk. to go, to do, to carry out	ходить.идти, делать, выполнять
+高	KOU	taka(i), taka(maru), taka(meru)	high, expensive, increase, quantity	высокий, дорогой, увеличение, количество
+国	KOKU	kuni	country	страна
+今	KON, KIN	ima	now	сейчас
+左	SA	hidari	left	левый
+三	SAN	mit(tsu), mi-	three	три
+山	SAN	yama	mountain	гора
+四	SHI	yo(ttsu), yu(tsu), yo-, yon-	four	четыре
+子	SHI, SU	ko	child	ребенок
+耳	JI	mimi	ear	ухо
+時	JI	toki	time, hour	время, час
+七	SHICHI	nana(tsu), nana-, nano-	seven	Семь
+車	SHA	kuruma	car, wheel	машина, колесо
+社	SHA	yashiro	shinto shrine, society	Синто Храм, общество
+手	SHU	te	hand	рука
+週	SHUU		week	неделя
+十	JUU, JI	too, to-	ten, cross	Десять, Крест
+出	SHUTSU	da(su), de(ru)	to leave, to get out. to take out	уйти, чтобы выйти.чтобы вывести
+書	SHO	ka(ku)	to write	написать
+女	JO, NYO	onna, me	woman, female	Женщина, женщина
+小	SHOU	chii(sai), ko-, o-	small	маленький
+少	SHOU	suko(shi), suku(nai)	a little	немного
+上	SHOU, JOU	ue, kami, a(geru), a(garu)	above, upper	Вверху, верх
+食	SHOKU	ta(beru), ku(ru), ku(rau)	to eat	поесть
+新	SHIN	atara(shii), ara(ta), nii-	new	новый
+人	JIN, NIN	hito	person	человек
+水	SUI	mizu	water	вода
+生	SEI, SHOU	i(kiru), u(mu), ha(yasu), nama, ki	to live, to grow, to be born, raw	жить, расти, родиться, сырой
+西	SEI, SAI	nishi	west	западный
+川	SEN	kawa	river	река
+千	SEN	chi	thousand	тысяча
+先	SEN	saki	before, in future	Раньше, в будущем
+前	ZEN	mae	before	до
+足	SOKU	ashi, ta(riru), ta(su)	foot, to be sufficient, to add	нога, чтобы быть достаточным, чтобы добавить
+多	TA	oo(i)	many	много
+大	DAI, TAI	ou(kii), oo(i)	big, a lot	Большой, много
+男	DAN, NAN	otoko	man, male	Человек, мужчина
+中	CHUU	naka	inner, center, between	Внутренний, центр, между
+長	CHOU	naga(i)	long, leader	долго, лидер
+天	TEN	ame, ama	sky	небо
+店	TEN	mise	shop	магазин
+電	DEN		electricity	электричество
+土	DO, TO	tsuchi	earth, ground	Земля, земля
+東	TOU	higashi	east	восток
+道	DOU	michi	street, path	Улица, путь
+読	DOKU	yo(mu)	to read	чтобы прочитать
+南	NAN	minami	south	юг
+ニ	NI	futa(tsu), futa-	two	два
+日	NICHI, JITSU	hi, -ka	day, sun	день, солнце
+入	NYUU	hai(ru), i(ru), i(reru)	to enter, to insert	войти, вставить
+年	NEN	toshi	year	год
+買	BAI	ka(u)	to buy	купить
+白	HAKU, BYAKU	shiro(i), shiro	white	белый
+八	HACHI	yat(tsu), ya(tsu), ya-, you-	eight	восемь
+半	HAN	naka(ba)	half, middle, semi-	половина, середина, полу-
+百	HYAKU		hundred	сотня
+父	FU	chichi	father	отец
+分	BUN, BU, FUN	wa(keru), wa(kareru), wa(karu)	part, minute, to divide, to understand	часть, минута, чтобы разделить, понять
+聞	BUN, MON	ki(ku), ki(koeru)	to hear, to listen, to ask	слышать, слушать, спрашивать
+母	BO	haha	mother	мать
+北	HOKU	kita	north	север
+木	BOKU, MOKU	ki, ko	tree, wood	Дерево, дерево
+本	HON	moto	book, source, main-	книга, источник, основной
+毎	MAI		each, every	каждый, каждый
+万	MAN, BAN		ten thousand, all, many	десять тысяч, все, многие
+名	MEI, MYOU	na	name, reputation	имя, репутация
+目	MOKU	me	eye	глаз
+友	YUU	tomo	friend	друг
+来	RAI	ku(ru), kita(ru), kita(su)	to come	прийти
+立	RITSU	ta(tsu), ta(teru)	to stand, to establish	стоять, установить
+六	ROKU	mutt(su), mu(tsu), mu, mui	six	шесть
+話	WA	hanashi, hana(su)	speech, to talk, story, conversation	Речь, говорить, рассказывать, разговор

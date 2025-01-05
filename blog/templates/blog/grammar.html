@@ -14,8 +14,8 @@
             <div class="card shadow-sm">
                 <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                   
-                    <!-- Номер урока в виде красивого значка -->
-      
+                    <!-- <a class="btn btn-default" ><span class="glyphicon glyphicon-pencil"></span></a> -->
+                    <a class="btn btn-default" href="{% url 'grammar_edit' pk=grammar.pk %}"><span class="glyphicon glyphicon-pencil">EDIT!!!</span></a>                         
                     <h5 class="card-title mb-0">{{ grammar.title_ru }}</h5>
                     <span class="badge p-2 fs-4">{{ forloop.counter }}</span>
                 </div>
@@ -29,24 +29,24 @@
                     <li class="list-group-item text-center"> {{ grammar.example_jp_kana }}</li>
                     <li class="list-group-item text-center"> {{ grammar.example_ru }}</li>
                 </ul>
-
                 <!-- Если есть дополнительные примеры, показываем аккордеон -->
-                {% if grammar.examples.exists %}
+                {% if grammar.examples.all  %}
                     <div class="accordion" id="accordionExample{{ forloop.counter }}">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo{{ forloop.counter }}">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ forloop.counter }}" aria-expanded="false" aria-controls="collapseTwo{{ forloop.counter }}">
-                                    Ещё примеры
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ forloop.counter }}" aria-expanded="false" aria-controls="collapseTwo{{ forloop.counter }}">                                    Ещё примеры
                                 </button>
                             </h2>
                             <div id="collapseTwo{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="headingTwo{{ forloop.counter }}" data-bs-parent="#accordionExample{{ forloop.counter }}">
-                                <div class="accordion-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item">へや　で　おどります</li>
-                                        <li class="list-group-item">heya de odorimasu</li>
-                                        <li class="list-group-item">Танцую в комнате</li>
-                                    </ul>
-                                </div>
+                                {% for example in grammar.examples.all  %}
+                                    <div class="accordion-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">{{ example.add_example_jp_kanji }}</li>
+                                            <li class="list-group-item">{{ example.add_example_jp_kana }}</li>
+                                            <li class="list-group-item">{{ example.add_example_ru }}</li>
+                                        </ul>
+                                    </div>
+                                {% endfor %}
                             </div>      
                         </div>
                     </div>

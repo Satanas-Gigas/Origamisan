@@ -1,9 +1,12 @@
 from django.conf import settings
+from django.urls import reverse_lazy
 from django.shortcuts import render, redirect
 from .models import Post, Grammar, Word, Kanji
 from django.shortcuts import render, get_object_or_404
-from .forms import PostForm, GrammarForm, ExampleForm, WordForm
+from .forms import PostForm, GrammarForm, ExampleForm, WordForm, KanjiForm
 from django.utils import timezone
+from django.views.generic.edit import UpdateView
+from django.http import HttpResponseRedirect
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
@@ -74,7 +77,7 @@ def create_grammar(request):
         grammar_form = GrammarForm()
         example_form = ExampleForm()
 
-    return render(request, 'blog/create_grammar.html', {
+    return render(request, 'blog/grammar_create.html', {
         'grammar_form': grammar_form,
         'example_form': example_form,
     })
@@ -96,8 +99,67 @@ def create_word(request):
         word_form = WordForm()
 
     context = {'form': word_form,}
-    return render(request, 'blog/create_word.html', context)
+    return render(request, 'blog/word_create.html', context)
 
 def kanji(request):
     kanjis = Kanji.objects.filter(level=5)  # Предзагрузка примеров
     return render(request, 'blog/kanji.html', {'kanjis': kanjis})
+
+
+def grammar_edit(request, pk):
+    # Получаем объект Grammar
+    grammar = get_object_or_404(Grammar, pk=pk)
+    
+    # Если форма отправлена (POST-запрос)
+    if request.method == 'POST':
+        # Создаем форму для Grammar
+        grammar_form = GrammarForm(request.POST, instance=grammar)
+        
+        # Получаем формы для примеров
+        example_forms = []
+        for example in grammar.examples.all():
+            example_form = ExampleForm(request.POST, instance=example)
+            example_forms.append(example_form)
+
+        if grammar_form.is_valid():
+            # Сохраняем объект Grammar, но не коммитим сразу
+            grammar = grammar_form.save(commit=False)
+            grammar.save()  # Сохраняем грамматику
+
+            # Обрабатываем формы для примеров
+            for example_form in example_forms:
+                if example_form.is_valid():
+                    example = example_form.save(commit=False)
+                    example.grammar = grammar  # Связываем пример с грамматикой
+                    example.save()
+
+            return redirect('grammar')  # Перенаправляем после успешного сохранения
+
+    else:
+        # Если запрос не POST, создаем пустые формы
+        grammar_form = GrammarForm(instance=grammar)
+        example_forms = [ExampleForm(instance=example) for example in grammar.examples.all()]
+
+    return render(request, 'blog/grammar_edit.html', {
+        'grammar_form': grammar_form,
+        'example_forms': example_forms,
+    })
+
+def kanji_create(request):
+    """
+    View to handle creation of a new Word object.
+    """
+    if request.method == 'POST':
+        kanji_form = KanjiForm(request.POST)
+        if kanji_form.is_valid():
+            # Сохраняем слово
+            kanji_form.save()
+            # messages.success(request, 'Слово успешно сохранено!')
+            return redirect('kanji')  # Замените на ваш URL списка слов или другую нужную страницу
+        # else:
+        #     messages.error(request, 'Пожалуйста, исправьте ошибки в форме.')
+    else:
+        kanji_form = KanjiForm()
+
+    context = {'form': kanji_form,}
+    return render(request, 'blog/kanji_create.html', context)

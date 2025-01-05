@@ -1,0 +1,72 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="text-center mb-5">Создать новый кандзи</h1>
+
+<div class="container">
+    <form method="POST" action="{% url 'create_word' %}">
+        {% csrf_token %}
+
+        <!-- Грамматика -->
+        <div class="row mb-4">
+            <div class="col-md-4 offset-md-4">
+                <h2 class="h4 mb-3 text-primary">Кандзи</h2>
+                <div class="form-group mb-3">
+                    <label for="id_level" class="form-label">Уровень</label>
+                    <select name="level" id="id_level" class="form-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    {% if form.level.errors %}
+                        <div class="text-danger">
+                            {% for error in form.level.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <!-- Поле автора -->
+                <div class="form-group mb-3">
+                    <label for="id_author" class="form-label">Автор</label>
+                    <div class="input-group">
+                        {{ form.author }}
+                    </div>
+                    {% if form.author.errors %}
+                        <div class="text-danger">
+                            {% for error in form.author.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <!-- Остальные поля -->
+                {% for field in form %}
+                    {% if field.name != "level" and field.name != "author" %}
+                        <div class="form-group mb-3">
+                            <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                            <textarea class="form-control" id="{{ field.id_for_label }}" name="{{ field.name }}" rows="3">{{ field.value|default:'' }}</textarea>
+                            {% if field.errors %}
+                                <div class="text-danger">
+                                    {% for error in field.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+               <!-- Кнопка отправки формы -->
+                <button type="submit" class="btn btn-success w-100">Сохранить Кандзи</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

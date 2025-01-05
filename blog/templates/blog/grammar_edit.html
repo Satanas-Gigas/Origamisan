@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container py-3">
+    <h1 class="text-center">Редактировать урок</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ grammar_form.as_p }}  <!-- Форма для грамматики -->
+
+        {% for example_form in example_forms %}
+            <div class="example-form">
+                <h4>Редактирование примера:</h4>
+                {{ example_form.as_p }}  <!-- Форма для примера -->
+            </div>
+        {% endfor %}
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <a href="{% url 'grammar' %}" class="btn btn-secondary">Отмена</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
