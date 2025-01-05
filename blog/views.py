@@ -1,3 +1,4 @@
+
 from django.conf import settings
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect
@@ -55,7 +56,7 @@ def word(request):
 def mainpanel(request):
     return render(request, 'blog/mainpanel.html')
 
-def create_grammar(request):
+def grammar_create(request):
     if request.method == 'POST':
         grammar_form = GrammarForm(request.POST)
         example_form = ExampleForm(request.POST)
@@ -82,7 +83,7 @@ def create_grammar(request):
         'example_form': example_form,
     })
 
-def create_word(request):
+def word_create(request):
     """
     View to handle creation of a new Word object.
     """
@@ -100,6 +101,7 @@ def create_word(request):
 
     context = {'form': word_form,}
     return render(request, 'blog/word_create.html', context)
+
 
 def kanji(request):
     kanjis = Kanji.objects.filter(level=5)  # Предзагрузка примеров
@@ -146,20 +148,38 @@ def grammar_edit(request, pk):
     })
 
 def kanji_create(request):
-    """
-    View to handle creation of a new Word object.
-    """
     if request.method == 'POST':
         kanji_form = KanjiForm(request.POST)
         if kanji_form.is_valid():
-            # Сохраняем слово
             kanji_form.save()
-            # messages.success(request, 'Слово успешно сохранено!')
-            return redirect('kanji')  # Замените на ваш URL списка слов или другую нужную страницу
-        # else:
-        #     messages.error(request, 'Пожалуйста, исправьте ошибки в форме.')
+            return redirect('kanji') 
     else:
         kanji_form = KanjiForm()
 
     context = {'form': kanji_form,}
     return render(request, 'blog/kanji_create.html', context)
+
+
+def kanji_edit(request, pk):
+    kanji = get_object_or_404(Kanji, pk=pk)
+    if request.method == "POST":
+        form = KanjiForm(request.POST, instance=kanji)
+        if form.is_valid():
+            kanji = form.save(commit=False)
+            kanji.save()
+            return redirect('kanji')
+    else:
+        form = KanjiForm(instance=kanji)
+    return render(request, 'blog/kanji_edit.html', {'form': form})
+
+def word_edit(request, pk):
+    word = get_object_or_404(Word, pk=pk)
+    if request.method == "POST":
+        form = WordForm(request.POST, instance=word)
+        if form.is_valid():
+            word = form.save(commit=False)
+            word.save()
+            return redirect('word')
+    else:
+        form = WordForm(instance=kanji)
+    return render(request, 'blog/word_edit.html', {'form': form})

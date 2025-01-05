@@ -63,8 +63,6 @@ class Word(models.Model):
         ordering = ['level', 'kanji', 'kana']
 
 
-
-
 class Kanji(models.Model):
     level = models.IntegerField(default=5)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

@@ -44,7 +44,6 @@
                         </div>
                     {% endif %}
                 </div>
-
                 <!-- Остальные поля -->
                 {% for field in form %}
                     {% if field.name != "level" and field.name != "author" %}
@@ -61,7 +60,6 @@
                         </div>
                     {% endif %}
                 {% endfor %}
-
                <!-- Кнопка отправки формы -->
                 <button type="submit" class="btn btn-success w-100">Сохранить слово</button>
             </div>

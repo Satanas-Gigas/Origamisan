@@ -9,14 +9,21 @@ urlpatterns = [
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new/', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
-    path('grammar/', views.grammar, name='grammar'),  # Имя пути 'about'
+
+
+
     path('mainpanel/', views.mainpanel, name='mainpanel'),  # Имя пути 'about'
-    path('create_grammar/', views.create_grammar, name='create_grammar'),# Другие маршруты
-    path('create_word/', views.create_word, name='create_word'),# Другие маршруты
+
+
     path('word/', views.word, name='word'),# Другие маршруты
-    path('kanji/', views.kanji, name='kanji'),# Другие маршруты
+    path('word_edit/<int:pk>/edit/', views.word_edit, name='word_edit'),# Другие маршруты
+    path('word_create/', views.word_create, name='word_create'),# Другие маршруты
+    path('grammar/', views.grammar, name='grammar'),  # Имя пути 'about'
+    path('grammar_create/', views.grammar_create, name='grammar_create'),# Другие маршруты
     path('grammar/<int:pk>/edit/', views.grammar_edit, name='grammar_edit'),
+    path('kanji/', views.kanji, name='kanji'),# Другие маршруты
     path('kanji_create/', views.kanji_create, name='kanji_create'),# Другие маршруты
+    path('kanji_edit/<int:pk>/edit/', views.kanji_edit, name='kanji_edit'),# Другие маршруты
 ]
 
 if settings.DEBUG:

@@ -2,10 +2,10 @@
 {% load static %}
 
 {% block content %}
-<h1 class="text-center mb-5">Создать новый кандзи</h1>
+<h1 class="text-center mb-5">Редактировать Кандзи</h1>
 
 <div class="container">
-    <form method="POST" action="{% url 'create_word' %}">
+    <form method="POST" action="{% url 'kanji_create' %}">
         {% csrf_token %}
 
         <!-- Грамматика -->
@@ -29,8 +29,6 @@
                         </div>
                     {% endif %}
                 </div>
-
-                <!-- Поле автора -->
                 <div class="form-group mb-3">
                     <label for="id_author" class="form-label">Автор</label>
                     <div class="input-group">
