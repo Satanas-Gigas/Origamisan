@@ -21,7 +21,7 @@
 <h1 class="text-center mb-5">Создать новую грамматику</h1>
 
 <div class="container">
-    <form method="POST" action="{% url 'create_grammar' %}">
+    <form method="POST" action="{% url 'grammar_create' %}">
         {% csrf_token %}
 
         <!-- Грамматика -->

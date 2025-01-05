@@ -1,10 +1,9 @@
 
 from django.conf import settings
 from django.urls import reverse_lazy
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post, Grammar, Word, Kanji
-from django.shortcuts import render, get_object_or_404
-from .forms import PostForm, GrammarForm, ExampleForm, WordForm, KanjiForm
+from .forms import PostForm, GrammarForm, ExampleForm, WordForm, KanjiForm,  WordKanaVariantForm, WordKanjiVariantForm, WordTranslateVariantForm
 from django.utils import timezone
 from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
@@ -183,3 +182,43 @@ def word_edit(request, pk):
     else:
         form = WordForm(instance=kanji)
     return render(request, 'blog/word_edit.html', {'form': form})
+
+def word_variant_create(request, pk):
+    word = get_object_or_404(Word, pk=pk)
+    if request.method == 'POST':
+        kana_form = WordKanaVariantForm(request.POST)
+        kanji_form = WordKanjiVariantForm(request.POST)
+        translate_form = WordTranslateVariantForm(request.POST)
+        if kana_form.is_valid() and kanji_form.is_valid() and translate_form.is_valid():
+            kana_variant = kana_form.save(commit=False)
+            kana_variant.word = word
+            kana_variant.save()
+
+            kanji_variant = kanji_form.save(commit=False)
+            kanji_variant.word = word
+            kanji_variant.save()
+
+            translate_variant = translate_form.save(commit=False)
+            translate_variant.word = word
+            translate_variant.save()
+
+            return redirect('word')
+    else:
+        kana_form = WordKanaVariantForm()
+        kanji_form = WordKanjiVariantForm()
+        translate_form = WordTranslateVariantForm()
+
+    return render(request, 'blog/word_variant_create.html', {
+        'word': word,
+        'kana_form': kana_form,
+        'kanji_form': kanji_form,
+        'translate_form': translate_form,
+    })
+
+
+def word_detail_view(request):
+    words = Word.objects.prefetch_related('fake_kana', 'fake_kanji', 'fake_translate').all()
+    context = {
+        'words': words,
+    }
+    return render(request, 'blog/word_detail.html', context)

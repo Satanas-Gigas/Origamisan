@@ -1,7 +1,8 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
-from . import views
+from . import views 
+# from .views import CreateWordView
 # from .views import GrammarUpdateView
 
 urlpatterns = [
@@ -18,6 +19,8 @@ urlpatterns = [
     path('word/', views.word, name='word'),# Другие маршруты
     path('word_edit/<int:pk>/edit/', views.word_edit, name='word_edit'),# Другие маршруты
     path('word_create/', views.word_create, name='word_create'),# Другие маршруты
+    path('word_variant_create/<int:pk>/add/', views.word_variant_create, name='word_variant_create'),# Другие маршруты
+    path('word_detail/', views.word_detail_view, name='word_detail'),
     path('grammar/', views.grammar, name='grammar'),  # Имя пути 'about'
     path('grammar_create/', views.grammar_create, name='grammar_create'),# Другие маршруты
     path('grammar/<int:pk>/edit/', views.grammar_edit, name='grammar_edit'),

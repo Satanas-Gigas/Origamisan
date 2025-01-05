@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Grammar, Example, Word, Kanji
+from .models import Post, Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
 from django.contrib.auth.models import User
 
 class PostForm(forms.ModelForm):
@@ -92,3 +92,19 @@ class KanjiForm(forms.ModelForm):
                 # Устанавливаем пустое значение для textarea, если оно None
                 if field.initial is None:
                     field.initial = ""
+
+
+class WordKanaVariantForm(forms.ModelForm):
+    class Meta:
+        model = Word_kana_variant
+        fields = ['add_kana']
+
+class WordKanjiVariantForm(forms.ModelForm):
+    class Meta:
+        model = Word_kanji_variant
+        fields = ['add_kanji']
+
+class WordTranslateVariantForm(forms.ModelForm):
+    class Meta:
+        model = Word_translate_variant
+        fields = ['add_translate_ru', 'add_translate_en']

@@ -44,7 +44,7 @@ class Example(models.Model):
     add_example_en = models.TextField (blank=True, null=True)  # Пример на английском
 
     def __str__(self):
-        return f"Example for {self.grammar.title_ru}"
+        return f"Example for {self.grammar.title_ru} ({self.level})"
     
 class Word(models.Model):
     level = models.IntegerField(default=5)
@@ -55,13 +55,35 @@ class Word(models.Model):
     translate_ru = models.CharField(max_length=200, blank=True, null=True)
     translate_en = models.CharField(max_length=200, blank=True, null=True)
 
-
     def __str__(self):
-            return f'{self.kanji} ({self.kana})'
+            return f'{self.kanji} ({self.kana}) ({self.level})'
     class Meta:
     # Дополнительно можно указать порядок сортировки или уникальные ограничения
         ordering = ['level', 'kanji', 'kana']
 
+class Word_kana_variant(models.Model):
+    word = models.ForeignKey(Word, related_name='fake_kana', on_delete=models.CASCADE)
+    add_kana = models.TextField (blank=True, null=True)
+
+    def __str__(self):
+        return f"Example for {self.word.kana} ({self.level})"    
+
+class Word_kanji_variant(models.Model):
+    word = models.ForeignKey(Word, related_name='fake_kanji', on_delete=models.CASCADE)
+    add_kanji = models.TextField (blank=True, null=True)
+    
+    def __str__(self):
+        return f"Example for {self.word.kanji} ({self.level})"
+    
+
+class Word_translate_variant(models.Model):
+    word = models.ForeignKey(Word, related_name='fake_translate', on_delete=models.CASCADE)
+    add_translate_ru = models.TextField (blank=True, null=True)
+    add_translate_en = models.TextField (blank=True, null=True)
+    
+    def __str__(self):
+        return f"Example for {self.word.translate_ru} ({self.level})"
+   
 
 class Kanji(models.Model):
     level = models.IntegerField(default=5)

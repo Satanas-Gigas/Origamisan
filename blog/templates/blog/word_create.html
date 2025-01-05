@@ -5,7 +5,7 @@
 <h1 class="text-center mb-5">Создать новое слово</h1>
 
 <div class="container">
-    <form method="POST" action="{% url 'create_word' %}">
+    <form method="POST" action="{% url 'word_create' %}">
         {% csrf_token %}
 
         <!-- Грамматика -->

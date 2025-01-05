@@ -1,0 +1,52 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Details</title>
+</head>
+<body>
+    <h1>Список слов и их вариантов</h1>
+    <ul>
+        {% for word in words %}
+            <li>
+                <strong>{{ word.kanji }} ({{ word.kana }}) — Уровень: {{ word.level }}</strong>
+                <ul>
+                    <li>Автор: {{ word.author.username }}</li>
+                    <li>Ромадзи: {{ word.romaji }}</li>
+                    <li>Перевод (RU): {{ word.translate_ru }}</li>
+                    <li>Перевод (EN): {{ word.translate_en }}</li>
+                </ul>
+                <h4>Фейковые каны:</h4>
+                <ul>
+                    {% for kana_variant in word.fake_kana.all %}
+                        <li>{{ kana_variant.add_kana }}</li>
+                    {% empty %}
+                        <li>Нет вариантов</li>
+                    {% endfor %}
+                </ul>
+                <h4>Фейковые кандзи:</h4>
+                <ul>
+                    {% for kanji_variant in word.fake_kanji.all %}
+                        <li>{{ kanji_variant.add_kanji }}</li>
+                    {% empty %}
+                        <li>Нет вариантов</li>
+                    {% endfor %}
+                </ul>
+                <h4>Фейковые переводы:</h4>
+                <ul>
+                    {% for translate_variant in word.fake_translate.all %}
+                        <li>RU: {{ translate_variant.add_translate_ru }}, EN: {{ translate_variant.add_translate_en }}</li>
+                    {% empty %}
+                        <li>Нет вариантов</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}

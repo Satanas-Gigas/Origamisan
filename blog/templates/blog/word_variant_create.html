@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Добавить варианты для слова {{ word.kanji }}</h1>
+<form method="post">
+    {% csrf_token %}
+    <h3>Kana Variant</h3>
+    {{ kana_form.as_p }}
+
+    <h3>Kanji Variant</h3>
+    {{ kanji_form.as_p }}
+
+    <h3>Translate Variant</h3>
+    {{ translate_form.as_p }}
+
+    <button type="submit">Сохранить</button>
+</form>
+{% endblock %}
