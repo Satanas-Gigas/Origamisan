@@ -4,13 +4,15 @@
     <h1 class="text-center">Тестирование по словам</h1>
     <p>Выберите количество вопросов:</p>
     <div class="d-flex justify-content-center gap-2">
-        <a href="{% url 'word_test_start' %}?questions=2" class="btn btn-primary">2 вопросов</a>
-        <a href="{% url 'word_test_start' %}?questions=3" class="btn btn-primary">3 вопросов</a>
-        <a href="{% url 'word_test_start' %}?questions=5" class="btn btn-primary">5 вопросов</a>
-        <a href="{% url 'word_test_start' %}?questions=20" class="btn btn-primary">20 вопросов</a>
-        <a href="{% url 'word_test_start' %}?questions=30" class="btn btn-primary">30 вопросов</a>
-        <a href="{% url 'word_test_start' %}?questions=60" class="btn btn-primary">60 вопросов</a>
-        <a href="{% url 'word_test_start' %}?questions=1000" class="btn btn-primary">Все вопросы</a>
+        <!-- Kana to Kanji -->
+        <a href="{% url 'word_test_start' %}?questions=2&type=kana_to_kanji" class="btn btn-primary">2 вопроса (Kana → Kanji)</a>
+        <a href="{% url 'word_test_start' %}?questions=3&type=kana_to_kanji" class="btn btn-primary">3 вопроса (Kana → Kanji)</a>
+        <a href="{% url 'word_test_start' %}?questions=5&type=kana_to_kanji" class="btn btn-primary">5 вопросов (Kana → Kanji)</a>
+
+        <!-- Kanji to Kana -->
+        <a href="{% url 'word_test_start' %}?questions=2&type=kanji_to_kana" class="btn btn-primary">2 вопроса (Kanji → Kana)</a>
+        <a href="{% url 'word_test_start' %}?questions=3&type=kanji_to_kana" class="btn btn-primary">3 вопроса (Kanji → Kana)</a>
+        <a href="{% url 'word_test_start' %}?questions=5&type=kanji_to_kana" class="btn btn-primary">5 вопросов (Kanji → Kana)</a>
     </div>
 </div>
 {% endblock %}

@@ -270,36 +270,49 @@ def word_test(request):
     return render(request, 'blog/word_test.html')
 
 def word_test_start(request):
-    # Получаем количество вопросов из параметров
     question_count = int(request.GET.get('questions', 10))
-      # Создаем список вопросов
+    test_type = request.GET.get('type', 'kanji_to_kana')  # Тип теста: kanji -> kana или kana -> kanji
+    
     questions = []
-    all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True))[:question_count*4]
-    
-    # Загружаем вопросы, где kanji не пустое
-    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
-    
-    for word in words:
-        # Генерируем варианты ответа
-        correct_kana = word.kana
-        fake_kana = random.sample([kana for kana in all_kana if kana != correct_kana], 3)
-        options = fake_kana + [correct_kana]
-        random.shuffle(options)
+    if test_type == 'kanji_to_kana':
+        # Логика текущего теста (kanji -> kana)
+        all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="").values_list('kana', flat=True))[:question_count * 4]
+        words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+        
+        for word in words:
+            correct_kana = word.kana
+            fake_kana = random.sample([kana for kana in all_kana if kana != correct_kana], 3)
+            options = fake_kana + [correct_kana]
+            random.shuffle(options)
+            questions.append({
+                'question_word': word.kanji,
+                'options': options,
+                'correct': correct_kana,
+            })
 
-        # Добавляем вопрос
-        questions.append({
-            'kanji': word.kanji,
-            'options': options,
-            'correct': correct_kana,
-        })
+    elif test_type == 'kana_to_kanji':
+        # Логика нового теста (kana -> kanji)
+        all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True))[:question_count * 4]
+        words = Word.objects.filter(kana__isnull=False).exclude(kana="''").exclude(kanji="''").order_by('?')[:question_count]
+        
+        for word in words:
+            correct_kanji = word.kanji
+            fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
+            options = fake_kanji + [correct_kanji]
+            random.shuffle(options)
+            questions.append({
+                'question_word': word.kana,
+                'options': options,
+                'correct': correct_kanji,
+            })
 
-    # Сохраняем вопросы в сессии для последующего использования
     request.session['questions'] = questions
-    questions_total = request.session['questions']
-    request.session['current_question_index'] = 0 # Начинаем с первого вопроса
-    request.session['user_answers'] = []  # Создаем список для сохранения ответов пользователя
-    context = {'question': questions[0], 'total': questions_total, "question_count": question_count}  # Передаем первый вопрос
+    request.session['current_question_index'] = 0
+    request.session['user_answers'] = []
+
+    context = {'question': questions[0], 'total': len(questions), 'question_count': question_count, 'test_type': test_type}
     return render(request, 'blog/word_test_start.html', context)
+
 
 
 def word_test_next(request):

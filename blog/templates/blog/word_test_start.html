@@ -11,7 +11,7 @@
                 <h5 class="card-title text-center"><span>questions_total: </span>{{ questions_total }}</h5>
                 <h5 class="card-title text-center"><span>len_qs: </span>{{ len_qs }}</h5>
                 <h5 class="card-title text-center"><span>total: </span>{{ total }}</h5>
-                <h5 class="card-title text-center">{{ question.kanji }}</h5>
+                <h5 class="card-title text-center">{{ question.question_word }}</h5>
                 <div class="d-flex flex-column gap-2">
                     {% for option in question.options %}
                     <div>
