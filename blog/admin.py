@@ -1,13 +1,13 @@
 from django.contrib import admin
-from .models import Post, Grammar, Example, Word, Kanji,  Word_kana_variant, Word_kanji_variant, Word_translate_variant
+from .models import Post, Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
 
 admin.site.register(Post)
 admin.site.register(Grammar)
 admin.site.register(Example)
-# admin.site.register(Word)
 admin.site.register(Kanji)
 
-admin.register(Word)
+# Регистрация модели Word
+@admin.register(Word)
 class WordAdmin(admin.ModelAdmin):
     list_display = ('kanji', 'kana', 'romaji', 'translate_ru', 'translate_en', 'level', 'author')
 

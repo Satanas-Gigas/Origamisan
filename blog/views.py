@@ -2,11 +2,14 @@
 from django.conf import settings
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Post, Grammar, Word, Kanji
+from .models import Post, Grammar, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
 from .forms import PostForm, GrammarForm, ExampleForm, WordForm, KanjiForm,  WordKanaVariantForm, WordKanjiVariantForm, WordTranslateVariantForm
+from django.forms import inlineformset_factory
 from django.utils import timezone
 from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
+import random
+
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
@@ -48,7 +51,7 @@ def grammar(request):
     return render(request, 'blog/grammar.html', {'grammars': grammars})
 
 def word(request):
-    words = Word.objects.filter(level=5)  # Предзагрузка примеров
+    words = Word.objects.filter(level="5")  # Предзагрузка примеров
     return render(request, 'blog/word.html', {'words': words})
 
 
@@ -171,17 +174,7 @@ def kanji_edit(request, pk):
         form = KanjiForm(instance=kanji)
     return render(request, 'blog/kanji_edit.html', {'form': form})
 
-def word_edit(request, pk):
-    word = get_object_or_404(Word, pk=pk)
-    if request.method == "POST":
-        form = WordForm(request.POST, instance=word)
-        if form.is_valid():
-            word = form.save(commit=False)
-            word.save()
-            return redirect('word')
-    else:
-        form = WordForm(instance=kanji)
-    return render(request, 'blog/word_edit.html', {'form': form})
+
 
 def word_variant_create(request, pk):
     word = get_object_or_404(Word, pk=pk)
@@ -222,3 +215,147 @@ def word_detail_view(request):
         'words': words,
     }
     return render(request, 'blog/word_detail.html', context)
+
+
+
+
+def word_edit(request, pk):
+    word = get_object_or_404(Word, pk=pk)
+    if request.method == "POST":
+        form = WordForm(request.POST, instance=word)
+        if form.is_valid():
+            word = form.save(commit=False)
+            word.save()
+            return redirect('word')
+    else:
+        form = WordForm(instance=word)
+    return render(request, 'blog/word_edit.html', {'form': form})
+
+def word_edit(request, pk):
+    word = get_object_or_404(Word, pk=pk)
+
+    # Создание формсетов для каждой дочерней модели
+    KanaFormSet = inlineformset_factory(Word, Word_kana_variant, fields=['add_kana'], extra=1, can_delete=True)
+    KanjiFormSet = inlineformset_factory(Word, Word_kanji_variant, fields=['add_kanji'], extra=1, can_delete=True)
+    TranslateFormSet = inlineformset_factory(Word, Word_translate_variant, fields=['add_translate_ru', 'add_translate_en'], extra=1, can_delete=True)
+
+    if request.method == "POST":
+        word_form = WordForm(request.POST, instance=word)
+        kana_formset = KanaFormSet(request.POST, instance=word)
+        kanji_formset = KanjiFormSet(request.POST, instance=word)
+        translate_formset = TranslateFormSet(request.POST, instance=word)
+
+        if word_form.is_valid() and kana_formset.is_valid() and kanji_formset.is_valid() and translate_formset.is_valid():
+            word = word_form.save()
+            kana_formset.save()
+            kanji_formset.save()
+            translate_formset.save()
+            return redirect('word_detail')  # Замените на нужный URL
+    else:
+        word_form = WordForm(instance=word)
+        kana_formset = KanaFormSet(instance=word)
+        kanji_formset = KanjiFormSet(instance=word)
+        translate_formset = TranslateFormSet(instance=word)
+
+    context = {
+        'form': word_form,
+        'kana_formset': kana_formset,
+        'kanji_formset': kanji_formset,
+        'translate_formset': translate_formset,
+    }
+    return render(request, 'blog/word_edit.html', context)
+
+
+def word_test(request):
+    return render(request, 'blog/word_test.html')
+
+def word_test_start(request):
+    # Получаем количество вопросов из параметров
+    question_count = int(request.GET.get('questions', 10))
+      # Создаем список вопросов
+    questions = []
+    all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="").values_list('kana', flat=True))[:question_count*4]
+    
+    # Загружаем вопросы, где kanji не пустое
+    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="").order_by('?')[:question_count]
+    
+    for word in words:
+        # Генерируем варианты ответа
+        correct_kana = word.kana
+        fake_kana = random.sample([kana for kana in all_kana if kana != correct_kana], 3)
+        options = fake_kana + [correct_kana]
+        random.shuffle(options)
+
+        # Добавляем вопрос
+        questions.append({
+            'kanji': word.kanji,
+            'options': options,
+            'correct': correct_kana,
+        })
+
+    # Сохраняем вопросы в сессии для последующего использования
+    request.session['questions'] = questions
+    questions_total = request.session['questions']
+    request.session['current_question_index'] = 0 # Начинаем с первого вопроса
+    request.session['user_answers'] = []  # Создаем список для сохранения ответов пользователя
+    context = {'question': questions[0], 'total': questions_total, "question_count": question_count}  # Передаем первый вопрос
+    return render(request, 'blog/word_test_start.html', context)
+
+
+def word_test_next(request):
+    # Получаем текущий индекс вопроса
+    current_index = request.session.get('current_question_index')
+    
+    # Загружаем все вопросы из сессии
+    questions = request.session.get('questions', [])
+    
+    # Получаем ответ пользователя
+    user_answer = request.POST.get('question_1')
+    correct_answer = questions[current_index]['correct']
+    
+    # Сохраняем ответ пользователя (правильный/неправильный)
+    is_correct = user_answer == correct_answer
+    user_answers = request.session.get('user_answers', [])
+    user_answers.append(is_correct)
+    request.session['user_answers'] = user_answers
+
+    # Проверяем, есть ли следующий вопрос
+    if current_index < len(questions) - 1:
+        # Увеличиваем индекс
+        request.session['current_question_index'] = current_index + 1
+        context = {
+            'question': questions[current_index + 1],
+            "current_index": current_index + 1,
+            "len_qs": len(questions),
+        }  # Передаем следующий вопрос
+        return render(request, 'blog/word_test_start.html', context)
+    else:
+        # Если вопросы закончились, перенаправляем на страницу завершения
+        return redirect('word_test_complete')
+
+
+def word_test_complete(request):
+    # Загружаем ответы пользователя
+    user_answers = request.session.get('user_answers', [])
+    
+    # Подсчитываем количество правильных и неправильных ответов
+    correct_count = user_answers.count(True)
+    incorrect_count = user_answers.count(False)
+    total_count = len(user_answers)
+    
+    # Дополнительная статистика
+    accuracy_percentage = (correct_count / total_count * 100) if total_count > 0 else 0
+
+    # Очищаем сессии после завершения теста
+    request.session['user_answers'] = []
+    request.session['questions'] = []
+    request.session['current_question_index'] = 0
+
+    context = {
+        'correct_count': correct_count,
+        'incorrect_count': incorrect_count,
+        'accuracy_percentage': accuracy_percentage,
+        'total_count': total_count,
+    }
+    
+    return render(request, 'blog/word_test_complete.html', context)

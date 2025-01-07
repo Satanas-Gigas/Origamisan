@@ -11,6 +11,17 @@
     <title>Всё лучшее здесь!</title>
     <link href="{% static 'bootstrap\dist\css\bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'bootstrap\example_css\carousel.css' %}" rel="stylesheet">
+  
+    <style>
+      .correct-answer {
+          color: green;
+          font-weight: bold;
+          background-color: #e8f5e9; /* Светло-зеленый фон */
+          border: 1px solid green; /* Зеленая рамка */
+          padding: 2px 5px;
+          border-radius: 5px;
+      }
+      </style>
   </head>
   <body>
     <header data-bs-theme="dark">
@@ -43,6 +54,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'word_detail' %}">Посмотреть варианты</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'word_test' %}">word_test</a>
               </li>
             </ul>
             <form class="d-flex" role="search">

@@ -108,3 +108,30 @@ class WordTranslateVariantForm(forms.ModelForm):
     class Meta:
         model = Word_translate_variant
         fields = ['add_translate_ru', 'add_translate_en']
+        
+
+
+class WordKanaVariantForm(forms.ModelForm):
+    class Meta:
+        model = Word_kana_variant
+        fields = ['add_kana']
+        widgets = {
+            'add_kana': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
+class WordKanjiVariantForm(forms.ModelForm):
+    class Meta:
+        model = Word_kanji_variant
+        fields = ['add_kanji']
+        widgets = {
+            'add_kanji': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
+class WordTranslateVariantForm(forms.ModelForm):
+    class Meta:
+        model = Word_translate_variant
+        fields = ['add_translate_ru', 'add_translate_en']
+        widgets = {
+            'add_translate_ru': forms.TextInput(attrs={'class': 'form-control'}),
+            'add_translate_en': forms.TextInput(attrs={'class': 'form-control'}),
+        }

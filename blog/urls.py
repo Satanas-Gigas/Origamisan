@@ -27,6 +27,10 @@ urlpatterns = [
     path('kanji/', views.kanji, name='kanji'),# Другие маршруты
     path('kanji_create/', views.kanji_create, name='kanji_create'),# Другие маршруты
     path('kanji_edit/<int:pk>/edit/', views.kanji_edit, name='kanji_edit'),# Другие маршруты
+    path('word_test/', views.word_test, name='word_test'),
+    path('word_test_start/', views.word_test_start, name='word_test_start'),
+    path('word_test_next/', views.word_test_next, name='word_test_next'),
+    path('word_test_complete/', views.word_test_complete, name='word_test_complete'),
 ]
 
 if settings.DEBUG:
