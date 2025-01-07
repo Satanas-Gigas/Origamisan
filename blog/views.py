@@ -274,10 +274,10 @@ def word_test_start(request):
     question_count = int(request.GET.get('questions', 10))
       # Создаем список вопросов
     questions = []
-    all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="").values_list('kana', flat=True))[:question_count*4]
+    all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True))[:question_count*4]
     
     # Загружаем вопросы, где kanji не пустое
-    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="").order_by('?')[:question_count]
+    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
     
     for word in words:
         # Генерируем варианты ответа
@@ -310,7 +310,7 @@ def word_test_next(request):
     questions = request.session.get('questions', [])
     
     # Получаем ответ пользователя
-    user_answer = request.POST.get('question_1')
+    user_answer = request.POST.get('user_answer')
     correct_answer = questions[current_index]['correct']
     
     # Сохраняем ответ пользователя (правильный/неправильный)
