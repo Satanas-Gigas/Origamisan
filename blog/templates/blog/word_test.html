@@ -2,17 +2,34 @@
 {% block content %}
 <div class="container py-3">
     <h1 class="text-center">Тестирование по словам</h1>
-    <p>Выберите количество вопросов:</p>
+    <p>Выберите количество вопросов: Kanji to Kana</p>
+    <div class="d-flex justify-content-center gap-2">
+        <!-- Kanji to Kana -->
+        <a href="{% url 'word_test_start' %}?questions=2&type=kanji_to_kana" class="btn btn-primary">2 вопроса (Kanji → Kana)</a>
+        <a href="{% url 'word_test_start' %}?questions=3&type=kanji_to_kana" class="btn btn-primary">3 вопроса (Kanji → Kana)</a>
+        <a href="{% url 'word_test_start' %}?questions=5&type=kanji_to_kana" class="btn btn-primary">5 вопросов (Kanji → Kana)</a>
+    </div>
+    <p>Выберите количество вопросов: Kana to Kanji</p>
     <div class="d-flex justify-content-center gap-2">
         <!-- Kana to Kanji -->
         <a href="{% url 'word_test_start' %}?questions=2&type=kana_to_kanji" class="btn btn-primary">2 вопроса (Kana → Kanji)</a>
         <a href="{% url 'word_test_start' %}?questions=3&type=kana_to_kanji" class="btn btn-primary">3 вопроса (Kana → Kanji)</a>
         <a href="{% url 'word_test_start' %}?questions=5&type=kana_to_kanji" class="btn btn-primary">5 вопросов (Kana → Kanji)</a>
+    </div>
 
-        <!-- Kanji to Kana -->
-        <a href="{% url 'word_test_start' %}?questions=2&type=kanji_to_kana" class="btn btn-primary">2 вопроса (Kanji → Kana)</a>
-        <a href="{% url 'word_test_start' %}?questions=3&type=kanji_to_kana" class="btn btn-primary">3 вопроса (Kanji → Kana)</a>
-        <a href="{% url 'word_test_start' %}?questions=5&type=kanji_to_kana" class="btn btn-primary">5 вопросов (Kanji → Kana)</a>
+    <p>Выберите количество вопросов: Kanji to Trans</p>
+    <div class="d-flex justify-content-center gap-2">
+        <!-- Kanji to Trans -->
+        <a href="{% url 'word_test_start' %}?questions=2&type=kanji_to_trans" class="btn btn-primary">2 вопроса (Kana → Kanji)</a>
+        <a href="{% url 'word_test_start' %}?questions=3&type=kanji_to_trans" class="btn btn-primary">3 вопроса (Kana → Kanji)</a>
+        <a href="{% url 'word_test_start' %}?questions=5&type=kanji_to_trans" class="btn btn-primary">5 вопросов (Kana → Kanji)</a>
+    </div>
+    <p>Выберите количество вопросов: Trans to Kanji</p>
+    <div class="d-flex justify-content-center gap-2">
+        <!-- Trans to Kanji -->
+        <a href="{% url 'word_test_start' %}?questions=2&type=trans_to_kanji" class="btn btn-primary">2 вопроса (Kana → Kanji)</a>
+        <a href="{% url 'word_test_start' %}?questions=3&type=trans_to_kanji" class="btn btn-primary">3 вопроса (Kana → Kanji)</a>
+        <a href="{% url 'word_test_start' %}?questions=5&type=trans_to_kanji" class="btn btn-primary">5 вопросов (Kana → Kanji)</a>
     </div>
 </div>
 {% endblock %}

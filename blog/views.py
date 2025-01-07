@@ -276,7 +276,7 @@ def word_test_start(request):
     questions = []
     if test_type == 'kanji_to_kana':
         # Логика текущего теста (kanji -> kana)
-        all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="").values_list('kana', flat=True))[:question_count * 4]
+        all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True))[:question_count * 4]
         words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
         
         for word in words:
@@ -302,6 +302,38 @@ def word_test_start(request):
             random.shuffle(options)
             questions.append({
                 'question_word': word.kana,
+                'options': options,
+                'correct': correct_kanji,
+            })
+    
+    elif test_type == 'kanji_to_trans':
+        # Логика нового теста (kanji_to_trans)
+        all_trans = list(Word.objects.exclude(kana__isnull=True).exclude(translate_ru="''").values_list('translate_ru', flat=True))[:question_count * 4]
+        words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+        
+        for word in words:
+            correct_trans = word.translate_ru
+            fake_trans = random.sample([translate_ru for translate_ru in all_trans if translate_ru != correct_trans], 3)
+            options = fake_trans + [correct_trans]
+            random.shuffle(options)
+            questions.append({
+                'question_word': word.kanji,
+                'options': options,
+                'correct': correct_trans,
+            })
+
+    elif test_type == 'trans_to_kanji':
+        # Логика нового теста (trans_to_kanji)
+        all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True))[:question_count * 4]
+        words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+        
+        for word in words:
+            correct_kanji = word.kanji
+            fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
+            options = fake_kanji + [correct_kanji]
+            random.shuffle(options)
+            questions.append({
+                'question_word': word.translate_ru,
                 'options': options,
                 'correct': correct_kanji,
             })
