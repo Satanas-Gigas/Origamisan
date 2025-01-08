@@ -10,7 +10,7 @@ class PostForm(forms.ModelForm):
 class GrammarForm(forms.ModelForm):
     class Meta:
         model = Grammar
-        fields = ['level', 'author', 'title_ru', 'title_en', 'explain_ru', 'explain_en', 'example_jp_kanji', 'example_jp_kana', 'example_ru', 'example_en']
+        fields = ['level', 'author', 'title', 'formula_ru', 'formula_en', 'explain_ru', 'explain_en', 'example_jp_kanji', 'example_jp_kana', 'example_ru', 'example_en']
 
     author = forms.ModelChoiceField(queryset=User.objects.all(), empty_label="Выберите автора", widget=forms.Select(attrs={'class': 'form-select'}))
 

@@ -272,6 +272,8 @@ def word_test(request):
 def word_test_start(request):
     question_count = int(request.GET.get('questions', 10))
     test_type = request.GET.get('type', 'kanji_to_kana')  # Тип теста: kanji -> kana или kana -> kanji
+    request.session['test_type']  = test_type
+    request.session['question_count'] = question_count
     
     questions = []
     if test_type == 'kanji_to_kana':
@@ -380,27 +382,39 @@ def word_test_next(request):
 
 
 def word_test_complete(request):
-    # Загружаем ответы пользователя
+    # Получаем ответы пользователя из сессии
     user_answers = request.session.get('user_answers', [])
-    
-    # Подсчитываем количество правильных и неправильных ответов
-    correct_count = user_answers.count(True)
-    incorrect_count = user_answers.count(False)
+
+    # Проверяем, что ответы корректно загружены
+    if not isinstance(user_answers, list):
+        user_answers = []
+
+    # Подсчитываем статистику
+    correct_count = sum(1 for answer in user_answers if answer is True)
+    incorrect_count = sum(1 for answer in user_answers if answer is False)
     total_count = len(user_answers)
-    
-    # Дополнительная статистика
+
+    # Вычисляем точность
     accuracy_percentage = (correct_count / total_count * 100) if total_count > 0 else 0
 
-    # Очищаем сессии после завершения теста
-    request.session['user_answers'] = []
-    request.session['questions'] = []
-    request.session['current_question_index'] = 0
+    # Получаем параметры теста из сессии
+    test_type = request.session.get('test_type')
+    question_count = request.session.get('question_count')
 
+    # Очищаем данные сессии после завершения теста
+    request.session.pop('user_answers', None)
+    request.session.pop('questions', None)
+    request.session.pop('current_question_index', None)
+
+    # Формируем контекст для шаблона
     context = {
         'correct_count': correct_count,
         'incorrect_count': incorrect_count,
-        'accuracy_percentage': accuracy_percentage,
+        'accuracy_percentage': round(accuracy_percentage, 2),  # Ограничиваем точность до двух знаков
         'total_count': total_count,
+        'test_type': test_type,
+        'question_count': question_count,
     }
-    
+
+    # Рендерим шаблон
     return render(request, 'blog/word_test_complete.html', context)

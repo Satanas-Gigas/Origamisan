@@ -17,10 +17,11 @@ class Post(models.Model):
         return self.title
     
 class Grammar(models.Model):
-    level = models.IntegerField(default=5)
+    level = models.CharField(max_length=1,default="5")
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title_ru = models.CharField(max_length=200)
-    title_en = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, blank=True, null=True)
+    formula_ru = models.CharField(max_length=200, blank=True, null=True)
+    formula_en = models.CharField(max_length=200, blank=True, null=True)
     explain_ru = models.TextField (blank=True, null=True)
     explain_en = models.TextField (blank=True, null=True)
     example_jp_kanji = models.TextField (blank=True, null=True)  # Пример на японском
@@ -30,22 +31,12 @@ class Grammar(models.Model):
 
 
     def __str__(self):
-        return f'{self.example_ru} ({self.level})'
+            return f'{self.title} ({self.level})'
     
     class Meta:
     # Дополнительно можно указать порядок сортировки или уникальные ограничения
-        ordering = ['level', 'title_ru', 'title_en']
+        ordering = ['title', 'level']
 
-class Example(models.Model):
-    grammar = models.ForeignKey(Grammar, related_name='examples', on_delete=models.CASCADE)
-    add_example_jp_kanji = models.TextField (blank=True, null=True) # Пример на японском
-    add_example_jp_kana = models.TextField (blank=True, null=True)  # Пример на русском
-    add_example_ru = models.TextField (blank=True, null=True) # Пример на английском
-    add_example_en = models.TextField (blank=True, null=True)  # Пример на английском
-
-    def __str__(self):
-        return f"Example for {self.grammar.title_ru} ({self.grammar.level})"
-    
 class Word(models.Model):
     level = models.CharField(max_length=1,default="5")
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -60,6 +51,18 @@ class Word(models.Model):
     class Meta:
     # Дополнительно можно указать порядок сортировки или уникальные ограничения
         ordering = ['level', 'kanji', 'kana']
+
+
+class Example(models.Model):
+    grammar = models.ForeignKey(Grammar, related_name='examples', on_delete=models.CASCADE)
+    add_example_jp_kanji = models.TextField (blank=True, null=True) # Пример на японском
+    add_example_jp_kana = models.TextField (blank=True, null=True)  # Пример на русском
+    add_example_ru = models.TextField (blank=True, null=True) # Пример на английском
+    add_example_en = models.TextField (blank=True, null=True)  # Пример на английском
+
+    def __str__(self):
+        return f"Example for {self.grammar.title} ({self.grammar.level})"
+    
 
 class Word_kana_variant(models.Model):
     word = models.ForeignKey(Word, related_name='fake_kana', on_delete=models.CASCADE)

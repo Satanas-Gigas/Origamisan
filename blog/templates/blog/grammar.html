@@ -16,8 +16,11 @@
                   
                     <!-- <a class="btn btn-default" ><span class="glyphicon glyphicon-pencil"></span></a> -->
                     <a class="btn btn-default" href="{% url 'grammar_edit' pk=grammar.pk %}"><span class="glyphicon glyphicon-pencil">EDIT!!!</span></a>                         
-                    <h5 class="card-title mb-0">{{ grammar.title_ru }}</h5>
+                    <h5 class="card-title mb-0">{{ grammar.title }}</h5>
                     <span class="badge p-2 fs-4">{{ forloop.counter }}</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><strong>{{ grammar.formula_ru }}</strong></p>
                 </div>
                 <div class="card-body">
                     <p class="card-text"><strong>{{ grammar.explain_ru }}</strong></p>

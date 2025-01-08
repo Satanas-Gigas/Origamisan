@@ -12,7 +12,7 @@
     </div>
 
     <div class="text-center mt-3">
-        <a href="{% url 'word_test_start' %}" class="btn btn-primary">Начать заново</a>
+        <a href="{% url 'word_test_start' %}?type={{ test_type }}&questions={{ question_count }}" class="btn btn-primary">Начать заново</a>
     </div>
 </div>
 {% endblock %}
