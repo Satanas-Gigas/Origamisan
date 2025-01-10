@@ -16,18 +16,16 @@
                   
                     <!-- <a class="btn btn-default" ><span class="glyphicon glyphicon-pencil"></span></a> -->
                     <a class="btn btn-default toggle-visibility" href="{% url 'grammar_edit' pk=grammar.pk %}"><span class="glyphicon glyphicon-pencil">EDIT!!!</span></a>                         
-                    <h5 class="card-title mb-0">{{ grammar.title }}</h5>
+                    <h5 class="card-title mb-0"><strong>{{ grammar.title }}</strong></h5>
                     <span class="badge p-2 fs-4">{{ forloop.counter }}</span>
                 </div>
-                <div class="card-body">
-                    <p class="card-text"><strong>{{ grammar.formula_ru }}</strong></p>
-                </div>
-                <div class="card-body">
-                    <p class="card-text"><strong>{{ grammar.explain_ru }}</strong></p>
-                </div>
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item text-center　text-start">{{ grammar.formula_ru }}</li>
+                    <li class="list-group-item text-center"><p class="card-text"><strong>{{ grammar.explain_ru }}</strong></p>  </li>
 
                 <!-- Основные примеры -->
-                <ul class="list-group list-group-flush">
+
                     <li class="list-group-item text-center"> {{ grammar.example_jp_kanji }}</li>
                     <li class="list-group-item text-center"> {{ grammar.example_jp_kana }}</li>
                     <li class="list-group-item text-center"> {{ grammar.example_ru }}</li>
@@ -37,7 +35,8 @@
                     <div class="accordion" id="accordionExample{{ forloop.counter }}">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo{{ forloop.counter }}">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ forloop.counter }}" aria-expanded="false" aria-controls="collapseTwo{{ forloop.counter }}">                                    Ещё примеры
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{ forloop.counter }}" aria-expanded="false" aria-controls="collapseTwo{{ forloop.counter }}">
+                                    Ещё примеры
                                 </button>
                             </h2>
                             <div id="collapseTwo{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="headingTwo{{ forloop.counter }}" data-bs-parent="#accordionExample{{ forloop.counter }}">

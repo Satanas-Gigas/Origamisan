@@ -1,40 +1,124 @@
-@ -1,37 +1,38 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
 
-<div class="container py-3">
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal text-body-emphasis">Слова N5</h1>
-      <p class="fs-5 text-body-secondary">Быстрый набор слов на уровень N5</p>
-    </div>
+<style>
+  .footer {
+    margin-top: auto;
+    text-align: right;
+    font-size: 1rem;
+    color: #6c757d;
+  }
 
+  .container {
+    max-width: 1200px;
+  }
+
+  .pricing-header {
+    margin-bottom: 40px;
+  }
+
+  .card {
+  border: 2px solid #007bff; /* Добавляет контур (измените цвет по вашему вкусу) */
+  border-radius: 15px; /* Сохраняем скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Тень */
+  transition: transform 0.2s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-header {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .list-group-item {
+    background-color: #f8f9fa;
+    border: none;
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+  .badge {
+    font-size: 1rem;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  hr.my-1 {
+    border: none;
+    border-top: 1px solid #000000; /* Цвет и толщина линии */
+    margin: 5px 0; /* Отступы сверху и снизу */
+  }
+</style>
+
+<div class="container py-3">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal text-body-emphasis">Слова N5</h1>
+    <p class="fs-5 text-body-secondary">Быстрый набор слов на уровень N5</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for word in words %}
-        <div class="row mb-4">
-            <div class="col-lg-3 mx-auto">
-                <div class="card shadow-sm">
-                    <a class="btn btn-default toggle-visibility" href="{% url 'word_edit' pk=word.pk %}">EDIT_W!</a>                     
-                    <a class="btn btn-default toggle-visibility" href="{% url 'word_variant_create' pk=word.pk %}">VAR_ADD!</a> 
-                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                    
-                        {% if word.kanji %}
-                            <h4 class="card-title mb-0 mx-auto">{{ word.kanji|default:"" }}</h4>
-                        {% else %}
-                            <h4 class="card-title mb-0 mx-auto">{{ word.kana }}</h4>
-                        {% endif %}
-                        <span class="badge p-2 fs-4">{{ forloop.counter }}</span>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        {% if word.kanji %}
-                            <li class="list-group-item text-center w-100">{{ word.kana }}</li>
-                        {% endif %}
-                        <li class="list-group-item text-center w-100">{{ word.translate_ru|default:"" }}</li>
-                        <!-- <li class="list-group-item text-center">{{ word.translate_en }}</li> -->
-                    </ul>                
-                </div>
+    <div class="col">
+        <div class="card">
+            {% if not word.kanji or word.kanji == "''" %}
+            <div class="card-header">
+                {{ word.kana }}
             </div>
+            {% else %}
+            <div class="card-header">
+                {{ word.kanji }}
+            </div>
+            {% endif %}
+            <ul class="list-group list-group-flush">
+                {% if word.kanji %}
+                    <li class="list-group-item"><strong>Кана: </strong>{{ word.kana }}</li>
+                {% endif %}
+                <hr class="my-1"> <!-- Разделитель -->
+                <li class="list-group-item"><strong>Ромаджи: </strong>{{ word.romaji }}</li>
+                <hr class="my-1"> <!-- Разделитель -->
+                <li class="list-group-item"><strong>Перевод: </strong>{{ word.translate_ru }}</li>
+            </ul>
+        <div class="card-body text-center toggle-visibility">
+          <a class="btn" href="{% url 'word_edit' pk=word.pk %}">Редактировать</a>
+          <a class="btn" href="{% url 'word_variant_create' pk=word.pk %}">Добавить вариант</a>
         </div>
+        <div class="card-footer text-muted text-end">
+          #{{ forloop.counter }}
+        </div>
+      </div>
+    </div>
     {% endfor %}
+  </div>
 </div>
 
 {% endblock %}

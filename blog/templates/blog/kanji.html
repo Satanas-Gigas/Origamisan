@@ -2,40 +2,178 @@
 {% load static %}
 {% block content %}
 
-<div class="container py-3">
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal text-body-emphasis">Канджи N5</h1>
-      <p class="fs-5 text-body-secondary">Быстрые канджи на уровень N5</p>
+<style>
+  .kanji-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fdfdfd;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 15px;
+  }
+
+  .kanji-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+  }
+
+
+  .footer {
+    margin-top: auto; /* Это прижимает {{ forloop.counter }} вниз карточки */
+    text-align: right;
+    font-size: 1rem;
+    color: #6c757d;
+  }
+
+
+  .hidden {
+    display: none;
+  }
+
+  .correct-answer {
+    color: green;
+    font-weight: bold;
+    background-color: #e8f5e9;
+    border: 1px solid green;
+    padding: 2px 5px;
+    border-radius: 5px;
+  }
+
+  .kanji-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+  }
+
+  .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border: 1px solid #dcdcdc; /* Добавляем видимый контур */
+  border-radius: 15px; /* Оставляем закругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fdfdfd;
+}
+
+  .card-body {
+    background-color: #fdfdfd;
+    border-radius: 15px;
+    padding: 15px;
+  }
+
+
+
+  .btn-edit {
+    display: inline-block;
+    color: #fff;
+    background-color: #007bff;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .btn-edit:hover {
+    background-color: #0056b3;
+  }
+
+  .kanji-container {
+    padding: 10px;
+  }
+
+  .header-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  .sub-header-text {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+
+  .kanji-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .list-group-item {
+      font-size: 1rem;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+      <h1 class="header-text">Канджи N5</h1>
+      <p class="sub-header-text">Узнайте и запомните канджи уровня N5 с помощью этих карточек</p>
     </div>
-    {% for kanji in kanjis %}
-        <div class="container">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="card mb-3 col-lg-4">
-                    <div class="row g-0">
-                        <div class="col-md-4 d-inline p-2 text-bg-primary" >
-                            <a class="btn btn-default" href="{% url 'kanji_edit' pk=kanji.pk %}">                     
-                                <span class="glyphicon glyphicon-pencil toggle-visibility">EDIT!!!</span>
-                            </a>   
-                            
-                            <span class="kanji-text">{{ kanji.kanji}}
-                            </span>
-                        </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <ul class="list-group list-group-flush">
-                                        <p class="text-end">{{ forloop.counter }}</p>
-                                        <li class="list-group-item text-center w-100">{{ kanji.onyomi }}</li>
-                                        <li class="list-group-item text-center w-100">{{ kanji.kunyomi }}</li>
-                                        <li class="list-group-item text-center w-100">{{ kanji.meaning_ru }}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    
+    <div class="kanji-grid">
+      {% for kanji in kanjis %}
+
+      <div class="card">
+        <div class="card-body">
+          <div class="text-center">
+            <div class="toggle-visibility">
+              <a class="btn-edit" href="{% url 'kanji_edit' pk=kanji.pk %}">Редактировать</a>
             </div>
+            <span class="kanji-text">{{ kanji.kanji }}</span>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Он:</strong> {{ kanji.onyomi }}
+            </li>
+            <li class="list-group-item">
+              <strong>Кун:</strong> {{ kanji.kunyomi }}
+            </li>
+            <li class="list-group-item">
+              <strong>Значение:</strong> {{ kanji.meaning_ru }}
+            </li>
+          </ul>
+          <p class="footer">{{ forloop.counter }}</p>
         </div>
-    {% endfor %}
-</div>
+      </div>
+      
+
+      {% endfor %}
+    </div>
+  </div>
+  
 
 {% endblock %}
