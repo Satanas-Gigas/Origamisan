@@ -343,8 +343,10 @@ def word_test_start(request):
     request.session['questions'] = questions
     request.session['current_question_index'] = 0
     request.session['user_answers'] = []
+    
+    total = question_count
 
-    context = {'question': questions[0], 'total': len(questions), 'question_count': question_count, 'test_type': test_type}
+    context = {'question': questions[0], 'total': total, 'question_count': question_count, 'test_type': test_type}
     return render(request, 'blog/word_test_start.html', context)
 
 

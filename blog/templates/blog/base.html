@@ -23,9 +23,16 @@
         border: 1px solid green; /* Зеленая рамка */
         padding: 2px 5px;
         border-radius: 5px;
-                /* Класс для скрытия элементов */
-
-      }
+        }
+        .kanji-text {
+          display: block; /* Растягиваем текст */
+          width: 100%; /* Занимаем всю доступную ширину */
+          text-align: center; /* Центрируем текст */
+          font-size: 2rem; /* Увеличиваем размер текста */
+          font-weight: bold; /* Делаем текст жирным */
+          margin: 0; /* Отступы сверху и снизу */
+          padding: 0; /* Отступы сверху и снизу */
+        }
       </style>
       <script>
           document.addEventListener("DOMContentLoaded", function () {
@@ -44,8 +51,7 @@
             // Обработчик клика по кнопке
             toggleButton.addEventListener("click", function () {
                 const currentState = localStorage.getItem("toggleVisibility") === "true";
-                const newState = !currentState;
-
+                const newState = !currentState;                
                 // Сохраняем новое состояние в localStorage
                 localStorage.setItem("toggleVisibility", newState);
 
