@@ -7,10 +7,17 @@
         {% csrf_token %}
         <div class="card my-3">
             <div class="card-body">
-                <h5 class="card-title text-center"><span>current_index: </span>{{ current_index }}</h5>
-                <h5 class="card-title text-center"><span>questions_total: </span>{{ questions_total }}</h5>
-                <h5 class="card-title text-center"><span>len_qs: </span>{{ len_qs }}</h5>
-                <h5 class="card-title text-center"><span>total: </span>{{ total }}</h5>
+                <h5 class="card-title text-center"><span>Вопрос №: </span>
+                    
+                    <!-- {{ word.kanji|default:"" }} -->
+                    {% if current_index %}
+                    {{ current_index +=1 }}
+                    {% else %}
+                    {{ current_index|default:"1"}}
+                    {% endif %}
+
+                </h5>
+                <h5 class="card-title text-center"><span>Всего вопросов: </span>{{ len_qs }}</h5>
                 <h5 class="card-title text-center">{{ question.question_word }}</h5>
                 <div class="d-flex flex-column gap-2">
                     {% for option in question.options %}

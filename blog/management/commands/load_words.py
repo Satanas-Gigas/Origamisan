@@ -1,14 +1,14 @@
 import os
 from django.core.management.base import BaseCommand
-from blog.models import Word
+from blog.models import Kanji
 from django.contrib.auth.models import User
 
 
 class Command(BaseCommand):
-    help = 'Load words from words_with_ru.txt into the Word model'
+    help = 'Load Kanji from kanji_n5.txt into the Word model'
 
     def handle(self, *args, **kwargs):
-        file_path = 'words_with_ru.txt'  # Укажите путь к файлу
+        file_path = 'kanji_n5.txt'  # Укажите путь к файлу
 
         if not os.path.exists(file_path):
             self.stdout.write(self.style.ERROR(f"Файл {file_path} не найден."))
@@ -35,17 +35,16 @@ class Command(BaseCommand):
                 fields = line.strip().split('\t')
 
                 # Дополняем недостающие поля пустыми строками
-                while len(fields) < 5:
+                while len(fields) < 4:
                     fields.append('')
 
-                kanji, kana, romaji, translate_en, translate_ru = fields
+                kanji, onyomi, kunyomi, meaning_en = fields
 
-                Word.objects.create(
+                Kanji.objects.create(
                     kanji=kanji or None,  # Если kanji отсутствует, сохраняем как None
-                    kana=kana or None,
-                    romaji=romaji or None,
-                    translate_en=translate_en or None,
-                    translate_ru=translate_ru or None,
+                    onyomi=onyomi or None,
+                    kunyomi=kunyomi or None,
+                    meaning_en=meaning_en or None,
                     level="5",  # Уровень по умолчанию
                     author=author  # Указываем автора
                 )

@@ -14,9 +14,13 @@
                     <div class="row g-0">
                         <div class="col-md-4">
                             <a class="btn btn-default" href="{% url 'kanji_edit' pk=kanji.pk %}">                     
-                                <span class="glyphicon glyphicon-pencil">EDIT!!!</span>
+                                <span class="glyphicon glyphicon-pencil toggle-visibility">EDIT!!!</span>
                             </a>   
+                            <span class="glyphicon glyphicon-pencil">
+                                {{ forloop.counter }}
+                            </span>
                             {{ kanji.kanji}}
+
                         </div>
                             <div class="col-md-8">
                                 <div class="card-body">

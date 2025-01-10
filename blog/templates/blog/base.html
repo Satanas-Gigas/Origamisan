@@ -13,15 +13,48 @@
     <link href="{% static 'bootstrap\example_css\carousel.css' %}" rel="stylesheet">
   
     <style>
+      .hidden {
+        display: none;
+        }
       .correct-answer {
-          color: green;
-          font-weight: bold;
-          background-color: #e8f5e9; /* Светло-зеленый фон */
-          border: 1px solid green; /* Зеленая рамка */
-          padding: 2px 5px;
-          border-radius: 5px;
+        color: green;
+        font-weight: bold;
+        background-color: #e8f5e9; /* Светло-зеленый фон */
+        border: 1px solid green; /* Зеленая рамка */
+        padding: 2px 5px;
+        border-radius: 5px;
+                /* Класс для скрытия элементов */
+
       }
       </style>
+      <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById("toggle-visibility-btn");
+            const toggleElements = document.querySelectorAll(".toggle-visibility");
+
+            // Проверяем состояние из localStorage
+            const isHidden = localStorage.getItem("toggleVisibility") === "true";
+
+            if (isHidden) {
+                toggleElements.forEach(element => {
+                    element.classList.add("hidden");
+                });
+            }
+
+            // Обработчик клика по кнопке
+            toggleButton.addEventListener("click", function () {
+                const currentState = localStorage.getItem("toggleVisibility") === "true";
+                const newState = !currentState;
+
+                // Сохраняем новое состояние в localStorage
+                localStorage.setItem("toggleVisibility", newState);
+
+                toggleElements.forEach(element => {
+                    element.classList.toggle("hidden", newState);
+                });
+            });
+        });
+    </script>
   </head>
   <body>
     <header data-bs-theme="dark">
@@ -37,25 +70,28 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'grammar' %}">Грамм</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'grammar_create' %}">Доб_ грамм</a>
+                <a class="nav-link toggle-visibility" href="{% url 'grammar_create' %}">Доб_ грамм</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'word' %}">Слова</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'word_create' %}">Доб_ Слова</a>
+                <a class="nav-link toggle-visibility" href="{% url 'word_create' %}">Доб_ Слова</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'kanji' %}">Канджи</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'kanji_create' %}">Доб_ Канджи</a>
+                <a class="nav-link toggle-visibility" href="{% url 'kanji_create' %}">Доб_ Канджи</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'word_detail' %}">Посм_ всё</a>
+                <a class="nav-link toggle-visibility" href="{% url 'word_detail' %}">Посм_ всё</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'word_test' %}">Тест Кандзи - Кана</a>
+              </li>
+              <li class="nav-item">
+                <button id="toggle-visibility-btn">Скрыть/открыть</button>
               </li>
             </ul>
             <form class="d-flex" role="search">

@@ -3,7 +3,12 @@ from .models import Post, Grammar, Example, Word, Kanji, Word_kana_variant, Word
 
 admin.site.register(Post)
 admin.site.register(Example)
-admin.site.register(Kanji)
+
+# Регистрация модели Word
+@admin.register(Kanji)
+class WordAdmin(admin.ModelAdmin):
+    list_display = ('kanji', 'onyomi', 'kunyomi', 'meaning_ru', 'meaning_en', 'level', 'author')
+
 
 # Регистрация модели Word
 @admin.register(Word)

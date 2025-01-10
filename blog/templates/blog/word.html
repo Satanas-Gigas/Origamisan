@@ -13,8 +13,8 @@
         <div class="row mb-4">
             <div class="col-lg-3 mx-auto">
                 <div class="card shadow-sm">
-                    <a class="btn btn-default" href="{% url 'word_edit' pk=word.pk %}">EDIT_W!</a>                     
-                    <a class="btn btn-default" href="{% url 'word_variant_create' pk=word.pk %}">VAR_ADD!</a> 
+                    <a class="btn btn-default toggle-visibility" href="{% url 'word_edit' pk=word.pk %}">EDIT_W!</a>                     
+                    <a class="btn btn-default toggle-visibility" href="{% url 'word_variant_create' pk=word.pk %}">VAR_ADD!</a> 
                     <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                     
                         {% if word.kanji %}

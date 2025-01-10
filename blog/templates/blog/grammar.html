@@ -15,7 +15,7 @@
                 <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
                   
                     <!-- <a class="btn btn-default" ><span class="glyphicon glyphicon-pencil"></span></a> -->
-                    <a class="btn btn-default" href="{% url 'grammar_edit' pk=grammar.pk %}"><span class="glyphicon glyphicon-pencil">EDIT!!!</span></a>                         
+                    <a class="btn btn-default toggle-visibility" href="{% url 'grammar_edit' pk=grammar.pk %}"><span class="glyphicon glyphicon-pencil">EDIT!!!</span></a>                         
                     <h5 class="card-title mb-0">{{ grammar.title }}</h5>
                     <span class="badge p-2 fs-4">{{ forloop.counter }}</span>
                 </div>
