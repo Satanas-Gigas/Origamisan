@@ -8,30 +8,28 @@
       <p class="fs-5 text-body-secondary">Быстрая грамматика на уровень N5</p>
     </div>
 
-    {% for grammar in grammars %}
-    <div class="row mb-4">
-        <div class="col-lg-8 mx-auto">
+    <div class="row row-cols-1 row-cols-md-2 g-4"> <!-- Добавлены колонки для 2 столбцов -->
+        {% for grammar in grammars %}
+        <div class="col">
             <div class="card shadow-sm">
                 <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                  
-                    <!-- <a class="btn btn-default" ><span class="glyphicon glyphicon-pencil"></span></a> -->
-                    <a class="btn btn-default toggle-visibility" href="{% url 'grammar_edit' pk=grammar.pk %}"><span class="glyphicon glyphicon-pencil">EDIT!!!</span></a>                         
+                    <a class="btn btn-default toggle-visibility" href="{% url 'grammar_edit' pk=grammar.pk %}">
+                        <span class="glyphicon glyphicon-pencil">EDIT!!!</span>
+                    </a>                         
                     <h5 class="card-title mb-0"><strong>{{ grammar.title }}</strong></h5>
                     <span class="badge p-2 fs-4">{{ forloop.counter }}</span>
                 </div>
                 <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-start">{{ grammar.formula_ru }}</li>
+                    <li class="list-group-item text-center"><p class="card-text"><strong>{{ grammar.explain_ru }}</strong></p></li>
 
-                    <li class="list-group-item text-center　text-start">{{ grammar.formula_ru }}</li>
-                    <li class="list-group-item text-center"><p class="card-text"><strong>{{ grammar.explain_ru }}</strong></p>  </li>
-
-                <!-- Основные примеры -->
-
-                    <li class="list-group-item text-center"> {{ grammar.example_jp_kanji }}</li>
-                    <li class="list-group-item text-center"> {{ grammar.example_jp_kana }}</li>
-                    <li class="list-group-item text-center"> {{ grammar.example_ru }}</li>
+                    <!-- Основные примеры -->
+                    <li class="list-group-item text-center">{{ grammar.example_jp_kanji }}</li>
+                    <li class="list-group-item text-center">{{ grammar.example_jp_kana }}</li>
+                    <li class="list-group-item text-center">{{ grammar.example_ru }}</li>
                 </ul>
                 <!-- Если есть дополнительные примеры, показываем аккордеон -->
-                {% if grammar.examples.all  %}
+                {% if grammar.examples.all %}
                     <div class="accordion" id="accordionExample{{ forloop.counter }}">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo{{ forloop.counter }}">
@@ -40,7 +38,7 @@
                                 </button>
                             </h2>
                             <div id="collapseTwo{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="headingTwo{{ forloop.counter }}" data-bs-parent="#accordionExample{{ forloop.counter }}">
-                                {% for example in grammar.examples.all  %}
+                                {% for example in grammar.examples.all %}
                                     <div class="accordion-body">
                                         <ul class="list-group">
                                             <li class="list-group-item">{{ example.add_example_jp_kanji }}</li>
@@ -55,7 +53,7 @@
                 {% endif %}
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}
