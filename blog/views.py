@@ -216,9 +216,6 @@ def word_detail_view(request):
     }
     return render(request, 'blog/word_detail.html', context)
 
-
-
-
 def word_edit(request, pk):
     word = get_object_or_404(Word, pk=pk)
     if request.method == "POST":
@@ -348,8 +345,6 @@ def word_test_start(request):
 
     context = {'question': questions[0], 'total': total, 'question_count': question_count, 'test_type': test_type}
     return render(request, 'blog/word_test_start.html', context)
-
-
 
 def word_test_next(request):
     # Получаем текущий индекс вопроса
