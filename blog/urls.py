@@ -31,6 +31,7 @@ urlpatterns = [
     path('word_test_start/', views.word_test_start, name='word_test_start'),
     path('word_test_next/', views.word_test_next, name='word_test_next'),
     path('word_test_complete/', views.word_test_complete, name='word_test_complete'),
+    path('word_test_premium/', views.word_test_premium, name='word_test_premium'),
 ]
 
 if settings.DEBUG:

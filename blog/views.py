@@ -266,13 +266,30 @@ def word_edit(request, pk):
 def word_test(request):
     return render(request, 'blog/word_test.html')
 
+def word_test_premium(request):
+    return render(request, 'blog/word_test_premium.html')
+
 def word_test_start(request):
-    question_count = int(request.GET.get('questions', 10))
-    test_type = request.GET.get('type', 'kanji_to_kana')  # Тип теста: kanji -> kana или kana -> kanji
-    request.session['test_type']  = test_type
-    request.session['question_count'] = question_count
+
+    rollback = request.POST.get('rollback')
+    questions_p = request.POST.get('questions_p')    
+
+    if rollback and questions_p:
+
+        request.session['test_type']  = 'kanji_to_kana'
+        test_type = request.session['test_type']  # Присваиваем test_type
+        request.session['question_count'] = int(questions_p)
+        request.session['rollback'] = rollback
+        question_count = int(questions_p)
+
+    else:
+        question_count = int(request.GET.get('questions', 10))
+        test_type = request.GET.get('type', 'kanji_to_kana')  # Тип теста: kanji -> kana или kana -> kanji
+        request.session['test_type']  = test_type
+        request.session['question_count'] = question_count    
     
     questions = []
+
     if test_type == 'kanji_to_kana':
         # Логика текущего теста (kanji -> kana)
         all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True))[:question_count * 4]
@@ -347,35 +364,32 @@ def word_test_start(request):
     return render(request, 'blog/word_test_start.html', context)
 
 def word_test_next(request):
-    # Получаем текущий индекс вопроса
-    current_index = request.session.get('current_question_index')
-    
-    # Загружаем все вопросы из сессии
+    current_index = request.session.get('current_question_index', 0)
     questions = request.session.get('questions', [])
-    
-    # Получаем ответ пользователя
     user_answer = request.POST.get('user_answer')
     correct_answer = questions[current_index]['correct']
-    
-    # Сохраняем ответ пользователя (правильный/неправильный)
     is_correct = user_answer == correct_answer
     user_answers = request.session.get('user_answers', [])
     user_answers.append(is_correct)
     request.session['user_answers'] = user_answers
+    rollback_count = int(request.session['rollback'])
 
-    # Проверяем, есть ли следующий вопрос
-    if current_index < len(questions) - 1:
-        # Увеличиваем индекс
-        request.session['current_question_index'] = current_index + 1
+    if is_correct:
+        current_index += 1
+    elif rollback_count:
+        current_index = max(0, current_index - rollback_count)
+
+    if current_index < len(questions):
+        request.session['current_question_index'] = current_index
         context = {
-            'question': questions[current_index + 1],
-            "current_index": current_index + 1,
-            "len_qs": len(questions),
-        }  # Передаем следующий вопрос
+            'question': questions[current_index],
+            'current_index': current_index,
+            'len_qs': len(questions),
+        }
         return render(request, 'blog/word_test_start.html', context)
     else:
-        # Если вопросы закончились, перенаправляем на страницу завершения
         return redirect('word_test_complete')
+
 
 
 def word_test_complete(request):
