@@ -231,122 +231,123 @@ def word_test(request):
 def word_test_premium(request):
     return render(request, 'blog/word_test_premium.html')
 
-def word_test_start(request):
+def generate_kanji_to_kana_questions(question_count):
+    questions = []
+    all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True).order_by('?'))[:question_count * 4]
+    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+    for word in words:
+        correct_kana = word.kana
+        fake_kana = random.sample([kana for kana in all_kana if kana != correct_kana], 3)
+        options = fake_kana + [correct_kana]
+        random.shuffle(options)
+        questions.append({
+            'question_word': word.kanji,
+            'options': options,
+            'correct': correct_kana,
+        })
+    return questions
+
+def generate_kana_to_kanji_questions(question_count):
+    questions = []
+    all_kanji = list(Word.objects.exclude(kana__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:question_count * 4]
+    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+    for word in words:
+        correct_kanji = word.kanji
+        fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
+        options = fake_kanji + [correct_kanji]
+        random.shuffle(options)
+        questions.append({
+            'question_word': word.kana,
+            'options': options,
+            'correct': correct_kanji,
+        })
+    return questions
+
+def process_request_params(request):
     rollback = request.POST.get('rollback')
     hide = request.POST.get('hide')
-    request.session['hide'] = hide
-    test_type = request.GET.get('type', 'kanji_to_kana')  # Тип теста: kanji -> kana или kana -> kanji
-    request.session['test_type']  = test_type         
+    test_type = request.GET.get('type', 'kanji_to_kana')  
+    question_count = int(request.GET.get('questions', 10))
 
-    if (rollback or hide == "on"):        
-        question_count = 6
-        request.session['question_count'] = question_count
-        request.session['rollback'] = rollback
-    else:
-        question_count = int(request.GET.get('questions', 10))
-        request.session['question_count'] = question_count
+    # if rollback or hide == "on":
+        # question_count = 6
+
+    request.session.update({
+        'hide': hide,
+        'test_type': test_type,
+        'question_count': question_count,
+        'rollback': rollback,
+    })
+    return hide, test_type, question_count
+
+
+def handle_hide_mode(question_count):
+    correct_kanjis = []
+    attempts = 0
+    while len(correct_kanjis) < question_count:
+        correct_answer = Kanji.objects.order_by('?').first()
+        word = Word.objects.filter(
+            kanji__contains=correct_answer.kanji,
+            kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
+        ).order_by('?').first()
+
+        if word:
+            correct_kanjis.append({"kanji": word, "answer": correct_answer})
+        attempts += 1
+        if attempts > 10:
+            raise ValueError('Не удалось найти подходящие слова для теста')
+
     questions = []
-    if hide == 'on':
-        print("Hide mode is ON")
-        correct_kanjis = []
-        attempts = 0        
-        while len(correct_kanjis) < question_count:
-            correct_answer = Kanji.objects.order_by('?').first()
-            word = Word.objects.filter(
-                kanji__contains=correct_answer.kanji,
-                kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
-            ).order_by('?').first()
+    for correct_kanji in correct_kanjis:
+        correct_answer = correct_kanji["answer"].kanji
+        kanji = correct_kanji["kanji"].kanji
+        all_kanji = Kanji.objects.exclude(kanji=correct_answer).values_list('kanji', flat=True).order_by('?')[:3]
+        distractors = random.sample(list(all_kanji), 3)
+        options = distractors + [correct_answer]
+        random.shuffle(options)
+        hidden_index = kanji.find(correct_answer)
+        hidden_word = kanji[:hidden_index] + "＿" + kanji[hidden_index + 1:]
+        questions.append({
+            'question_word': hidden_word,
+            'options': options,
+            'correct': correct_answer,
+        })
+    return questions
 
-            if word:
-                correct_kanjis.append({"kanji":word, "answer": correct_answer})
-                attempts += 1
-            if attempts > 10:
-                return render(request, 'blog/word_test_start.html', {'error': 'Не удалось найти подходящие слова для теста'})
+def word_test_start(request):
+    try:
+        hide, test_type, question_count = process_request_params(request)
         
-        for correct_kanji in correct_kanjis:
-            if not correct_kanji:
-                return render(request, 'blog/word_test_start.html', {'error': 'Нет доступных иероглифов для теста'})
-            
-            correct_answer = correct_kanji["answer"].kanji
-            kanji = correct_kanji["kanji"].kanji
-            all_kanji = Kanji.objects.exclude(kanji=correct_answer).values_list('kanji', flat=True).order_by('?')[:3]
-            distractors = random.sample(list(all_kanji), 3)
-            options = distractors + [correct_answer]
-            random.shuffle(options)
-            hidden_index = kanji.find(correct_answer)
-            hidden_word = kanji[:hidden_index] + "＿" + kanji[hidden_index + 1:]
-            questions.append({
-                'question_word': hidden_word,
-                'options': options,
-                'correct': correct_answer,
-            })
+        if hide == 'on':
+            questions = handle_hide_mode(question_count)
+        elif test_type == 'kanji_to_kana':
+            questions = generate_kanji_to_kana_questions(question_count)
+        elif test_type == 'kana_to_kanji':
+            questions = generate_kana_to_kanji_questions(question_count)
+        elif test_type == 'kanji_to_trans':
+            questions = generate_kanji_to_trans_questions(question_count)
+        elif test_type == 'trans_to_kanji':
+            questions = generate_trans_to_kanji_questions(question_count)
+        else:
+            return render(request, 'blog/word_test_start.html', {'error': 'Неизвестный тип теста'})
 
-    elif test_type == 'kanji_to_kana':
-        all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True).order_by('?'))[:question_count * 4]
-        words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
-        for word in words:
-            correct_kana = word.kana
-            fake_kana = random.sample([kana for kana in all_kana if kana != correct_kana], 3)
-            options = fake_kana + [correct_kana]
-            random.shuffle(options)
-            questions.append({
-                'question_word': word.kanji,
-                'options': options,
-                'correct': correct_kana,
-            })
+        request.session.update({
+            'questions': questions,
+            'current_question_index': 0,
+            'user_answers': [],
+        })
 
-    elif test_type == 'kana_to_kanji':
-        all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:3]
-        words = Word.objects.filter(kana__isnull=False).exclude(kana="''").exclude(kanji="''").order_by('?')[:question_count]
-        for word in words:
-            correct_kanji = word.kanji
-            fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
-            options = fake_kanji + [correct_kanji]
-            random.shuffle(options)
-            questions.append({
-                'question_word': word.kana,
-                'options': options,
-                'correct': correct_kanji,
-            })
-    
-    elif test_type == 'kanji_to_trans':
-        # Логика нового теста (kanji_to_trans)
-        all_trans = list(Word.objects.exclude(kana__isnull=True).exclude(translate_ru="''").values_list('translate_ru', flat=True).order_by('?'))[:3]
-        words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
-        
-        for word in words:
-            correct_trans = word.translate_ru
-            fake_trans = random.sample([translate_ru for translate_ru in all_trans if translate_ru != correct_trans], 3)
-            options = fake_trans + [correct_trans]
-            random.shuffle(options)
-            questions.append({
-                'question_word': word.kanji,
-                'options': options,
-                'correct': correct_trans,
-            })
+        context = {
+            'question': questions[0],
+            'total': question_count,
+            'question_count': question_count,
+            'test_type': test_type,
+            'hide': hide,
+        }
+        return render(request, 'blog/word_test_start.html', context)
 
-    elif test_type == 'trans_to_kanji':
-        # Логика нового теста (trans_to_kanji)
-        all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:3]
-        words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
-        
-        for word in words:
-            correct_kanji = word.kanji
-            fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
-            options = fake_kanji + [correct_kanji]
-            random.shuffle(options)
-            questions.append({
-                'question_word': word.translate_ru,
-                'options': options,
-                'correct': correct_kanji,
-            })
-
-    request.session['questions'] = questions
-    request.session['current_question_index'] = 0
-    request.session['user_answers'] = []    
-    total = question_count
-    context = {'question': questions[0], 'total': total, 'question_count': question_count, 'test_type': test_type, 'hide': hide}
-    return render(request, 'blog/word_test_start.html', context)
+    except ValueError as e:
+        return render(request, 'blog/word_test_start.html', {'error': str(e)})
 
 def word_test_next(request):
     hide = request.session.get('hide')
@@ -358,13 +359,22 @@ def word_test_next(request):
     user_answers = request.session.get('user_answers', [])
     user_answers.append(is_correct)
     request.session['user_answers'] = user_answers
-    rollback_count = int(request.session['rollback'])
+    rollback_count = request.session['rollback']
+    if rollback_count != None:
+        rollback_count = int(rollback_count)
+    # rollback_count = int(request.session.get('rollback', 0)) - 1 if request.session.get('rollback') else 0
+
     request.session['hide'] = hide
 
-    if is_correct:
+    # if is_correct:
+    #     current_index += 1
+
+    if rollback_count == None:
         current_index += 1
-    elif rollback_count:
+
+    else:
         current_index = max(0, current_index - rollback_count)
+
 
     if current_index < len(questions):
         request.session['current_question_index'] = current_index
@@ -372,7 +382,8 @@ def word_test_next(request):
             'question': questions[current_index],
             'current_index': current_index,
             'len_qs': len(questions),
-            'hide': hide
+            'hide': hide,
+            'rollback_count': rollback_count,
         }
         return render(request, 'blog/word_test_start.html', context)
     else:
