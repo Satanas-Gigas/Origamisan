@@ -1,4 +1,3 @@
-
 from django.conf import settings
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect, get_object_or_404
@@ -9,7 +8,6 @@ from django.utils import timezone
 from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
 import random
-
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
@@ -54,7 +52,6 @@ def word(request):
     words = Word.objects.filter(level="5")  # Предзагрузка примеров
     return render(request, 'blog/word.html', {'words': words})
 
-
 def mainpanel(request):
     return render(request, 'blog/mainpanel.html')
 
@@ -64,18 +61,15 @@ def grammar_create(request):
         example_form = ExampleForm(request.POST)
 
         if grammar_form.is_valid():
-            # Сохраняем объект Grammar, но не коммитим
             grammar = grammar_form.save(commit=False)
             grammar.save()  # Теперь у grammar есть первичный ключ
 
             if example_form.is_valid():
-                # Передаем грамматику в форму примеров
                 example = example_form.save(commit=False)
                 example.grammar = grammar
                 example.save()
 
-            return redirect('grammar')  # Перенаправление после успешного сохранения
-
+            return redirect('grammar') 
     else:
         grammar_form = GrammarForm()
         example_form = ExampleForm()
@@ -86,64 +80,41 @@ def grammar_create(request):
     })
 
 def word_create(request):
-    """
-    View to handle creation of a new Word object.
-    """
     if request.method == 'POST':
         word_form = WordForm(request.POST)
         if word_form.is_valid():
-            # Сохраняем слово
             word_form.save()
-            # messages.success(request, 'Слово успешно сохранено!')
-            return redirect('word')  # Замените на ваш URL списка слов или другую нужную страницу
-        # else:
-        #     messages.error(request, 'Пожалуйста, исправьте ошибки в форме.')
+            return redirect('word')
     else:
         word_form = WordForm()
 
     context = {'form': word_form,}
     return render(request, 'blog/word_create.html', context)
 
-
 def kanji(request):
     kanjis = Kanji.objects.filter(level=5)  # Предзагрузка примеров
     return render(request, 'blog/kanji.html', {'kanjis': kanjis})
 
-
 def grammar_edit(request, pk):
-    # Получаем объект Grammar
-    grammar = get_object_or_404(Grammar, pk=pk)
-    
-    # Если форма отправлена (POST-запрос)
+    grammar = get_object_or_404(Grammar, pk=pk)    
     if request.method == 'POST':
-        # Создаем форму для Grammar
         grammar_form = GrammarForm(request.POST, instance=grammar)
-        
-        # Получаем формы для примеров
         example_forms = []
         for example in grammar.examples.all():
             example_form = ExampleForm(request.POST, instance=example)
             example_forms.append(example_form)
-
         if grammar_form.is_valid():
-            # Сохраняем объект Grammar, но не коммитим сразу
             grammar = grammar_form.save(commit=False)
-            grammar.save()  # Сохраняем грамматику
-
-            # Обрабатываем формы для примеров
+            grammar.save()
             for example_form in example_forms:
                 if example_form.is_valid():
                     example = example_form.save(commit=False)
-                    example.grammar = grammar  # Связываем пример с грамматикой
+                    example.grammar = grammar
                     example.save()
-
-            return redirect('grammar')  # Перенаправляем после успешного сохранения
-
+            return redirect('grammar')
     else:
-        # Если запрос не POST, создаем пустые формы
         grammar_form = GrammarForm(instance=grammar)
         example_forms = [ExampleForm(instance=example) for example in grammar.examples.all()]
-
     return render(request, 'blog/grammar_edit.html', {
         'grammar_form': grammar_form,
         'example_forms': example_forms,
@@ -157,10 +128,8 @@ def kanji_create(request):
             return redirect('kanji') 
     else:
         kanji_form = KanjiForm()
-
     context = {'form': kanji_form,}
     return render(request, 'blog/kanji_create.html', context)
-
 
 def kanji_edit(request, pk):
     kanji = get_object_or_404(Kanji, pk=pk)
@@ -173,8 +142,6 @@ def kanji_edit(request, pk):
     else:
         form = KanjiForm(instance=kanji)
     return render(request, 'blog/kanji_edit.html', {'form': form})
-
-
 
 def word_variant_create(request, pk):
     word = get_object_or_404(Word, pk=pk)
@@ -208,7 +175,6 @@ def word_variant_create(request, pk):
         'translate_form': translate_form,
     })
 
-
 def word_detail_view(request):
     words = Word.objects.prefetch_related('fake_kana', 'fake_kanji', 'fake_translate').all()
     context = {
@@ -230,8 +196,6 @@ def word_edit(request, pk):
 
 def word_edit(request, pk):
     word = get_object_or_404(Word, pk=pk)
-
-    # Создание формсетов для каждой дочерней модели
     KanaFormSet = inlineformset_factory(Word, Word_kana_variant, fields=['add_kana'], extra=1, can_delete=True)
     KanjiFormSet = inlineformset_factory(Word, Word_kanji_variant, fields=['add_kanji'], extra=1, can_delete=True)
     TranslateFormSet = inlineformset_factory(Word, Word_translate_variant, fields=['add_translate_ru', 'add_translate_en'], extra=1, can_delete=True)
@@ -247,13 +211,12 @@ def word_edit(request, pk):
             kana_formset.save()
             kanji_formset.save()
             translate_formset.save()
-            return redirect('word_detail')  # Замените на нужный URL
+            return redirect('word_detail')
     else:
         word_form = WordForm(instance=word)
         kana_formset = KanaFormSet(instance=word)
         kanji_formset = KanjiFormSet(instance=word)
         translate_formset = TranslateFormSet(instance=word)
-
     context = {
         'form': word_form,
         'kana_formset': kana_formset,
@@ -261,7 +224,6 @@ def word_edit(request, pk):
         'translate_formset': translate_formset,
     }
     return render(request, 'blog/word_edit.html', context)
-
 
 def word_test(request):
     return render(request, 'blog/word_test.html')
@@ -272,47 +234,33 @@ def word_test_premium(request):
 def word_test_start(request):
     rollback = request.POST.get('rollback')
     hide = request.POST.get('hide')
-    print(f"Hide: {hide}")
     request.session['hide'] = hide
     test_type = request.GET.get('type', 'kanji_to_kana')  # Тип теста: kanji -> kana или kana -> kanji
     request.session['test_type']  = test_type         
 
-    if (rollback or hide == "on"):
-
-        # question_count = int(request.POST.get('questions_p', 10))
+    if (rollback or hide == "on"):        
         question_count = 6
-        print(f"Question count from POST: {question_count}")
         request.session['question_count'] = question_count
         request.session['rollback'] = rollback
-
     else:
         question_count = int(request.GET.get('questions', 10))
-        request.session['question_count'] = question_count      
-
+        request.session['question_count'] = question_count
     questions = []
-
-
-    if hide == 'on':  # Проверяем, включён ли режим hide
-        print("Hide mode is ON")  # Проверяем, что режим включен
+    if hide == 'on':
+        print("Hide mode is ON")
         correct_kanjis = []
-        attempts = 0  # Переменная для подсчета попыток
-        
+        attempts = 0        
         while len(correct_kanjis) < question_count:
-
             correct_answer = Kanji.objects.order_by('?').first()
-            
-            # Получаем слово, которое содержит правильный иероглиф
             word = Word.objects.filter(
                 kanji__contains=correct_answer.kanji,
                 kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
             ).order_by('?').first()
 
             if word:
-                correct_kanjis.append({"kanji":word, "answer": correct_answer})  # Добавляем найденное слово в список
+                correct_kanjis.append({"kanji":word, "answer": correct_answer})
                 attempts += 1
-            
-            # Если мы не можем найти подходящее слово за несколько попыток, возвращаем ошибку
-            if attempts > 10:  # Максимальное количество попыток
+            if attempts > 10:
                 return render(request, 'blog/word_test_start.html', {'error': 'Не удалось найти подходящие слова для теста'})
         
         for correct_kanji in correct_kanjis:
@@ -321,41 +269,21 @@ def word_test_start(request):
             
             correct_answer = correct_kanji["answer"].kanji
             kanji = correct_kanji["kanji"].kanji
-            
-            # Получаем иероглифы для дистракторов
-            all_kanji = Kanji.objects.exclude(kanji=correct_answer).values_list('kanji', flat=True)[:3]
-            print(f"All kanji for distractors: {all_kanji}")  # Выводим иероглифы для дистракторов
-
+            all_kanji = Kanji.objects.exclude(kanji=correct_answer).values_list('kanji', flat=True).order_by('?')[:3]
             distractors = random.sample(list(all_kanji), 3)
-
             options = distractors + [correct_answer]
             random.shuffle(options)
-
-            print(f"Selected kanji: {correct_answer}")  # Выводим выбранное слово
-
-            # Генерация скрытого слова с подставленным символом "＿"
-            # kanji = correct_kanji.kanji
             hidden_index = kanji.find(correct_answer)
             hidden_word = kanji[:hidden_index] + "＿" + kanji[hidden_index + 1:]
-
             questions.append({
                 'question_word': hidden_word,
                 'options': options,
                 'correct': correct_answer,
             })
-        print(f"correct_kanji-list: {correct_kanji}")  # Выводим выбранное слово
-        
-
-        print(f"questions:")
-        print(f"questions: {questions}")
-                    
-            
 
     elif test_type == 'kanji_to_kana':
-        # Логика текущего теста (kanji -> kana)
-        all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True))[:question_count * 4]
+        all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True).order_by('?'))[:question_count * 4]
         words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
-        
         for word in words:
             correct_kana = word.kana
             fake_kana = random.sample([kana for kana in all_kana if kana != correct_kana], 3)
@@ -368,10 +296,8 @@ def word_test_start(request):
             })
 
     elif test_type == 'kana_to_kanji':
-        # Логика нового теста (kana -> kanji)
-        all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True))[:question_count * 4]
+        all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:3]
         words = Word.objects.filter(kana__isnull=False).exclude(kana="''").exclude(kanji="''").order_by('?')[:question_count]
-        
         for word in words:
             correct_kanji = word.kanji
             fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
@@ -385,7 +311,7 @@ def word_test_start(request):
     
     elif test_type == 'kanji_to_trans':
         # Логика нового теста (kanji_to_trans)
-        all_trans = list(Word.objects.exclude(kana__isnull=True).exclude(translate_ru="''").values_list('translate_ru', flat=True))[:question_count * 4]
+        all_trans = list(Word.objects.exclude(kana__isnull=True).exclude(translate_ru="''").values_list('translate_ru', flat=True).order_by('?'))[:3]
         words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
         
         for word in words:
@@ -401,7 +327,7 @@ def word_test_start(request):
 
     elif test_type == 'trans_to_kanji':
         # Логика нового теста (trans_to_kanji)
-        all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True))[:question_count * 4]
+        all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:3]
         words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
         
         for word in words:
@@ -417,14 +343,10 @@ def word_test_start(request):
 
     request.session['questions'] = questions
     request.session['current_question_index'] = 0
-    request.session['user_answers'] = []
-    
+    request.session['user_answers'] = []    
     total = question_count
-
     context = {'question': questions[0], 'total': total, 'question_count': question_count, 'test_type': test_type, 'hide': hide}
     return render(request, 'blog/word_test_start.html', context)
-
-
 
 def word_test_next(request):
     hide = request.session.get('hide')
@@ -456,34 +378,19 @@ def word_test_next(request):
     else:
         return redirect('word_test_complete')
 
-
-
 def word_test_complete(request):
-    # Получаем ответы пользователя из сессии
     user_answers = request.session.get('user_answers', [])
-
-    # Проверяем, что ответы корректно загружены
     if not isinstance(user_answers, list):
         user_answers = []
-
-    # Подсчитываем статистику
     correct_count = sum(1 for answer in user_answers if answer is True)
     incorrect_count = sum(1 for answer in user_answers if answer is False)
     total_count = len(user_answers)
-
-    # Вычисляем точность
     accuracy_percentage = (correct_count / total_count * 100) if total_count > 0 else 0
-
-    # Получаем параметры теста из сессии
     test_type = request.session.get('test_type')
     question_count = request.session.get('question_count')
-
-    # Очищаем данные сессии после завершения теста
     request.session.pop('user_answers', None)
     request.session.pop('questions', None)
     request.session.pop('current_question_index', None)
-
-    # Формируем контекст для шаблона
     context = {
         'correct_count': correct_count,
         'incorrect_count': incorrect_count,
@@ -492,6 +399,4 @@ def word_test_complete(request):
         'test_type': test_type,
         'question_count': question_count,
     }
-
-    # Рендерим шаблон
     return render(request, 'blog/word_test_complete.html', context) 
