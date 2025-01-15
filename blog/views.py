@@ -270,27 +270,88 @@ def word_test_premium(request):
     return render(request, 'blog/word_test_premium.html')
 
 def word_test_start(request):
-
     rollback = request.POST.get('rollback')
-    questions_p = request.POST.get('questions_p')    
+    hide = request.POST.get('hide')
+    print(f"Hide: {hide}")
+    request.session['hide'] = hide
+    test_type = request.GET.get('type', 'kanji_to_kana')  # Тип теста: kanji -> kana или kana -> kanji
+    request.session['test_type']  = test_type         
 
-    if rollback and questions_p:
+    if (rollback or hide == "on"):
 
-        request.session['test_type']  = 'kanji_to_kana'
-        test_type = request.session['test_type']  # Присваиваем test_type
-        request.session['question_count'] = int(questions_p)
+        # question_count = int(request.POST.get('questions_p', 10))
+        question_count = 6
+        print(f"Question count from POST: {question_count}")
+        request.session['question_count'] = question_count
         request.session['rollback'] = rollback
-        question_count = int(questions_p)
 
     else:
         question_count = int(request.GET.get('questions', 10))
-        test_type = request.GET.get('type', 'kanji_to_kana')  # Тип теста: kanji -> kana или kana -> kanji
-        request.session['test_type']  = test_type
-        request.session['question_count'] = question_count    
-    
+        request.session['question_count'] = question_count      
+
     questions = []
 
-    if test_type == 'kanji_to_kana':
+
+    if hide == 'on':  # Проверяем, включён ли режим hide
+        print("Hide mode is ON")  # Проверяем, что режим включен
+        correct_kanjis = []
+        attempts = 0  # Переменная для подсчета попыток
+        
+        while len(correct_kanjis) < question_count:
+
+            correct_answer = Kanji.objects.order_by('?').first()
+            
+            # Получаем слово, которое содержит правильный иероглиф
+            word = Word.objects.filter(
+                kanji__contains=correct_answer.kanji,
+                kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
+            ).order_by('?').first()
+
+            if word:
+                correct_kanjis.append({"kanji":word, "answer": correct_answer})  # Добавляем найденное слово в список
+                attempts += 1
+            
+            # Если мы не можем найти подходящее слово за несколько попыток, возвращаем ошибку
+            if attempts > 10:  # Максимальное количество попыток
+                return render(request, 'blog/word_test_start.html', {'error': 'Не удалось найти подходящие слова для теста'})
+        
+        for correct_kanji in correct_kanjis:
+            if not correct_kanji:
+                return render(request, 'blog/word_test_start.html', {'error': 'Нет доступных иероглифов для теста'})
+            
+            correct_answer = correct_kanji["answer"].kanji
+            kanji = correct_kanji["kanji"].kanji
+            
+            # Получаем иероглифы для дистракторов
+            all_kanji = Kanji.objects.exclude(kanji=correct_answer).values_list('kanji', flat=True)[:3]
+            print(f"All kanji for distractors: {all_kanji}")  # Выводим иероглифы для дистракторов
+
+            distractors = random.sample(list(all_kanji), 3)
+
+            options = distractors + [correct_answer]
+            random.shuffle(options)
+
+            print(f"Selected kanji: {correct_answer}")  # Выводим выбранное слово
+
+            # Генерация скрытого слова с подставленным символом "＿"
+            # kanji = correct_kanji.kanji
+            hidden_index = kanji.find(correct_answer)
+            hidden_word = kanji[:hidden_index] + "＿" + kanji[hidden_index + 1:]
+
+            questions.append({
+                'question_word': hidden_word,
+                'options': options,
+                'correct': correct_answer,
+            })
+        print(f"correct_kanji-list: {correct_kanji}")  # Выводим выбранное слово
+        
+
+        print(f"questions:")
+        print(f"questions: {questions}")
+                    
+            
+
+    elif test_type == 'kanji_to_kana':
         # Логика текущего теста (kanji -> kana)
         all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True))[:question_count * 4]
         words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
@@ -360,10 +421,13 @@ def word_test_start(request):
     
     total = question_count
 
-    context = {'question': questions[0], 'total': total, 'question_count': question_count, 'test_type': test_type}
+    context = {'question': questions[0], 'total': total, 'question_count': question_count, 'test_type': test_type, 'hide': hide}
     return render(request, 'blog/word_test_start.html', context)
 
+
+
 def word_test_next(request):
+    hide = request.session.get('hide')
     current_index = request.session.get('current_question_index', 0)
     questions = request.session.get('questions', [])
     user_answer = request.POST.get('user_answer')
@@ -373,6 +437,7 @@ def word_test_next(request):
     user_answers.append(is_correct)
     request.session['user_answers'] = user_answers
     rollback_count = int(request.session['rollback'])
+    request.session['hide'] = hide
 
     if is_correct:
         current_index += 1
@@ -385,6 +450,7 @@ def word_test_next(request):
             'question': questions[current_index],
             'current_index': current_index,
             'len_qs': len(questions),
+            'hide': hide
         }
         return render(request, 'blog/word_test_start.html', context)
     else:
@@ -428,4 +494,4 @@ def word_test_complete(request):
     }
 
     # Рендерим шаблон
-    return render(request, 'blog/word_test_complete.html', context)
+    return render(request, 'blog/word_test_complete.html', context) 

@@ -3,13 +3,11 @@
 {% block content %}
 <div class="container py-5">
     <h1 class="text-center mb-4">Премиум Тесты</h1>
-
     <div class="row mb-4">
         <div class="col-md-6 mx-auto text-center">
             <p class="fs-5">Выберите величину отката и количество вопросов</p>
             <form method="POST" action="{% url 'word_test_start' %}">
-                {% csrf_token %}
-                
+                {% csrf_token %}                
                 <!-- Выбор отката -->
                 <div class="mb-3">
                     <p class="fw-bold">Величина отката:</p>
@@ -22,8 +20,34 @@
                     <input type="radio" class="btn-check" name="rollback" value=15 id="rollback-15" autocomplete="off">
                     <label class="btn btn-outline-success" for="rollback-15">15</label>
 
-                    <input type="radio" class="btn-check" name="rollback" value="all" id="rollback-all" autocomplete="off">
-                    <label class="btn btn-outline-success" for="rollback-all">Все</label>
+                    <input type="radio" class="btn-check" name="rollback" value="No" id="rollback-all" autocomplete="off">
+                    <label class="btn btn-outline-success" for="rollback-all">No</label>
+                </div>
+                <div class="mb-3">
+                    <p class="fw-bold">Время показа вопроса:</p>
+                    <input type="radio" class="btn-check" name="question_time" value=1 id="question_t_1" autocomplete="off">
+                    <label class="btn btn-outline-success" for="questions-1">1</label>
+
+                    <input type="radio" class="btn-check" name="question_time" value=2 id="question_t_2" autocomplete="off" checked>
+                    <label class="btn btn-outline-success" for="questions-2">2</label>
+
+                    <input type="radio" class="btn-check" name="question_time" value=3 id="question_t_3" autocomplete="off">
+                    <label class="btn btn-outline-success" for="questions-3">3</label>
+
+                    <input type="radio" class="btn-check" name="question_time" value=4 id="question_t_4" autocomplete="off">
+                    <label class="btn btn-outline-success" for="questions-4">4</label>
+
+                    <input type="radio" class="btn-check" name="question_time" value="No" id="question_t_4" autocomplete="off">
+                    <label class="btn btn-outline-success" for="questions-No">No</label>
+                </div>
+
+                <div class="mb-3">
+                    <p class="fw-bold">Режим Выбери нужный ИЕРОГЛИФ</p>
+                    <input type="radio" class="btn-check" name="hide" value="on" id="hide_kanji_yes" autocomplete="off" checked>
+                    <label class="btn btn-outline-success" for="hide_kanji_yes">Включить</label>
+
+                    <input type="radio" class="btn-check" name="hide" value="off" id="hide_kanji_no" autocomplete="off">
+                    <label class="btn btn-outline-success" for="hide_kanji_no">Выключить</label>
                 </div>
 
                 <!-- Выбор количества вопросов -->
@@ -40,8 +64,8 @@
 
                     <input type="radio" class="btn-check" name="questions_p" value="all" id="questions-all" autocomplete="off">
                     <label class="btn btn-outline-success" for="questions-all">Все</label>
-                </div>                
-                <!-- Кнопка отправки -->
+                </div>
+                  <!-- Кнопка отправки -->
                 <button type="submit" class="btn btn-primary mt-3">Начать тест</button>
             </form>
         </div>

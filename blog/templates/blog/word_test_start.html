@@ -127,10 +127,15 @@
                     <!-- Общая информация -->
                     <h5 class="card-title text-center mb-3">
                         <span>Всего вопросов: </span>
+                        <br>
+                        question: {{questions}}
+                        <br>
+                        question_count: {{question_count}}
+                        <br>
                         {% if total %}
                         {{ total }}
                         {% else %}
-                        {{ len_qs }}
+                        lenqs: {{ len_qs }}
                         {% endif %}
                     </h5>
                     <h5 class="card-title text-center mb-3">
@@ -140,6 +145,11 @@
                         {% endwith %}
                     </h5>
                     <!-- Вопрос и ответ -->
+                     <br>
+                    hide: {{ hide }}
+                     <br>
+                     test-type: {{ test_type }}
+                     <br>
                     <h5 class="card-title text-center mb-4">{{ question.kanji }}</h5>
                     <hr class="my-1"> <!-- Разделитель -->
                     <h5 class="card-title text-center mb-4">{{ question.question_word }}</h5>

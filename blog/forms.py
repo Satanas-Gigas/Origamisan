@@ -135,12 +135,3 @@ class WordTranslateVariantForm(forms.ModelForm):
             'add_translate_ru': forms.TextInput(attrs={'class': 'form-control'}),
             'add_translate_en': forms.TextInput(attrs={'class': 'form-control'}),
         }
-
-class RollbackForm(forms.ModelForm):
-    class Meta:
-        model = Word_translate_variant
-        fields = ['add_translate_ru', 'add_translate_en']
-        widgets = {
-            'add_translate_ru': forms.TextInput(attrs={'class': 'form-control'}),
-            'add_translate_en': forms.TextInput(attrs={'class': 'form-control'}),
-        }

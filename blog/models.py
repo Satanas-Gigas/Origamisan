@@ -97,7 +97,6 @@ class Kanji(models.Model):
     meaning_ru = models.CharField(max_length=200, blank=True, null=True)
     meaning_en = models.CharField(max_length=200, blank=True, null=True)
 
-
     def __str__(self):
             return f'{self.kanji} ({self.level})'
     class Meta:
