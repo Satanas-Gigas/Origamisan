@@ -250,7 +250,6 @@ def handle_hide_mode(question_count):
     correct_kanjis = []
     attempts = 0
     question_count = int(question_count)
-
     word_kanji_list = Word.objects.filter(kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]').values_list('kanji', flat=True)
     word_kanji_list = list(word_kanji_list)
     kanji_list = Kanji.objects.filter(
@@ -273,7 +272,6 @@ def handle_hide_mode(question_count):
         if attempts > 28:
             print(f"Не удалось найти подходящие слова для теста {attempts}")
             raise ValueError('Не удалось найти подходящие слова для теста')
-
     questions = []
     for correct_kanji in correct_kanjis:
         correct_answer = correct_kanji["answer"].kanji
@@ -325,8 +323,6 @@ def generate_kana_to_kanji_questions(question_count):
     return questions
 
 def generate_kanji_to_trans_questions(question_count):
-    # kanji - to - kana
-    # kanji- to - trans
     question_count = int(question_count)
     questions = []
     all_trans = list(Word.objects.exclude(translate_ru__isnull=True).exclude(translate_ru="''").values_list('translate_ru', flat=True).order_by('?'))[:3]
@@ -343,6 +339,22 @@ def generate_kanji_to_trans_questions(question_count):
         })
     return questions
 
+def generate_trans_to_kanji_questions(question_count):
+    question_count = int(question_count)
+    questions = []
+    all_kanji = list(Word.objects.exclude(kana__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:question_count * 4]
+    words = Word.objects.filter(translate_ru__isnull=False).exclude(translate_ru="''").order_by('?')[:question_count]
+    for word in words:
+        correct_kanji = word.kanji
+        fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
+        options = fake_kanji + [correct_kanji]
+        random.shuffle(options)
+        questions.append({
+            'question_word': word.translate_ru,
+            'options': options,
+            'correct': correct_kanji,
+        })
+    return questions
 
 def word_test_start(request):
     try:
