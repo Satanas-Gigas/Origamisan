@@ -252,16 +252,31 @@ def handle_hide_mode(question_count):
     correct_kanjis = []
     attempts = 0
     question_count = int(question_count)
-    print(f"!!!!!!!questions_count: {question_count}")
-    while len(correct_kanjis) < 20:
-        correct_answer = Kanji.objects.order_by('?').first()
+
+    word_kanji_list = Word.objects.filter(kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]').values_list('kanji', flat=True)
+    word_kanji_list = list(word_kanji_list)
+    kanji_list = Kanji.objects.filter(
+        kanji__in=[
+            kanji.kanji for kanji in Kanji.objects.all()
+            if any(kanji.kanji in word for word in word_kanji_list)
+        ])
+    # print(f"!!!!!!!question_count: {question_count}")
+    correct_answer1 = 0
+    while len(correct_kanjis) < question_count:
+
+        correct_answer = kanji_list.exclude(
+            kanji__in=[entry["answer"].kanji for entry in correct_kanjis]
+        ).order_by('?').first()
         word = Word.objects.filter(
             kanji__contains=correct_answer.kanji,
             kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
         ).order_by('?').first()
+        correct_answer1 += 1
+        print(f"!!!!!!!correct_answer(): {correct_answer}{correct_answer1}")
         if word:
             correct_kanjis.append({"kanji": word, "answer": correct_answer})
-        attempts += 1
+        else:    
+            attempts += 1
         if attempts > 28:
             print(f"Не удалось найти подходящие слова для теста {attempts}")
             raise ValueError('Не удалось найти подходящие слова для теста')
