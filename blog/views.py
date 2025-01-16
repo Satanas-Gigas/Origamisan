@@ -238,8 +238,6 @@ def process_request_params(request):
     question_count = request.GET.get('questions')
     if not question_count:
         question_count = request.POST.get('questions_p')
-    print(f"questions_count: {question_count}")
-
     request.session.update({
         'hide': hide,
         'test_type': test_type,
@@ -260,10 +258,7 @@ def handle_hide_mode(question_count):
             kanji.kanji for kanji in Kanji.objects.all()
             if any(kanji.kanji in word for word in word_kanji_list)
         ])
-    # print(f"!!!!!!!question_count: {question_count}")
-    correct_answer1 = 0
     while len(correct_kanjis) < question_count:
-
         correct_answer = kanji_list.exclude(
             kanji__in=[entry["answer"].kanji for entry in correct_kanjis]
         ).order_by('?').first()
@@ -271,8 +266,6 @@ def handle_hide_mode(question_count):
             kanji__contains=correct_answer.kanji,
             kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
         ).order_by('?').first()
-        correct_answer1 += 1
-        print(f"!!!!!!!correct_answer(): {correct_answer}{correct_answer1}")
         if word:
             correct_kanjis.append({"kanji": word, "answer": correct_answer})
         else:    
@@ -290,7 +283,6 @@ def handle_hide_mode(question_count):
         options = distractors + [correct_answer]
         random.shuffle(options)
         hidden_index = kanji.find(correct_answer)
-        # print(f"hidden_word: {hidden_index}")
         hidden_word = kanji[:hidden_index] + "＿" + kanji[hidden_index + 1:]
         questions.append({
             'question_word': hidden_word,
@@ -331,6 +323,26 @@ def generate_kana_to_kanji_questions(question_count):
             'correct': correct_kanji,
         })
     return questions
+
+def generate_kanji_to_trans_questions(question_count):
+    # kanji - to - kana
+    # kanji- to - trans
+    question_count = int(question_count)
+    questions = []
+    all_trans = list(Word.objects.exclude(translate_ru__isnull=True).exclude(translate_ru="''").values_list('translate_ru', flat=True).order_by('?'))[:3]
+    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+    for word in words:
+        correct_trans = word.translate_ru
+        fake_trans = random.sample([trans for trans in all_trans if trans != correct_trans], 3)
+        options = fake_trans + [correct_trans]
+        random.shuffle(options)
+        questions.append({
+            'question_word': word.kanji,
+            'options': options,
+            'correct': correct_trans,
+        })
+    return questions
+
 
 def word_test_start(request):
     try:
@@ -380,18 +392,12 @@ def word_test_next(request):
     rollback_count = request.session['rollback']
     if rollback_count != None:
         rollback_count = int(rollback_count)
-    # rollback_count = int(request.session.get('rollback', 0)) - 1 if request.session.get('rollback') else 0
     request.session['hide'] = hide
 
     current_index += 1
-    if rollback_count == None:
-        print(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print(f"rollback_current_index: {current_index}")
 
-    elif not is_correct:
+    if (not is_correct and rollback_count):
         current_index = max(0, current_index - rollback_count)
-        print(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        print(f"rollback_current_index: {current_index}")
 
     if current_index < len(questions):
         request.session['current_question_index'] = current_index
@@ -428,25 +434,4 @@ def word_test_complete(request):
         'question_count': question_count,
     }
     return render(request, 'blog/word_test_complete.html', context) 
-
-# # Получаем список всех записей из Word, которые содержат минимум два иероглифа Kanji
-# word_kanji_list = Word.objects.filter(
-#     kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'  # Слова из двух и более иероглифов Kanji
-# ).values_list('kanji', flat=True)
-
-# # Преобразуем список word_kanji_list в обычный Python список для проверки подстрок
-# word_kanji_list = list(word_kanji_list)
-
-# # Фильтруем Kanji, проверяя, содержится ли Kanji.kanji в каком-либо из слов из word_kanji_list
-# kanji_count = Kanji.objects.filter(
-#     kanji__in=[
-#         kanji.kanji for kanji in Kanji.objects.all()
-#         if any(kanji.kanji in word for word in word_kanji_list)
-#     ]
-# ).count()
-
-# # Выводим результат
-# print(f"Количество записей Kanji, которые входят в состав слов из Word: {kanji_count}")
-
-# print(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
