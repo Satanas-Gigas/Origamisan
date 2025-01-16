@@ -253,7 +253,7 @@ def handle_hide_mode(question_count):
     attempts = 0
     question_count = int(question_count)
     print(f"!!!!!!!questions_count: {question_count}")
-    while len(correct_kanjis) < 5:
+    while len(correct_kanjis) < 20:
         correct_answer = Kanji.objects.order_by('?').first()
         word = Word.objects.filter(
             kanji__contains=correct_answer.kanji,
@@ -262,8 +262,8 @@ def handle_hide_mode(question_count):
         if word:
             correct_kanjis.append({"kanji": word, "answer": correct_answer})
         attempts += 1
-        if attempts > 20:
-            # print(f"Не удалось найти подходящие слова для теста")
+        if attempts > 28:
+            print(f"Не удалось найти подходящие слова для теста {attempts}")
             raise ValueError('Не удалось найти подходящие слова для теста')
 
     questions = []
@@ -413,3 +413,25 @@ def word_test_complete(request):
         'question_count': question_count,
     }
     return render(request, 'blog/word_test_complete.html', context) 
+
+# # Получаем список всех записей из Word, которые содержат минимум два иероглифа Kanji
+# word_kanji_list = Word.objects.filter(
+#     kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'  # Слова из двух и более иероглифов Kanji
+# ).values_list('kanji', flat=True)
+
+# # Преобразуем список word_kanji_list в обычный Python список для проверки подстрок
+# word_kanji_list = list(word_kanji_list)
+
+# # Фильтруем Kanji, проверяя, содержится ли Kanji.kanji в каком-либо из слов из word_kanji_list
+# kanji_count = Kanji.objects.filter(
+#     kanji__in=[
+#         kanji.kanji for kanji in Kanji.objects.all()
+#         if any(kanji.kanji in word for word in word_kanji_list)
+#     ]
+# ).count()
+
+# # Выводим результат
+# print(f"Количество записей Kanji, которые входят в состав слов из Word: {kanji_count}")
+
+# print(f"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
