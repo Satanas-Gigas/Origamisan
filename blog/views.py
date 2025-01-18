@@ -250,43 +250,53 @@ def handle_hide_mode(question_count):
     correct_kanjis = []
     attempts = 0
     question_count = int(question_count)
-    word_kanji_list = Word.objects.filter(kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]').values_list('kanji', flat=True)
+    
+    word_kanji_list = Word.objects.filter(
+    kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
+    ).values_list('kanji', flat=True)
     word_kanji_list = list(word_kanji_list)
     kanji_list = Kanji.objects.filter(
-        kanji__in=[
-            kanji.kanji for kanji in Kanji.objects.all()
-            if any(kanji.kanji in word for word in word_kanji_list)
-        ])
+    kanji__in=[ 
+        kanji.kanji for kanji in Kanji.objects.all()
+        if any(kanji.kanji in word for word in word_kanji_list)
+    ])
     while len(correct_kanjis) < question_count:
         correct_answer = kanji_list.exclude(
             kanji__in=[entry["answer"].kanji for entry in correct_kanjis]
-        ).order_by('?').first()
-        word = Word.objects.filter(
+        ).order_by('?').first()        
+        words = Word.objects.filter(
             kanji__contains=correct_answer.kanji,
             kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
-        ).order_by('?').first()
-        if word:
-            correct_kanjis.append({"kanji": word, "answer": correct_answer})
+        )
+        if words.exists():
+            combined_words = " ".join(word.kanji for word in words)
+            correct_kanjis.append({"kanji": combined_words, "answer": correct_answer})
+            # print(f"combined_words {combined_words}")
+            # print()
         else:    
             attempts += 1
+        if len(correct_kanjis) >= question_count:
+            break        
         if attempts > 28:
             print(f"Не удалось найти подходящие слова для теста {attempts}")
-            raise ValueError('Не удалось найти подходящие слова для теста')
+            raise ValueError('Не удалось найти подходящие слова для теста')        
     questions = []
     for correct_kanji in correct_kanjis:
         correct_answer = correct_kanji["answer"].kanji
-        kanji = correct_kanji["kanji"].kanji
+        # kanji = correct_kanji["kanji"].kanji
+        kanji = correct_kanji["kanji"]
+
         all_kanji = Kanji.objects.exclude(kanji=correct_answer).values_list('kanji', flat=True).order_by('?')[:3]
         distractors = random.sample(list(all_kanji), 3)
         options = distractors + [correct_answer]
         random.shuffle(options)
-        hidden_index = kanji.find(correct_answer)
-        hidden_word = kanji[:hidden_index] + "＿" + kanji[hidden_index + 1:]
+        hidden_word = kanji.replace(correct_answer, '_')
         questions.append({
             'question_word': hidden_word,
             'options': options,
             'correct': correct_answer,
-        })   
+        })
+    
     return questions
 
 def generate_kanji_to_kana_questions(question_count):
