@@ -116,6 +116,44 @@
     });
 </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const question_wordDiv = document.querySelector("[data-id='question_word-div']"); // Контейнер для question.kanji
+        const optionsDiv = document.querySelector("[data-id='options-div']"); // Контейнер для кнопок
+        const clockDiv_hide = document.getElementById("clockdiv_hide"); // Таймер
+        let timeInterval; // Переменная для хранения интервала таймера
+
+        // Функция для отсчета времени
+        function getTimeRemaining_hide(endtime) {
+            const t = Date.parse(endtime) - Date.parse(new Date());
+            const seconds = Math.floor((t / 1000) % 60);
+            return { total: t, seconds: seconds };
+        }
+        
+        function initializeClock_hide(id, endtime) {
+            const clock = document.getElementById(id);
+            optionsDiv.style.display = "none";
+            function updateClock_hide() {
+                const t = getTimeRemaining_hide(endtime);
+                clock.innerHTML = `Seconds: ${t.seconds}`;
+                
+                if (t.total <= 0) {
+                    clearInterval(timeInterval);
+                    clock.style.display = "none"; // Скрыть таймер
+                    question_wordDiv.style.display = "none";
+                    optionsDiv.style.display = "";
+                }
+            }
+            updateClock_hide(); // Запустите функцию один раз, чтобы избежать задержки
+            timeInterval = setInterval(updateClock_hide, 1000);
+        }
+        // Получаем значение question_time из data-атрибута
+        const questionTime = parseInt(clockDiv_hide.getAttribute("data-question-time"), 10) || 4;
+        const deadline = new Date(Date.parse(new Date()) + questionTime * 1000);
+        initializeClock_hide('clockdiv_hide', deadline);
+    });
+</script>
+
 <div class="container py-5">
     <h1 class="text-center mb-4">Тестирование</h1>
     <form id="quiz-form" method="post" action="{% url 'word_test_next' %}">
@@ -126,14 +164,10 @@
                 <div class="card-body">
                     <!-- Общая информация -->
                     <h5 class="card-title text-center mb-3">
+                        <span>Осталось времени: 
+                            <div id="clockdiv_hide"></div>
+                        </span>
                         <span>Всего вопросов: </span>
-                        <br>
-                        rollback_count: {{rollback_count}}
-                        <br>
-                        question: {{questions}}
-                        <br>
-                        question_count: {{question_count}}
-                        <br>
                         {% if total %}
                         {{ total }}
                         {% else %}
@@ -147,16 +181,12 @@
                         {% endwith %}
                     </h5>
                     <!-- Вопрос и ответ -->
-                     <br>
-                    hide: {{ hide }}
-                     <br>
-                     test-type: {{ test_type }}
-                     <br>
-                    <h5 class="card-title text-center mb-4">{{ question.kanji }}</h5>
                     <hr class="my-1"> <!-- Разделитель -->
-                    <h5 class="card-title text-center mb-4">{{ question.question_word }}</h5>
+                    <div data-id = 'question_word-div'>
+                        <h5 class="card-title text-center mb-4">{{ question.question_word }}</h5>
+                    </div>
                     <!-- Варианты ответов (кнопки) -->
-                    <div class="row g-3">
+                    <div class="row g-3" data-id="options-div">
                         {% for option in question.options %}
                         <div class="col-6">
                             <button 

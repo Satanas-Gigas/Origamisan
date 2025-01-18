@@ -249,7 +249,7 @@ def process_request_params(request):
 def handle_hide_mode(question_count):
     correct_kanjis = []
     attempts = 0
-    question_count = int(question_count)    
+    question_count = 3    
     word_kanji_list = Word.objects.filter(
     kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
     ).values_list('kanji', flat=True)
@@ -364,6 +364,13 @@ def generate_trans_to_kanji_questions(question_count):
 def word_test_start(request):
     try:
         hide, test_type, question_count = process_request_params(request)
+        question_time = request.POST.get('question_time', request.GET.get('question_time', 4))  # Значение по умолчанию 4
+        try:
+            question_time = int(question_time)
+            if question_time <= 0:
+                raise ValueError("Время должно быть больше 0.")
+        except ValueError:
+            return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
         
         if hide == 'on':
             questions = handle_hide_mode(question_count)
@@ -382,7 +389,9 @@ def word_test_start(request):
             'questions': questions,
             'current_question_index': 0,
             'user_answers': [],
+            'question_time': question_time,  # Сохраняем время в сессии
         })
+
 
         context = {
             'question': questions[0],
@@ -390,6 +399,7 @@ def word_test_start(request):
             'question_count': question_count,
             'test_type': test_type,
             'hide': hide,
+            'question_time': question_time,  # Передаём время в шаблон
         }
         return render(request, 'blog/word_test_start.html', context)
 
