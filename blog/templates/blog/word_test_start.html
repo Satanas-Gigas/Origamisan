@@ -7,7 +7,13 @@
         const form = document.getElementById("quiz-form"); // Форма для отправки
         const resultMessage = document.getElementById("result-message"); // Сообщение о результате
         const clockDiv = document.getElementById("clockdiv"); // Таймер
-
+        const question_wordDiv = document.querySelector("[data-id='question_word-div']"); // Контейнер для question.kanji
+        const optionsDiv = document.querySelector("[data-id='options-div']"); // Контейнер для кнопок
+        const clockDiv_hide = document.getElementById("clockdiv_hide"); // Таймер
+        const progressBar = document.querySelector(".progress-bar"); // Полоска прогресса
+        const progress = document.querySelector(".progress"); // Полоска прогресса
+        let timeInterval_hide; // Переменная для хранения интервала таймера
+        const totalDuration = 10; // Таймер на 10 секунд
         let timeInterval; // Переменная для хранения интервала таймера
 
         buttons.forEach((button) => {
@@ -105,28 +111,23 @@
                     }, 1000); // Задержка 1 секунда
                 }
             }
-
             updateClock(); // Запустите функцию один раз, чтобы избежать задержки
             timeInterval = setInterval(updateClock, 1000); // Сохраняем интервал для остановки
         }
-
         // Устанавливаем конечное время для таймера (например, через 1 минуту)
         var deadline = new Date(Date.parse(new Date()) + 300 * 1000);
         initializeClock('clockdiv', deadline);
-    });
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const question_wordDiv = document.querySelector("[data-id='question_word-div']"); // Контейнер для question.kanji
-        const optionsDiv = document.querySelector("[data-id='options-div']"); // Контейнер для кнопок
-        const clockDiv_hide = document.getElementById("clockdiv_hide"); // Таймер
-        let timeInterval; // Переменная для хранения интервала таймера
-
+// ////////////////////////////////////////////////////////////////////////////////
         // Функция для отсчета времени
+        // console.log("в начале totalDuration:", totalDuration);
+
+
         function getTimeRemaining_hide(endtime) {
             const t = Date.parse(endtime) - Date.parse(new Date());
             const seconds = Math.floor((t / 1000) % 60);
+            const percentage = (t / (4 * 1000)) * 100;
+            console.log("внутри функции totalDuration:", 4);
+            progressBar.style.width = `${Math.max(0, percentage)}%`;
             return { total: t, seconds: seconds };
         }
         
@@ -137,20 +138,22 @@
                 const t = getTimeRemaining_hide(endtime);
                 clock.innerHTML = `Seconds: ${t.seconds}`;
                 
-                if (t.total <= 0) {
-                    clearInterval(timeInterval);
+                if (t.total < 0) {
+                    clearInterval(timeInterval_hide);
                     clock.style.display = "none"; // Скрыть таймер
                     question_wordDiv.style.display = "none";
                     optionsDiv.style.display = "";
+                    progressBar.style.width = "0%"; // Полоска прогресса опустошена
+                    progress.style.display = "";
                 }
             }
             updateClock_hide(); // Запустите функцию один раз, чтобы избежать задержки
-            timeInterval = setInterval(updateClock_hide, 1000);
+            timeInterval_hide = setInterval(updateClock_hide, 1000);
         }
         // Получаем значение question_time из data-атрибута
-        const questionTime = parseInt(clockDiv_hide.getAttribute("data-question-time"), 10) || 4;
-        const deadline = new Date(Date.parse(new Date()) + questionTime * 1000);
-        initializeClock_hide('clockdiv_hide', deadline);
+        const questionTime = parseInt(clockDiv_hide.getAttribute("data-question_time"), 10) || 4;
+        const deadline_hide = new Date(Date.parse(new Date()) + questionTime * 1000);
+        initializeClock_hide('clockdiv_hide', deadline_hide);
     });
 </script>
 
@@ -184,6 +187,9 @@
                     <hr class="my-1"> <!-- Разделитель -->
                     <div data-id = 'question_word-div'>
                         <h5 class="card-title text-center mb-4">{{ question.question_word }}</h5>
+                    </div>
+                    <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar text-bg-warning" style="width: 100%;  transition: width 1s linear;"></div>
                     </div>
                     <!-- Варианты ответов (кнопки) -->
                     <div class="row g-3" data-id="options-div">
