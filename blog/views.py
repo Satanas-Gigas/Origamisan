@@ -249,7 +249,7 @@ def process_request_params(request):
 def handle_hide_mode(question_count):
     correct_kanjis = []
     attempts = 0
-    question_count = 3    
+    question_count = int(question_count)    
     word_kanji_list = Word.objects.filter(
     kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
     ).values_list('kanji', flat=True)
@@ -269,7 +269,8 @@ def handle_hide_mode(question_count):
         )[:4]
         if words.exists():
             combined_words = " ".join(word.kanji for word in words).replace(" ", "\u00A0\u00A0\u00A0\u00A0\u00A0")
-            correct_kanjis.append({"kanji": combined_words, "answer": correct_answer})
+            combined_kana = " ".join(word.kana for word in words).replace(" ", "\u00A0\u00A0\u00A0\u00A0\u00A0")
+            correct_kanjis.append({"kanji": combined_words, "kana": combined_kana, "answer": correct_answer})
         else:    
             attempts += 1
         if len(correct_kanjis) >= question_count:
@@ -281,6 +282,7 @@ def handle_hide_mode(question_count):
     for correct_kanji in correct_kanjis:
         correct_answer = correct_kanji["answer"].kanji
         kanji = correct_kanji["kanji"]
+        kana = correct_kanji["kana"]
         all_kanji = Kanji.objects.exclude(kanji=correct_answer).values_list('kanji', flat=True).order_by('?')[:3]
         distractors = random.sample(list(all_kanji), 3)
         options = distractors + [correct_answer]
@@ -288,6 +290,7 @@ def handle_hide_mode(question_count):
         hidden_word = kanji.replace(correct_answer, '___')
         questions.append({
             'question_word': hidden_word,
+            'kana': kana,
             'options': options,
             'correct': correct_answer,
         })

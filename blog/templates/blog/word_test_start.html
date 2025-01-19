@@ -15,15 +15,12 @@
         let timeInterval_hide; // Переменная для хранения интервала таймера
         const totalDuration = 10; // Таймер на 10 секунд
         let timeInterval; // Переменная для хранения интервала таймера
-
         buttons.forEach((button) => {
             button.addEventListener("click", () => {
                 // Делаем все кнопки неактивными
                 buttons.forEach((btn) => btn.disabled = true);
-
                 // Проверяем, правильный ли ответ
                 const isCorrect = button.getAttribute("data-correct") === "true";
-
                 if (isCorrect) {
                     // Если ответ правильный
                     button.classList.add("btn-success");
@@ -34,7 +31,6 @@
                     button.classList.add("btn-danger");
                     resultMessage.style.color = "red";
                     resultMessage.innerText = "Неправильно!";
-
                     // Подсвечиваем правильный ответ
                     buttons.forEach((btn) => {
                         if (btn.getAttribute("data-correct") === "true") {
@@ -42,14 +38,11 @@
                         }
                     });
                 }
-
                 // Показываем сообщение о результате
                 resultMessage.style.display = "block";
-
                 // Скрываем таймер и очищаем интервал
                 clockDiv.style.display = "none";
                 clearInterval(timeInterval); // Останавливаем таймер
-
                 // Устанавливаем значение для отправки
                 const hiddenInput = document.createElement("input");
                 hiddenInput.type = "hidden";
@@ -62,7 +55,6 @@
                 }, 1000); // Задержка 1 секунда
             });
         });
-
         // Функция для отсчета времени
         function getTimeRemaining(endtime) {
             const t = Date.parse(endtime) - Date.parse(new Date());
@@ -78,25 +70,20 @@
                 seconds: seconds
             };
         }
-
         function initializeClock(id, endtime) {
-            var clock = document.getElementById(id);
-            
+            var clock = document.getElementById(id);            
             function updateClock() {
                 var t = getTimeRemaining(endtime);
-                clock.innerHTML = 'Seconds: ' + t.seconds;
+                clock.innerHTML = 'Осталось: ' + t.seconds + ' сек.';
                 if (t.total <= 0) {
                     clearInterval(timeInterval);
-                    clock.style.display = "none"; // Скрыть таймер, когда время вышло
-                    
+                    clock.style.display = "none"; // Скрыть таймер, когда время вышло                    
                     // Когда время вышло, считаем ответ неправильным и переходим к следующему вопросу
                     resultMessage.style.color = "red";
                     resultMessage.innerText = "Время истекло! Неправильно!";
                     resultMessage.style.display = "block";
-
                     // Останавливаем таймер и скрываем его
-                    clockDiv.style.display = "none";
-                    
+                    clockDiv.style.display = "none";                    
                     // Устанавливаем неправильный ответ
                     const incorrectAnswerButton = document.querySelector('.answer-btn[data-correct="false"]');
                     const hiddenInput = document.createElement("input");
@@ -104,7 +91,6 @@
                     hiddenInput.name = "user_answer";
                     hiddenInput.value = incorrectAnswerButton.value;
                     form.appendChild(hiddenInput);
-
                     // Задержка перед отправкой формы
                     setTimeout(() => {
                         form.submit();
@@ -117,27 +103,20 @@
         // Устанавливаем конечное время для таймера (например, через 1 минуту)
         var deadline = new Date(Date.parse(new Date()) + 300 * 1000);
         initializeClock('clockdiv', deadline);
-// ////////////////////////////////////////////////////////////////////////////////
-        // Функция для отсчета времени
-        // console.log("в начале totalDuration:", totalDuration);
-
-
+//////////////////////////////////////////////////////////////////////////////////
         function getTimeRemaining_hide(endtime) {
             const t = Date.parse(endtime) - Date.parse(new Date());
             const seconds = Math.floor((t / 1000) % 60);
             const percentage = (t / (4 * 1000)) * 100;
-            console.log("внутри функции totalDuration:", 4);
             progressBar.style.width = `${Math.max(0, percentage)}%`;
             return { total: t, seconds: seconds };
-        }
-        
+        }        
         function initializeClock_hide(id, endtime) {
             const clock = document.getElementById(id);
             optionsDiv.style.display = "none";
             function updateClock_hide() {
                 const t = getTimeRemaining_hide(endtime);
-                clock.innerHTML = `Seconds: ${t.seconds}`;
-                
+                clock.innerHTML = `${t.seconds} сек.`;                
                 if (t.total < 0) {
                     clearInterval(timeInterval_hide);
                     clock.style.display = "none"; // Скрыть таймер
@@ -157,64 +136,68 @@
     });
 </script>
 
-<div class="container py-5">
-    <h1 class="text-center mb-4">Тестирование</h1>
+<div class="container py-5" style="background-color: #fafafa;">
+    <h1 class="text-center mb-4" style="color: #d32f2f;">Тестирование</h1>
     <form id="quiz-form" method="post" action="{% url 'word_test_next' %}">
         {% csrf_token %}
-        <!-- Ограничение ширины карточки -->
-        <div class="col-md-6 mx-auto">
-            <div class="card my-3 shadow-sm">
-                <div class="card-body">
-                    <!-- Общая информация -->
-                    <h5 class="card-title text-center mb-3">
-                        <span>Осталось времени: 
-                            <div id="clockdiv_hide"></div>
-                        </span>
-                        <span>Всего вопросов: </span>
-                        {% if total %}
-                        {{ total }}
-                        {% else %}
-                        lenqs: {{ len_qs }}
-                        {% endif %}
-                    </h5>
-                    <h5 class="card-title text-center mb-3">
-                        Вопрос №:
-                        {% with current_index|add:1 as current_index %}
-                        {{ current_index|default:"1" }}
-                        {% endwith %}
-                    </h5>
-                    <!-- Вопрос и ответ -->
-                    <hr class="my-1"> <!-- Разделитель -->
-                    <div data-id = 'question_word-div'>
-                        <h5 class="card-title text-center mb-4">{{ question.question_word }}</h5>
+        <div class="col-md-8 mx-auto">
+            <div class="card my-3 shadow-lg" style="border: 2px solid #424242;">
+                <div class="card-body" style="background-color: #f9f6f2;">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 style="color: #424242;">Время: 
+                            <span id="clockdiv_hide" class="fw-bold" style="color: #c62828;"></span>
+                        </h5>
+                        <h5 style="color: #424242;">Вопрос:                             
+                            <span class="fw-bold" style="color: #212121;">
+                                {% with current_index|add:1 as current_index %}
+                                {{ current_index|default:"1" }}
+                                {% endwith %}
+                            </span>
+                            из 
+                            <span class="fw-bold" style="color: #212121;">{% if total %}
+                                {{ total }}
+                                {% else %}
+                                {{ len_qs }}
+                                {% endif %}
+                            </span>
+                        </h5>
                     </div>
-                    <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar text-bg-warning" style="width: 100%;  transition: width 1s linear;"></div>
+                    <div class="progress mb-4" style="height: 20px; background-color: #e0e0e0;">
+                        <div class="progress-bar" style="background-color: #d32f2f; transition: width 1s linear;" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <!-- Варианты ответов (кнопки) -->
+                    <div class="text-center mb-4" data-id="question_word-div">
+                        <h3 class="fw-bold" style="color: #212121;">
+                            {{ question.question_word }}
+                        </h3>
+                        <div class="dropdown-center">
+                            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Подсказка
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li style="color: #212121;">{{ question.kana }}</li>                              
+                            </ul>
+                        </div>
+                    </div>
                     <div class="row g-3" data-id="options-div">
                         {% for option in question.options %}
-                        <div class="col-6">
-                            <button 
-                                type="submit" 
-                                name="user_answer" 
-                                value="{{ option }}"
-                                data-correct="{% if option == question.correct %}true{% else %}false{% endif %}" 
-                                class="btn btn-lg btn-outline-primary w-100 shadow-sm answer-btn">
-                                {{ option }}
-                            </button>
-                        </div>
+                            <div class="col-md-6">
+                                <button 
+                                    type="submit" 
+                                    name="user_answer" 
+                                    value="{{ option }}"
+                                    data-correct="{% if option == question.correct %}true{% else %}false{% endif %}" 
+                                    class="btn btn-lg w-100 answer-btn" 
+                                    style="background-color: #f5f5f5; border: 2px solid #424242; color: #212121;">
+                                    <span class="fw-bold">{{ option }}</span>
+                                </button>
+                            </div>
                         {% endfor %}
                     </div>
-                    <div id="result-message" class="text-center mt-3" style="display: none;"></div>
-                    <div class="d-flex justify-content-center align-items-center" >
-                        <!-- Таймер -->
-                        <div id="clockdiv">                        
-                        </div>
+                    <div id="result-message" class="text-center mt-4" style="display: none;"></div>                    
+                    <div class="d-flex justify-content-center align-items-center mt-3">
+                        <div id="clockdiv" class="fw-bold" style="color: #c62828;"></div>
                     </div>
                 </div>
             </div>
-        </div>        
-    </form>
-</div>
+        </div>
 {% endblock %}
