@@ -1,5 +1,5 @@
 {% extends 'blog/base.html' %}
-
+{% load custom_filters %}
 {% block content %}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -15,47 +15,49 @@
         let timeInterval_hide; // Переменная для хранения интервала таймера
         const totalDuration = 10; // Таймер на 10 секунд
         let timeInterval; // Переменная для хранения интервала таймера
+
         buttons.forEach((button) => {
+            button.addEventListener("mouseover", () => {
+                button.style.backgroundColor = "#e0e0e0";
+            });
+            button.addEventListener("mouseout", () => {
+                button.style.backgroundColor = "#f5f5f5";
+            });
+
             button.addEventListener("click", () => {
-                // Делаем все кнопки неактивными
                 buttons.forEach((btn) => btn.disabled = true);
-                // Проверяем, правильный ли ответ
                 const isCorrect = button.getAttribute("data-correct") === "true";
                 if (isCorrect) {
-                    // Если ответ правильный
                     button.classList.add("btn-success");
                     resultMessage.style.color = "green";
                     resultMessage.innerText = "Правильно!";
+                    button.style.boxShadow = "0 0 20px 5px green";
                 } else {
-                    // Если ответ неправильный
                     button.classList.add("btn-danger");
                     resultMessage.style.color = "red";
                     resultMessage.innerText = "Неправильно!";
-                    // Подсвечиваем правильный ответ
+                    button.style.boxShadow = "0 0 20px 5px red";
                     buttons.forEach((btn) => {
                         if (btn.getAttribute("data-correct") === "true") {
                             btn.classList.add("btn-success");
+                            btn.style.boxShadow = "0 0 20px 5px green";
                         }
                     });
                 }
-                // Показываем сообщение о результате
                 resultMessage.style.display = "block";
-                // Скрываем таймер и очищаем интервал
                 clockDiv.style.display = "none";
-                clearInterval(timeInterval); // Останавливаем таймер
-                // Устанавливаем значение для отправки
+                clearInterval(timeInterval);
                 const hiddenInput = document.createElement("input");
                 hiddenInput.type = "hidden";
                 hiddenInput.name = "user_answer";
                 hiddenInput.value = button.value;
                 form.appendChild(hiddenInput);
-                // Задержка перед отправкой формы
                 setTimeout(() => {
                     form.submit();
-                }, 1000); // Задержка 1 секунда
+                }, 1000);
             });
         });
-        // Функция для отсчета времени
+
         function getTimeRemaining(endtime) {
             const t = Date.parse(endtime) - Date.parse(new Date());
             const seconds = Math.floor((t / 1000) % 60);
@@ -70,40 +72,39 @@
                 seconds: seconds
             };
         }
+
         function initializeClock(id, endtime) {
             var clock = document.getElementById(id);            
             function updateClock() {
                 var t = getTimeRemaining(endtime);
-                clock.innerHTML = 'Осталось: ' + t.seconds + ' сек.';
+                clock.innerHTML = 'Времени осталось : ' + t.seconds + ' сек';
                 if (t.total <= 0) {
                     clearInterval(timeInterval);
-                    clock.style.display = "none"; // Скрыть таймер, когда время вышло                    
-                    // Когда время вышло, считаем ответ неправильным и переходим к следующему вопросу
+                    clock.style.display = "none";
                     resultMessage.style.color = "red";
                     resultMessage.innerText = "Время истекло! Неправильно!";
                     resultMessage.style.display = "block";
-                    // Останавливаем таймер и скрываем его
                     clockDiv.style.display = "none";                    
-                    // Устанавливаем неправильный ответ
                     const incorrectAnswerButton = document.querySelector('.answer-btn[data-correct="false"]');
                     const hiddenInput = document.createElement("input");
                     hiddenInput.type = "hidden";
                     hiddenInput.name = "user_answer";
                     hiddenInput.value = incorrectAnswerButton.value;
                     form.appendChild(hiddenInput);
-                    // Задержка перед отправкой формы
                     setTimeout(() => {
                         form.submit();
-                    }, 1000); // Задержка 1 секунда
+                    }, 1000);
                 }
             }
-            updateClock(); // Запустите функцию один раз, чтобы избежать задержки
-            timeInterval = setInterval(updateClock, 1000); // Сохраняем интервал для остановки
+            updateClock();
+            timeInterval = setInterval(updateClock, 1000);
         }
-        // Устанавливаем конечное время для таймера (например, через 1 минуту)
-        var deadline = new Date(Date.parse(new Date()) + 300 * 1000);
-        initializeClock('clockdiv', deadline);
+
+        
+
+
 //////////////////////////////////////////////////////////////////////////////////
+
         function getTimeRemaining_hide(endtime) {
             const t = Date.parse(endtime) - Date.parse(new Date());
             const seconds = Math.floor((t / 1000) % 60);
@@ -111,6 +112,7 @@
             progressBar.style.width = `${Math.max(0, percentage)}%`;
             return { total: t, seconds: seconds };
         }        
+
         function initializeClock_hide(id, endtime) {
             const clock = document.getElementById(id);
             optionsDiv.style.display = "none";
@@ -119,17 +121,19 @@
                 clock.innerHTML = `${t.seconds} сек.`;                
                 if (t.total < 0) {
                     clearInterval(timeInterval_hide);
-                    clock.style.display = "none"; // Скрыть таймер
+                    clock.style.display = "none";
                     question_wordDiv.style.display = "none";
                     optionsDiv.style.display = "";
-                    progressBar.style.width = "0%"; // Полоска прогресса опустошена
+                    progressBar.style.width = "0%";
                     progress.style.display = "";
+                    var deadline = new Date(Date.parse(new Date()) + 300 * 1000);
+                    initializeClock('clockdiv', deadline);
                 }
             }
-            updateClock_hide(); // Запустите функцию один раз, чтобы избежать задержки
+            updateClock_hide();
             timeInterval_hide = setInterval(updateClock_hide, 1000);
         }
-        // Получаем значение question_time из data-атрибута
+
         const questionTime = parseInt(clockDiv_hide.getAttribute("data-question_time"), 10) || 4;
         const deadline_hide = new Date(Date.parse(new Date()) + questionTime * 1000);
         initializeClock_hide('clockdiv_hide', deadline_hide);
@@ -174,12 +178,16 @@
                               Подсказка
                             </button>
                             <ul class="dropdown-menu">
-                              <li style="color: #212121;">{{ question.kana }}</li>                              
+                                <li style="color: #212121;">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        {{ question.kana }}
+                                    </div>
+                                </li>                              
                             </ul>
                         </div>
                     </div>
                     <div class="row g-3" data-id="options-div">
-                        {% for option in question.options %}
+                        {% for option in question.options|shuffle %}
                             <div class="col-md-6">
                                 <button 
                                     type="submit" 
@@ -200,4 +208,8 @@
                 </div>
             </div>
         </div>
+    </form>
+</div>
+
+
 {% endblock %}

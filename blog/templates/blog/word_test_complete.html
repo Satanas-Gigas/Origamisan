@@ -4,10 +4,10 @@
 <div class="container py-3">
     <h1 class="text-center">Завершение теста</h1>
     <div class="text-center">
-        <h2>Ваш результат</h2>
+        <h2>Ваш результат:</h2>
+        <p><strong>Общее количество вопросов:</strong> {{ total_count }}</p>
         <p><strong>Правильных ответов:</strong> {{ correct_count }}</p>
         <p><strong>Неправильных ответов:</strong> {{ incorrect_count }}</p>
-        <p><strong>Общее количество вопросов:</strong> {{ total_count }}</p>
         <p><strong>Точность:</strong> {{ accuracy_percentage|floatformat:2 }}%</p>
     </div>
 

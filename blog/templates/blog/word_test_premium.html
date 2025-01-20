@@ -25,45 +25,64 @@
                 </div>
                 <div class="mb-3">
                     <p class="fw-bold">Время показа вопроса:</p>
-                    <input type="radio" class="btn-check" name="question_time" value=1 id="question_t_1" autocomplete="off">
+                    <input type="radio" class="btn-check" name="question_time" value=1 id="questions-1" autocomplete="off">
                     <label class="btn btn-outline-success" for="questions-1">1</label>
 
-                    <input type="radio" class="btn-check" name="question_time" value=2 id="question_t_2" autocomplete="off">
+                    <input type="radio" class="btn-check" name="question_time" value=2 id="questions-2" autocomplete="off">
                     <label class="btn btn-outline-success" for="questions-2">2</label>
 
-                    <input type="radio" class="btn-check" name="question_time" value=3 id="question_t_3" autocomplete="off" checked>
+                    <input type="radio" class="btn-check" name="question_time" value=3 id="questions-3" autocomplete="off" checked>
                     <label class="btn btn-outline-success" for="questions-3">3</label>
 
-                    <input type="radio" class="btn-check" name="question_time" value=4 id="question_t_4" autocomplete="off" >
+                    <input type="radio" class="btn-check" name="question_time" value=4 id="questions-4" autocomplete="off" >
                     <label class="btn btn-outline-success" for="questions-4">4</label>
 
-                    <input type="radio" class="btn-check" name="question_time" value="No" id="question_t_4" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions-No">No</label>
+                    <input type="radio" class="btn-check" name="question_time" value="No" id="questions-no" autocomplete="off">
+                    <label class="btn btn-outline-success" for="questions-no">No</label>
                 </div>
 
                 <div class="mb-3">
+                    <p class="fw-bold">Время показа вариантов ответа:</p>
+                    <input type="radio" class="btn-check" name="answers_time" value=1 id="answers-10" autocomplete="off">
+                    <label class="btn btn-outline-success" for="answers-10">10</label>
+
+                    <input type="radio" class="btn-check" name="answers_time" value=2 id="answers-20" autocomplete="off">
+                    <label class="btn btn-outline-success" for="answers-20">20</label>
+
+                    <input type="radio" class="btn-check" name="answers_time" value=3 id="answers-30" autocomplete="off" checked>
+                    <label class="btn btn-outline-success" for="answers-30">30</label>
+
+                    <input type="radio" class="btn-check" name="answers_time" value=4 id="answers-40" autocomplete="off" >
+                    <label class="btn btn-outline-success" for="answers-40">40</label>
+
+                    <input type="radio" class="btn-check" name="answers_time" value="No" id="answers-no" autocomplete="off">
+                    <label class="btn btn-outline-success" for="answers-no">No</label>
+                </div>
+                
+                <input type="hidden" id="hide" name="hide" value="on" />
+                <!-- <div class="mb-3">
                     <p class="fw-bold">Режим Выбери нужный ИЕРОГЛИФ</p>
                     <input type="radio" class="btn-check" name="hide" value="on" id="hide_kanji_yes" autocomplete="off" checked>
                     <label class="btn btn-outline-success" for="hide_kanji_yes">Включить</label>
 
                     <input type="radio" class="btn-check" name="hide" value="off" id="hide_kanji_no" autocomplete="off">
                     <label class="btn btn-outline-success" for="hide_kanji_no">Выключить</label>
-                </div>
+                </div> -->
 
                 <!-- Выбор количества вопросов -->
                 <div class="mb-3">
                     <p class="fw-bold">Количество вопросов:</p>
-                    <input type="radio" class="btn-check" name="questions_p" value=5 id="questions-5" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions-5">5</label>
+                    <input type="radio" class="btn-check" name="questions_p" value=5 id="questions_p-5" autocomplete="off">
+                    <label class="btn btn-outline-success" for="questions_p-5">5</label>
 
-                    <input type="radio" class="btn-check" name="questions_p" value=30 id="questions-30" autocomplete="off" checked>
-                    <label class="btn btn-outline-success" for="questions-30">30</label>
+                    <input type="radio" class="btn-check" name="questions_p" value=30 id="questions_p-30" autocomplete="off" checked>
+                    <label class="btn btn-outline-success" for="questions_p-30">30</label>
 
-                    <input type="radio" class="btn-check" name="questions_p" value=50 id="questions-50" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions-50">50</label>
+                    <input type="radio" class="btn-check" name="questions_p" value=50 id="questions_p-50" autocomplete="off">
+                    <label class="btn btn-outline-success" for="questions_p-50">50</label>
 
-                    <input type="radio" class="btn-check" name="questions_p" value="all" id="questions-all" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions-all">Все</label>
+                    <input type="radio" class="btn-check" name="questions_p" value="all" id="questions_p-all" autocomplete="off">
+                    <label class="btn btn-outline-success" for="questions_p-all">Все</label>
                 </div>
                   <!-- Кнопка отправки -->
                 <button type="submit" class="btn btn-primary mt-3">Начать тест</button>
