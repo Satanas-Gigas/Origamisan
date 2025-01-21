@@ -231,19 +231,25 @@ def word_test(request):
 def word_test_premium(request):
     return render(request, 'blog/word_test_premium.html')
 
+    # print(f"???????????????rollback_count :: {rollback_count}")
 def process_request_params(request):
-    rollback = request.POST.get('rollback')
+    rollback_count = request.POST.get('rollback')
     hide = request.POST.get('hide')
+    question_time = request.POST.get('question_time')
+    answers_time = request.POST.get('answers_time')
     test_type = request.GET.get('type', 'kanji_to_kana')  
     question_count = request.GET.get('questions')
     if not question_count:
         question_count = request.POST.get('questions_p')
     request.session.update({
+        'question_time': question_time,
+        'answers_time': answers_time,
         'hide': hide,
         'test_type': test_type,
         'question_count': question_count,
-        'rollback': rollback,
+        'rollback_count': rollback_count,        
     })
+    # print(f"???????????????rollback_count :: {rollback_count}")
     return hide, test_type, question_count
 
 def handle_hide_mode(question_count):
@@ -375,6 +381,15 @@ def word_test_start(request):
         except ValueError:
             return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
         
+        answers_time = request.POST.get('answers_time', request.GET.get('answers_time', 50))  # Значение по умолчанию 4
+        try:
+            answers_time = int(answers_time)
+            if answers_time <= 0:
+                raise ValueError("Время должно быть больше 0.")
+        except ValueError:
+            return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
+        
+        
         if hide == 'on':
             questions = handle_hide_mode(question_count)
         elif test_type == 'kanji_to_kana':
@@ -393,6 +408,7 @@ def word_test_start(request):
             'current_question_index': 0,
             'user_answers': [],
             'question_time': question_time,  # Сохраняем время в сессии
+            'answers_time': answers_time,
         })
 
 
@@ -403,6 +419,7 @@ def word_test_start(request):
             'test_type': test_type,
             'hide': hide,
             'question_time': question_time,  # Передаём время в шаблон
+            'answers_time': answers_time,  # Передаём время в шаблон
         }
         return render(request, 'blog/word_test_start.html', context)
 
@@ -411,6 +428,8 @@ def word_test_start(request):
 
 def word_test_next(request):
     hide = request.session.get('hide')
+    question_time = request.session.get('question_time')
+    answers_time = request.session.get('answers_time')
     current_index = request.session.get('current_question_index', 0)
     questions = request.session.get('questions', [])
     user_answer = request.POST.get('user_answer')
@@ -419,9 +438,16 @@ def word_test_next(request):
     user_answers = request.session.get('user_answers', [])
     user_answers.append(is_correct)
     request.session['user_answers'] = user_answers
-    rollback_count = request.session['rollback']
+    rollback_count = request.session['rollback_count']
+    
+    if rollback_count == "all":
+        rollback_count = len(questions)
+    elif rollback_count == "no":
+        rollback_count = None
     if rollback_count != None:
         rollback_count = int(rollback_count)
+    print(f"!!!!!!!!!!rollback_count  - {rollback_count}")
+        
     request.session['hide'] = hide
 
     current_index += 1
@@ -437,6 +463,8 @@ def word_test_next(request):
             'len_qs': len(questions),
             'hide': hide,
             'rollback_count': rollback_count,
+            'question_time': question_time,
+            'answers_time': answers_time,
         }
         return render(request, 'blog/word_test_start.html', context)
     else:

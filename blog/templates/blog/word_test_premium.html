@@ -6,30 +6,31 @@
     <h1 class="text-center mb-5" style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 700;">テスト - Иероглифы</h1>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="border: none; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);">
+            <div class="card" style="border: none; box-shadow: 0 4px 10px rgb(0, 0, 0);">
                 <div class="card-body p-5" style="background-color: #ffffff; border-radius: 15px;">
                     <p class="text-center fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Настройте параметры перед началом теста</p>
+                    <hr class="my-10"> <!-- Разделитель -->
                     <form method="POST" action="{% url 'word_test_start' %}">
                         {% csrf_token %}
                         <input type="hidden" id="hide" name="hide" value="on" />                        
                         <!-- Выбор отката -->
-                        <div class="mb-4">
+                        <div class=" mb-4">
                             <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Количество вопросов, на которое текущий индекс сместится назад, в случае неправильного ответа:</p>
                             <div class="d-flex justify-content-around">                            
 
                                 <input type="radio" class="btn-check" name="rollback" value=5 id="rollback-5" autocomplete="off" checked>
                                 <label class="btn btn-outline-dark fs-5 w-100" for="rollback-5">
-                                    5 сек.                                     
+                                    5                                     
                                 </label>
                                 
                                 <input type="radio" class="btn-check" name="rollback" value=10 id="rollback-10" autocomplete="off"> 
                                 <label class="btn btn-outline-dark fs-5 w-100"  for="rollback-10">
-                                    10 сек.                                    
+                                    10                                    
                                 </label>                                
                                 
                                 <input type="radio" class="btn-check" name="rollback" value=15 id="rollback-15" autocomplete="off"> 
                                 <label class="btn btn-outline-dark fs-5 w-100" for="rollback-15">
-                                    15 сек.                                    
+                                    15                                    
                                 </label>                                
                                 
                                 <input type="radio" class="btn-check" name="rollback" value="all" id="rollback-all" autocomplete="off"> 
@@ -49,15 +50,15 @@
                             <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Время показа вопроса:</p>
                             <div class="d-flex justify-content-around">
                                 
-                                <input type="radio" class="btn-check" name="question_time" value=1 id="questions-1" autocomplete="off">
+                                <input type="radio" class="btn-check" name="question_time" value=1 id="questions-1" autocomplete="off" checked>
                                 <label class="btn btn-outline-dark fs-5 w-100" for="questions-1">1 сек.
                                 </label>
                                 
-                                <input type="radio"  class="btn-check" name="question_time" value=2 id="questions-2" autocomplete="off">
+                                <input type="radio" class="btn-check" name="question_time" value=2 id="questions-2" autocomplete="off">
                                 <label class="btn btn-outline-dark fs-5 w-100" for="questions-2">2 сек.
                                 </label>
 
-                                <input type="radio" class="btn-check"name="question_time" value=3 id="questions-3" autocomplete="off" checked> 
+                                <input type="radio" class="btn-check"name="question_time" value=3 id="questions-3" autocomplete="off"> 
                                 <label class="btn btn-outline-dark fs-5 w-100"  for="questions-3">3 сек.                                
                                 </label>                                
 
@@ -78,23 +79,23 @@
                             <div class="d-flex justify-content-around">
                                 
                                 <input type="radio" class="btn-check" name="answers_time" value=10 id="answers-10" autocomplete="off"> 
-                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-10"> 10
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-10"> 10 сек.
                                 </label>
                                 
                                 <input type="radio"class="btn-check"  name="answers_time" value=20 id="answers-20" autocomplete="off"> 
-                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-20"> 20
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-20"> 20 сек.
                                 </label>
                                 
                                 <input type="radio" class="btn-check" name="answers_time" value=30 id="answers-30" autocomplete="off" checked> 
-                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-30"> 30
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-30"> 30 сек.
                                 </label>
                                 
                                 <input type="radio" class="btn-check" name="answers_time" value=40 id="answers-40" autocomplete="off"> 
-                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-40"> 40
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-40"> 40 сек.
                                 </label>
                                 
                                 <input type="radio" class="btn-check" name="answers_time" value="No" id="answers-no" autocomplete="off"> 
-                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-no"> No
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-no"> Нет
                                 </label>
                             </div>
                         </div>
