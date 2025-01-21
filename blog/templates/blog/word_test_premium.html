@@ -1,92 +1,133 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container py-5">
-    <h1 class="text-center mb-4">Премиум Тесты</h1>
-    <div class="row mb-4">
-        <div class="col-md-6 mx-auto text-center">
-            <p class="fs-5">Выберите величину отката и количество вопросов</p>
-            <form method="POST" action="{% url 'word_test_start' %}">
-                {% csrf_token %}                
-                <!-- Выбор отката -->
-                <div class="mb-3">
-                    <p class="fw-bold">Величина отката:</p>
-                    <input type="radio" class="btn-check" name="rollback" value=5 id="rollback-5" autocomplete="off" checked>
-                    <label class="btn btn-outline-success" for="rollback-5">5</label>
 
-                    <input type="radio" class="btn-check" name="rollback" value=10 id="rollback-10" autocomplete="off">
-                    <label class="btn btn-outline-success" for="rollback-10">10</label>
+<div class="container py-5" style="background-color: #f9f9f9; border-radius: 20px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
+    <h1 class="text-center mb-5" style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 700;">テスト - Иероглифы</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card" style="border: none; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);">
+                <div class="card-body p-5" style="background-color: #ffffff; border-radius: 15px;">
+                    <p class="text-center fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Настройте параметры перед началом теста</p>
+                    <form method="POST" action="{% url 'word_test_start' %}">
+                        {% csrf_token %}
+                        <input type="hidden" id="hide" name="hide" value="on" />                        
+                        <!-- Выбор отката -->
+                        <div class="mb-4">
+                            <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Количество вопросов, на которое текущий индекс сместится назад, в случае неправильного ответа:</p>
+                            <div class="d-flex justify-content-around">                            
 
-                    <input type="radio" class="btn-check" name="rollback" value=15 id="rollback-15" autocomplete="off">
-                    <label class="btn btn-outline-success" for="rollback-15">15</label>
+                                <input type="radio" class="btn-check" name="rollback" value=5 id="rollback-5" autocomplete="off" checked>
+                                <label class="btn btn-outline-dark fs-5 w-100" for="rollback-5">
+                                    5 сек.                                     
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="rollback" value=10 id="rollback-10" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="rollback-10">
+                                    10 сек.                                    
+                                </label>                                
+                                
+                                <input type="radio" class="btn-check" name="rollback" value=15 id="rollback-15" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100" for="rollback-15">
+                                    15 сек.                                    
+                                </label>                                
+                                
+                                <input type="radio" class="btn-check" name="rollback" value="all" id="rollback-all" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100" for="rollback-all">
+                                    В начало                                    
+                                </label>
 
-                    <input type="radio" class="btn-check" name="rollback" value="No" id="rollback-all" autocomplete="off">
-                    <label class="btn btn-outline-success" for="rollback-all">No</label>
+                                <input type="radio" class="btn-check" name="rollback" value="no" id="rollback-no" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100" for="rollback-no">
+                                    Нет                                    
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Время показа вопроса -->
+                        <div class="mb-4">
+                            <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Время показа вопроса:</p>
+                            <div class="d-flex justify-content-around">
+                                
+                                <input type="radio" class="btn-check" name="question_time" value=1 id="questions-1" autocomplete="off">
+                                <label class="btn btn-outline-dark fs-5 w-100" for="questions-1">1 сек.
+                                </label>
+                                
+                                <input type="radio"  class="btn-check" name="question_time" value=2 id="questions-2" autocomplete="off">
+                                <label class="btn btn-outline-dark fs-5 w-100" for="questions-2">2 сек.
+                                </label>
+
+                                <input type="radio" class="btn-check"name="question_time" value=3 id="questions-3" autocomplete="off" checked> 
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="questions-3">3 сек.                                
+                                </label>                                
+
+                                <input type="radio" class="btn-check" name="question_time" value=4 id="questions-4" autocomplete="off">
+                                <label class="btn btn-outline-dark fs-5 w-100" for="questions-4">4 сек.
+                                </label>
+
+                                <input type="radio" class="btn-check" name="question_time" value="No" id="questions-no" autocomplete="off">
+                                <label class="btn btn-outline-dark fs-5 w-100" for="questions-no">Нет                     
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <!-- Время показа вариантов ответа -->
+                        <div class="mb-4">
+                            <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Время показа вариантов ответа:</p>
+                            <div class="d-flex justify-content-around">
+                                
+                                <input type="radio" class="btn-check" name="answers_time" value=10 id="answers-10" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-10"> 10
+                                </label>
+                                
+                                <input type="radio"class="btn-check"  name="answers_time" value=20 id="answers-20" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-20"> 20
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="answers_time" value=30 id="answers-30" autocomplete="off" checked> 
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-30"> 30
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="answers_time" value=40 id="answers-40" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-40"> 40
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="answers_time" value="No" id="answers-no" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="answers-no"> No
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Количество вопросов -->
+                        <div class="mb-4">
+                            <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Количество вопросов:</p>
+                            <div class="d-flex justify-content-around">
+                                
+                                <input type="radio" class="btn-check" name="questions_p" value=5 id="questions_p-5" autocomplete="off">
+                                <label class="btn btn-outline-dark fs-5 w-100" for="questions_p-5">5 
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="questions_p" value=30 id="questions_p-30" autocomplete="off" checked>
+                                <label class="btn btn-outline-dark fs-5 w-100" for="questions_p-30">30
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="questions_p" value=50 id="questions_p-50" autocomplete="off">
+                                <label class="btn btn-outline-dark fs-5 w-100" for="questions_p-50">50
+                                </label>                                
+
+                                <input type="radio" class="btn-check" name="questions_p" value="all" id="questions_p-all" autocomplete="off">
+                                <label class="btn btn-outline-dark fs-5 w-100" for="questions_p-all">Все
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Кнопка отправки -->
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary px-5 py-2" style="font-size: 1rem; font-weight: 600;">Начать тест</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <p class="fw-bold">Время показа вопроса:</p>
-                    <input type="radio" class="btn-check" name="question_time" value=1 id="questions-1" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions-1">1</label>
-
-                    <input type="radio" class="btn-check" name="question_time" value=2 id="questions-2" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions-2">2</label>
-
-                    <input type="radio" class="btn-check" name="question_time" value=3 id="questions-3" autocomplete="off" checked>
-                    <label class="btn btn-outline-success" for="questions-3">3</label>
-
-                    <input type="radio" class="btn-check" name="question_time" value=4 id="questions-4" autocomplete="off" >
-                    <label class="btn btn-outline-success" for="questions-4">4</label>
-
-                    <input type="radio" class="btn-check" name="question_time" value="No" id="questions-no" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions-no">No</label>
-                </div>
-
-                <div class="mb-3">
-                    <p class="fw-bold">Время показа вариантов ответа:</p>
-                    <input type="radio" class="btn-check" name="answers_time" value=1 id="answers-10" autocomplete="off">
-                    <label class="btn btn-outline-success" for="answers-10">10</label>
-
-                    <input type="radio" class="btn-check" name="answers_time" value=2 id="answers-20" autocomplete="off">
-                    <label class="btn btn-outline-success" for="answers-20">20</label>
-
-                    <input type="radio" class="btn-check" name="answers_time" value=3 id="answers-30" autocomplete="off" checked>
-                    <label class="btn btn-outline-success" for="answers-30">30</label>
-
-                    <input type="radio" class="btn-check" name="answers_time" value=4 id="answers-40" autocomplete="off" >
-                    <label class="btn btn-outline-success" for="answers-40">40</label>
-
-                    <input type="radio" class="btn-check" name="answers_time" value="No" id="answers-no" autocomplete="off">
-                    <label class="btn btn-outline-success" for="answers-no">No</label>
-                </div>
-                
-                <input type="hidden" id="hide" name="hide" value="on" />
-                <!-- <div class="mb-3">
-                    <p class="fw-bold">Режим Выбери нужный ИЕРОГЛИФ</p>
-                    <input type="radio" class="btn-check" name="hide" value="on" id="hide_kanji_yes" autocomplete="off" checked>
-                    <label class="btn btn-outline-success" for="hide_kanji_yes">Включить</label>
-
-                    <input type="radio" class="btn-check" name="hide" value="off" id="hide_kanji_no" autocomplete="off">
-                    <label class="btn btn-outline-success" for="hide_kanji_no">Выключить</label>
-                </div> -->
-
-                <!-- Выбор количества вопросов -->
-                <div class="mb-3">
-                    <p class="fw-bold">Количество вопросов:</p>
-                    <input type="radio" class="btn-check" name="questions_p" value=5 id="questions_p-5" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions_p-5">5</label>
-
-                    <input type="radio" class="btn-check" name="questions_p" value=30 id="questions_p-30" autocomplete="off" checked>
-                    <label class="btn btn-outline-success" for="questions_p-30">30</label>
-
-                    <input type="radio" class="btn-check" name="questions_p" value=50 id="questions_p-50" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions_p-50">50</label>
-
-                    <input type="radio" class="btn-check" name="questions_p" value="all" id="questions_p-all" autocomplete="off">
-                    <label class="btn btn-outline-success" for="questions_p-all">Все</label>
-                </div>
-                  <!-- Кнопка отправки -->
-                <button type="submit" class="btn btn-primary mt-3">Начать тест</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
