@@ -11,10 +11,12 @@
         const optionsDiv = document.querySelector("[data-id='options-div']"); // Контейнер для кнопок
         const clockDiv_hide = document.getElementById("clockdiv_hide"); // Таймер
         const progressBar = document.querySelector(".progress-bar"); // Полоска прогресса
+        const progressBar_down = document.getElementById("progress-bar_down"); // Таймер
         const progress = document.querySelector(".progress"); // Полоска прогресса
         let timeInterval_hide; // Переменная для хранения интервала таймера
         const totalDuration = 10; // Таймер на 10 секунд
         let timeInterval; // Переменная для хранения интервала таймера
+        const left_time = document.getElementById("left_time");
 
         buttons.forEach((button) => {
             button.addEventListener("mouseover", () => {
@@ -76,6 +78,8 @@
         function getTimeRemaining(endtime) {
             const t = Date.parse(endtime) - Date.parse(new Date());
             const seconds = Math.floor((t / 1000) % 60);
+            const percentage = (t / ({{answers_time|default:20}} * 1000)) * 100;
+            progressBar_down.style.width = `${Math.max(0, percentage)}%`;
             return { total: t, seconds: seconds };
         }        
 
@@ -123,6 +127,7 @@
                 const t = getTimeRemaining_hide(endtime);
                 clock.innerHTML = `${t.seconds} сек.`;                
                 if (t.total < 0) {
+                    left_time.style.visibility = "hidden"
                     clearInterval(timeInterval_hide);
                     clock.style.display = "none";
                     question_wordDiv.style.display = "none";
@@ -151,10 +156,10 @@
             <div class="card my-3 shadow-lg" style="border: 2px solid #424242;">
                 <div class="card-body" style="background-color: #f9f6f2;">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 style="color: #424242;">Время: 
+                        <h5 style="color: #424242;" id="left_time">Осталось:  
                             <span id="clockdiv_hide" class="fw-bold" style="color: #c62828;"></span>
                         </h5>
-                        <h5 style="color: #424242;">Вопрос:                             
+                        <h5 style="color: #424242;"  >Вопрос:                             
                             <span class="fw-bold" style="color: #212121;">
                                 {% with current_index|add:1 as current_index %}
                                 {{ current_index|default:"1" }}
@@ -204,9 +209,13 @@
                             </div>
                         {% endfor %}
                     </div>
+
+
                     <div class="progress mb-4" style="height: 20px; background-color: #e0e0e0;">
-                        <div class="progress-bar" style="background-color: #d32f2f; transition: width 1s linear;" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" id="progress-bar_down" style="background-color: #d32f2f; transition: width 1s linear;" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
+
+
                     <div id="result-message" class="text-center mt-4" style="display: none;"></div>                    
                     <div class="d-flex justify-content-center align-items-center mt-3">
                         <div id="clockdiv" class="fw-bold" style="color: #c62828;"></div>
