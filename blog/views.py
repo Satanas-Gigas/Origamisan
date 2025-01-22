@@ -254,8 +254,7 @@ def process_request_params(request):
 
 def handle_hide_mode(question_count):
     correct_kanjis = []
-    attempts = 0
-    question_count = int(question_count)    
+    attempts = 0 
     word_kanji_list = Word.objects.filter(
     kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
     ).values_list('kanji', flat=True)
@@ -265,6 +264,13 @@ def handle_hide_mode(question_count):
         kanji.kanji for kanji in Kanji.objects.all()
         if any(kanji.kanji in word for word in word_kanji_list)
     ])
+
+    if question_count == "all":
+        question_count = len(kanji_list)
+    else: question_count = int(question_count)
+
+    print(f"question_count all = {question_count}")
+
     while len(correct_kanjis) < question_count:
         correct_answer = kanji_list.exclude(
             kanji__in=[entry["answer"].kanji for entry in correct_kanjis]
@@ -374,20 +380,28 @@ def word_test_start(request):
     try:
         hide, test_type, question_count = process_request_params(request)
         question_time = request.POST.get('question_time', request.GET.get('question_time', 4))  # Значение по умолчанию 4
-        try:
-            question_time = int(question_time)
-            if question_time <= 0:
-                raise ValueError("Время должно быть больше 0.")
-        except ValueError:
-            return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
-        
+
+        if (question_time != "None"):
+            try:
+                question_time = int(question_time)
+                if question_time <= 0:
+                    raise ValueError("Время должно быть больше 0.")
+            except ValueError:
+                return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
+        else:
+            question_time = None
+
+            
         answers_time = request.POST.get('answers_time', request.GET.get('answers_time', 50))  # Значение по умолчанию 4
-        try:
-            answers_time = int(answers_time)
-            if answers_time <= 0:
-                raise ValueError("Время должно быть больше 0.")
-        except ValueError:
-            return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
+        if (answers_time != "None"):
+            try:
+                answers_time = int(answers_time)
+                if answers_time <= 0:
+                    raise ValueError("Время должно быть больше 0.")
+            except ValueError:
+                return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
+        else:
+            answers_time = None
         
         
         if hide == 'on':
@@ -411,6 +425,8 @@ def word_test_start(request):
             'answers_time': answers_time,
         })
 
+        if question_count == "all":
+            question_count = "из всех"
 
         context = {
             'question': questions[0],
@@ -446,7 +462,6 @@ def word_test_next(request):
         rollback_count = None
     if rollback_count != None:
         rollback_count = int(rollback_count)
-    print(f"!!!!!!!!!!rollback_count  - {rollback_count}")
         
     request.session['hide'] = hide
 

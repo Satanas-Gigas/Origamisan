@@ -84,13 +84,16 @@
         }        
 
         function initializeClock(id, endtime) {
+
+            // question_wordDiv.style.display = "";
+            // optionsDiv.style.display = "";
+                       
             const clock = document.getElementById(id);
              function updateClock() {
                 const t = getTimeRemaining(endtime);
-                clock.innerHTML = `${t.seconds} сек.`;                
+                clock.innerHTML = `${t.seconds} сек.`;
+                                
                 if (t.total < 0) {
-
-
                     clearInterval(timeInterval);
                     clock.style.display = "none";
                     resultMessage.style.color = "red";
@@ -111,6 +114,14 @@
             updateClock();
             timeInterval = setInterval(updateClock, 1000);
         }
+        /////suda idi
+        // var question_time = {{question_time}}
+        // console.log("question_time    -   ", question_time);
+
+                        
+        // var answers_time = {{answers_time}};
+        // console.log("ELSEEEEE    answers_time -   ", answers_time);     
+        {% if question_time %}
 
         function getTimeRemaining_hide(endtime) {
             const t = Date.parse(endtime) - Date.parse(new Date());
@@ -125,7 +136,8 @@
             optionsDiv.style.display = "none";
             function updateClock_hide() {
                 const t = getTimeRemaining_hide(endtime);
-                clock.innerHTML = `${t.seconds} сек.`;                
+                clock.innerHTML = `${t.seconds} сек.`;   
+     
                 if (t.total < 0) {
                     left_time.style.visibility = "hidden"
                     clearInterval(timeInterval_hide);
@@ -145,8 +157,21 @@
         const questionTime = {{question_time|default:4}};
         const deadline_hide = new Date(Date.parse(new Date()) + questionTime * 1000);
         initializeClock_hide('clockdiv_hide', deadline_hide);
+
+        {% else %}
+        var answers_time = {{answers_time}};
+        console.log("ELSEEEEE    answers_time -   ", answers_time);
+        
+
+        var deadline = new Date(Date.parse(new Date()) + {{answers_time|default:4}} * 1000);
+        initializeClock('clockdiv', deadline);
+
+        {% endif %}
+
     });
+            // console.log("answers_time    -   ", answers_time);
 </script>
+
 
 <div class="container py-5" style="background-color: #fafafa;">
     <h1 class="text-center mb-4" style="color: #d32f2f;">Тестирование</h1>
