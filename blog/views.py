@@ -231,26 +231,7 @@ def word_test(request):
 def word_test_premium(request):
     return render(request, 'blog/word_test_premium.html')
 
-    # print(f"???????????????rollback_count :: {rollback_count}")
-def process_request_params(request):
-    rollback_count = request.POST.get('rollback')
-    hide = request.POST.get('hide')
-    question_time = request.POST.get('question_time')
-    answers_time = request.POST.get('answers_time')
-    test_type = request.GET.get('type', 'kanji_to_kana')  
-    question_count = request.GET.get('questions')
-    if not question_count:
-        question_count = request.POST.get('questions_p')
-    request.session.update({
-        'question_time': question_time,
-        'answers_time': answers_time,
-        'hide': hide,
-        'test_type': test_type,
-        'question_count': question_count,
-        'rollback_count': rollback_count,        
-    })
-    # print(f"???????????????rollback_count :: {rollback_count}")
-    return hide, test_type, question_count
+
 
 def handle_hide_mode(question_count):
     correct_kanjis = []
@@ -376,9 +357,39 @@ def generate_trans_to_kanji_questions(question_count):
         })
     return questions
 
+
+
+def process_request_params(request):
+    rollback_count = request.POST.get('rollback')
+    question_time = request.POST.get('question_time')
+    answers_time = request.POST.get('answers_time')
+    test_type = request.GET.get('test_type')    
+    if not test_type:
+        test_type = request.POST.get('test_type')
+    extra_option = request.POST.get('extra_option')
+    question_count = request.GET.get('questions')
+    if not question_count:
+        question_count = request.POST.get('questions_p')
+    request.session.update({
+        'question_time': question_time,
+        'answers_time': answers_time,
+        'test_type': test_type,
+        'extra_option': extra_option,
+        'question_count': question_count,
+        'rollback_count': rollback_count,        
+    })
+    print(f'test_type - {test_type}')
+    print (f"extra_option - {extra_option}")
+    print (f"question_count - {question_count}")
+    return test_type, question_count, extra_option
+
+
+
 def word_test_start(request):
     try:
-        hide, test_type, question_count = process_request_params(request)
+        test_type, question_count, extra_option = process_request_params(request)
+
+        
         question_time = request.POST.get('question_time', request.GET.get('question_time', 4))  # Значение по умолчанию 4
 
         if (question_time != "None"):
@@ -402,9 +413,9 @@ def word_test_start(request):
                 return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
         else:
             answers_time = None
+
         
-        
-        if hide == 'on':
+        if test_type == 'hide':
             questions = handle_hide_mode(question_count)
         elif test_type == 'kanji_to_kana':
             questions = generate_kanji_to_kana_questions(question_count)
@@ -423,6 +434,7 @@ def word_test_start(request):
             'user_answers': [],
             'question_time': question_time,  # Сохраняем время в сессии
             'answers_time': answers_time,
+            'extra_option': extra_option,
         })
 
         if question_count == "all":
@@ -433,9 +445,9 @@ def word_test_start(request):
             'total': question_count,
             'question_count': question_count,
             'test_type': test_type,
-            'hide': hide,
             'question_time': question_time,  # Передаём время в шаблон
             'answers_time': answers_time,  # Передаём время в шаблон
+            'extra_option': extra_option,
         }
         return render(request, 'blog/word_test_start.html', context)
 
@@ -455,6 +467,7 @@ def word_test_next(request):
     user_answers.append(is_correct)
     request.session['user_answers'] = user_answers
     rollback_count = request.session['rollback_count']
+    extra_option = request.session['extra_option']
     
     if rollback_count == "all":
         rollback_count = len(questions)
@@ -480,6 +493,7 @@ def word_test_next(request):
             'rollback_count': rollback_count,
             'question_time': question_time,
             'answers_time': answers_time,
+            'extra_option ': extra_option,
         }
         return render(request, 'blog/word_test_start.html', context)
     else:

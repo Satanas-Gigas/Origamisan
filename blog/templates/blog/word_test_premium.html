@@ -11,8 +11,70 @@
                     <p class="text-center fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Настройте параметры перед началом теста</p>
                     <hr class="my-10"> <!-- Разделитель -->
                     <form method="POST" action="{% url 'word_test_start' %}">
-                        {% csrf_token %}
-                        <input type="hidden" id="hide" name="hide" value="on" />                        
+                        {% csrf_token %}   
+                        <div class=" mb-4">
+                            <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Выберите тип теста:</p>
+                            <div class="d-flex justify-content-around">                            
+
+                                <input type="radio" class="btn-check" name="test_type" value="kanji_to_kana" id="type_kanji_to_kana" autocomplete="off" checked>
+                                <label class="btn btn-outline-dark fs-5 w-100" for="type_kanji_to_kana">
+                                    Канджи Кана                                     
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="test_type" value='kana_to_kanji' id="type_kana_to_kanji" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100"  for="type_kana_to_kanji">
+                                    Кана Канджи                                    
+                                </label>                                
+                                
+                                <input type="radio" class="btn-check" name="test_type" value='kanji_to_trans' id="type_kanji_to_trans" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100" for="type_kanji_to_trans">
+                                    Канджи Перевод                                    
+                                </label>                                
+                                
+                                <input type="radio" class="btn-check" name="test_type" value='trans_to_kanji' id="type_trans_to_kanji" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100" for="type_trans_to_kanji">
+                                    Перевод Канджи                                    
+                                </label>
+
+                                <input type="radio" class="btn-check" name="test_type" value="hide" id="type_hide" autocomplete="off"> 
+                                <label class="btn btn-outline-dark fs-5 w-100" for="type_hide">
+                                    Скрытый Канджи                                    
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="extra-options" class="mt-3" style="display: none;">
+                            <p class="text-start fs-5" style="color: #555; font-family: 'Poppins', sans-serif;">Выберите вариант:</p>
+                            <div class="d-flex justify-content-around">
+                                <input type="radio" class="btn-check" name="extra_option" value=True id="option_with_hints" autocomplete="off">
+                                <label class="btn btn-outline-dark fs-5 w-100" for="option_with_hints">С подсказками</label>
+                    
+                                <input type="radio" class="btn-check" name="extra_option" value=None id="option_without_hints" autocomplete="off" checked>
+                                <label class="btn btn-outline-dark fs-5 w-100" for="option_without_hints">Без подсказок</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        // Получаем элементы
+                        const typeHide = document.getElementById('type_hide');
+                        const extraOptions = document.getElementById('extra-options');
+                        const typeRadioButtons = document.querySelectorAll('input[name="test_type"]');
+                    
+                        // Добавляем обработчик события
+                        typeRadioButtons.forEach(radio => {
+                            radio.addEventListener('change', function () {
+                                if (typeHide.checked) {
+                                    extraOptions.style.display = 'block';
+                                } else {
+                                    extraOptions.style.display = 'none';
+                                }
+                            });
+                        });
+                    </script>
+                    
+                        
+                        
                         <!-- Выбор отката -->
                         <div class=" mb-4">
                             <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Количество вопросов, на которое текущий индекс сместится назад, в случае неправильного ответа:</p>

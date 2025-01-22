@@ -10,7 +10,6 @@
         <p><strong>Неправильных ответов:</strong> {{ incorrect_count }}</p>
         <p><strong>Точность:</strong> {{ accuracy_percentage|floatformat:2 }}%</p>
     </div>
-
     <div class="text-center mt-3">
         <a href="{% url 'word_test_start' %}?type={{ test_type }}&questions={{ question_count }}" class="btn btn-primary">Начать заново</a>
     </div>
