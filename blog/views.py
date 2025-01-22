@@ -361,13 +361,37 @@ def generate_trans_to_kanji_questions(question_count):
 
 def process_request_params(request):
     rollback_count = request.POST.get('rollback')
-    question_time = request.POST.get('question_time')
-    answers_time = request.POST.get('answers_time')
     test_type = request.GET.get('test_type')    
     if not test_type:
         test_type = request.POST.get('test_type')
     extra_option = request.POST.get('extra_option')
     question_count = request.GET.get('questions')
+
+    question_time = request.POST.get('question_time', request.GET.get('question_time', None))  # Значение по умолчанию 4
+
+    if ((question_time != "None") and (question_time != None)):
+        try:
+            question_time = int(question_time)
+            if question_time <= 0:
+                raise ValueError("Время должно быть больше 0.")
+        except ValueError:
+            return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
+    else:
+        question_time = None
+
+        
+    answers_time = request.POST.get('answers_time', request.GET.get('answers_time', 40))  # Значение по умолчанию 4
+    if (answers_time != "None"):
+        try:
+            answers_time = int(answers_time)
+            if answers_time <= 0:
+                raise ValueError("Время должно быть больше 0.")
+        except ValueError:
+            return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
+    else:
+        answers_time = None
+
+
     if not question_count:
         question_count = request.POST.get('questions_p')
     request.session.update({
@@ -381,38 +405,12 @@ def process_request_params(request):
     print(f'test_type - {test_type}')
     print (f"extra_option - {extra_option}")
     print (f"question_count - {question_count}")
-    return test_type, question_count, extra_option
-
-
+    return test_type, question_count, extra_option, question_time, answers_time
 
 def word_test_start(request):
     try:
-        test_type, question_count, extra_option = process_request_params(request)
-
-        
-        question_time = request.POST.get('question_time', request.GET.get('question_time', 4))  # Значение по умолчанию 4
-
-        if (question_time != "None"):
-            try:
-                question_time = int(question_time)
-                if question_time <= 0:
-                    raise ValueError("Время должно быть больше 0.")
-            except ValueError:
-                return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
-        else:
-            question_time = None
-
-            
-        answers_time = request.POST.get('answers_time', request.GET.get('answers_time', 50))  # Значение по умолчанию 4
-        if (answers_time != "None"):
-            try:
-                answers_time = int(answers_time)
-                if answers_time <= 0:
-                    raise ValueError("Время должно быть больше 0.")
-            except ValueError:
-                return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
-        else:
-            answers_time = None
+        test_type, question_count, extra_option, question_time, answers_time = process_request_params(request)        
+       
 
         
         if test_type == 'hide':

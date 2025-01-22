@@ -115,8 +115,6 @@
             timeInterval = setInterval(updateClock, 1000);
         }
                           
-        // var answers_time = {{answers_time}};
-        // console.log("ELSEEEEE    answers_time -   ", answers_time);     
         {% if question_time %}
 
         function getTimeRemaining_hide(endtime) {
@@ -156,7 +154,7 @@
 
         {% else %}   
 
-        var deadline = new Date(Date.parse(new Date()) + {{answers_time|default:4}} * 1000);
+        var deadline = new Date(Date.parse(new Date()) + {{answers_time|default:40}} * 1000);
         initializeClock('clockdiv', deadline);
 
         {% endif %}
@@ -228,6 +226,7 @@
                             </div>
                         {% endfor %}
                     </div>
+                    <br>
                     <div class="progress mb-4" style="height: 20px; background-color: #e0e0e0;">
                         <div class="progress-bar" id="progress-bar_down" style="background-color: #d32f2f; transition: width 1s linear;" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>

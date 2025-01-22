@@ -1,17 +1,46 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-<div class="container py-3">
-    <h1 class="text-center">Завершение теста</h1>
-    <div class="text-center">
-        <h2>Ваш результат:</h2>
-        <p><strong>Общее количество вопросов:</strong> {{ total_count }}</p>
-        <p><strong>Правильных ответов:</strong> {{ correct_count }}</p>
-        <p><strong>Неправильных ответов:</strong> {{ incorrect_count }}</p>
-        <p><strong>Точность:</strong> {{ accuracy_percentage|floatformat:2 }}%</p>
-    </div>
-    <div class="text-center mt-3">
-        <a href="{% url 'word_test_start' %}?type={{ test_type }}&questions={{ question_count }}" class="btn btn-primary">Начать заново</a>
+<div class="container py-5" style="font-family: 'Noto Serif JP', serif; background-color: #fdf6e3;">
+    <div class="border rounded shadow-lg" style="border: 2px solid #d8c292; background: white;">
+        <div class="p-5">
+            <h1 class="text-center mb-4" style="color: #8b4513; font-size: 2.5rem; font-weight: bold; font-family: 'Poppins', sans-serif;">Результаты теста</h1>
+
+            <table class="table table-bordered text-center" style="font-size: 1.2rem; border-color: #d8c292; color: #333;">
+                <thead style="background-color: #f2e6d9;">
+                    <tr>
+                        <th style="padding: 15px;"><p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Параметр</th>
+                        <th style="padding: 15px;"><p class="text-center fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 15px; font-weight: bold; "> <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Общее количество вопросов</p></td>
+                        <td style="padding: 15px; color: #000000;"><p class="text-center fs-5 mb-4" style="color: #1100ff; font-family: 'Poppins', sans-serif;"> {{ total_count }}</p></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; font-weight: bold; "> <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Правильных ответов</p></td>
+                        <td style="padding: 15px; color: #228B22;"><p class="text-center fs-5 mb-4" style="color: #00ff80; font-family: 'Poppins', sans-serif;"> {{ correct_count }}</p></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; font-weight: bold;"><p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Неправильных ответов</p></td>
+                        <td style="padding: 15px; color: #B22222; "> <p class="text-center fs-5 mb-4" style="color: #ff0000; font-family: 'Poppins', sans-serif;"> {{ incorrect_count }}</p></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; font-weight: bold;"><p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Точность</p></td>
+                        <td style="padding: 15px; color: #4169E1; "> <p class="text-center fs-5 mb-4" style="color: #000000; font-family: 'Poppins', sans-serif;"> {{ accuracy_percentage|floatformat:2 }}%</p></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="text-center mt-4">
+                <a href="{% url 'word_test_start' %}?type={{ test_type }}&questions={{ question_count }}" 
+                   class="btn px-5 py-3" 
+                   style="background-color: #d8c292; color: white; border: 1px solid #8b4513; font-size: 1.2rem; font-weight: bold; border-radius: 25px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+                    <p class="text-center" style="color: #555; font-family: 'Poppins', sans-serif;">Пройти ещё раз</p>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
