@@ -53,26 +53,24 @@
                                 <label class="btn btn-outline-dark fs-5 w-100" for="option_without_hints">Без подсказок</label>
                             </div>
                         </div>
-                    </div>
-                    
-                    <script>
-                        // Получаем элементы
-                        const typeHide = document.getElementById('type_hide');
-                        const extraOptions = document.getElementById('extra-options');
-                        const typeRadioButtons = document.querySelectorAll('input[name="test_type"]');
-                    
-                        // Добавляем обработчик события
-                        typeRadioButtons.forEach(radio => {
-                            radio.addEventListener('change', function () {
-                                if (typeHide.checked) {
-                                    extraOptions.style.display = 'block';
-                                } else {
-                                    extraOptions.style.display = 'none';
-                                }
+
+                        <script>
+                            // Получаем элементы
+                            const typeHide = document.getElementById('type_hide');
+                            const extraOptions = document.getElementById('extra-options');
+                            const typeRadioButtons = document.querySelectorAll('input[name="test_type"]');
+                        
+                            // Добавляем обработчик события
+                            typeRadioButtons.forEach(radio => {
+                                radio.addEventListener('change', function () {
+                                    if (typeHide.checked) {
+                                        extraOptions.style.display = 'block';
+                                    } else {
+                                        extraOptions.style.display = 'none';
+                                    }
+                                });
                             });
-                        });
-                    </script>
-                    
+                        </script>
                         
                         
                         <!-- Выбор отката -->
