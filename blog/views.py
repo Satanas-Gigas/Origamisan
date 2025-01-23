@@ -308,6 +308,7 @@ def generate_kanji_to_kana_questions(question_count):
     return questions
 
 def generate_kana_to_kanji_questions(question_count):
+    question_count = int(question_count)
     questions = []
     all_kanji = list(Word.objects.exclude(kana__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:question_count * 4]
     words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
