@@ -100,14 +100,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'word_test_premium' %}">Премиум Тесты</a>
               </li>
+              {% if user.is_authenticated%}
               <li class="nav-item">
                 <button id="toggle-visibility-btn">Скрыть/открыть</button>
               </li>
+              {% endif %}
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Введите текст" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Поиск</button>
-            </form>
           </div>
         </div>
       </nav>
@@ -123,36 +121,18 @@
 
         <div class="carousel-inner d-flex align-items-center" style="height: 100%; position: relative;">
           <div class="carousel-item active">
-            <img src="{% get_media_prefix %}slide.jpg" class="d-block w-100d-flex align-items-center" alt="Slide 1" style="object-fit: cover; height: 100%;">
-            <div class="container " style="position: absolute; top: 0; left: 0; width: 100%; height: 46%;">
-              <div class="carousel-caption text-start" style="position: absolute; bottom: 10%; left: 10%; z-index: 10;">
-                <h1>Ничего не бойтесь!</h1>
-                <p class="opacity-75">Всё самое необходимое здесь! Также, в дальнейшем, у нас будет много интересных товаров!</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Подробнее!</a></p>
-              </div>
-            </div>
+            <img src="{% get_media_prefix %}slide.jpg" class="d-block w-100" alt="Slide 1" style="object-fit: cover;">
+
           </div>
       
           <div class="carousel-item">
-            <img src="{% get_media_prefix %}slide2.jpg" class="d-block w-10 d-flex align-items-center" alt="Slide 2" style="object-fit: cover; height: 100%;">
-            <div class="container" style="position: absolute; top: 0; left: 0; width: 100%; height: 46%;">
-              <div class="carousel-caption" style="position: absolute; bottom: 10%; left: 10%; z-index: 10;">
-                <h1>От носителей языка.</h1>
-                <p>Сайт сопровождают японцы, а также активно продвигают новые идеи для развития.</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Узнать больше!</a></p>
-              </div>
-            </div>
+            <img src="{% get_media_prefix %}slide2.jpg" class="d-block w-100" alt="Slide 2" style="object-fit: cover;">
+
           </div>
       
           <div class="carousel-item">
-            <img src="{% get_media_prefix %}slide3.jpg" class="d-block w-10 d-flex align-items-center" alt="Slide 3" style="object-fit: cover; height: 100%;">
-            <div class="container" style="position: absolute; top: 0; left: 0; width: 100%; height: 46%;">
-              <div class="carousel-caption text-end" style="position: absolute; bottom: 10%; right: 10%; z-index: 10;">
-                <h1>Вся необходимая грамматика</h1>
-                <p>Вся грамматика в одном месте! Полностью все объяснения</p>
-                <p><a class="btn btn-lg btn-primary" href="#">Рассмотреть подробнее</a></p>
-              </div>
-            </div>
+            <img src="{% get_media_prefix %}slide3.jpg" class="d-block w-100" alt="Slide 3" style="object-fit: cover;">
+            
           </div>
         </div>
       
@@ -175,8 +155,8 @@
       <hr class="featurette-divider">  
     </main>
     <footer class="container">
-      <p class="float-end"><a href="#">Back to top</a></p>
-      <p>&copy; 2017–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <p class="float-end"><a href="/">На главную страницу</a></p>
+      <p>&copy; 2024–2025 &middot; <a href="#">robot-tyaga@yandex.ru</a></p>
     </footer>
     <script src="{% static 'bootstrap\dist\js\bootstrap.bundle.min.js' %}"></script>
   </body>
