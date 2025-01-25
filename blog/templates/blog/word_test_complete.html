@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+
 <div class="container py-5" style="font-family: 'Noto Serif JP', serif; background-color: #fdf6e3;">
     <div class="border rounded shadow-lg" style="border: 2px solid #d8c292; background: white;">
         <div class="p-5">
@@ -34,10 +35,23 @@
             </table>
 
             <div class="text-center mt-4">
-                <a href="{% url 'word_test_start' %}?type={{ test_type }}&questions={{ question_count }}" 
-                   class="btn px-5 py-3" 
+                <form method="POST" action="{% url 'word_test_start' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="rollback" value={{ rollback }}>
+                    <input type="hidden" name="test_type" value={{ test_type }}>
+                    <input type="hidden" name="questions_p" value={{ question_count }}>
+                    <input type="hidden" name="extra_option" value={{ extra_option }}>
+                    <input type="hidden" name="answers_time" value={{ answers_time}}>
+                    <button type="submit" class="btn px-5 py-3" style="background-color: #d8c292; color: white; border: 1px solid #8b4513; font-size: 1.2rem; font-weight: bold; border-radius: 25px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+                        <p class="text-center" style="color: #555; font-family: 'Poppins', sans-serif;">Попробывать ещё раз</p>    
+                    </button>
+                </form>    
+                <br>
+                <a href="/" 
+                   class="btn px-5 py-3"
+                   role="button" 
                    style="background-color: #d8c292; color: white; border: 1px solid #8b4513; font-size: 1.2rem; font-weight: bold; border-radius: 25px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
-                    <p class="text-center" style="color: #555; font-family: 'Poppins', sans-serif;">Пройти ещё раз</p>
+                    <p class="text-center" style="color: #555; font-family: 'Poppins', sans-serif;">На главную страницу</p>
                 </a>
             </div>
         </div>
