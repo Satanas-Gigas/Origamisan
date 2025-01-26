@@ -1,22 +1,22 @@
 from django.contrib import admin
-from .models import Post, Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
+from .models import Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
 
-admin.site.register(Post)
 admin.site.register(Example)
 
 # Регистрация модели Word
 @admin.register(Kanji)
-class WordAdmin(admin.ModelAdmin):
+class KanjiAdmin(admin.ModelAdmin):
     list_display = ('kanji', 'onyomi', 'kunyomi', 'meaning_ru', 'meaning_en', 'level', 'author')
 
 
-# Регистрация модели Word
 @admin.register(Word)
 class WordAdmin(admin.ModelAdmin):
-    list_display = ('kanji', 'kana', 'romaji', 'translate_ru', 'translate_en', 'level', 'author')
+    list_display = ('kanji', 'kana', 'part_of_speech', 'level', 'author')
+    list_filter = ('part_of_speech', 'level')
+    search_fields = ('kanji', 'kana', 'translate_ru', 'translate_en')    
 
 @admin.register(Grammar)
-class WordAdmin(admin.ModelAdmin):
+class GrammarAdmin(admin.ModelAdmin):
     list_display = ('title', 'formula_ru')
 
 # Регистрация дочерних моделей

@@ -1,11 +1,6 @@
 from django import forms
-from .models import Post, Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
+from .models import Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
 from django.contrib.auth.models import User
-
-class PostForm(forms.ModelForm):
-    class Meta:
-        model = Post
-        fields = ('title', 'text')
     
 class GrammarForm(forms.ModelForm):
     class Meta:

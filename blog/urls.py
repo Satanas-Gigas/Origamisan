@@ -7,15 +7,7 @@ from . import views
 
 urlpatterns = [
     path('', views.mainpanel, name='mainpanel'),
-    path('post/<int:pk>/', views.post_detail, name='post_detail'),
-    path('post/new/', views.post_new, name='post_new'),
-    path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
-
-
-
     path('mainpanel/', views.mainpanel, name='mainpanel'),  # Имя пути 'about'
-
-
     path('word/', views.word, name='word'),# Другие маршруты
     path('word_edit/<int:pk>/edit/', views.word_edit, name='word_edit'),# Другие маршруты
     path('word_create/', views.word_create, name='word_create'),# Другие маршруты

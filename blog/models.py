@@ -2,20 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
-class Post(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
-
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
-
-    def __str__(self):
-        return self.title
-    
 class Grammar(models.Model):
     level = models.CharField(max_length=1,default="5")
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -38,18 +24,50 @@ class Grammar(models.Model):
         ordering = ['title', 'level']
 
 class Word(models.Model):
-    level = models.CharField(max_length=1,default="5")
+    level = models.CharField(max_length=1, default="5")
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     kanji = models.CharField(max_length=100, blank=True, null=True)
     kana = models.CharField(max_length=100, blank=True, null=True)
     romaji = models.CharField(max_length=100, blank=True, null=True)
     translate_ru = models.CharField(max_length=200, blank=True, null=True)
     translate_en = models.CharField(max_length=200, blank=True, null=True)
+    part_of_speech = models.CharField(
+        max_length=50, 
+        blank=True, 
+        null=True, 
+        choices=[
+            ('verb', 'Verb'),
+            ('noun', 'Noun'),
+            ('i-adjective', 'I-Adjective'),
+            ('na-adjective', 'Na-Adjective'),
+            ('adverb', 'Adverb'),
+            ('question-word', 'Question Word'),
+            ('counter', 'Counter'),
+            ('suffix', 'Suffix'),
+        ]
+    )
 
     def __str__(self):
-            return f'{self.kanji} ({self.kana}) ({self.level})'
+        return f'{self.kanji} ({self.kana}) ({self.level})'
+
+    # def save(self, *args, **kwargs):
+    #     # Определяем часть речи
+    #     if self.kanji or self.kana:
+    #         if (self.kanji and self.kanji.endswith('る')) or (self.kana and self.kana.endswith('る')):
+    #             self.part_of_speech = 'verb'
+    #         elif self.kana and self.kana.endswith('い'):
+    #             self.part_of_speech = 'i-adjective'
+    #         elif self.kana and self.kana.endswith('な'):
+    #             self.part_of_speech = 'na-adjective'
+    #         elif self.kana and self.kana in ['どれ', 'なに', 'なぜ']:
+    #             self.part_of_speech = 'question-word'
+    #         elif self.kana and self.kana.endswith('つ'):
+    #             self.part_of_speech = 'counter_suffix'
+    #         else:
+    #             self.part_of_speech = 'noun'
+    #     super().save(*args, **kwargs)
+
     class Meta:
-    # Дополнительно можно указать порядок сортировки или уникальные ограничения
         ordering = ['level', 'kanji', 'kana']
 
 
