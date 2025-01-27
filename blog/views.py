@@ -10,6 +10,7 @@ from django.http import HttpResponseRedirect
 import random
 import re
 from django.db.models import Q
+from django.db.models import Case, When, F, Value
 
 def grammar(request):
     grammars = Grammar.objects.prefetch_related('examples').filter(level=5)  # Предзагрузка примеров
@@ -300,52 +301,125 @@ def generate_kanji_to_kana_questions(question_count):
 def generate_kana_to_kanji_questions(question_count):
     question_count = int(question_count)
     questions = []
-    all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:question_count * 4]
-    words = Word.objects.filter(kana__isnull=False).exclude(kana="''").order_by('?')[:question_count]
+
+    # Получаем список случайных слов с каной и канзи
+    words = Word.objects.filter(kana__isnull=False, kanji__isnull=False).exclude(kana="''").exclude(kanji="''").order_by('?')[:question_count]
+
     for word in words:
         correct_kanji = word.kanji
-        fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
+        part_of_speech = word.part_of_speech
+        # Используем регулярное выражение для выделения иероглифов
+        match = re.match(r'([\u4e00-\u9fff]+)([\u3040-\u309f\u30a0-\u30ff]*)', word.kanji)
+        kana_suffix = ""
+        if match:
+            kanji_part, kana_suffix = match.groups()  # kanji_part - иероглифы, kana_suffix - кана
+        # Фильтруем слова, чтобы выбрать подходящие фейковые варианты
+        all_kanji_query = Word.objects.filter(~Q(kanji=correct_kanji)).exclude(kanji="''")  # Исключаем правильный ответ
+        all_kanji_query = all_kanji_query.filter(part_of_speech=part_of_speech)  # Только слова с той же частью речи
+        if kana_suffix:
+            all_kanji_query = all_kanji_query.filter(kana__endswith=kana_suffix)  # Кана должна заканчиваться на тот же суффикс
+
+        all_kanji = list(all_kanji_query.values_list('kanji', flat=True).order_by('?')[:3])
+
+        # Если недостаточно вариантов, пропускаем этот вопрос
+        if len(all_kanji) < 3:
+            continue
+
+        # Создаем варианты ответа
+        fake_kanji = random.sample(all_kanji, min(len(all_kanji), 3))
         options = fake_kanji + [correct_kanji]
         random.shuffle(options)
+
+        # Добавляем вопрос
         questions.append({
             'question_word': word.kana,
             'options': options,
             'correct': correct_kanji,
         })
+
     return questions
 
 def generate_kanji_to_trans_questions(question_count):
     question_count = int(question_count)
     questions = []
-    all_trans = list(Word.objects.exclude(translate_ru__isnull=True).exclude(translate_ru="''").values_list('translate_ru', flat=True).order_by('?'))[:3]
+
+    # Получаем случайные слова с kanji
     words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+
     for word in words:
         correct_trans = word.translate_ru
-        fake_trans = random.sample([trans for trans in all_trans if trans != correct_trans], 3)
+        part_of_speech = word.part_of_speech
+
+        # Получаем все переводы с такой же частью речи, исключая правильный ответ
+        all_trans = list(
+            Word.objects.filter(part_of_speech=part_of_speech)
+            .exclude(translate_ru__isnull=True)
+            .exclude(translate_ru="")
+            .exclude(translate_ru=correct_trans)
+            .values_list('translate_ru', flat=True)
+            .order_by('?')[:10]  # Больше выборка, чтобы избежать ошибок
+        )
+
+        # Если недостаточно вариантов, пропускаем вопрос
+        if len(all_trans) < 3:
+            continue
+
+        # Выбираем три случайных фейковых перевода
+        fake_trans = random.sample(all_trans, 3)
         options = fake_trans + [correct_trans]
         random.shuffle(options)
+
+        # Добавляем вопрос
         questions.append({
             'question_word': word.kanji,
             'options': options,
             'correct': correct_trans,
         })
+
     return questions
 
 def generate_trans_to_kanji_questions(question_count):
     question_count = int(question_count)
     questions = []
-    all_kanji = list(Word.objects.exclude(kana__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:question_count * 4]
-    words = Word.objects.filter(translate_ru__isnull=False).exclude(translate_ru="''").order_by('?')[:question_count]
+
+    # Получаем случайные слова с переводом на русский
+    words = Word.objects.filter(translate_ru__isnull=False).exclude(translate_ru="").order_by('?')[:question_count]
+
     for word in words:
-        correct_kanji = word.kanji
-        fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
+        # Определяем правильный вариант (kanji или kana)
+        correct_kanji = word.kanji if word.kanji != "''" else word.kana
+        part_of_speech = word.part_of_speech
+
+        # Получаем список всех kanji или заменяем их на kana, если kanji пусто
+        all_kanji = list(
+            Word.objects.filter(part_of_speech=part_of_speech)
+            .annotate(
+                kanji_or_kana=Case(
+                    When(kanji="''", then=F('kana')),  # Если kanji пусто, берём kana
+                    default=F('kanji')                 # Иначе берём kanji
+                )
+            )
+            .exclude(kanji_or_kana=correct_kanji)  # Исключаем правильный ответ
+            .values_list('kanji_or_kana', flat=True)
+            .order_by('?')[:10]  # Больше выборка для надёжности
+        )
+
+        # Если недостаточно вариантов, пропускаем вопрос
+        if len(all_kanji) < 3:
+            continue
+
+        # Генерируем фейковые варианты
+        fake_kanji = random.sample(all_kanji, 3)
         options = fake_kanji + [correct_kanji]
         random.shuffle(options)
+
+        # Добавляем вопрос
         questions.append({
             'question_word': word.translate_ru,
             'options': options,
             'correct': correct_kanji,
         })
+
     return questions
 
 def process_request_params(request):

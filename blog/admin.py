@@ -11,7 +11,7 @@ class KanjiAdmin(admin.ModelAdmin):
 
 @admin.register(Word)
 class WordAdmin(admin.ModelAdmin):
-    list_display = ('kanji', 'kana', 'part_of_speech', 'level', 'author')
+    list_display = ('kanji', 'kana', 'part_of_speech', 'level', 'author', "translate_ru")
     list_filter = ('part_of_speech', 'level')
     search_fields = ('kanji', 'kana', 'translate_ru', 'translate_en')    
 
