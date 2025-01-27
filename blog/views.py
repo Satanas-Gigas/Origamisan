@@ -8,6 +8,8 @@ from django.utils import timezone
 from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
 import random
+import re
+from django.db.models import Q
 
 def grammar(request):
     grammars = Grammar.objects.prefetch_related('examples').filter(level=5)  # Предзагрузка примеров
@@ -196,8 +198,6 @@ def word_test(request):
 def word_test_premium(request):
     return render(request, 'blog/word_test_premium.html')
 
-
-
 def handle_hide_mode(question_count):
     correct_kanjis = []
     attempts = 0 
@@ -214,7 +214,6 @@ def handle_hide_mode(question_count):
     if question_count == "all":
         question_count = len(kanji_list)
     else: question_count = int(question_count)
-
 
     while len(correct_kanjis) < question_count:
         correct_answer = kanji_list.exclude(
@@ -256,25 +255,53 @@ def handle_hide_mode(question_count):
 def generate_kanji_to_kana_questions(question_count):
     question_count = int(question_count)
     questions = []
-    all_kana = list(Word.objects.exclude(kana__isnull=True).exclude(kana="''").values_list('kana', flat=True).order_by('?'))[:3]
+
+    # Получаем список случайных слов с каной и канзи
     words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+
     for word in words:
         correct_kana = word.kana
-        fake_kana = random.sample([kana for kana in all_kana if kana != correct_kana], 3)
+        part_of_speech = word.part_of_speech
+
+        # Используем регулярное выражение для выделения суффикса каны
+        match = re.match(r'([\u4e00-\u9fff]+)([\u3040-\u309f\u30a0-\u30ff]*)', word.kanji)
+        kana_suffix = ""
+        if match:
+            kanji_part, kana_suffix = match.groups()  # kanji_part - иероглифы, kana_suffix - кана
+
+        # Фильтруем слова, чтобы выбрать подходящие фейковые варианты
+        all_kana_query = Word.objects.filter(~Q(kana=correct_kana))  # Исключаем правильный ответ
+        # if part_of_speech == "verb":
+        all_kana_query = all_kana_query.filter(part_of_speech=word.part_of_speech)  # Только слова с той же частью речи
+        if kana_suffix:
+            all_kana_query = all_kana_query.filter(kana__endswith=kana_suffix)  # Кана должна заканчиваться на тот же суффикс
+
+        all_kana = list(all_kana_query.values_list('kana', flat=True).order_by('?')[:3])
+
+        # Если недостаточно вариантов, пропускаем этот вопрос
+        if len(all_kana) < 3:
+            all_kana_query = all_kana_query.filter(part_of_speech=part_of_speech).order_by('?')[:3]
+            continue
+
+        # Создаем варианты ответа
+        fake_kana = random.sample(all_kana, 3)
         options = fake_kana + [correct_kana]
         random.shuffle(options)
+
+        # Добавляем вопрос
         questions.append({
             'question_word': word.kanji,
             'options': options,
             'correct': correct_kana,
         })
+
     return questions
 
 def generate_kana_to_kanji_questions(question_count):
     question_count = int(question_count)
     questions = []
-    all_kanji = list(Word.objects.exclude(kana__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:question_count * 4]
-    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+    all_kanji = list(Word.objects.exclude(kanji__isnull=True).exclude(kanji="''").values_list('kanji', flat=True).order_by('?'))[:question_count * 4]
+    words = Word.objects.filter(kana__isnull=False).exclude(kana="''").order_by('?')[:question_count]
     for word in words:
         correct_kanji = word.kanji
         fake_kanji = random.sample([kanji for kanji in all_kanji if kanji != correct_kanji], 3)
@@ -321,8 +348,6 @@ def generate_trans_to_kanji_questions(question_count):
         })
     return questions
 
-
-
 def process_request_params(request):
     rollback = request.POST.get('rollback')
     test_type = request.GET.get('test_type')    
@@ -332,7 +357,6 @@ def process_request_params(request):
     question_count = request.GET.get('questions')
     if not question_count:
         question_count = request.POST.get('questions_p')
-
     question_time = request.POST.get('question_time', request.GET.get('question_time', None))  # Значение по умолчанию 4
 
     if ((question_time != "None") and (question_time != None)):
@@ -343,9 +367,7 @@ def process_request_params(request):
         except ValueError:
             return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
     else:
-        question_time = None
-
-        
+        question_time = None        
     answers_time = request.POST.get('answers_time', request.GET.get('answers_time', 40))  # Значение по умолчанию 4
     if (answers_time != "None"):
         try:
@@ -369,7 +391,6 @@ def process_request_params(request):
     return test_type, question_count, extra_option, question_time, answers_time
 
 def word_test_start(request):
-
     try:
         test_type, question_count, extra_option, question_time, answers_time = process_request_params(request)        
       
@@ -483,8 +504,5 @@ def word_test_complete(request):
         'rollback': rollback,
         'extra_option': extra_option,
         'answers_time': answers_time,
-
     }
-
-    return render(request, 'blog/word_test_complete.html', context) 
-
+    return render(request, 'blog/word_test_complete.html', context)
