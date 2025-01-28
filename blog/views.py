@@ -254,42 +254,54 @@ def handle_hide_mode(question_count):
     return questions
 
 def generate_kanji_to_kana_questions(question_count):
-    question_count = int(question_count)
+    # Проверка значения question_count
+    try:
+        if question_count == "all":
+            question_count = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").exclude(kanji=None).count()
+        else:
+            question_count = int(question_count)
+    except ValueError:
+        raise ValueError("question_count должно быть числом или 'all'")
+
     questions = []
 
-    # Получаем список случайных слов с каной и канзи
-    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+    # Получаем случайные слова с каной и канзи
+    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").exclude(kanji=None).order_by('?')[:question_count]
 
     for word in words:
         correct_kana = word.kana
         part_of_speech = word.part_of_speech
 
-        # Используем регулярное выражение для выделения суффикса каны
-        match = re.match(r'([\u4e00-\u9fff]+)([\u3040-\u309f\u30a0-\u30ff]*)', word.kanji)
+        # Попытка найти суффикс каны через kanji
         kana_suffix = ""
-        if match:
-            kanji_part, kana_suffix = match.groups()  # kanji_part - иероглифы, kana_suffix - кана
+        if re.match(r'^[\u4e00-\u9fff]+$', word.kanji):
+            match = re.match(r'[\u4e00-\u9fff]+([\u3040-\u309f\u30a0-\u30ff]*)$', word.kanji)
+            if match:
+                kana_suffix = match.group(1)  # Извлекаем суффикс каны
 
-        # Фильтруем слова, чтобы выбрать подходящие фейковые варианты
-        all_kana_query = Word.objects.filter(~Q(kana=correct_kana))  # Исключаем правильный ответ
-        # if part_of_speech == "verb":
-        all_kana_query = all_kana_query.filter(part_of_speech=word.part_of_speech)  # Только слова с той же частью речи
-        if kana_suffix:
-            all_kana_query = all_kana_query.filter(kana__endswith=kana_suffix)  # Кана должна заканчиваться на тот же суффикс
+        # Формируем запрос для получения фейковых вариантов
+        all_kana_query = Word.objects.filter(~Q(kana=correct_kana)).exclude(kanji="''").exclude(kanji=None)  # Исключаем правильный ответ
+        if part_of_speech:
+            all_kana_query = all_kana_query.filter(part_of_speech=part_of_speech)
+        if kana_suffix and len(kana_suffix) > 0:
+            all_kana_query = all_kana_query.filter(kana__endswith=kana_suffix)
 
-        all_kana = list(all_kana_query.values_list('kana', flat=True).order_by('?')[:3])
-
-        # Если недостаточно вариантов, пропускаем этот вопрос
+        # Получаем список вариантов
+        all_kana = list(all_kana_query.values_list('kana', flat=True).order_by('?')[:10])
         if len(all_kana) < 3:
-            all_kana_query = all_kana_query.filter(part_of_speech=part_of_speech).order_by('?')[:3]
-            continue
+            print(f'not enough kana {len(all_kana)}')
+            all_kana = list(Word.objects.filter(~Q(kana=correct_kana)).values_list('kana', flat=True).order_by('?')[:3])
+            if len(all_kana) < 3:
+                continue
 
-        # Создаем варианты ответа
+        # Генерируем фейковые ответы
         fake_kana = random.sample(all_kana, 3)
+        if correct_kana in fake_kana:
+            fake_kana.remove(correct_kana)
         options = fake_kana + [correct_kana]
         random.shuffle(options)
 
-        # Добавляем вопрос
+        # Добавляем вопрос в список
         questions.append({
             'question_word': word.kanji,
             'options': options,
@@ -299,31 +311,49 @@ def generate_kanji_to_kana_questions(question_count):
     return questions
 
 def generate_kana_to_kanji_questions(question_count):
-    question_count = int(question_count)
+    if question_count == "all":
+        question_count = Word.objects.filter(
+            kana__isnull=False, kanji__isnull=False
+        ).exclude(kana="").exclude(kanji="''").exclude(kanji=None).count()
+    else:
+        question_count = int(question_count)
+
     questions = []
 
-    # Получаем список случайных слов с каной и канзи
-    words = Word.objects.filter(kana__isnull=False, kanji__isnull=False).exclude(kana="''").exclude(kanji="''").order_by('?')[:question_count]
+    # Получаем случайные слова с каной и канзи
+    words = Word.objects.filter(
+        kana__isnull=False, kanji__isnull=False
+    ).exclude(kana="''").exclude(kanji="''").exclude(kanji=None).order_by('?')[:question_count]
 
     for word in words:
         correct_kanji = word.kanji
         part_of_speech = word.part_of_speech
-        # Используем регулярное выражение для выделения иероглифов
-        match = re.match(r'([\u4e00-\u9fff]+)([\u3040-\u309f\u30a0-\u30ff]*)', word.kanji)
+
+        # Регулярное выражение для выделения каны и иероглифов
         kana_suffix = ""
+        match = re.match(r'[\u4e00-\u9fff]+([\u3040-\u309f\u30a0-\u30ff]*)$', correct_kanji)
         if match:
-            kanji_part, kana_suffix = match.groups()  # kanji_part - иероглифы, kana_suffix - кана
-        # Фильтруем слова, чтобы выбрать подходящие фейковые варианты
-        all_kanji_query = Word.objects.filter(~Q(kanji=correct_kanji)).exclude(kanji="''")  # Исключаем правильный ответ
-        all_kanji_query = all_kanji_query.filter(part_of_speech=part_of_speech)  # Только слова с той же частью речи
-        if kana_suffix:
-            all_kanji_query = all_kanji_query.filter(kana__endswith=kana_suffix)  # Кана должна заканчиваться на тот же суффикс
+            kana_suffix = match.group(1)  # Извлекаем суффикс каны
+            print(f'kana_suffix is - {kana_suffix}')
 
-        all_kanji = list(all_kanji_query.values_list('kanji', flat=True).order_by('?')[:3])
+        # Формируем запрос для получения фейковых вариантов
+        all_kanji_query = Word.objects.filter(~Q(kanji=correct_kanji)).exclude(kanji="''").exclude(kanji=None)
+        if part_of_speech:  # Учитываем часть речи
+            all_kanji_query = all_kanji_query.filter(part_of_speech=part_of_speech)
+        if kana_suffix:  # Если найден суффикс, фильтруем по нему
+            all_kanji_query = all_kanji_query.filter(kana__endswith=kana_suffix)
 
-        # Если недостаточно вариантов, пропускаем этот вопрос
+        # Получаем список фейковых вариантов
+        all_kanji = list(all_kanji_query.values_list('kanji', flat=True).order_by('?')[:10])
         if len(all_kanji) < 3:
-            continue
+            # Если недостаточно вариантов, используем общий список
+            all_kanji = list(
+                Word.objects.filter(~Q(kanji=correct_kanji))
+                .values_list('kanji', flat=True)
+                .order_by('?')[:3]
+            )
+        if len(all_kanji) < 3:
+            continue  # Пропускаем вопрос, если недостаточно данных
 
         # Создаем варианты ответа
         fake_kanji = random.sample(all_kanji, min(len(all_kanji), 3))
@@ -340,11 +370,14 @@ def generate_kana_to_kanji_questions(question_count):
     return questions
 
 def generate_kanji_to_trans_questions(question_count):
-    question_count = int(question_count)
+    if question_count == "all":
+        question_count = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").exclude(kanji=None).count()
+    else:
+        question_count = int(question_count)
     questions = []
 
     # Получаем случайные слова с kanji
-    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").order_by('?')[:question_count]
+    words = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").exclude(kanji=None).order_by('?')[:question_count]
 
     for word in words:
         correct_trans = word.translate_ru
@@ -379,11 +412,14 @@ def generate_kanji_to_trans_questions(question_count):
     return questions
 
 def generate_trans_to_kanji_questions(question_count):
-    question_count = int(question_count)
+    if question_count == "all":
+        question_count = Word.objects.filter(translate_ru__isnull=False).exclude(translate_ru="''").count()
+    else:
+        question_count = int(question_count)
     questions = []
 
     # Получаем случайные слова с переводом на русский
-    words = Word.objects.filter(translate_ru__isnull=False).exclude(translate_ru="").order_by('?')[:question_count]
+    words = Word.objects.filter(translate_ru__isnull=False).exclude(translate_ru="''").order_by('?')[:question_count]
 
     for word in words:
         # Определяем правильный вариант (kanji или kana)
