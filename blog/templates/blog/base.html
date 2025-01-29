@@ -10,44 +10,217 @@
 
     <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
     <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+    .footer {
+  flex: 0 0 20vh; /* 20% высоты экрана */
+  height: 20vh;
+  background: linear-gradient(135deg, #1e1e1e, #333); /* Градиентный фон */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0;
+  flex: 0 0 20vh; /* 20% от высоты экрана */
+}
+
+.footer-card {
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  /* padding: 15px; */
+  /* border-radius: 10px; */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* transition: transform 0.2s, box-shadow 0.2s; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-card:hover {
+  /* transform: translateY(-5px); */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  padding: 0;
+  margin: 0;
+}
+
+.footer h5 {
+  color: #f8d210; /* Желтый заголовок */
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #17a2b8; /* Голубые ссылки */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #f8d210;
+}
+
+.footer .list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* .footer .list-unstyled li {
+  margin-bottom: 5px;
+} */
+
+/* Убираем проблемы с высотой */
+.footer .row {
+  width: 100%;
+}
+
+.footer .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-card {
+  min-height: 100%;
+  width: 100%;
+}
+
+      
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #79dbff;
+    }
+    .header {
+      flex: 0 0 20vh; /* 20% от высоты экрана */
+    }
+    .main {
+      flex: 0 0 60vh; /* 60% от высоты экрана */
+    }
+    /* .footer {
+      flex: 0 0 20vh;  } */
+   /* 20% от высоты экрана */
+
+   @media (max-width: 768px) {
+      footer {
+      display: none;
       }
-      .header {
-        flex: 0 0 20vh; /* 20% от высоты экрана */
+      #myCarousel {
+      display: none;
+        }
       }
-      .main {
-        flex: 0 0 60vh; /* 60% от высоты экрана */
-      }
-      .footer {
-        flex: 0 0 20vh; /* 20% от высоты экрана */
-      }
+      
     </style>
   </head>
   <body class="m-0 p-0">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Домой</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'grammar' %}">Грамматика</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link toggle-visibility" href="{% url 'grammar_create' %}">Доб_ грамм</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'word' %}">Слова</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link toggle-visibility" href="{% url 'word_create' %}">Доб_ Слова</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'kanji' %}">Канджи</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link toggle-visibility" href="{% url 'kanji_create' %}">Доб_ Канджи</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link toggle-visibility" href="{% url 'word_detail' %}">Посм_ всё</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'word_test' %}">Тест Канджи - Кана</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'word_test_premium' %}">Премиум Тесты</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <button id="toggle-visibility-btn" class="btn btn-outline-primary">Скрыть/открыть</button>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="d-flex flex-column min-vh-100 p-0 m-0">
-      <div class="p-0 m-0 border border-primary header d-flex align-items-center justify-content-center">
-        Flex item 1 (Header 20%)
+      <div class="p-0 m-0 border border-primary header d-flex align-items-center justify-content-center position-relative">
+        <div id="myCarousel" class="carousel slide w-100 h-100 position-absolute" data-bs-ride="carousel">
+          <div class="carousel-inner w-100 h-100">
+            <div class="carousel-item active w-100 h-100">
+              <img src="{% get_media_prefix %}slide1.jpg" class="d-block w-100 h-100" style="object-fit: cover; object-position: center;" alt="Slide 1">
+            </div>
+            <div class="carousel-item w-100 h-100">
+              <img src="{% get_media_prefix %}slide2.jpg" class="d-block w-100 h-100" style="object-fit: cover; object-position: center;" alt="Slide 2">
+            </div>
+            <div class="carousel-item w-100 h-100">
+              <img src="{% get_media_prefix %}slide3.jpg" class="d-block w-100 h-100" style="object-fit: cover; object-position: center;" alt="Slide 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
       </div>
       <div class="p-0 m-0 border border-primary main d-flex align-items-center justify-content-center">
-        Flex item 2 (Main 60%)
+        {% block content %}
+        <!-- Контент из дочернего шаблона -->
+        {% endblock %}
       </div>
-      <div class="p-0 m-0 border border-primary footer d-flex align-items-center">
-        <div class="row w-100 h-100 p-0 m-0">
-          <div class="col p-0 m-0 border border-primary d-flex align-items-center justify-content-center">
-            Column
-          </div>
-          <div class="col p-0 m-0 border border-primary d-flex align-items-center justify-content-center">
-            Column
-          </div>
-          <div class="col p-0 m-0 border border-primary d-flex align-items-center justify-content-center">
-            Column
+
+      <footer>
+      <div class="footer d-flex align-items-center">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-md-4 d-flex">
+              <div class="footer-card align-items-stretch">
+                <h5 class="text-uppercase">Всё лучшее здесь</h5>
+                <p>Ваш ресурс для изучения японского языка, грамматики, слов и кандзи.</p>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex">
+              <div class="footer-card flex-fill">
+                <h5 class="text-uppercase">Быстрые ссылки</h5>
+                <ul class="list-unstyled">
+                  <li><a href="/">Домой</a></li>
+                  <li><a href="{% url 'grammar' %}">Грамматика</a></li>
+                  <li><a href="{% url 'kanji' %}">Кандзи</a></li>
+                  <li><a href="{% url 'word_test' %}">Тесты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex">
+              <div class="footer-card flex-fill">
+                <h5 class="text-uppercase">Контакты</h5>
+                <p>
+                  <a href="mailto:robot-tyaga@yandex.ru">robot-tyaga@yandex.ru</a>
+                </p>
+                <p>&copy; 2024–2025 Всё лучшее здесь</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      </footer>
+
+
     </div>
+
     <script src="{% static 'bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
   </body>
 </html>
