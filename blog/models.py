@@ -50,23 +50,6 @@ class Word(models.Model):
     def __str__(self):
         return f'{self.kanji} ({self.kana}) ({self.level})'
 
-    # def save(self, *args, **kwargs):
-    #     # Определяем часть речи
-    #     if self.kanji or self.kana:
-    #         if (self.kanji and self.kanji.endswith('る')) or (self.kana and self.kana.endswith('る')):
-    #             self.part_of_speech = 'verb'
-    #         elif self.kana and self.kana.endswith('い'):
-    #             self.part_of_speech = 'i-adjective'
-    #         elif self.kana and self.kana.endswith('な'):
-    #             self.part_of_speech = 'na-adjective'
-    #         elif self.kana and self.kana in ['どれ', 'なに', 'なぜ']:
-    #             self.part_of_speech = 'question-word'
-    #         elif self.kana and self.kana.endswith('つ'):
-    #             self.part_of_speech = 'counter_suffix'
-    #         else:
-    #             self.part_of_speech = 'noun'
-    #     super().save(*args, **kwargs)
-
     class Meta:
         ordering = ['level', 'kanji', 'kana']
 

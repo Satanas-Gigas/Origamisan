@@ -2,19 +2,44 @@
 {% load static %}
 
 {% block content %}
-
-<h1>Добавить варианты для слова {{ word.kanji }}</h1>
-<form method="post">
-    {% csrf_token %}
-    <h3>Kana Variant</h3>
-    {{ kana_form.as_p }}
-
-    <h3>Kanji Variant</h3>
-    {{ kanji_form.as_p }}
-
-    <h3>Translate Variant</h3>
-    {{ translate_form.as_p }}
-
-    <button type="submit">Сохранить</button>
-</form>
+<div class="container mt-5">
+    <!-- Заголовок -->
+    <h1 class="text-center mb-4">Добавить варианты для слова: <span class="text-primary">{{ word.kanji }}</span></h1>
+    
+    <!-- Форма -->
+    <form method="post" class="bg-light p-4 rounded shadow-sm">
+        {% csrf_token %}
+        
+        <!-- Kana Variant -->
+        <div class="mb-4">
+            <h3 class="text-secondary">Kana Variant</h3>
+            <div class="form-group">
+                {{ kana_form.as_p }}
+            </div>
+        </div>
+        
+        <!-- Kanji Variant -->
+        <div class="mb-4">
+            <h3 class="text-secondary">Kanji Variant</h3>
+            <div class="form-group">
+                {{ kanji_form.as_p }}
+            </div>
+        </div>
+        
+        <!-- Translate Variant -->
+        <div class="mb-4">
+            <h3 class="text-secondary">Translate Variant</h3>
+            <div class="form-group">
+                {{ translate_form.as_p }}
+            </div>
+        </div>
+        
+        <!-- Кнопка сохранения -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">
+                <i class="bi bi-save"></i> Сохранить
+            </button>
+        </div>
+    </form>
+</div>
 {% endblock %}

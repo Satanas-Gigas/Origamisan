@@ -1,164 +1,53 @@
 {% load static %}
 <!doctype html>
 <html lang="ru" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
-
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="description" content="Лучший сайт для изучения японского языка">
+    <meta name="author" content="Mark Otto, Jacob Thornton, и Bootstrap contributors">
     <title>Всё лучшее здесь!</title>
-    <link href="{% static 'bootstrap\dist\css\bootstrap.css' %}" rel="stylesheet">
-    <link href="{% static 'bootstrap\example_css\carousel.css' %}" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
-  
+
+    <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
     <style>
-      .hidden {
-        display: none;
-        }
-      .correct-answer {
-        color: green;
-        font-weight: bold;
-        background-color: #e8f5e9; /* Светло-зеленый фон */
-        border: 1px solid green; /* Зеленая рамка */
-        padding: 2px 5px;
-        border-radius: 5px;
-        }
-        .kanji-text {
-          display: block; /* Растягиваем текст */
-          width: 100%; /* Занимаем всю доступную ширину */
-          text-align: center; /* Центрируем текст */
-          font-size: 2rem; /* Увеличиваем размер текста */
-          font-weight: bold; /* Делаем текст жирным */
-          margin: 0; /* Отступы сверху и снизу */
-          padding: 0; /* Отступы сверху и снизу */
-        }
-        
-      </style>
-      <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const toggleButton = document.getElementById("toggle-visibility-btn");
-            const toggleElements = document.querySelectorAll(".toggle-visibility");
-
-            // Проверяем состояние из localStorage
-            const isHidden = localStorage.getItem("toggleVisibility") === "true";
-
-            if (isHidden) {
-                toggleElements.forEach(element => {
-                    element.classList.add("hidden");
-                });
-            }
-
-            // Обработчик клика по кнопке
-            toggleButton.addEventListener("click", function () {
-                const currentState = localStorage.getItem("toggleVisibility") === "true";
-                const newState = !currentState;                
-                // Сохраняем новое состояние в localStorage
-                localStorage.setItem("toggleVisibility", newState);
-
-                toggleElements.forEach(element => {
-                    element.classList.toggle("hidden", newState);
-                });
-            });
-        });
-    </script>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        flex: 0 0 20vh; /* 20% от высоты экрана */
+      }
+      .main {
+        flex: 0 0 60vh; /* 60% от высоты экрана */
+      }
+      .footer {
+        flex: 0 0 20vh; /* 20% от высоты экрана */
+      }
+    </style>
   </head>
-  <body>
-    <header data-bs-theme="dark">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">Домой</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'grammar' %}">Грамматика</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link toggle-visibility" href="{% url 'grammar_create' %}">Доб_ грамм</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'word' %}">Слова</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link toggle-visibility" href="{% url 'word_create' %}">Доб_ Слова</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'kanji' %}">Канджи</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link toggle-visibility" href="{% url 'kanji_create' %}">Доб_ Канджи</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link toggle-visibility" href="{% url 'word_detail' %}">Посм_ всё</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'word_test' %}">Тест Канджи - Кана</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'word_test_premium' %}">Премиум Тесты</a>
-              </li>
-              {% if user.is_authenticated%}
-              <li class="nav-item">
-                <button id="toggle-visibility-btn">Скрыть/открыть</button>
-              </li>
-              {% endif %}
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-
-      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" style="height: 30vh; overflow: hidden; position: relative;">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-
-        <div class="carousel-inner d-flex align-items-center" style="height: 100%; position: relative;">
-          <div class="carousel-item active">
-            <img src="{% get_media_prefix %}slide.jpg" class="d-block w-100" alt="Slide 1" style="object-fit: cover;">
-
-          </div>
-      
-          <div class="carousel-item">
-            <img src="{% get_media_prefix %}slide2.jpg" class="d-block w-100" alt="Slide 2" style="object-fit: cover;">
-
-          </div>
-      
-          <div class="carousel-item">
-            <img src="{% get_media_prefix %}slide3.jpg" class="d-block w-100" alt="Slide 3" style="object-fit: cover;">
-            
-          </div>
-        </div>
-      
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Назад</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Вперёд</span>
-        </button>
+  <body class="m-0 p-0">
+    <div class="d-flex flex-column min-vh-100 p-0 m-0">
+      <div class="p-0 m-0 border border-primary header d-flex align-items-center justify-content-center">
+        Flex item 1 (Header 20%)
       </div>
-        {% block content %}
-        <!-- Здесь будет вставляться контент из дочернего шаблона -->
-        {% endblock %}
-
-        {% block grammar %}
-        <!-- Здесь будет вставляться контент из дочернего шаблона -->
-        {% endblock %}
-      <hr class="featurette-divider">  
-    </main>
-    <footer class="container">
-      <p class="float-end"><a href="/">На главную страницу</a></p>
-      <p>&copy; 2024–2025 &middot; <a href="#">robot-tyaga@yandex.ru</a></p>
-    </footer>
-    <script src="{% static 'bootstrap\dist\js\bootstrap.bundle.min.js' %}"></script>
+      <div class="p-0 m-0 border border-primary main d-flex align-items-center justify-content-center">
+        Flex item 2 (Main 60%)
+      </div>
+      <div class="p-0 m-0 border border-primary footer d-flex align-items-center">
+        <div class="row w-100 h-100 p-0 m-0">
+          <div class="col p-0 m-0 border border-primary d-flex align-items-center justify-content-center">
+            Column
+          </div>
+          <div class="col p-0 m-0 border border-primary d-flex align-items-center justify-content-center">
+            Column
+          </div>
+          <div class="col p-0 m-0 border border-primary d-flex align-items-center justify-content-center">
+            Column
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
   </body>
 </html>
