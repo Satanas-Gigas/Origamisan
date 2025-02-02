@@ -1,12 +1,58 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container marketing mt-5">
+
+<style>
+/* Стили изображений */
+.bd-placeholder-img.rounded-circle.img-fluid.hover-scale.mx-auto {
+    width: 140px;
+    height: 140px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+/* Карточки одинакового размера */
+.card {
+    background: #68fff2;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Увеличение при наведении */
+.hover-scale {
+    transition: transform 0.3s ease-in-out;
+}
+.hover-scale:hover {
+    transform: scale(1.1);
+}
+
+/* Цвет заголовков при наведении */
+.hover-text {
+    transition: color 0.3s ease-in-out;
+}
+.hover-text:hover {
+    color: #007bff;
+}
+
+/* Тень и плавность */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+</style>
+
+<div class="container">
     <div class="row text-center justify-content-center">
         <!-- Карточка 1 -->
         <div class="col-lg-4 d-flex align-items-stretch">
             <div class="card border-0 shadow-lg p-4 w-100">
-                <img src="{% get_media_prefix %}sheep.svg" class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto" width="140" height="140" alt="Sheep">
+                <img src="{% get_media_prefix %}sheep.svg" class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto"
+                 width="140" height="140" alt="Sheep">
                 <h2 class="fw-bold mt-3 hover-text">Грамматика</h2>
                 <p class="flex-grow-1">Начать разбор грамматики немедленно!</p>
                 <p><a class="btn btn-primary btn-lg mt-auto" href="{% url 'grammar' %}">Приступить! &raquo;</a></p>
@@ -35,38 +81,4 @@
     </div>
 </div>
 
-<style>
-    /* Карточки одинакового размера */align-items-stretch
-    .card {
-        background: #ffffff;
-        border-radius: 15px;
-        text-align: center;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    /* Увеличение при наведении */
-    .hover-scale {
-        transition: transform 0.3s ease-in-out;
-    }
-    .hover-scale:hover {
-        transform: scale(1.1);
-    }
-
-    /* Цвет заголовков при наведении */
-    .hover-text {
-        transition: color 0.3s ease-in-out;
-    }
-    .hover-text:hover {
-        color: #007bff;
-    }
-
-    /* Тень и плавность */
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
-</style>
 {% endblock %}

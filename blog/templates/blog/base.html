@@ -10,17 +10,20 @@
 
     <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
     <style>
+        .hidden {
+        display: none;
+        }
     .footer {
-  flex: 0 0 20vh; /* 20% высоты экрана */
-  height: 20vh;
-  background: linear-gradient(135deg, #1e1e1e, #333); /* Градиентный фон */
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0;
-  flex: 0 0 20vh; /* 20% от высоты экрана */
-}
+    flex: 0 0 20vh; /* 20% высоты экрана */
+    height: 20vh;
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Градиентный фон */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0;
+    flex: 0 0 20vh; /* 20% от высоты экрана */
+  }
 
 .footer-card {
   background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
@@ -87,7 +90,7 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      background-color: #79dbff;
+      background-color: #57bcff;
     }
     .header {
       flex: 0 0 20vh; /* 20% от высоты экрана */
@@ -95,8 +98,8 @@
     .main {
       flex: 0 0 60vh; /* 60% от высоты экрана */
     }
-    /* .footer {
-      flex: 0 0 20vh;  } */
+    .footer {
+      flex: 0 0 20vh;  }
    /* 20% от высоты экрана */
 
    @media (max-width: 768px) {
@@ -107,8 +110,75 @@
       display: none;
         }
       }
-      
-    </style>
+
+
+      div.p-0.m-0.border.border-primary.main.d-flex.align-items-center.justify-content-center {
+  height: 100%;
+  /* max-height: 600px; */
+  width: auto;
+  background-color: hsla(200,40%,30%,.4);
+  background-image:   
+    url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+    url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+    url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+    url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+    url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+  background-repeat: repeat-x;
+  background-position: 
+    0 20%,
+    0 100%,
+    0 50%,
+    0 100%,
+    0 0;
+  background-size: 
+    2500px,
+    800px,
+    500px 200px,
+    1000px,
+    400px 260px;
+  animation: 50s para infinite linear;
+  }
+
+@keyframes para {
+  100% {
+    background-position: 
+      -5000px 20%,
+      -800px 95%,
+      500px 50%,
+      1000px 100%,
+      400px 0;
+    }
+  }
+
+
+
+</style>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggle-visibility-btn");
+    const toggleElements = document.querySelectorAll(".toggle-visibility");
+    // Проверяем состояние из localStorage
+    const isHidden = localStorage.getItem("toggleVisibility") === "true";
+    if (isHidden) {
+        toggleElements.forEach(element => {
+            element.classList.add("hidden");
+        });
+    }
+
+    // Обработчик клика по кнопке
+    toggleButton.addEventListener("click", function () {
+        const currentState = localStorage.getItem("toggleVisibility") === "true";
+        const newState = !currentState;                
+        // Сохраняем новое состояние в localStorage
+        localStorage.setItem("toggleVisibility", newState);
+        toggleElements.forEach(element => {
+            element.classList.toggle("hidden", newState);
+        });
+    });
+});
+</script>
   </head>
   <body class="m-0 p-0">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -177,50 +247,29 @@
           </button>
         </div>
       </div>
-      <div class="p-0 m-0 border border-primary main d-flex align-items-center justify-content-center">
-        {% block content %}
-        <!-- Контент из дочернего шаблона -->
-        {% endblock %}
-      </div>
-
+        <div class="p-0 m-0 border border-primary main d-flex align-items-center justify-content-center">
+          
+          {% block content %}
+          <!-- Контент из дочернего шаблона -->
+          {% endblock %}
+        </div>
       <footer>
-      <div class="footer d-flex align-items-center">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-md-4 d-flex">
-              <div class="footer-card align-items-stretch">
-                <h5 class="text-uppercase">Всё лучшее здесь</h5>
-                <p>Ваш ресурс для изучения японского языка, грамматики, слов и кандзи.</p>
-              </div>
-            </div>
-            <div class="col-md-4 d-flex">
-              <div class="footer-card flex-fill">
-                <h5 class="text-uppercase">Быстрые ссылки</h5>
-                <ul class="list-unstyled">
-                  <li><a href="/">Домой</a></li>
-                  <li><a href="{% url 'grammar' %}">Грамматика</a></li>
-                  <li><a href="{% url 'kanji' %}">Кандзи</a></li>
-                  <li><a href="{% url 'word_test' %}">Тесты</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4 d-flex">
-              <div class="footer-card flex-fill">
-                <h5 class="text-uppercase">Контакты</h5>
-                <p>
-                  <a href="mailto:robot-tyaga@yandex.ru">robot-tyaga@yandex.ru</a>
-                </p>
-                <p>&copy; 2024–2025 Всё лучшее здесь</p>
+        <div class="footer d-flex align-items-center">
+          <div class="container">
+            <div class="row text-center">            
+              <div class="col-md-12 d-flex">
+                <div class="footer-card flex-fill">
+                  <p>
+                    <a href="mailto:robot-tyaga@yandex.ru">robot-tyaga@yandex.ru</a>
+                  </p>
+                  <p>&copy; 2024–2025 - Бахара</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        </footer>
       </div>
-      </footer>
-
-
-    </div>
-
-    <script src="{% static 'bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
-  </body>
-</html>
+      <script src="{% static 'bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    </body>
+  </html>
