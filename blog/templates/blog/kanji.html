@@ -8,7 +8,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
   }
-
   .card {
     display: flex;
     flex-direction: column;
@@ -21,11 +20,15 @@
   }
 
   .card-body {
-    display: flex;
+    display: flex;    
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     padding: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #fdfdfd;
+    border: 1px solid rgb(0, 0, 0);
   }
 
   .kanji-text {
@@ -43,7 +46,7 @@
   }
 
 
-  .footer {
+  .footer_kanji {
     margin-top: auto; /* Это прижимает {{ forloop.counter }} вниз карточки */
     text-align: right;
     font-size: 1rem;
@@ -70,29 +73,12 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #ffffff;
     margin: 10px 0;
     padding: 10px 0;
-    background-color: #f8f9fa;
+    background-color: #2190ff;
     border: 1px solid #dcdcdc;
     border-radius: 10px;
-  }
-
-  .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  border: 1px solid #dcdcdc; /* Добавляем видимый контур */
-  border-radius: 15px; /* Оставляем закругленные углы */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fdfdfd;
-}
-
-  .card-body {
-    background-color: #fdfdfd;
-    border-radius: 15px;
-    padding: 15px;
   }
 
 
@@ -138,13 +124,11 @@
     }
 </style>
 
-<div class="container py-5">
-  <div class="container py-3">
+  <div class="container py-5">
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
       <h1 class="display-4 fw-normal text-body-emphasis">Канджи N5</h1>
       <p class="fs-5 text-body-secondary">Узнайте и запомните канджи уровня N5 с помощью этих карточек</p>
-    </div>
-   
+    </div>   
     <div class="kanji-grid">
       {% for kanji in kanjis %}
       <div class="card">
@@ -166,12 +150,10 @@
               <strong>Значение:</strong> {{ kanji.meaning_ru }}
             </li>
           </ul>
-          <p class="footer">{{ forloop.counter }}</p>
+          <p class="footer_kanji">{{ forloop.counter }}</p>
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
-  
-
 {% endblock %}

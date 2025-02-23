@@ -11,18 +11,7 @@
     border-radius: 50%;
     background-color: aliceblue;
 }
-
 /* Карточки одинакового размера */
-.card {
-    background: #68fff2;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
 /* Увеличение при наведении */
 .hover-scale {
     transition: transform 0.3s ease-in-out;
@@ -42,40 +31,72 @@
 /* Тень и плавность */
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
 }
-</style>
+
+/* Анимация Карточки */
+
+.card {
+    border: 5px solid rgb(0,0,0);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+  </style>
 
 <div class="container">
     <div class="row text-center justify-content-center">
         <!-- Карточка 1 -->
         <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card border-0 shadow-lg p-4 w-100">
+            <div class="card shadow-lg p-4 w-100">
                 <img src="{% get_media_prefix %}sheep.svg" class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto"
                  width="140" height="140" alt="Sheep">
                 <h2 class="fw-bold mt-3 hover-text">Грамматика</h2>
-                <p class="flex-grow-1">Начать разбор грамматики немедленно!</p>
+                <strong><p class="flex-grow-1 hover-text">Начать разбор грамматики немедленно!</p></strong>
                 <p><a class="btn btn-primary btn-lg mt-auto" href="{% url 'grammar' %}">Приступить! &raquo;</a></p>
+                          
             </div>
         </div>
         
         <!-- Карточка 2 -->
         <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card border-0 shadow-lg p-4 w-100">
+            <div class="card shadow-lg p-4 w-100">
                 <img src="{% get_media_prefix %}face1.svg" class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto" width="140" height="140" alt="Words">
                 <h2 class="fw-bold mt-3 hover-text">Слова!</h2>
-                <p class="flex-grow-1">Начать изучать слова!</p>
+                <strong><p class="flex-grow-1 hover-text">Начать изучать слова!</p></strong>
                 <p><a class="btn btn-success btn-lg mt-auto" href="{% url 'word' %}">Приступить! &raquo;</a></p>
+                <div class='light x1'></div>
+                <div class='light x2'></div>
+                <div class='light x3'></div>
+                <div class='light x4'></div>
+                <div class='light x5'></div>
+                <div class='light x6'></div>
+                <div class='light x7'></div>
+                <div class='light x8'></div>
+                <div class='light x9'></div>    
             </div>
         </div>
 
         <!-- Карточка 3 -->
         <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card border-0 shadow-lg p-4 w-100">
+            <div class="card shadow-lg p-4 w-100">
                 <img src="{% get_media_prefix %}face2.svg" class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto" width="140" height="140" alt="Tests">
                 <h2 class="fw-bold mt-3 hover-text">Тесты!</h2>
-                <p class="flex-grow-1">Проверить себя на знания.</p>
+                <strong><p class="flex-grow-1 hover-text">Проверить себя на знания.</p> </strong>
                 <p><a class="btn btn-danger btn-lg mt-auto" href="{% url 'word_test' %}">Приступить! &raquo;</a></p>
+                <div class='light x1'></div>
+                <div class='light x2'></div>
+                <div class='light x3'></div>
+                <div class='light x4'></div>
+                <div class='light x5'></div>
+                <div class='light x6'></div>
+                <div class='light x7'></div>
+                <div class='light x8'></div>
+                <div class='light x9'></div>    
             </div>
         </div>
     </div>

@@ -7,226 +7,166 @@
     <meta name="description" content="Лучший сайт для изучения японского языка">
     <meta name="author" content="Mark Otto, Jacob Thornton, и Bootstrap contributors">
     <title>Всё лучшее здесь!</title>
-
     <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
     <style>
-        .hidden {
-        display: none;
-        }
-    .footer {
-    flex: 0 0 20vh; /* 20% высоты экрана */
-    height: 20vh;
-    background: linear-gradient(135deg, #1e1e1e, #333); /* Градиентный фон */
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 0;
-    flex: 0 0 20vh; /* 20% от высоты экрана */
-  }
-
-.footer-card {
-  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
-  /* padding: 15px; */
-  /* border-radius: 10px; */
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  /* transition: transform 0.2s, box-shadow 0.2s; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footer-card:hover {
-  /* transform: translateY(-5px); */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  padding: 0;
-  margin: 0;
-}
-
-.footer h5 {
-  color: #f8d210; /* Желтый заголовок */
-  margin-bottom: 10px;
-}
-
-.footer a {
-  color: #17a2b8; /* Голубые ссылки */
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-  color: #f8d210;
-}
-
-.footer .list-unstyled {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* .footer .list-unstyled li {
-  margin-bottom: 5px;
-} */
-
-/* Убираем проблемы с высотой */
-.footer .row {
-  width: 100%;
-}
-
-.footer .col-md-4 {
-  display: flex;
-  justify-content: center;
-}
-
-.footer-card {
-  min-height: 100%;
-  width: 100%;
-}
-
-      
-    html, body {
-      height: 100%;
-      margin: 0;
+      .hidden {
+      display: none;
+      }    
+      .footer {
+      background: linear-gradient(135deg, #1e1e1e, #333); /* Градиентный фон */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0;
+      }
+      .footer-card {
+      background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+      /* padding: 15px; */
+      /* border-radius: 10px; */
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      /* transition: transform 0.2s, box-shadow 0.2s; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      }
+      .footer-card:hover {
+      /* transform: translateY(-5px); */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
       padding: 0;
-      background-color: #57bcff;
-    }
-    .header {
-      flex: 0 0 20vh; /* 20% от высоты экрана */
-    }
-    .main {
-      flex: 0 0 60vh; /* 60% от высоты экрана */
-    }
-    .footer {
-      flex: 0 0 20vh;  }
-   /* 20% от высоты экрана */
+      margin: 0;
+      }
+      .footer h5 {
+        color: #f8d210; /* Желтый заголовок */
+        margin-bottom: 10px;
+      }
+      .footer a {
+        color: #17a2b8; /* Голубые ссылки */
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+        color: #f8d210;
+      }
+      .footer .list-unstyled {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .footer .row {
+        width: 100%;
+      }
+      .footer .col-md-4 {
+        display: flex;
+        justify-content: center;
+      }
+      .footer-card {
+        min-height: 100%;
+        width: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+      }
+      .navbar {
+        flex: 0 0 10vh;
+      }   
+      .header {
+      margin-top: 8.1vh !important;
+      flex: 0 0 20vh;   
+      }
+      .main {
+      flex: 0 0 60vh;
+      }
+      .footer {
+      flex: 0 0 10vh;  }
 
-   @media (max-width: 768px) {
-      footer {
+      @media (max-width: 768px) {
+      .footer {
       display: none;
       }
-      #myCarousel {
+
+      .header {
       display: none;
+      }
+
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("toggle-visibility-btn");
+        const toggleElements = document.querySelectorAll(".toggle-visibility");
+        // Проверяем состояние из localStorage
+        const isHidden = localStorage.getItem("toggleVisibility") === "true";
+        if (isHidden) {
+            toggleElements.forEach(element => {
+                element.classList.add("hidden");
+            });
         }
-      }
-
-
-      div.p-0.m-0.border.border-primary.main.d-flex.align-items-center.justify-content-center {
-  height: 100%;
-  /* max-height: 600px; */
-  width: auto;
-  background-color: hsla(200,40%,30%,.4);
-  background-image:   
-    url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
-    url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
-    url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
-    url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
-    url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
-  background-repeat: repeat-x;
-  background-position: 
-    0 20%,
-    0 100%,
-    0 50%,
-    0 100%,
-    0 0;
-  background-size: 
-    2500px,
-    800px,
-    500px 200px,
-    1000px,
-    400px 260px;
-  animation: 50s para infinite linear;
-  }
-
-@keyframes para {
-  100% {
-    background-position: 
-      -5000px 20%,
-      -800px 95%,
-      500px 50%,
-      1000px 100%,
-      400px 0;
-    }
-  }
-
-
-
-</style>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("toggle-visibility-btn");
-    const toggleElements = document.querySelectorAll(".toggle-visibility");
-    // Проверяем состояние из localStorage
-    const isHidden = localStorage.getItem("toggleVisibility") === "true";
-    if (isHidden) {
-        toggleElements.forEach(element => {
-            element.classList.add("hidden");
-        });
-    }
-
-    // Обработчик клика по кнопке
-    toggleButton.addEventListener("click", function () {
-        const currentState = localStorage.getItem("toggleVisibility") === "true";
-        const newState = !currentState;                
-        // Сохраняем новое состояние в localStorage
-        localStorage.setItem("toggleVisibility", newState);
-        toggleElements.forEach(element => {
-            element.classList.toggle("hidden", newState);
-        });
-    });
-});
-</script>
+        // Обработчик клика по кнопке
+        toggleButton.addEventListener("click", function () {
+            const currentState = localStorage.getItem("toggleVisibility") === "true";
+            const newState = !currentState;                
+            // Сохраняем новое состояние в localStorage
+            localStorage.setItem("toggleVisibility", newState);
+            toggleElements.forEach(element => {
+                element.classList.toggle("hidden", newState);
+             });
+          });
+      });
+    </script>
   </head>
-  <body class="m-0 p-0">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">Домой</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'grammar' %}">Грамматика</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link toggle-visibility" href="{% url 'grammar_create' %}">Доб_ грамм</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'word' %}">Слова</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link toggle-visibility" href="{% url 'word_create' %}">Доб_ Слова</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'kanji' %}">Канджи</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link toggle-visibility" href="{% url 'kanji_create' %}">Доб_ Канджи</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link toggle-visibility" href="{% url 'word_detail' %}">Посм_ всё</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'word_test' %}">Тест Канджи - Кана</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'word_test_premium' %}">Премиум Тесты</a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <button id="toggle-visibility-btn" class="btn btn-outline-primary">Скрыть/открыть</button>
-            </li>
-            {% endif %}
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <body>
     <div class="d-flex flex-column min-vh-100 p-0 m-0">
-      <div class="p-0 m-0 border border-primary header d-flex align-items-center justify-content-center position-relative">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Домой</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'grammar' %}">Грамматика</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link toggle-visibility" href="{% url 'grammar_create' %}">Доб_ грамм</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'word' %}">Слова</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link toggle-visibility" href="{% url 'word_create' %}">Доб_ Слова</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'kanji' %}">Канджи</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link toggle-visibility" href="{% url 'kanji_create' %}">Доб_ Канджи</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link toggle-visibility" href="{% url 'word_detail' %}">Посм_ всё</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'word_test' %}">Тест Канджи - Кана</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'word_test_premium' %}">Премиум Тесты</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <button id="toggle-visibility-btn" class="btn btn-outline-primary">Скрыть/открыть</button>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="header p-0 m-0 d-flex align-items-center justify-content-center position-relative">
         <div id="myCarousel" class="carousel slide w-100 h-100 position-absolute" data-bs-ride="carousel">
           <div class="carousel-inner w-100 h-100">
             <div class="carousel-item active w-100 h-100">
@@ -247,29 +187,26 @@
           </button>
         </div>
       </div>
-        <div class="p-0 m-0 border border-primary main d-flex align-items-center justify-content-center">
-          
-          {% block content %}
-          <!-- Контент из дочернего шаблона -->
-          {% endblock %}
-        </div>
-      <footer>
-        <div class="footer d-flex align-items-center">
-          <div class="container">
-            <div class="row text-center">            
-              <div class="col-md-12 d-flex">
-                <div class="footer-card flex-fill">
-                  <p>
-                    <a href="mailto:robot-tyaga@yandex.ru">robot-tyaga@yandex.ru</a>
-                  </p>
-                  <p>&copy; 2024–2025 - Бахара</p>
-                </div>
+      <div class="p-0 m-0 main d-flex align-items-center justify-content-center">        
+        {% block content %}
+        <!-- Контент из дочернего шаблона -->
+        {% endblock %}        
+      </div>
+      <div class="footer">
+        <div class="container">
+          <div class="row text-center">            
+            <div class="col-md-12 d-flex">
+              <div class="footer-card flex-fill">
+                <p>
+                  <a href="mailto:robot-tyaga@yandex.ru">robot-tyaga@yandex.ru</a>
+                </p>
+                <p>&copy; 2024–2025 - Бахара</p>
               </div>
             </div>
           </div>
         </div>
-        </footer>
       </div>
-      <script src="{% static 'bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
-    </body>
-  </html>
+    </div>
+    <script src="{% static 'bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

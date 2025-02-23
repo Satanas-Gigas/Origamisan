@@ -4,13 +4,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Grammar, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
 from .forms import GrammarForm, ExampleForm, WordForm, KanjiForm,  WordKanaVariantForm, WordKanjiVariantForm, WordTranslateVariantForm
 from django.forms import inlineformset_factory
-from django.utils import timezone
-from django.views.generic.edit import UpdateView
-from django.http import HttpResponseRedirect
 import random
 import re
 from django.db.models import Q
-from django.db.models import Case, When, F, Value
+from django.db.models import Case, When, F
 
 def grammar(request):
     grammars = Grammar.objects.prefetch_related('examples').filter(level=5)  # Предзагрузка примеров
@@ -60,7 +57,7 @@ def word_create(request):
     return render(request, 'blog/word_create.html', context)
 
 def kanji(request):
-    kanjis = Kanji.objects.filter(level=5)  # Предзагрузка примеров
+    kanjis = Kanji.objects.filter(level=int(request.GET.get("level", 5))) # Предзагрузка примеров
     return render(request, 'blog/kanji.html', {'kanjis': kanjis})
 
 def grammar_edit(request, pk):
@@ -150,17 +147,17 @@ def word_detail_view(request):
     }
     return render(request, 'blog/word_detail.html', context)
 
-def word_edit(request, pk):
-    word = get_object_or_404(Word, pk=pk)
-    if request.method == "POST":
-        form = WordForm(request.POST, instance=word)
-        if form.is_valid():
-            word = form.save(commit=False)
-            word.save()
-            return redirect('word')
-    else:
-        form = WordForm(instance=word)
-    return render(request, 'blog/word_edit.html', {'form': form})
+# def word_edit(request, pk):
+#     word = get_object_or_404(Word, pk=pk)
+#     if request.method == "POST":
+#         form = WordForm(request.POST, instance=word)
+#         if form.is_valid():
+#             word = form.save(commit=False)
+#             word.save()
+#             return redirect('word')
+#     else:
+#         form = WordForm(instance=word)
+#     return render(request, 'blog/word_edit.html', {'form': form})
 
 def word_edit(request, pk):
     word = get_object_or_404(Word, pk=pk)
@@ -194,12 +191,20 @@ def word_edit(request, pk):
     return render(request, 'blog/word_edit.html', context)
 
 def word_test(request):
-    return render(request, 'blog/word_test.html')
+    test_types = [
+        ('kanji_to_kana', 'вопрос: Канджи, ответы: Кана', 'primary'),
+        ('kana_to_kanji', 'вопрос: Кана, ответы: Канджи', 'success'),
+        ('kanji_to_trans', 'вопрос: Канджи, ответы: Перевод', 'danger'),
+        ('trans_to_kanji', 'вопрос: Перевод, ответы: Канджи', 'dark'),
+    ]
+    questions_list = [20, 30, 50]  # Добавляем в контекст
+    return render(request, 'blog/word_test.html', {'test_types': test_types, 'questions_list': questions_list})
+
 
 def word_test_premium(request):
     return render(request, 'blog/word_test_premium.html')
 
-def handle_hide_mode(question_count):
+def handle_hide_mode(request, question_count):
     correct_kanjis = []
     attempts = 0 
     word_kanji_list = Word.objects.filter(
@@ -214,12 +219,16 @@ def handle_hide_mode(question_count):
 
     if question_count == "all":
         question_count = len(kanji_list)
-    else: question_count = int(question_count)
+    else: 
+        if not str(question_count).isdigit():
+            return render(request, 'blog/word_test_start.html', {'error': 'Некорректное количество вопросов.'})
+        question_count = int(question_count)
 
     while len(correct_kanjis) < question_count:
         correct_answer = kanji_list.exclude(
             kanji__in=[entry["answer"].kanji for entry in correct_kanjis]
-        ).order_by('?').first()        
+        ).annotate(random_val=Func(F('id'), function='RANDOM')).order_by('random_val').first()
+            
         words = Word.objects.filter(
             kanji__contains=correct_answer.kanji,
             kanji__regex=r'[\u4E00-\u9FFF].*[\u4E00-\u9FFF]'
@@ -253,12 +262,14 @@ def handle_hide_mode(question_count):
     
     return questions
 
-def generate_kanji_to_kana_questions(question_count):
+def generate_kanji_to_kana_questions(request, question_count):
     # Проверка значения question_count
     try:
         if question_count == "all":
             question_count = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").exclude(kanji=None).count()
         else:
+            if not str(question_count).isdigit():
+                return render(request, 'blog/word_test_start.html', {'error': 'Некорректное количество вопросов.'})
             question_count = int(question_count)
     except ValueError:
         raise ValueError("question_count должно быть числом или 'all'")
@@ -310,12 +321,14 @@ def generate_kanji_to_kana_questions(question_count):
 
     return questions
 
-def generate_kana_to_kanji_questions(question_count):
+def generate_kana_to_kanji_questions(request, question_count):
     if question_count == "all":
         question_count = Word.objects.filter(
             kana__isnull=False, kanji__isnull=False
         ).exclude(kana="").exclude(kanji="''").exclude(kanji=None).count()
     else:
+        if not str(question_count).isdigit():
+            return render(request, 'blog/word_test_start.html', {'error': 'Некорректное количество вопросов.'})
         question_count = int(question_count)
 
     questions = []
@@ -369,10 +382,12 @@ def generate_kana_to_kanji_questions(question_count):
 
     return questions
 
-def generate_kanji_to_trans_questions(question_count):
+def generate_kanji_to_trans_questions(request, question_count):
     if question_count == "all":
         question_count = Word.objects.filter(kanji__isnull=False).exclude(kanji="''").exclude(kanji=None).count()
     else:
+        if not str(question_count).isdigit():
+            return render(request, 'blog/word_test_start.html', {'error': 'Некорректное количество вопросов.'})
         question_count = int(question_count)
     questions = []
 
@@ -411,10 +426,12 @@ def generate_kanji_to_trans_questions(question_count):
 
     return questions
 
-def generate_trans_to_kanji_questions(question_count):
+def generate_trans_to_kanji_questions(request, question_count):
     if question_count == "all":
         question_count = Word.objects.filter(translate_ru__isnull=False).exclude(translate_ru="''").count()
     else:
+        if not str(question_count).isdigit():
+            return render(request, 'blog/word_test_start.html', {'error': 'Некорректное количество вопросов.'})
         question_count = int(question_count)
     questions = []
 
@@ -468,7 +485,7 @@ def process_request_params(request):
     if not question_count:
         question_count = request.POST.get('questions_p')
     question_time = request.POST.get('question_time', request.GET.get('question_time', None))  # Значение по умолчанию 4
-
+    
     if ((question_time != "None") and (question_time != None)):
         try:
             question_time = int(question_time)
@@ -479,6 +496,12 @@ def process_request_params(request):
     else:
         question_time = None        
     answers_time = request.POST.get('answers_time', request.GET.get('answers_time', 40))  # Значение по умолчанию 4
+    answers_time = int(answers_time) if answers_time else None      
+
+    if answers_time and (answers_time < 1 or answers_time > 60):  # Ограничение в 5 минут
+        return render(request, 'blog/word_test_start.html', {'error': 'Некорректное значение времени.'})
+
+
     if (answers_time != "None"):
         try:
             answers_time = int(answers_time)
@@ -503,17 +526,22 @@ def process_request_params(request):
 def word_test_start(request):
     try:
         test_type, question_count, extra_option, question_time, answers_time = process_request_params(request)        
-      
+
+        allowed_test_types = {'hide', 'kanji_to_kana', 'kana_to_kanji', 'kanji_to_trans', 'trans_to_kanji'}
+        
+        if test_type not in allowed_test_types:
+            return render(request, 'blog/word_test_start.html', {'error': 'Некорректный тип теста.'})
+  
         if test_type == 'hide':
-            questions = handle_hide_mode(question_count)
+            questions = handle_hide_mode(request, question_count)
         elif test_type == 'kanji_to_kana':
-            questions = generate_kanji_to_kana_questions(question_count)
+            questions = generate_kanji_to_kana_questions(request, question_count)
         elif test_type == 'kana_to_kanji':
-            questions = generate_kana_to_kanji_questions(question_count)
+            questions = generate_kana_to_kanji_questions(request, question_count)
         elif test_type == 'kanji_to_trans':
-            questions = generate_kanji_to_trans_questions(question_count)
+            questions = generate_kanji_to_trans_questions(request, question_count)
         elif test_type == 'trans_to_kanji':
-            questions = generate_trans_to_kanji_questions(question_count)
+            questions = generate_trans_to_kanji_questions(request, question_count)
         else:
             return render(request, 'blog/word_test_start.html', {'error': 'Неизвестный тип теста'})
 
