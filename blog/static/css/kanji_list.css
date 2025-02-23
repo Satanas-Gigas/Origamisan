@@ -1,0 +1,119 @@
+  .kanji-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fdfdfd;
+  }
+
+  .card-body {
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #fdfdfd;
+    border: 1px solid rgb(0, 0, 0);
+  }
+
+  .kanji-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+  }
+
+
+  .footer_kanji {
+    margin-top: auto; /* Это прижимает {{ forloop.counter }} вниз карточки */
+    text-align: right;
+    font-size: 1rem;
+    color: #6c757d;
+  }
+
+
+  .hidden {
+    display: none;
+  }
+
+  .correct-answer {
+    color: green;
+    font-weight: bold;
+    background-color: #e8f5e9;
+    border: 1px solid green;
+    padding: 2px 5px;
+    border-radius: 5px;
+  }
+
+  .kanji-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: #2190ff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+  }
+
+
+
+  .btn-edit {
+    display: inline-block;
+    color: #fff;
+    background-color: #007bff;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .btn-edit:hover {
+    background-color: #0056b3;
+  }
+
+  .kanji-container {
+    padding: 10px;
+  }
+
+  .header-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  .sub-header-text {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+
+  .kanji-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .list-group-item {
+      font-size: 1rem;
+    }
