@@ -1,21 +1,27 @@
 {% extends 'blog/base.html' %}
 {% load static %}
+
 {% block content %}
-<div class="container py-5" style="background-color: #f9f9f9; border-radius: 20px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
-    <h1 class="text-center mb-5" style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 700;">Быстрое тестирование</h1>
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/word_test.css' %}">
+{% endblock %}
+
+<div class="container container-custom">
+    <h1 class="header-title">Быстрое тестирование</h1>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="border: none; box-shadow: 0 4px 10px rgb(0, 0, 0);">
-                <div class="card-body p-5" style="background-color: #ffffff; border-radius: 15px;">
+            <div class="card test-card">
+                <div class="card-body card-body-custom">
 
                     {% for test_type, label, color in test_types %}
                     <div class="row mb-4">
                         <div class="col-md-12 mx-auto text-center">
-                            <p class="fs-5">{{ label }}</p>
-                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <p class="test-label">{{ label }}</p>
+                            <div class="button-container">
                                 {% for q in questions_list %}
-                                <div class="card flex-grow-1" style="min-width: 150px;">
-                                    <a href="{% url 'word_test_start' %}?questions={{ q|urlencode }}&test_type={{ test_type|urlencode }}" class="btn btn-outline-{{ color }} fs-5 w-100">
+                                <div class="card question-card">
+                                    <a href="{% url 'word_test_start' %}?questions={{ q|urlencode }}&test_type={{ test_type|urlencode }}" class="btn btn-outline-{{ color }} test-button">
                                         <span class="d-inline d-md-none">{{ q }}</span>
                                         <span class="d-none d-md-inline">{{ q }} вопросов <br> ({{ label }})</span>
                                     </a>
@@ -24,7 +30,7 @@
                             </div>
                         </div>
                     </div>
-                    {% if not forloop.last %} <hr class="my-10"> {% endif %}
+                    {% if not forloop.last %} <hr class="section-divider"> {% endif %}
                     {% endfor %}
 
                 </div>    

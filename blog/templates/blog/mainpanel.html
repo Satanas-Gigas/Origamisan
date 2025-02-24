@@ -1,52 +1,9 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
-
-<style>
-/* Стили изображений */
-.bd-placeholder-img.rounded-circle.img-fluid.hover-scale.mx-auto {
-    width: 140px;
-    height: 140px;
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 50%;
-    background-color: aliceblue;
-}
-/* Карточки одинакового размера */
-/* Увеличение при наведении */
-.hover-scale {
-    transition: transform 0.3s ease-in-out;
-}
-.hover-scale:hover {
-    transform: scale(1.1);
-}
-
-/* Цвет заголовков при наведении */
-.hover-text {
-    transition: color 0.3s ease-in-out;
-}
-.hover-text:hover {
-    color: #007bff;
-}
-
-/* Тень и плавность */
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Анимация Карточки */
-
-.card {
-    border: 5px solid rgb(0,0,0);
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-  </style>
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mainpanel.css' %}">
+{% endblock %}
 
 <div class="container">
     <div class="row text-center justify-content-center">

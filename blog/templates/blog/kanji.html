@@ -1,39 +1,45 @@
 {% extends 'blog/base.html' %}
 {% load static %}
+{% block content %}
+
 {% block extra_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/kanji_list.css' %}">
 {% endblock %}
-{% block content %}
-  <div class="container py-5">
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal text-body-emphasis">Канджи N5</h1>
-      <p class="fs-5 text-body-secondary">Узнайте и запомните канджи уровня N5 с помощью этих карточек</p>
-    </div>   
-    <div class="kanji-grid">
-      {% for kanji in kanjis %}
-      <div class="card">
-        <div class="card-body">
-          <div class="text-center">
-            <div class="toggle-visibility">
-              <a class="btn-edit" href="{% url 'kanji_edit' pk=kanji.pk %}">Редактировать</a>
-            </div>
-            <span class="kanji-text">{{ kanji.kanji }}</span>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <strong>Он:</strong> {{ kanji.onyomi }}
-            </li>
-            <li class="list-group-item">
-              <strong>Кун:</strong> {{ kanji.kunyomi }}
-            </li>
-            <li class="list-group-item">
-              <strong>Значение:</strong> {{ kanji.meaning_ru }}
-            </li>
-          </ul>
-          <p class="footer_kanji">{{ forloop.counter }}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
+
+<div class="container py-3">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal text-body-emphasis">Канджи N5</h1>
+    <p class="fs-5 text-body-secondary">Узнайте и запомните канджи уровня N5 с помощью этих карточек</p>
   </div>
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="kanji-grid">
+        {% for kanji in kanjis %}
+        <div class="card">
+          <div class="card-body">
+            <div class="text-center">
+              <div class="toggle-visibility">
+                <a class="btn-edit" href="{% url 'kanji_edit' pk=kanji.pk %}">Редактировать</a>
+              </div>
+              <span class="kanji-text" style="font-family: 'Sazanami_Mincho';">{{ kanji.kanji }}</span>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Он:</strong> {{ kanji.onyomi }}
+              </li>
+              <li class="list-group-item">
+                <strong>Кун:</strong> {{ kanji.kunyomi }}
+              </li>
+              <li class="list-group-item">
+                <strong>Значение:</strong> {{ kanji.meaning_ru }}
+              </li>
+            </ul>
+            <p class="footer_kanji">{{ forloop.counter }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div> <!-- Закрываем kanji-grid -->
+    </div> <!-- Закрываем col-md-12 -->
+  </div> <!-- Закрываем row -->
+</div>
 {% endblock %}

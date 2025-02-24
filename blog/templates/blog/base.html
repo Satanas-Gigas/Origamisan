@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="ru" data-bs-theme="auto">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,123 +8,14 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, и Bootstrap contributors">
     <title>Всё лучшее здесь!</title>
     <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
-    <style>
-      .hidden {
-      display: none;
-      }    
-      .footer {
-      background: linear-gradient(135deg, #1e1e1e, #333); /* Градиентный фон */
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 0;
-      }
-      .footer-card {
-      background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
-      /* padding: 15px; */
-      /* border-radius: 10px; */
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      /* transition: transform 0.2s, box-shadow 0.2s; */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      }
-      .footer-card:hover {
-      /* transform: translateY(-5px); */
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-      padding: 0;
-      margin: 0;
-      }
-      .footer h5 {
-        color: #f8d210; /* Желтый заголовок */
-        margin-bottom: 10px;
-      }
-      .footer a {
-        color: #17a2b8; /* Голубые ссылки */
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-      .footer a:hover {
-        text-decoration: underline;
-        color: #f8d210;
-      }
-      .footer .list-unstyled {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-      }
-      .footer .row {
-        width: 100%;
-      }
-      .footer .col-md-4 {
-        display: flex;
-        justify-content: center;
-      }
-      .footer-card {
-        min-height: 100%;
-        width: 100%;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: #ffffff;
-      }
-      .navbar {
-        flex: 0 0 10vh;
-      }   
-      .header {
-      margin-top: 8.1vh !important;
-      flex: 0 0 20vh;   
-      }
-      .main {
-      flex: 0 0 60vh;
-      }
-      .footer {
-      flex: 0 0 10vh;  }
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/base.js' %}"></script>
 
-      @media (max-width: 768px) {
-      .footer {
-      display: none;
-      }
-
-      .header {
-      display: none;
-      }
-
-      }
-    </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleButton = document.getElementById("toggle-visibility-btn");
-        const toggleElements = document.querySelectorAll(".toggle-visibility");
-        // Проверяем состояние из localStorage
-        const isHidden = localStorage.getItem("toggleVisibility") === "true";
-        if (isHidden) {
-            toggleElements.forEach(element => {
-                element.classList.add("hidden");
-            });
-        }
-        // Обработчик клика по кнопке
-        toggleButton.addEventListener("click", function () {
-            const currentState = localStorage.getItem("toggleVisibility") === "true";
-            const newState = !currentState;                
-            // Сохраняем новое состояние в localStorage
-            localStorage.setItem("toggleVisibility", newState);
-            toggleElements.forEach(element => {
-                element.classList.toggle("hidden", newState);
-             });
-          });
-      });
-    </script>
-
-  {% block extra_css %}{% endblock %}
-
-
+  {% block extra_css %}
+  {% endblock %}
+  
   </head>
-  <body>
+  <body data-question-time="{{ question_time|default:4 }}" data-answers-time="{{ answers_time|default:40 }}">
     <div class="d-flex flex-column min-vh-100 p-0 m-0">
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -173,14 +64,14 @@
       <div class="header p-0 m-0 d-flex align-items-center justify-content-center position-relative">
         <div id="myCarousel" class="carousel slide w-100 h-100 position-absolute" data-bs-ride="carousel">
           <div class="carousel-inner w-100 h-100">
-            <div class="carousel-item active w-100 h-100">
-              <img src="{% get_media_prefix %}slide1.jpg" class="d-block w-100 h-100" style="object-fit: cover; object-position: center;" alt="Slide 1">
+            <div class="carousel-item active w-100">
+              <img src="{% get_media_prefix %}slide1.jpg" class="d-block w-100" style="object-fit: cover; object-position: center;" alt="Slide 1">
             </div>
             <div class="carousel-item w-100 h-100">
-              <img src="{% get_media_prefix %}slide2.jpg" class="d-block w-100 h-100" style="object-fit: cover; object-position: center;" alt="Slide 2">
+              <img src="{% get_media_prefix %}slide2.jpg" class="d-block w-100 position-absolute top-100 start-50 translate-middle" style="object-fit: cover;" alt="Slide 2">
             </div>
             <div class="carousel-item w-100 h-100">
-              <img src="{% get_media_prefix %}slide3.jpg" class="d-block w-100 h-100" style="object-fit: cover; object-position: center;" alt="Slide 3">
+              <img src="{% get_media_prefix %}slide3.jpg" class="d-block w-100 position-absolute top-50 start-50 translate-middle" style="object-fit: cover;" alt="Slide 3">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">

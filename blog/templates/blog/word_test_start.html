@@ -1,183 +1,33 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 {% load custom_filters %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/word_test_start.css' %}">
+{% endblock %}
+
 {% block content %}
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const buttons = document.querySelectorAll(".answer-btn"); // Все кнопки с вариантами
-        const form = document.getElementById("quiz-form"); // Форма для отправки
-        const resultMessage = document.getElementById("result-message"); // Сообщение о результате
-        const clockDiv = document.getElementById("clockdiv"); // Таймер
-        const question_wordDiv = document.querySelector("[data-id='question_word-div']"); // Контейнер для question.kanji
-        const optionsDiv = document.querySelector("[data-id='options-div']"); // Контейнер для кнопок
-        const clockDiv_hide = document.getElementById("clockdiv_hide"); // Таймер
-        const progressBar = document.querySelector(".progress-bar"); // Полоска прогресса
-        const progressBar_down = document.getElementById("progress-bar_down"); // Таймер
-        const progress = document.querySelector(".progress"); // Полоска прогресса
-        let timeInterval_hide; // Переменная для хранения интервала таймера
-        const totalDuration = 10; // Таймер на 10 секунд
-        let timeInterval; // Переменная для хранения интервала таймера
-        const left_time = document.getElementById("left_time");
+<script src="{% static 'js/word_test_start.js' %}"></script>
 
-        buttons.forEach((button) => {
-            button.addEventListener("mouseover", () => {
-                button.style.backgroundColor = "#e0e0e0";
-            });
-            button.addEventListener("mouseout", () => {
-                button.style.backgroundColor = "#f5f5f5";
-            });
-
-            button.addEventListener("click", () => {
-                buttons.forEach((btn) => btn.disabled = true);
-                const isCorrect = button.getAttribute("data-correct") === "true";
-                if (isCorrect) {
-                    button.classList.add("btn-success");
-                    resultMessage.style.color = "green";
-                    resultMessage.innerText = "Правильно!";
-                    button.style.boxShadow = "0 0 20px 5px green";
-                } else {
-                    button.classList.add("btn-danger");
-                    resultMessage.style.color = "red";
-                    resultMessage.innerText = "Неправильно!";
-                    button.style.boxShadow = "0 0 20px 5px red";
-                    buttons.forEach((btn) => {
-                        if (btn.getAttribute("data-correct") === "true") {
-                            btn.classList.add("btn-success");
-                            btn.style.boxShadow = "0 0 20px 5px green";
-                        }
-                    });
-                }
-                resultMessage.style.display = "block";
-                clockDiv.style.display = "none";
-                clearInterval(timeInterval);
-                const hiddenInput = document.createElement("input");
-                hiddenInput.type = "hidden";
-                hiddenInput.name = "user_answer";
-                hiddenInput.value = button.value;
-                form.appendChild(hiddenInput);
-                setTimeout(() => {
-                    form.submit();
-                }, 1000);
-            });
-        });
-
-        function getTimeRemaining(endtime) {
-            const t = Date.parse(endtime) - Date.parse(new Date());
-            const seconds = Math.floor((t / 1000) % 60);
-            const minutes = Math.floor((t / 1000 / 60) % 60);
-            const hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-            const days = Math.floor(t / (1000 * 60 * 60 * 24));
-            return {
-                total: t,
-                days: days,
-                hours: hours,
-                minutes: minutes,
-                seconds: seconds
-            };
-        }
-
-        function getTimeRemaining(endtime) {
-            const t = Date.parse(endtime) - Date.parse(new Date());
-            const seconds = Math.floor((t / 1000) % 60);
-            const percentage = (t / ({{answers_time|default:20}} * 1000)) * 100;
-            progressBar_down.style.width = `${Math.max(0, percentage)}%`;
-            return { total: t, seconds: seconds };
-        }        
-
-        function initializeClock(id, endtime) {            
-                       
-            const clock = document.getElementById(id);
-             function updateClock() {
-                const t = getTimeRemaining(endtime);
-                clock.innerHTML = `${t.seconds} сек.`;
-                                
-                if (t.total < 0) {
-                    clearInterval(timeInterval);
-                    clock.style.display = "none";
-                    resultMessage.style.color = "red";
-                    resultMessage.innerText = "Время истекло! Неправильно!";
-                    resultMessage.style.display = "block";
-                    clockDiv.style.display = "none";                    
-                    const incorrectAnswerButton = document.querySelector('.answer-btn[data-correct="false"]');
-                    const hiddenInput = document.createElement("input");
-                    hiddenInput.type = "hidden";
-                    hiddenInput.name = "user_answer";
-                    hiddenInput.value = incorrectAnswerButton.value;
-                    form.appendChild(hiddenInput);
-                    setTimeout(() => {
-                        form.submit();
-                    }, 1000);
-                }
-            }
-            updateClock();
-            timeInterval = setInterval(updateClock, 1000);
-        }
-                          
-        {% if question_time %}
-
-        function getTimeRemaining_hide(endtime) {
-            const t = Date.parse(endtime) - Date.parse(new Date());
-            const seconds = Math.floor((t / 1000) % 60);
-            const percentage = (t / ({{question_time|default:4}} * 1000)) * 100;
-            progressBar.style.width = `${Math.max(0, percentage)}%`;
-            return { total: t, seconds: seconds };
-        }        
-
-        function initializeClock_hide(id, endtime) {
-            const clock = document.getElementById(id);
-            optionsDiv.style.display = "none";
-            function updateClock_hide() {
-                const t = getTimeRemaining_hide(endtime);
-                clock.innerHTML = `${t.seconds} сек.`;   
-     
-                if (t.total < 0) {
-                    left_time.style.visibility = "hidden"
-                    clearInterval(timeInterval_hide);
-                    clock.style.display = "none";
-                    question_wordDiv.style.display = "none";
-                    optionsDiv.style.display = "";
-                    progressBar.style.width = "0%";
-                    progress.style.display = "";
-                    var deadline = new Date(Date.parse(new Date()) + {{answers_time|default:4}} * 1000);
-                    initializeClock('clockdiv', deadline);
-                }
-            }
-            updateClock_hide();
-            timeInterval_hide = setInterval(updateClock_hide, 1000);
-        }
-
-        const questionTime = {{question_time|default:4}};
-        const deadline_hide = new Date(Date.parse(new Date()) + questionTime * 1000);
-        initializeClock_hide('clockdiv_hide', deadline_hide);
-
-        {% else %}   
-
-        var deadline = new Date(Date.parse(new Date()) + {{answers_time|default:40}} * 1000);
-        initializeClock('clockdiv', deadline);
-
-        {% endif %}
-
-    });
-            // console.log("answers_time    -   ", answers_time);
-</script>
-<div class="container py-5" style="background-color: #fafafa;">
-    <h1 class="text-center mb-4" style="color: #d32f2f;">Тестирование</h1>
+<div class="container py-5">
+    <h1 class="text-center mb-4 style-red">Тестирование</h1>
     <form id="quiz-form" method="post" action="{% url 'word_test_next' %}">
         {% csrf_token %}
         <div class="col-md-8 mx-auto">
-            <div class="card my-3 shadow-lg" style="border: 2px solid #424242;">
-                <div class="card-body" style="background-color: #f9f6f2;">
+            <div class="card my-3 shadow-lg">
+                <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 style="color: #424242;" id="left_time">Осталось:  
-                            <span id="clockdiv_hide" class="fw-bold" style="color: #c62828;"></span>
+                        <h5 id="left_time">Осталось:  
+                            <span id="clockdiv_hide" class="fw-bold style-red"></span>
                         </h5>
-                        <h5 style="color: #424242;"  >Вопрос:                             
-                            <span class="fw-bold" style="color: #212121;">
+                        <h5>Вопрос:                             
+                            <span class="fw-bold black">
                                 {% with current_index|add:1 as current_index %}
                                 {{ current_index|default:"1" }}
                                 {% endwith %}
                             </span>
                             из 
-                            <span class="fw-bold" style="color: #212121;">{% if total %}
+                            <span class="fw-bold black">{% if total %}
                                 {{ total }}
                                 {% else %}
                                 {{ len_qs }}
@@ -185,13 +35,17 @@
                             </span>
                         </h5>
                     </div>
-                    <div class="progress mb-4" style="height: 20px; background-color: #e0e0e0;">
-                        <div class="progress-bar" style="background-color: #d32f2f; transition: width 1s linear;" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="text-center mb-4" data-id="question_word-div">
-                        <h3 class="fw-bold" style="color: #212121;">
+                        {% if test_type == "trans_to_kanji" %}
+                        <h1 class="fw-bold black">
+                        {% else %}
+                        <h1 class="fw-bold black" style="font-family: 'Sazanami_Mincho'">
+                        {% endif %}
                             {{ question.question_word|escape }}
-                        </h3>
+                        </h1>
                         <div class="dropdown-center">
                             {% if extra_option == "True" %}
                                  <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -200,7 +54,7 @@
                             {% endif %}        
 
                             <ul class="dropdown-menu">
-                                <li style="color: #212121;">
+                                <li>
                                     <div class="d-flex justify-content-center align-items-center">
                                         {{ question.kana }}
                                     </div>
@@ -216,20 +70,26 @@
                                     name="user_answer" 
                                     value="{{ option }}"
                                     data-correct="{% if option == question.correct %}true{% else %}false{% endif %}" 
-                                    class="btn btn-lg w-100 answer-btn" 
-                                    style="background-color: #f5f5f5; border: 2px solid #424242; color: #212121;">
-                                    <span class="fw-bold">{{ option|escape }}</span>
+                                    class="btn btn-lg w-100 answer-btn">
+
+                                    {% if test_type == "kanji_to_trans" %}
+                                    <span class="fw-bold black">
+                                    {% else %}
+                                    <span class="fw-bold black" style="font-family: 'Sazanami_Mincho';">
+                                    {% endif %}
+                                    {{ option|escape }}
+                                    </span>
                                 </button>
                             </div>
                         {% endfor %}
                     </div>
                     <br>
-                    <div class="progress mb-4" style="height: 20px; background-color: #e0e0e0;">
-                        <div class="progress-bar" id="progress-bar_down" style="background-color: #d32f2f; transition: width 1s linear;" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" id="progress-bar_down" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div id="result-message" class="text-center mt-4" style="display: none;"></div>                    
+                    <div id="result-message" class="text-center mt-4"></div>                    
                     <div class="d-flex justify-content-center align-items-center mt-3">
-                        <div id="clockdiv" class="fw-bold" style="color: #c62828;"></div>
+                        <div id="clockdiv" class="fw-bold style-red"></div>
                     </div>
                 </div>
             </div>

@@ -2,19 +2,23 @@
 {% load static %}
 {% block content %}
 
-<div class="container py-5" style="background-color: #f9f9f9; border-radius: 20px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);">
-    <h1 class="text-center mb-5" style="color: #333; font-family: 'Poppins', sans-serif; font-weight: 700;">テスト - Иероглифы</h1>
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/word_test_premium.css' %}">
+{% endblock %}
+
+<div class="container py-5">
+    <h1 class="text-center mb-5" >Тест на знание Иероглифов</h1>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="container py-3">
-                <div class="card" style="border: none; box-shadow: 0 4px 10px rgb(0, 0, 0);">
-                    <div class="card-body p-5" style="background-color: #ffffff; border-radius: 15px;">
-                        <p class="text-center fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Настройте параметры перед началом теста</p>
+                <div class="card out-style">
+                    <div class="card-body p-5">
+                        <p class="text-center fs-5 mb-4">Настройте параметры перед началом теста</p>
                         <hr class="my-10">
                         <form method="POST" action="{% url 'word_test_start' %}"> <!-- Разделитель -->
                             <div class="mb-4">
                                 {% csrf_token %}                                                
-                                <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Выберите тип теста:</p>
+                                <p class="text-start fs-5 mb-4">Выберите тип теста:</p>
                                 <div class="d-flex justify-content-center">
                                     <div class="row row-cols-1 row-cols-md-5 g-1">
                                         <div class="col">
@@ -60,9 +64,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="extra-options" class="mt-3" style="display: none;">
-                                <p class="text-start fs-5" style="color: #555; font-family: 'Poppins', sans-serif;">Выберите вариант:</p>                                    
-
+                            <div id="extra-options" class="mt-3">
+                                <p class="text-start fs-5">Выберите вариант:</p>                                    
                                 <div class="d-flex justify-content-center">
                                     <div class="col">
                                         <div class="card">                           
@@ -79,28 +82,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <script>
-                                // Получаем элементы
-                                const typeHide = document.getElementById('type_hide');
-                                const extraOptions = document.getElementById('extra-options');
-                                const typeRadioButtons = document.querySelectorAll('input[name="test_type"]');
-                            
-                                // Добавляем обработчик события
-                                typeRadioButtons.forEach(radio => {
-                                    radio.addEventListener('change', function () {
-                                        if (typeHide.checked) {
-                                            extraOptions.style.display = 'block';
-                                        } else {
-                                            extraOptions.style.display = 'none';
-                                        }
-                                    });
-                                });
-                            </script>                      
-                            
-                            <!-- Выбор отката -->
 
+                            <script src="{% static 'js/word_test_premium.js' %}"></script>
+                            
                             <hr class="my-10"> <!-- Разделитель -->
-                            <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">
+                            <p class="text-start fs-5 mb-4">
                                 Количество вопросов, на которое текущий индекс сместится назад, в случае неправильного ответа:
                             </p>    
                             <div class="row row-cols-1 row-cols-md-5 g-1">
@@ -149,7 +135,7 @@
                             <hr class="my-10"> <!-- Разделитель -->
                             <!-- Время показа вопроса -->
                             <div class="mb-4">
-                                <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Время показа вопроса:</p> 
+                                <p class="text-start fs-5 mb-4">Время показа вопроса:</p> 
                                 <div class="row row-cols-1 row-cols-md-5 g-1">
                                     <div class="col">
                                         <div class="card">                                        
@@ -191,7 +177,7 @@
                             <hr class="my-10"> <!-- Разделитель -->
                             <!-- Время показа вариантов ответа -->
                             <div class="mb-4">
-                                <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Время показа вариантов ответа:</p>
+                                <p class="text-start fs-5 mb-4">Время показа вариантов ответа:</p>
                                 <div class="row row-cols-1 row-cols-md-4 g-1">
                                     <div class="col">
                                         <div class="card">                                     
@@ -226,7 +212,7 @@
                             <hr class="my-10"> <!-- Разделитель -->
                             <!-- Количество вопросов -->
                             <div class="mb-4">
-                                <p class="text-start fs-5 mb-4" style="color: #555; font-family: 'Poppins', sans-serif;">Количество вопросов:</p>
+                                <p class="text-start fs-5 mb-4">Количество вопросов:</p>
                                 <div class="row row-cols-1 row-cols-md-4 g-1">
                                     <div class="col">
                                         <div class="card">
@@ -250,8 +236,7 @@
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <div class="card">                                   
-
+                                        <div class="card">                                
                                             <input type="radio" class="btn-check" name="questions_p" value="all" id="questions_p-all" autocomplete="off">
                                             <label class="btn btn-outline-dark fs-5 w-100" for="questions_p-all">Все
                                             </label>
@@ -262,7 +247,7 @@
                             <!-- Кнопка отправки -->
                             <hr class="my-10"> <!-- Разделитель -->
                             <div class="text-center mt-4">
-                                <button type="submit" class="btn btn-primary px-5 py-2" style="font-size: 1rem; font-weight: 600;">Начать тест</button>
+                                <button type="submit" class="btn btn-primary px-5 py-2">Начать тест</button>
                             </div>
                         </form>
                     </div>
