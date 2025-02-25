@@ -1,0 +1,62 @@
+/* Стили для контейнера */
+.container-custom {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem 1rem;
+}
+
+/* Заголовок */
+.header-title {
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Карточка теста */
+.test-card {
+    border: none;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+}
+
+/* Контейнер внутри карточки */
+.card-body-custom {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 3rem;
+}
+
+/* Текст описания теста */
+.test-label {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+/* Контейнер для кнопок */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Карточки вопросов */
+.question-card {
+    min-width: 150px;
+    flex-grow: 1;
+}
+
+/* Кнопки */
+.test-button {
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+/* Разделитель */
+.section-divider {
+    margin: 2.5rem 0;
+}
+
+/* font-family: 'Noto Sans JP', sans-serif; */

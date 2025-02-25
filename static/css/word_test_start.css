@@ -1,0 +1,39 @@
+.container.py-5{
+    background-color: #fafafa;
+}
+.text-center.mb-4.style-red{
+    color: #d32f2f;
+}
+.card.my-3.shadow-lg{
+    border: 2px solid #424242;
+}
+.card-body{
+    background-color: #f9f6f2;
+}
+h5{
+    color: #424242;
+}
+.fw-bold.style-red{
+    color: #c62828;
+}
+.fw-bold.black{
+    color: #212121;
+}
+.progress.mb-4{
+    height: 20px; background-color: #e0e0e0;
+}
+.progress-bar{
+    background-color: #d32f2f; transition: width 1s linear;
+    width: 100%;
+}
+li{
+color: #212121;
+}
+.btn.btn-lg.w-100.answer-btn{
+    background-color: #f5f5f5;
+    border: 2px solid #424242;
+    color: #212121;
+}
+.text-center.mt-4{
+    display: none;
+}

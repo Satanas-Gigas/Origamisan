@@ -1,0 +1,111 @@
+.hidden {
+display: none;
+}    
+.footer {
+background: linear-gradient(135deg, #1e1e1e, #333); /* Градиентный фон */
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 0;
+}
+.footer-card {
+background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+/* padding: 15px; */
+/* border-radius: 10px; */
+text-align: center;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+/* transition: transform 0.2s, box-shadow 0.2s; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.footer-card:hover {
+/* transform: translateY(-5px); */
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+padding: 0;
+margin: 0;
+}
+.footer h5 {
+    color: #f8d210; /* Желтый заголовок */
+    margin-bottom: 10px;
+}
+.footer a {
+    color: #17a2b8; /* Голубые ссылки */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer a:hover {
+    text-decoration: underline;
+    color: #f8d210;
+}
+.footer .list-unstyled {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footer .row {
+    width: 100%;
+}
+.footer .col-md-4 {
+    display: flex;
+    justify-content: center;
+}
+.footer-card {
+    min-height: 100%;
+    width: 100%;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+.navbar {
+    flex: 0 0 10vh;
+}   
+.header {
+/* margin-top: 8.1vh !important; */
+flex: 0 0 28.2vh;   
+}
+.main {
+flex: 0 0 60vh;
+}
+.footer {
+flex: 0 0 10vh;  }
+
+@media (max-width: 768px) {
+.footer {
+display: none;
+}
+
+.header {
+display: none;
+}
+
+}
+
+@font-face {
+    font-family: 'Habataki_Font';
+    src: url('/static/fonts/Habataki_Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sazanami_Mincho';
+    src: url('/static/fonts/Sazanami_Mincho.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KanjiStrokeOrders';
+    src: url('/static/fonts/KanjiStrokeOrders.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+

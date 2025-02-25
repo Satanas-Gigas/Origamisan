@@ -1,0 +1,59 @@
+.footer {
+margin-top: auto;
+text-align: right;
+font-size: 1rem;
+color: #6c757d;
+}
+
+.container {
+max-width: 1200px;
+}
+
+.card {
+border: 2px solid #007bff; /* Добавляет контур (измените цвет по вашему вкусу) */
+border-radius: 15px; /* Сохраняем скругленные углы */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Тень */
+transition: transform 0.2s ease-in-out;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.card:hover {
+transform: translateY(-5px);
+}
+
+.card-header {
+background: linear-gradient(45deg, #007bff, #0056b3);
+color: white;
+border-radius: 15px 15px 0 0;
+padding: 15px;
+text-align: center;
+font-family: 'Sazanami_Mincho';
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.list-group-item {
+background-color: #f8f9fa;
+border: none;
+font-size: 1rem;
+}
+
+.jap-font {
+font-family: 'Sazanami_Mincho';
+    }
+
+.badge {
+font-size: 1rem;
+background-color: #e9ecef;
+color: #495057;
+padding: 5px 10px;
+border-radius: 10px;
+}
+hr.my-1 {
+border: none;
+border-top: 1px solid #000000; /* Цвет и толщина линии */
+margin: 5px 0; /* Отступы сверху и снизу */
+}
