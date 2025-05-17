@@ -16,8 +16,51 @@
                         <p class="text-center fs-5 mb-4">Настройте параметры перед началом теста</p>
                         <hr class="my-10">
                         <form method="POST" action="{% url 'word_test_start' %}"> <!-- Разделитель -->
-                            <div class="mb-4">
-                                {% csrf_token %}                                                
+                            {% csrf_token %}  
+                            
+                            
+                             <div class="mb-4">
+                                <p class="text-start fs-5 mb-4">Выберите уровень:</p> 
+                                <div class="row row-cols-1 row-cols-md-5 g-1">
+                                    <div class="col">
+                                        <div class="card">                                        
+                                            <input type="radio" class="btn-check" name="level" value=5 id="level_5" autocomplete="off" checked>
+                                            <label class="btn btn-outline-dark fs-5 w-100" for="level_5">N5
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="col">
+                                        <div class="card">                                     
+                                            <input type="radio" class="btn-check" name="level" value=4 id="level_4" autocomplete="off">
+                                            <label class="btn btn-outline-dark fs-5 w-100" for="level_4">N4
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="col">
+                                        <div class="card"> 
+                                            <input type="radio" class="btn-check"name="level" value=3 id="level_3" autocomplete="off"> 
+                                            <label class="btn btn-outline-dark fs-5 w-100"  for="level_3">N3                               
+                                            </label>                                
+                                        </div> 
+                                    </div>
+                                    <div class="col">
+                                        <div class="card">         
+                                            <input type="radio" class="btn-check" name="level" value=2 id="level_2" autocomplete="off">
+                                            <label class="btn btn-outline-dark fs-5 w-100" for="level_2">N2
+                                            </label>
+                                        </div> 
+                                    </div>
+                                    <div class="col">
+                                        <div class="card"> 
+                                            <input type="radio" class="btn-check" name="level" value=1 id="level_1" autocomplete="off">
+                                            <label class="btn btn-outline-dark fs-5 w-100" for="level_1">N1                 
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-10"> <!-- Разделитель -->                           
+                            <div class="mb-4">                                             
                                 <p class="text-start fs-5 mb-4">Выберите тип теста:</p>
                                 <div class="d-flex justify-content-center">
                                     <div class="row row-cols-1 row-cols-md-5 g-1">
@@ -64,6 +107,17 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
+
+
+
+
+
+                            
+
+
                             <div id="extra-options" class="mt-3">
                                 <p class="text-start fs-5">Выберите вариант:</p>                                    
                                 <div class="d-flex justify-content-center">

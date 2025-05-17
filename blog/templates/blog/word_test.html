@@ -8,7 +8,20 @@
 {% endblock %}
 
 <div class="container container-custom">
-    <h1 class="header-title">Быстрое тестирование</h1>
+    <h1 class="header-title">Быстрое тестирование
+        <form method="post" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="level" value="5">
+            <button type="submit" class="btn btn-outline-primary {% if level == '5' %}active{% endif %}">N5</button>
+        </form>
+
+        <form method="post" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="level" value="4">
+            <button type="submit" class="btn btn-outline-primary {% if level == '4' %}active{% endif %}">N4</button>
+        </form>
+    JLPT {{ level }}
+    </h1>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card test-card">
@@ -21,8 +34,7 @@
                             <div class="button-container">
                                 {% for q in questions_list %}
                                 <div class="card question-card">
-                                    <a href="{% url 'word_test_start' %}?questions={{ q|urlencode }}&test_type={{ test_type|urlencode }}" class="btn btn-outline-{{ color }} test-button">
-                                        <span class="d-inline d-md-none">{{ q }}</span>
+                                    <a href="{% url 'word_test_start' %}?questions={{ q }}&test_type={{ test_type }}&level={{ request.POST.level|default:'5' }}" class="btn btn-outline-{{ color }} test-button">
                                         <span class="d-none d-md-inline">{{ q }} вопросов <br> ({{ label }})</span>
                                     </a>
                                 </div>

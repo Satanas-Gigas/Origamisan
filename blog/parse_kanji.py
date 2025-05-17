@@ -1,757 +1,1288 @@
+# -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
+import csv
 
-# Пример HTML-кода (замените на свой)
-html_content = """
+html = """
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff"> 60AA</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="悪" href="https://nihongoichiban.com/2011/04/11/%e6%82%aa/" target="_blank">悪</a></td>
+<td align="left" bgcolor="#ffffff">AKU, O</td>
+<td align="left" bgcolor="#ffffff">waru(i)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">bad, mean</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff"> 6697</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="暗" href="https://nihongoichiban.com/2011/04/12/%e6%9a%97/" target="_blank">暗</a></td>
+<td align="left" bgcolor="#ffffff">AN</td>
+<td align="left" bgcolor="#ffffff">kura(i)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">dark</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">533B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="医" href="https://nihongoichiban.com/2011/04/12/%e5%8c%bb/" target="_blank">医</a></td>
+<td align="left" bgcolor="#ffffff">I</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">medicine</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">610F</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="意" href="https://nihongoichiban.com/2011/04/13/%e6%84%8f/" target="_blank">意</a></td>
+<td align="left" bgcolor="#ffffff">I</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">will, heart, meaning</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4EE5</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="以" href="https://nihongoichiban.com/2011/04/14/%e4%bb%a5/" target="_blank">以</a></td>
+<td align="left" bgcolor="#ffffff">I</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">prefix</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5F15</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="引" href="https://nihongoichiban.com/2011/04/14/%e5%bc%95/" target="_blank">引</a></td>
+<td align="left" bgcolor="#ffffff">IN</td>
+<td align="left" bgcolor="#ffffff">hi(ku), hi(keru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to pull, make cheaper</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9662</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="院" href="https://nihongoichiban.com/2011/04/14/%e9%99%a2/" target="_blank">院</a></td>
+<td align="left" bgcolor="#ffffff">IN</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">institute, establishment</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">54E1</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="員" href="https://nihongoichiban.com/2011/04/15/%e5%93%a1/" target="_blank">員</a></td>
+<td align="left" bgcolor="#ffffff">IN</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">member</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">904B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="運" href="https://nihongoichiban.com/2011/04/15/%e9%81%8b/" target="_blank">運</a></td>
+<td align="left" bgcolor="#ffffff">UN</td>
+<td align="left" bgcolor="#ffffff">hako(bu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">destiny, transport, carry</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">82F1</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="英" href="https://nihongoichiban.com/2011/04/16/%e8%8b%b1/" target="_blank">英</a></td>
+<td align="left" bgcolor="#ffffff">EI</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">brilliant, talented</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6620</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="映" href="https://nihongoichiban.com/2011/04/16/%e6%98%a0/" target="_blank">映</a></td>
+<td align="left" bgcolor="#ffffff">EI</td>
+<td align="left" bgcolor="#ffffff">utsu(su), he(eru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to project, to glint</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9060</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="遠" href="https://nihongoichiban.com/2011/04/16/%e9%81%a0/" target="_blank">遠</a></td>
+<td align="left" bgcolor="#ffffff">EN</td>
+<td align="left" bgcolor="#ffffff">too(i)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">far away</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff"> 5C4B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="屋" href="https://nihongoichiban.com/2011/04/17/%e5%b1%8b/" target="_blank">屋</a></td>
+<td align="left" bgcolor="#ffffff">OKU</td>
+<td align="left" bgcolor="#ffffff">ya</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">room, house</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">97F3</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="音" href="https://nihongoichiban.com/2011/04/17/%e9%9f%b3/" target="_blank">音</a></td>
+<td align="left" bgcolor="#ffffff">ON, IN</td>
+<td align="left" bgcolor="#ffffff">oto, ne</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">sound</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6B4C</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="歌" href="https://nihongoichiban.com/2011/04/17/%e6%ad%8c/" target="_blank">歌</a></td>
+<td align="left" bgcolor="#ffffff">KA</td>
+<td align="left" bgcolor="#ffffff">uta, uta(u)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">song, poem, to sing</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">590F</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="夏" href="https://nihongoichiban.com/2011/04/18/%e5%a4%8f/" target="_blank">夏</a></td>
+<td align="left" bgcolor="#ffffff">KA</td>
+<td align="left" bgcolor="#ffffff">natsu</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">summer</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5BB6</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="家" href="https://nihongoichiban.com/2011/04/18/%e5%ae%b6/" target="_blank">家</a></td>
+<td align="left" bgcolor="#ffffff">KA, KE</td>
+<td align="left" bgcolor="#ffffff">ie, ya</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">house, home</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">753B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="画" href="https://nihongoichiban.com/2011/04/19/%e7%94%bb/" target="_blank">画</a></td>
+<td align="left" bgcolor="#ffffff">GA, KAKU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">picture, line of a character</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6D77</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="海" href="https://nihongoichiban.com/2011/04/19/%e6%b5%b7/" target="_blank">海</a></td>
+<td align="left" bgcolor="#ffffff">KAI</td>
+<td align="left" bgcolor="#ffffff">umi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">sea, ocean</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">56DE</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="回" href="https://nihongoichiban.com/2011/04/20/%e5%9b%9e/" target="_blank">回</a></td>
+<td align="left" bgcolor="#ffffff">KAI</td>
+<td align="left" bgcolor="#ffffff">mawa(su)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">times, occurrences</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">958B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="開" href="https://nihongoichiban.com/2011/04/20/%e9%96%8b/" target="_blank">開</a></td>
+<td align="left" bgcolor="#ffffff">KAI</td>
+<td align="left" bgcolor="#ffffff">a(keru), Hira(ku)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to open, vent, develop</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">754C</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="界" href="https://nihongoichiban.com/2011/04/21/%e7%95%8c/" target="_blank">界</a></td>
+<td align="left" bgcolor="#ffffff">KAI</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">world</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">697D</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="楽" href="https://nihongoichiban.com/2011/04/21/%e6%a5%bd/" target="_blank">楽</a></td>
+<td align="left" bgcolor="#ffffff">GAKU, RAKU</td>
+<td align="left" bgcolor="#ffffff">tano(shii), tano(shimu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">music, comfort, ease, joyful</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff"> 9928</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="館" href="https://nihongoichiban.com/2011/04/22/%e9%a4%a8/" target="_blank">館</a></td>
+<td align="left" bgcolor="#ffffff">KAN</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">big hall, building</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6F22</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="漢" href="https://nihongoichiban.com/2011/04/22/%e6%bc%a2/" target="_blank">漢</a></td>
+<td align="left" bgcolor="#ffffff">KAN</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">China, man</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5BD2</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="寒" href="https://nihongoichiban.com/2011/04/23/%e5%af%92/" target="_blank">寒</a></td>
+<td align="left" bgcolor="#ffffff">KAN</td>
+<td align="left" bgcolor="#ffffff">samu(i)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">cold temperature</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9854</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="顔" href="https://nihongoichiban.com/2011/04/23/%e9%a1%94/" target="_blank">顔</a></td>
+<td align="left" bgcolor="#ffffff">GAN</td>
+<td align="left" bgcolor="#ffffff">kao</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">face</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5E30</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="帰" href="https://nihongoichiban.com/2011/04/23/%e5%b8%b0/" target="_blank">帰</a></td>
+<td align="left" bgcolor="#ffffff">KI</td>
+<td align="left" bgcolor="#ffffff">kae(ru), kae(su)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">return home, return</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8D77</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="起" href="https://nihongoichiban.com/2011/04/23/%e8%b5%b7/" target="_blank">起</a></td>
+<td align="left" bgcolor="#ffffff">KI</td>
+<td align="left" bgcolor="#ffffff">o(kiru), o(kuro)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">stand up, start, cause</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7A76</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="究" href="https://nihongoichiban.com/2011/04/24/%e7%a9%b6/" target="_blank">究</a></td>
+<td align="left" bgcolor="#ffffff">KYUU</td>
+<td align="left" bgcolor="#ffffff">kiwa(meru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to explore, investigate</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6025</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="急" href="https://nihongoichiban.com/2011/04/24/%e6%80%a5/" target="_blank">急</a></td>
+<td align="left" bgcolor="#ffffff">KYUU</td>
+<td align="left" bgcolor="#ffffff">iso(gu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">urgent, quick, sudden, to hurry</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">725B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="牛" href="https://nihongoichiban.com/2011/04/24/%e7%89%9b/" target="_blank">牛</a></td>
+<td align="left" bgcolor="#ffffff">GYUU</td>
+<td align="left" bgcolor="#ffffff">ushi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">cow</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">53BB</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="去" href="https://nihongoichiban.com/2011/04/25/%e5%8e%bb/" target="_blank">去</a></td>
+<td align="left" bgcolor="#ffffff">KYO, KO</td>
+<td align="left" bgcolor="#ffffff">sa(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to pass by</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5F37</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="強" href="https://nihongoichiban.com/2011/04/25/%e5%bc%b7/" target="_blank">強</a></td>
+<td align="left" bgcolor="#ffffff">KYOU, GOU</td>
+<td align="left" bgcolor="#ffffff">tsuyo(i), tsuyo(maru), shi(iru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">strong, make stronger, to force</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6559</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="教" href="https://nihongoichiban.com/2011/04/25/%e6%95%99/" target="_blank">教</a></td>
+<td align="left" bgcolor="#ffffff">KYOU</td>
+<td align="left" bgcolor="#ffffff">oshi(eru), oso(waru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to teach, to learn</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4EAC</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="京" href="https://nihongoichiban.com/2011/04/26/%e4%ba%ac/" target="_blank">京</a></td>
+<td align="left" bgcolor="#ffffff">KYOU, KEI</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">capital</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">696D</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="業" href="https://nihongoichiban.com/2011/04/26/%e6%a5%ad/" target="_blank">業</a></td>
+<td align="left" bgcolor="#ffffff">GYOU, GOU</td>
+<td align="left" bgcolor="#ffffff">waza</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">company, business, profession, art</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8FD1</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="近" href="https://nihongoichiban.com/2011/04/27/%e8%bf%91/" target="_blank">近</a></td>
+<td align="left" bgcolor="#ffffff">KIN</td>
+<td align="left" bgcolor="#ffffff">chika(i)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">near</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9280</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="銀" href="https://nihongoichiban.com/2011/04/27/%e9%8a%80/" target="_blank">銀</a></td>
+<td align="left" bgcolor="#ffffff">GIN</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">silver</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">533A</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="区" href="https://nihongoichiban.com/2011/04/27/%e5%8c%ba/" target="_blank">区</a></td>
+<td align="left" bgcolor="#ffffff">KU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">city district</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8A08</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="計" href="https://nihongoichiban.com/2011/04/29/%e8%a8%88/" target="_blank">計</a></td>
+<td align="left" bgcolor="#ffffff">KEI</td>
+<td align="left" bgcolor="#ffffff">haka(ru), haka(rau)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to measure, to proceed</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5144</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="兄" href="https://nihongoichiban.com/2011/04/29/%e5%85%84/" target="_blank">兄</a></td>
+<td align="left" bgcolor="#ffffff">KEI, KYOU</td>
+<td align="left" bgcolor="#ffffff">ani</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">older brother</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8EFD</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="軽" href="https://nihongoichiban.com/2011/04/29/%e8%bb%bd/" target="_blank">軽</a></td>
+<td align="left" bgcolor="#ffffff">KEI</td>
+<td align="left" bgcolor="#ffffff">karu(i), karo(yaka)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">light (weight)</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">75AC</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="犬" href="https://nihongoichiban.com/2011/04/29/%e7%8a%ac/" target="_blank">犬</a></td>
+<td align="left" bgcolor="#ffffff">KEN</td>
+<td align="left" bgcolor="#ffffff">inu</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">dog</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7814</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="研" href="https://nihongoichiban.com/2011/04/30/%e7%a0%94/" target="_blank">研</a></td>
+<td align="left" bgcolor="#ffffff">KEN</td>
+<td align="left" bgcolor="#ffffff">to(gu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to polish, sharpen, wash rice</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">770C</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="県" href="https://nihongoichiban.com/2011/04/30/%e7%9c%8c/" target="_blank">県</a></td>
+<td align="left" bgcolor="#ffffff">KEN</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">prefecture</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5EFA</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="建" href="https://nihongoichiban.com/2011/05/01/%e5%bb%ba/" target="_blank">建</a></td>
+<td align="left" bgcolor="#ffffff">KEN</td>
+<td align="left" bgcolor="#ffffff">ta(teru), ta(su)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to construct, build</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9A13</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="験" href="https://nihongoichiban.com/2011/05/01/%e9%a8%93/" target="_blank">験</a></td>
+<td align="left" bgcolor="#ffffff">KEN</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">test, effect</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5143</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="元" href="https://nihongoichiban.com/2011/05/01/%e5%85%83/" target="_blank">元</a></td>
+<td align="left" bgcolor="#ffffff">GEN, GAN</td>
+<td align="left" bgcolor="#ffffff">moto</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">reason, original</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5DE5</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="工" href="https://nihongoichiban.com/2011/05/01/%e5%b7%a5/" target="_blank">工</a></td>
+<td align="left" bgcolor="#ffffff">KOU, KU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to construct</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5A83</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="広" href="https://nihongoichiban.com/2011/05/01/%e5%ba%83/" target="_blank">広</a></td>
+<td align="left" bgcolor="#ffffff">KOU</td>
+<td align="left" bgcolor="#ffffff">hiro(i), hiro(geru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">broad, wide, to widen, to expand</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8003</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="考" href="https://nihongoichiban.com/2011/05/01/%e8%80%83/" target="_blank">考</a></td>
+<td align="left" bgcolor="#ffffff">KOU</td>
+<td align="left" bgcolor="#ffffff">kanga(eru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to think, thought</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5149</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="光" href="https://nihongoichiban.com/2011/05/01/%e5%85%89/" target="_blank">光</a></td>
+<td align="left" bgcolor="#ffffff">KOU</td>
+<td align="left" bgcolor="#ffffff">hikari, hika(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">light, to shine</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">597D</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="好" href="https://nihongoichiban.com/2011/05/01/%e5%a5%bd/" target="_blank">好</a></td>
+<td align="left" bgcolor="#ffffff">KOU</td>
+<td align="left" bgcolor="#ffffff">kono(mu), su(ku)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to like</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5408</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="合" href="https://nihongoichiban.com/2011/05/01/%e5%90%88/" target="_blank">合</a></td>
+<td align="left" bgcolor="#ffffff">GOU, GA</td>
+<td align="left" bgcolor="#ffffff">a(waseru), a(u)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to fit, to connect</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9ED2</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="黒" href="https://nihongoichiban.com/2011/05/01/%e9%bb%92/" target="_blank">黒</a></td>
+<td align="left" bgcolor="#ffffff">KOKU</td>
+<td align="left" bgcolor="#ffffff">kuro(i), kuro</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">black</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">83DC</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="菜" href="https://nihongoichiban.com/2011/05/02/%e8%8f%9c/" target="_blank">菜</a></td>
+<td align="left" bgcolor="#ffffff">SAI</td>
+<td align="left" bgcolor="#ffffff">na</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">vegetable, rape</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4F5C</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="作" href="https://nihongoichiban.com/2011/05/02/%e4%bd%9c/" target="_blank">作</a></td>
+<td align="left" bgcolor="#ffffff">SAKU, SA</td>
+<td align="left" bgcolor="#ffffff">tsuku(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to make, to build</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7523</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="産" href="https://nihongoichiban.com/2011/05/02/%e7%94%a3/" target="_blank">産</a></td>
+<td align="left" bgcolor="#ffffff">SAN</td>
+<td align="left" bgcolor="#ffffff">u(mu), u(mareru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">birth, production</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7D19</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="紙" href="https://nihongoichiban.com/2011/05/02/%e7%b4%99/" target="_blank">紙</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">kami</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">paper</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">601D</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="思" href="https://nihongoichiban.com/2011/05/02/%e6%80%9d/" target="_blank">思</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">omo(u)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to think, to believe</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">59C9</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="姉" href="https://nihongoichiban.com/2011/05/02/%e5%a7%89/" target="_blank">姉</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">ane</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">older sister</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6B62</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="止" href="https://nihongoichiban.com/2011/05/02/%e6%ad%a2/" target="_blank">止</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">to(maru), to(meru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to stop</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5E02</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="市" href="https://nihongoichiban.com/2011/05/03/%e5%b8%82/" target="_blank">市</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">ichi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">city, market</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4ED5</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="仕" href="https://nihongoichiban.com/2011/05/03/%e4%bb%95/" target="_blank">仕</a></td>
+<td align="left" bgcolor="#ffffff">SHI, JI</td>
+<td align="left" bgcolor="#ffffff">tsuka(eru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to serve</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6B7B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="死" href="https://nihongoichiban.com/2011/05/03/%e6%ad%bb/" target="_blank">死</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">shi(nu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">death, to die</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4F7F</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="使" href="https://nihongoichiban.com/2011/05/03/%e4%bd%bf/" target="_blank">使</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">tsuka(u)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">use, messenger</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">59CB</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="始" href="https://nihongoichiban.com/2011/05/03/%e5%a7%8b/" target="_blank">始</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">haji(meru/maru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">start, to begin</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8A66</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="試" href="https://nihongoichiban.com/2011/05/03/%e8%a9%a6/" target="_blank">試</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">kokoro(miru), tame(su)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to try</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">79C1</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="私" href="https://nihongoichiban.com/2011/05/04/%e7%a7%81/" target="_blank">私</a></td>
+<td align="left" bgcolor="#ffffff">SHI</td>
+<td align="left" bgcolor="#ffffff">watashi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">I, me, private</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5B57</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="字" href="https://nihongoichiban.com/2011/05/04/%e5%ad%97/" target="_blank">字</a></td>
+<td align="left" bgcolor="#ffffff">JI</td>
+<td align="left" bgcolor="#ffffff">aza</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">character, sector of a village</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">81EA</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="自" href="https://nihongoichiban.com/2011/05/04/%e8%87%aa/" target="_blank">自</a></td>
+<td align="left" bgcolor="#ffffff">JI, SHI</td>
+<td align="left" bgcolor="#ffffff">mizuka(ra)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">self</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4E8B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="事" href="https://nihongoichiban.com/2011/05/04/%e4%ba%8b/" target="_blank">事</a></td>
+<td align="left" bgcolor="#ffffff">JI</td>
+<td align="left" bgcolor="#ffffff">koto</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">thing, matter</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6301</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="持" href="https://nihongoichiban.com/2011/05/04/%e6%8c%81/" target="_blank">持</a></td>
+<td align="left" bgcolor="#ffffff">JI</td>
+<td align="left" bgcolor="#ffffff">mo(tsu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to own, to carry</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5BA4</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="室" href="https://nihongoichiban.com/2011/05/04/%e5%ae%a4/" target="_blank">室</a></td>
+<td align="left" bgcolor="#ffffff">SHITSU</td>
+<td align="left" bgcolor="#ffffff">muro</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">room, cellar</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8CEA</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="質" href="https://nihongoichiban.com/2011/05/04/%e8%b3%aa/" target="_blank">質</a></td>
+<td align="left" bgcolor="#ffffff">SHITSU, SHICHI</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">quality, nature</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5199</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="写" href="https://nihongoichiban.com/2011/05/04/%e5%86%99/" target="_blank">写</a></td>
+<td align="left" bgcolor="#ffffff">SHA</td>
+<td align="left" bgcolor="#ffffff">utsu(su), utsu(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">copy, photograph</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8005</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="者" href="https://nihongoichiban.com/2011/05/05/%e8%80%85/" target="_blank">者</a></td>
+<td align="left" bgcolor="#ffffff">SHA</td>
+<td align="left" bgcolor="#ffffff">mono</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">person</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">501F</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="借" href="https://nihongoichiban.com/2011/05/05/%e5%80%9f/" target="_blank">借</a></td>
+<td align="left" bgcolor="#ffffff">SHAKU</td>
+<td align="left" bgcolor="#ffffff">ka(riru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to rent, to borrow</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5F31</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="弱" href="https://nihongoichiban.com/2011/05/05/%e5%bc%b1/" target="_blank">弱</a></td>
+<td align="left" bgcolor="#ffffff">JAKU</td>
+<td align="left" bgcolor="#ffffff">yowa(i), yowa(ru), yowa(meru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">weak, to weaken</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9996</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="首" href="https://nihongoichiban.com/2011/05/05/%e9%a6%96/" target="_blank">首</a></td>
+<td align="left" bgcolor="#ffffff">SHU</td>
+<td align="left" bgcolor="#ffffff">kubi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">neck, head</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4E3B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="主" href="https://nihongoichiban.com/2011/05/05/%e4%b8%bb/" target="_blank">主</a></td>
+<td align="left" bgcolor="#ffffff">SHU</td>
+<td align="left" bgcolor="#ffffff">nushi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">owner, main-</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">79CB</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="秋" href="https://nihongoichiban.com/2011/05/05/%e7%a7%8b/" target="_blank">秋</a></td>
+<td align="left" bgcolor="#ffffff">SHUU</td>
+<td align="left" bgcolor="#ffffff">aki</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">autumn, fall</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">96C6</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="集" href="https://nihongoichiban.com/2011/05/05/%e9%9b%86/" target="_blank">集</a></td>
+<td align="left" bgcolor="#ffffff">SHUU</td>
+<td align="left" bgcolor="#ffffff">atsu(maru/meru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to meet, to gather</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7FD2</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="習" href="https://nihongoichiban.com/2011/05/06/%e7%bf%92/" target="_blank">習</a></td>
+<td align="left" bgcolor="#ffffff">SHUU</td>
+<td align="left" bgcolor="#ffffff">nara(u)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to learn</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7D42</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="終" href="https://nihongoichiban.com/2011/05/06/%e7%b5%82/" target="_blank">終</a></td>
+<td align="left" bgcolor="#ffffff">SHUU</td>
+<td align="left" bgcolor="#ffffff">o(waru), o(eru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">end</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4F4F</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="住" href="https://nihongoichiban.com/2011/05/06/%e4%bd%8f/" target="_blank">住</a></td>
+<td align="left" bgcolor="#ffffff">JUU</td>
+<td align="left" bgcolor="#ffffff">su(mu), su(mau)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to live in, to reside</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">91CD</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="重" href="https://nihongoichiban.com/2011/05/07/%e9%87%8d/" target="_blank">重</a></td>
+<td align="left" bgcolor="#ffffff">JUU, CHOU</td>
+<td align="left" bgcolor="#ffffff">omo(i), kasa(naru), -e</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">heavy, serious, -fold</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6625</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="春" href="https://nihongoichiban.com/2011/05/07/%e6%98%a5/" target="_blank">春</a></td>
+<td align="left" bgcolor="#ffffff">SHUN</td>
+<td align="left" bgcolor="#ffffff">haru</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">spring</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6240</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="所" href="https://nihongoichiban.com/2011/05/07/%e6%89%80/" target="_blank">所</a></td>
+<td align="left" bgcolor="#ffffff">SHO</td>
+<td align="left" bgcolor="#ffffff">tokoro</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">a place</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6691</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="暑" href="https://nihongoichiban.com/2011/05/08/%e6%9a%91/" target="_blank">暑</a></td>
+<td align="left" bgcolor="#ffffff">SHO</td>
+<td align="left" bgcolor="#ffffff">atsu(i)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">hot (temperature)</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5834</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="場" href="https://nihongoichiban.com/2011/05/08/%e5%a0%b4/" target="_blank">場</a></td>
+<td align="left" bgcolor="#ffffff">JOU</td>
+<td align="left" bgcolor="#ffffff">ba</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">a place</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4E57</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="乗" href="https://nihongoichiban.com/2011/05/08/%e4%b9%97/" target="_blank">乗</a></td>
+<td align="left" bgcolor="#ffffff">JOU</td>
+<td align="left" bgcolor="#ffffff">no(ru), no(seru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to drive, to ride, to fool</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8272</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="色" href="https://nihongoichiban.com/2011/05/08/%e8%89%b2/" target="_blank">色</a></td>
+<td align="left" bgcolor="#ffffff">SHOKU</td>
+<td align="left" bgcolor="#ffffff">iro</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">color, sensuality</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">68EE</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="森" href="https://nihongoichiban.com/2011/05/08/%e6%a3%ae/" target="_blank">森</a></td>
+<td align="left" bgcolor="#ffffff">SHIN</td>
+<td align="left" bgcolor="#ffffff">mori</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">forest</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5FC3</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="心" href="https://nihongoichiban.com/2011/05/09/%e5%bf%83/" target="_blank">心</a></td>
+<td align="left" bgcolor="#ffffff">SHIN</td>
+<td align="left" bgcolor="#ffffff">kokoro</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">heart, mind</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">89AA</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="親" href="https://nihongoichiban.com/2011/05/09/%e8%a6%aa/" target="_blank">親</a></td>
+<td align="left" bgcolor="#ffffff">SHIN</td>
+<td align="left" bgcolor="#ffffff">oya, shita(shii), shita(shimu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">parents, to be close, to be friends</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">771F</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="真" href="https://nihongoichiban.com/2011/05/10/%e7%9c%9f/" target="_blank">真</a></td>
+<td align="left" bgcolor="#ffffff">SHIN</td>
+<td align="left" bgcolor="#ffffff">ma-</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">truth, reality, purity</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9032</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="進" href="https://nihongoichiban.com/2011/05/10/%e9%80%b2/" target="_blank">進</a></td>
+<td align="left" bgcolor="#ffffff">SHIN</td>
+<td align="left" bgcolor="#ffffff">susu(mu), susu(meru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">continue, proceed, promote</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">56F3</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="図" href="https://nihongoichiban.com/2011/05/10/%e5%9b%b3/" target="_blank">図</a></td>
+<td align="left" bgcolor="#ffffff">ZU, TO</td>
+<td align="left" bgcolor="#ffffff">haka(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">drawing, plan</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9752</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="青" href="https://nihongoichiban.com/2011/05/11/%e9%9d%92/" target="_blank">青</a></td>
+<td align="left" bgcolor="#ffffff">SEI</td>
+<td align="left" bgcolor="#ffffff">ao(i), ao</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">blue, green, unripe</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6B63</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="正" href="https://nihongoichiban.com/2011/05/11/%e6%ad%a3/" target="_blank">正</a></td>
+<td align="left" bgcolor="#ffffff">SEI, SHOU</td>
+<td align="left" bgcolor="#ffffff">tada(shii), tada(su), masa</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">correct, right</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">58F0</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="声" href="https://nihongoichiban.com/2011/05/12/%e5%a3%b0/" target="_blank">声</a></td>
+<td align="left" bgcolor="#ffffff">SEI</td>
+<td align="left" bgcolor="#ffffff">koe</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">voice</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4E16</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="世" href="https://nihongoichiban.com/2011/05/12/%e4%b8%96/" target="_blank">世</a></td>
+<td align="left" bgcolor="#ffffff">SEI, SE</td>
+<td align="left" bgcolor="#ffffff">yo</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">world, age</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8D64</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="赤" href="https://nihongoichiban.com/2011/05/12/%e8%b5%a4/" target="_blank">赤</a></td>
+<td align="left" bgcolor="#ffffff">SEKI, SHAKU</td>
+<td align="left" bgcolor="#ffffff">aka(i), aka(maru), aka(rameru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">red, to flush</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5915</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="夕" href="https://nihongoichiban.com/2011/05/12/%e5%a4%95/" target="_blank">夕</a></td>
+<td align="left" bgcolor="#ffffff">SEKI</td>
+<td align="left" bgcolor="#ffffff">yuu</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">evening</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5207</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="切" href="https://nihongoichiban.com/2011/05/12/%e5%88%87/" target="_blank">切</a></td>
+<td align="left" bgcolor="#ffffff">SETSU, SAI</td>
+<td align="left" bgcolor="#ffffff">ki(ru), ki(reru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to cut, come to an end</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8AAC</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="説" href="https://nihongoichiban.com/2011/05/13/%e8%aa%ac/" target="_blank">説</a></td>
+<td align="left" bgcolor="#ffffff">SETSU</td>
+<td align="left" bgcolor="#ffffff">to(ku)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">opinion, theory, explain</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6D17</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="洗" href="https://nihongoichiban.com/2011/05/14/%e6%b4%97/" target="_blank">洗</a></td>
+<td align="left" bgcolor="#ffffff">SEN</td>
+<td align="left" bgcolor="#ffffff">ara(u)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to wash</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">65E9</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="早" href="https://nihongoichiban.com/2011/05/14/%e6%97%a9/" target="_blank">早</a></td>
+<td align="left" bgcolor="#ffffff">SOU, SA</td>
+<td align="left" bgcolor="#ffffff">haya(i), haya(meru/maru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">fast, early, to speed up</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8D70</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="走" href="https://nihongoichiban.com/2011/05/14/%e8%b5%b0/" target="_blank">走</a></td>
+<td align="left" bgcolor="#ffffff">SOU</td>
+<td align="left" bgcolor="#ffffff">hashi(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to run</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9001</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="送" href="https://nihongoichiban.com/2011/05/14/%e9%80%81/" target="_blank">送</a></td>
+<td align="left" bgcolor="#ffffff">SOU</td>
+<td align="left" bgcolor="#ffffff">oku(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to send</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">65CF</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="族" href="https://nihongoichiban.com/2011/05/14/%e6%97%8f/" target="_blank">族</a></td>
+<td align="left" bgcolor="#ffffff">ZOKU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">family, tribe</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6751</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="村" href="https://nihongoichiban.com/2011/05/14/%e6%9d%91/" target="_blank">村</a></td>
+<td align="left" bgcolor="#ffffff">SON</td>
+<td align="left" bgcolor="#ffffff">mura</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">village</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4F53</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="体" href="https://nihongoichiban.com/2011/05/14/%e4%bd%93/" target="_blank">体</a></td>
+<td align="left" bgcolor="#ffffff">TAI, TEI</td>
+<td align="left" bgcolor="#ffffff">karada</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">body</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">592A</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="太" href="https://nihongoichiban.com/2011/05/14/%e5%a4%aa/" target="_blank">太</a></td>
+<td align="left" bgcolor="#ffffff">TAI, TA</td>
+<td align="left" bgcolor="#ffffff">futo(i), futo(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">bold, thick</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5F85</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="待" href="https://nihongoichiban.com/2011/05/15/%e5%be%85/" target="_blank">待</a></td>
+<td align="left" bgcolor="#ffffff">TAI</td>
+<td align="left" bgcolor="#ffffff">ma(tsu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to wait</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8CB8</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="貸" href="https://nihongoichiban.com/2011/05/15/%e8%b2%b8/" target="_blank">貸</a></td>
+<td align="left" bgcolor="#ffffff">TAI</td>
+<td align="left" bgcolor="#ffffff">ka(su)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to lend</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">53F0</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="台" href="https://nihongoichiban.com/2011/05/15/%e5%8f%b0/" target="_blank">台</a></td>
+<td align="left" bgcolor="#ffffff">DAI, TAI</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">frame, basis, pedestal</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4EE3</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="代" href="https://nihongoichiban.com/2011/05/15/%e4%bb%a3/" target="_blank">代</a></td>
+<td align="left" bgcolor="#ffffff">DAI, TAI</td>
+<td align="left" bgcolor="#ffffff">ka(waru), ka(eru), yo, shiro</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">generation, age, replace</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">984C</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="題" href="https://nihongoichiban.com/2011/05/15/%e9%a1%8c/" target="_blank">題</a></td>
+<td align="left" bgcolor="#ffffff">DAI</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">title, theme, subject</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">77ED</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="短" href="https://nihongoichiban.com/2011/05/15/%e7%9f%ad/" target="_blank">短</a></td>
+<td align="left" bgcolor="#ffffff">TAN</td>
+<td align="left" bgcolor="#ffffff">mijika(i)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">short</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">77E5</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="知" href="https://nihongoichiban.com/2011/05/15/%e7%9f%a5/" target="_blank">知</a></td>
+<td align="left" bgcolor="#ffffff">CHI</td>
+<td align="left" bgcolor="#ffffff">shi(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to know</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5730</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="地" href="https://nihongoichiban.com/2011/05/15/%e5%9c%b0/" target="_blank">地</a></td>
+<td align="left" bgcolor="#ffffff">CHI, JI</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">earth, land</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6C60</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="池" href="https://nihongoichiban.com/2011/05/15/%e6%b1%a0/" target="_blank">池</a></td>
+<td align="left" bgcolor="#ffffff">CHI</td>
+<td align="left" bgcolor="#ffffff">ike</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">pond</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8336</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="茶" href="https://nihongoichiban.com/2011/05/16/%e8%8c%b6/" target="_blank">茶</a></td>
+<td align="left" bgcolor="#ffffff">CHA, SA</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">tea</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7740</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="着" href="https://nihongoichiban.com/2011/05/16/%e7%9d%80/" target="_blank">着</a></td>
+<td align="left" bgcolor="#ffffff">CHAKU</td>
+<td align="left" bgcolor="#ffffff">ki(ru), tsu(keru), ki(seru), tsu(ku)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">arrival, clothes</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">663C</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="昼" href="https://nihongoichiban.com/2011/05/16/%e6%98%bc/" target="_blank">昼</a></td>
+<td align="left" bgcolor="#ffffff">CHUU</td>
+<td align="left" bgcolor="#ffffff">hiru</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">noon</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6CE8</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="注" href="https://nihongoichiban.com/2011/05/17/%e6%b3%a8/" target="_blank">注</a></td>
+<td align="left" bgcolor="#ffffff">CHUU</td>
+<td align="left" bgcolor="#ffffff">soso(gu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">notice, attention, flow</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">753A</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="町" href="https://nihongoichiban.com/2011/05/17/%e7%94%ba/" target="_blank">町</a></td>
+<td align="left" bgcolor="#ffffff">CHOU</td>
+<td align="left" bgcolor="#ffffff">machi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">city, quarter, district</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9CE5</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="鳥" href="https://nihongoichiban.com/2011/05/17/%e9%b3%a5/" target="_blank">鳥</a></td>
+<td align="left" bgcolor="#ffffff">CHOU</td>
+<td align="left" bgcolor="#ffffff">tori</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">bird</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">671D</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="朝" href="https://nihongoichiban.com/2011/05/17/%e6%9c%9d/" target="_blank">朝</a></td>
+<td align="left" bgcolor="#ffffff">CHOU</td>
+<td align="left" bgcolor="#ffffff">asa</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">morning</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">901A</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="通" href="https://nihongoichiban.com/2011/05/18/%e9%80%9a/" target="_blank">通</a></td>
+<td align="left" bgcolor="#ffffff">TSUU</td>
+<td align="left" bgcolor="#ffffff">tou(ru), tou(su), kayo(u)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to pass</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5F1F</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="弟" href="https://nihongoichiban.com/2011/05/18/%e5%bc%9f/" target="_blank">弟</a></td>
+<td align="left" bgcolor="#ffffff">TEI</td>
+<td align="left" bgcolor="#ffffff">otouto</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">younger brother</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4F4E</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="低" href="https://nihongoichiban.com/2011/05/18/%e4%bd%8e/" target="_blank">低</a></td>
+<td align="left" bgcolor="#ffffff">TEI</td>
+<td align="left" bgcolor="#ffffff">hiku(i), hiku(meru/maru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">low, to lower</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8EE2</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="転" href="https://nihongoichiban.com/2011/05/18/%e8%bb%a2/" target="_blank">転</a></td>
+<td align="left" bgcolor="#ffffff">TEN</td>
+<td align="left" bgcolor="#ffffff">koro(bu), koro(garu/geru), koro(gasu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to roll, to turn</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7530</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="田" href="https://nihongoichiban.com/2011/05/19/%e7%94%b0/" target="_blank">田</a></td>
+<td align="left" bgcolor="#ffffff">DEN</td>
+<td align="left" bgcolor="#ffffff">ta</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">rice field</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">90FD</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="都" href="https://nihongoichiban.com/2011/05/19/%e9%83%bd/" target="_blank">都</a></td>
+<td align="left" bgcolor="#ffffff">TO, TSU</td>
+<td align="left" bgcolor="#ffffff">miyako</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">capital</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5EA8</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="度" href="https://nihongoichiban.com/2011/05/20/%e5%ba%a6/" target="_blank">度</a></td>
+<td align="left" bgcolor="#ffffff">DO</td>
+<td align="left" bgcolor="#ffffff">tabi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">measure, degree</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7B54</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="答" href="https://nihongoichiban.com/2011/05/21/%e7%ad%94/" target="_blank">答</a></td>
+<td align="left" bgcolor="#ffffff">TOU</td>
+<td align="left" bgcolor="#ffffff">kota(e), kota(eru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">answer</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">51AC</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="冬" href="https://nihongoichiban.com/2011/05/21/%e5%86%ac/" target="_blank">冬</a></td>
+<td align="left" bgcolor="#ffffff">TOU</td>
+<td align="left" bgcolor="#ffffff">fuyu</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">winter</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">982D</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="頭" href="https://nihongoichiban.com/2011/05/21/%e9%a0%ad/" target="_blank">頭</a></td>
+<td align="left" bgcolor="#ffffff">TOU, ZU</td>
+<td align="left" bgcolor="#ffffff">atama, kashira</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">head, master540C</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">540C</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="同" href="https://nihongoichiban.com/2011/05/21/%e5%90%8c/" target="_blank">同</a></td>
+<td align="left" bgcolor="#ffffff">DOU</td>
+<td align="left" bgcolor="#ffffff">ona(ji)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">same</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">52D5</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="動" href="https://nihongoichiban.com/2011/05/21/%e5%8b%95/" target="_blank">動</a></td>
+<td align="left" bgcolor="#ffffff">DOU</td>
+<td align="left" bgcolor="#ffffff">ugo(ku), ugo(kasu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to move</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5802</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="堂" href="https://nihongoichiban.com/2011/05/22/%e5%a0%82/" target="_blank">堂</a></td>
+<td align="left" bgcolor="#ffffff">DOU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">room, hall, temple</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">50CD</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="働" href="https://nihongoichiban.com/2011/05/22/%e5%83%8d/" target="_blank">働</a></td>
+<td align="left" bgcolor="#ffffff">DOU</td>
+<td align="left" bgcolor="#ffffff">hatara(ku)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to work</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7279</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="特" href="https://nihongoichiban.com/2011/05/22/%e7%89%b9/" target="_blank">特</a></td>
+<td align="left" bgcolor="#ffffff">TOKU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">special</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">8089</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="肉" href="https://nihongoichiban.com/2011/05/22/%e8%82%89/" target="_blank">肉</a></td>
+<td align="left" bgcolor="#ffffff">NIKU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">meat</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">58F2</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="売" href="https://nihongoichiban.com/2011/05/22/%e5%a3%b2/" target="_blank">売</a></td>
+<td align="left" bgcolor="#ffffff">BAI</td>
+<td align="left" bgcolor="#ffffff">u(ru), u(reru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to sell</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">767A</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="発" href="https://nihongoichiban.com/2011/05/22/%e7%99%ba/" target="_blank">発</a></td>
+<td align="left" bgcolor="#ffffff">HATSU, HOTSU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">start, to leave, issue</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">98EF</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="飯" href="https://nihongoichiban.com/2011/05/22/%e9%a3%af/" target="_blank">飯</a></td>
+<td align="left" bgcolor="#ffffff">HAN</td>
+<td align="left" bgcolor="#ffffff">meshi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">meal, cooked rice</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">75C5</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="病" href="https://nihongoichiban.com/2011/05/23/%e7%97%85/" target="_blank">病</a></td>
+<td align="left" bgcolor="#ffffff">BYOU</td>
+<td align="left" bgcolor="#ffffff">ya(mu), yamai</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff"> sickness, illness</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">54C1</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="品" href="https://nihongoichiban.com/2011/05/23/%e5%93%81/" target="_blank">品</a></td>
+<td align="left" bgcolor="#ffffff">HIN</td>
+<td align="left" bgcolor="#ffffff">shina</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">product, quality</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4E0D</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="不" href="https://nihongoichiban.com/2011/05/24/%e4%b8%8d/" target="_blank">不</a></td>
+<td align="left" bgcolor="#ffffff">FU, BU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">not</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">98A8</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="風" href="https://nihongoichiban.com/2011/05/25/%e9%a2%a8/" target="_blank">風</a></td>
+<td align="left" bgcolor="#ffffff">FUU</td>
+<td align="left" bgcolor="#ffffff">kaze</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">wind, style</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">670D</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="服" href="https://nihongoichiban.com/2011/05/25/%e6%9c%8d/" target="_blank">服</a></td>
+<td align="left" bgcolor="#ffffff">FUKU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">clothing</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7269</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="物" href="https://nihongoichiban.com/2011/05/25/%e7%89%a9/" target="_blank">物</a></td>
+<td align="left" bgcolor="#ffffff">BUTSU, MOTSU</td>
+<td align="left" bgcolor="#ffffff">mono</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">thing</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6587</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="文" href="https://nihongoichiban.com/2011/05/26/%e6%96%87/" target="_blank">文</a></td>
+<td align="left" bgcolor="#ffffff">BUN, MON</td>
+<td align="left" bgcolor="#ffffff">fumi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">literature, sentence, letter</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5225</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="別" href="https://nihongoichiban.com/2011/05/26/%e5%88%a5/" target="_blank">別</a></td>
+<td align="left" bgcolor="#ffffff">BETSU</td>
+<td align="left" bgcolor="#ffffff">waka(reru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">difference, to part</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">52C9</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="勉" href="https://nihongoichiban.com/2011/05/27/%e5%8b%89/" target="_blank">勉</a></td>
+<td align="left" bgcolor="#ffffff">BEN</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">hard work, effort</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">4FBF</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="便" href="https://nihongoichiban.com/2011/05/28/%e4%be%bf/" target="_blank">便</a></td>
+<td align="left" bgcolor="#ffffff">BEN, BIN</td>
+<td align="left" bgcolor="#ffffff">tayo(ri)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">comfort, excrement, message</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6B69</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="歩" href="https://nihongoichiban.com/2011/05/28/%e6%ad%a9/" target="_blank">歩</a></td>
+<td align="left" bgcolor="#ffffff">HO, BU</td>
+<td align="left" bgcolor="#ffffff">aru(ku), ayu(mu)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to walk</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">65B9</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="方" href="https://nihongoichiban.com/2011/05/28/%e6%96%b9/" target="_blank">方</a></td>
+<td align="left" bgcolor="#ffffff">HOU</td>
+<td align="left" bgcolor="#ffffff">kata</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">direction, person</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">59B9</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="妹" href="https://nihongoichiban.com/2011/05/28/%e5%a6%b9/" target="_blank">妹</a></td>
+<td align="left" bgcolor="#ffffff">MAI</td>
+<td align="left" bgcolor="#ffffff">imouto</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">younger sister</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">5473</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="味" href="https://nihongoichiban.com/2011/05/28/%e5%91%b3/" target="_blank">味</a></td>
+<td align="left" bgcolor="#ffffff">MI</td>
+<td align="left" bgcolor="#ffffff">aji, aji(waru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">taste, to savor, to enjoy</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6C11</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="民" href="https://nihongoichiban.com/2011/05/28/%e6%b0%91/" target="_blank">民</a></td>
+<td align="left" bgcolor="#ffffff">MIN</td>
+<td align="left" bgcolor="#ffffff">tami</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">nation, people</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">660E</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="明" href="https://nihongoichiban.com/2011/05/28/%e6%98%8e/" target="_blank">明</a></td>
+<td align="left" bgcolor="#ffffff">MEI</td>
+<td align="left" bgcolor="#ffffff">a(kari), aka(rui)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">light, brightness, to be open</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">9580</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="門" href="https://nihongoichiban.com/2011/05/28/%e9%96%80/" target="_blank">門</a></td>
+<td align="left" bgcolor="#ffffff">MON</td>
+<td align="left" bgcolor="#ffffff">kado</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">gate</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">554F</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="問" href="https://nihongoichiban.com/2011/05/28/%e5%95%8f/" target="_blank">問</a></td>
+<td align="left" bgcolor="#ffffff">MON</td>
+<td align="left" bgcolor="#ffffff">to(i), to(u)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">question, take care of</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">591C</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="夜" href="https://nihongoichiban.com/2011/05/28/%e5%a4%9c/" target="_blank">夜</a></td>
+<td align="left" bgcolor="#ffffff">YA</td>
+<td align="left" bgcolor="#ffffff">yoro, yo~</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">night</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">91CE</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="野" href="https://nihongoichiban.com/2011/05/30/%e9%87%8e/" target="_blank">野</a></td>
+<td align="left" bgcolor="#ffffff">YA</td>
+<td align="left" bgcolor="#ffffff">no</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">field</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">85AC</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="薬" href="https://nihongoichiban.com/2011/05/29/%e8%96%ac/" target="_blank">薬</a></td>
+<td align="left" bgcolor="#ffffff">YAKU</td>
+<td align="left" bgcolor="#ffffff">kusuri</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">drug, medicine, chemical</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6709</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="有" href="https://nihongoichiban.com/2011/05/29/%e6%9c%89/" target="_blank">有</a></td>
+<td align="left" bgcolor="#ffffff">YUU, U</td>
+<td align="left" bgcolor="#ffffff">a(ru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">to exist, to be, to have</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">66DC</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="曜" href="https://nihongoichiban.com/2011/05/29/%e6%9b%9c/" target="_blank">曜</a></td>
+<td align="left" bgcolor="#ffffff">YOU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">weekday</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7528</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="用" href="https://nihongoichiban.com/2011/05/29/%e7%94%a8/" target="_blank">用</a></td>
+<td align="left" bgcolor="#ffffff">YOU</td>
+<td align="left" bgcolor="#ffffff">mochi(iru)</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">issue, to use</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6D0B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="洋" href="https://nihongoichiban.com/2011/05/29/%e6%b4%8b/" target="_blank">洋</a></td>
+<td align="left" bgcolor="#ffffff">YOU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">ocean, western, foreign</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">7406</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="理" href="https://nihongoichiban.com/2011/05/29/%e7%90%86/" target="_blank">理</a></td>
+<td align="left" bgcolor="#ffffff">RI</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">reason, principle</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">65C5</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="旅" href="https://nihongoichiban.com/2011/05/30/%e6%97%85/" target="_blank">旅</a></td>
+<td align="left" bgcolor="#ffffff">RYO</td>
+<td align="left" bgcolor="#ffffff">tabi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">trip, travel</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6599</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="料" href="https://nihongoichiban.com/2011/05/30/%e6%96%99/" target="_blank">料</a></td>
+<td align="left" bgcolor="#ffffff">RYOU</td>
+<td align="left" bgcolor="#ffffff">&#8211;</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">material, charge</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">529B</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="力" href="https://nihongoichiban.com/2011/05/30/%e5%8a%9b/" target="_blank">力</a></td>
+<td align="left" bgcolor="#ffffff">RYOKU, RIKI</td>
+<td align="left" bgcolor="#ffffff">chikara</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">power, force</td>
+</tr>
+<tr valign="top">
+<td align="middle" bgcolor="#ffffff">6797</td>
+<td style="text-align:center;" align="left" bgcolor="#ffffff"><a title="林" href="https://nihongoichiban.com/2011/05/30/%e6%9e%97/" target="_blank">林</a></td>
+<td align="left" bgcolor="#ffffff">RIN</td>
+<td align="left" bgcolor="#ffffff">hayashi</td>
+<td style="text-align:left;" align="middle" bgcolor="#ffffff">woods</td>
+</tr>"""
+# Парсинг HTML
+soup = BeautifulSoup(html, 'html.parser')
 
-<td valign="top" width="30">C<strong>ode</strong></td>
-<td valign="top" width="40"><strong>kanji</strong></td>
-<td valign="top" width="200"><strong>Onyomi</strong></td>
-<td valign="top" width="200"><strong>Kunyomi</strong></td>
-<td valign="top" width="200"><strong>Meaning</strong></td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5B89</td>
-<td style="text-align:center;" valign="top" width="30"><a title="安" href="https://nihongoichiban.com/2011/04/09/%e5%ae%89/" target="_blank">安</a></td>
-<td valign="top" width="200">AN</td>
-<td valign="top" width="200">yasu(i)</td>
-<td valign="top" width="200">peace, cheap, safety</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E00</td>
-<td style="text-align:center;" valign="top" width="30"><a title="一" href="https://nihongoichiban.com/2011/03/21/%e4%b8%80/" target="_blank">一</a></td>
-<td valign="top" width="200">ICHI, ITSU</td>
-<td valign="top" width="200">hito(tsu), hito-</td>
-<td valign="top" width="200">one</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">98F2</td>
-<td style="text-align:center;" valign="top" width="30"><a title="飲" href="https://nihongoichiban.com/2011/04/09/%e9%a3%b2/" target="_blank">飲</a></td>
-<td valign="top" width="200">IN</td>
-<td valign="top" width="200">no(mu)</td>
-<td valign="top" width="200">to drink</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">53F3</td>
-<td style="text-align:center;" valign="top" width="30"><a title="右" href="https://nihongoichiban.com/2011/04/09/%e5%8f%b3/" target="_blank">右</a></td>
-<td valign="top" width="200">U, YUU</td>
-<td valign="top" width="200">migi</td>
-<td valign="top" width="200">right</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">96E8</td>
-<td style="text-align:center;" valign="top" width="30"><a title="雨" href="https://nihongoichiban.com/2011/03/26/%e9%9b%a8/" target="_blank">雨</a></td>
-<td valign="top" width="200">U</td>
-<td valign="top" width="200">ame</td>
-<td valign="top" width="200">rain</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">99C5</td>
-<td style="text-align:center;" valign="top" width="30"><a title="駅" href="https://nihongoichiban.com/2011/04/09/%e9%a7%85/" target="_blank">駅</a></td>
-<td valign="top" width="200">EKI</td>
-<td valign="top" width="200">&#8211;</td>
-<td valign="top" width="200">station</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5186</td>
-<td style="text-align:center;" valign="top" width="30"><a title="円" href="https://nihongoichiban.com/2011/03/21/86/" target="_blank">円</a></td>
-<td valign="top" width="200">EN</td>
-<td valign="top" width="200">maru(i)</td>
-<td valign="top" width="200">circle, Yen, round</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">706B</td>
-<td style="text-align:center;" valign="top" width="30"><a title="火" href="https://nihongoichiban.com/2011/03/24/%e7%81%ab/" target="_blank">火</a></td>
-<td valign="top" width="200">KA</td>
-<td valign="top" width="200">hi</td>
-<td valign="top" width="200">fire</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">82B1</td>
-<td style="text-align:center;" valign="top" width="30"><a title="花" href="https://nihongoichiban.com/2011/04/09/%e8%8a%b1/" target="_blank">花</a></td>
-<td valign="top" width="200">KA</td>
-<td valign="top" width="200">hana</td>
-<td valign="top" width="200">flower, blossom</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E0B</td>
-<td style="text-align:center;" valign="top" width="30"><a title="下" href="https://nihongoichiban.com/2011/03/26/%e4%b8%8b/" target="_blank">下</a></td>
-<td valign="top" width="200">KA, GE</td>
-<td valign="top" width="200">shimo, sa(geru), o(rosu), ku(daru)</td>
-<td valign="top" width="200">below, down</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4F55</td>
-<td style="text-align:center;" valign="top" width="30"><a title="何" href="https://nihongoichiban.com/2011/04/09/%e4%bd%95/" target="_blank">何</a></td>
-<td valign="top" width="200">KA</td>
-<td valign="top" width="200">nani</td>
-<td valign="top" width="200">what, how many, which</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4FLA</td>
-<td style="text-align:center;" valign="top" width="30"><a title="会" href="https://nihongoichiban.com/2011/04/09/%e4%bc%9a/" target="_blank">会</a></td>
-<td valign="top" width="200">KAI, E</td>
-<td valign="top" width="200">a(u)</td>
-<td valign="top" width="200">to meet, to come together, society</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5916</td>
-<td style="text-align:center;" valign="top" width="30"><a title="外" href="https://nihongoichiban.com/2011/04/09/%e5%a4%96/" target="_blank">外</a></td>
-<td valign="top" width="200">GAI, GE</td>
-<td valign="top" width="200">soto, hoka, hazu(reru), hazu(su)</td>
-<td valign="top" width="200">outside, other, disconnect</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5B66</td>
-<td style="text-align:center;" valign="top" width="30"><a title="学" href="https://nihongoichiban.com/2011/04/09/%e5%ad%a6/" target="_blank">学</a></td>
-<td valign="top" width="200">GAKU</td>
-<td valign="top" width="200">mana(bu)</td>
-<td valign="top" width="200">school, science, learning</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">9593</td>
-<td style="text-align:center;" valign="top" width="30"><a title="間" href="https://nihongoichiban.com/2011/03/29/%e9%96%93/" target="_blank">間</a></td>
-<td valign="top" width="200">KAN, KEN</td>
-<td valign="top" width="200">aida</td>
-<td valign="top" width="200">time, time span</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6C17</td>
-<td style="text-align:center;" valign="top" width="30"><a title="気" href="https://nihongoichiban.com/2011/04/09/%e6%b0%97/" target="_blank">気</a></td>
-<td valign="top" width="200">KI, KE</td>
-<td valign="top" width="200">&#8211;</td>
-<td valign="top" width="200">soul, spirit</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E5D</td>
-<td style="text-align:center;" valign="top" width="30"><a title="九" href="https://nihongoichiban.com/2011/03/21/%e4%b9%9d/" target="_blank">九</a></td>
-<td valign="top" width="200">KYUU, KU</td>
-<td valign="top" width="200">kokono(tsu), kokono-</td>
-<td valign="top" width="200">nine</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4F11</td>
-<td style="text-align:center;" valign="top" width="30"><a title="休" href="https://nihongoichiban.com/2011/04/03/%e4%bc%91/" target="_blank">休</a></td>
-<td valign="top" width="200">KYUU</td>
-<td valign="top" width="200">yasu(mu)</td>
-<td valign="top" width="200">to rest</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">9B5A</td>
-<td style="text-align:center;" valign="top" width="30"><a title="魚" href="https://nihongoichiban.com/2011/04/09/%e9%ad%9a/" target="_blank">魚</a></td>
-<td valign="top" width="200">GYO</td>
-<td valign="top" width="200">sakana, uo</td>
-<td valign="top" width="200">fish</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">91D1</td>
-<td style="text-align:center;" valign="top" width="30"><a title="金" href="https://nihongoichiban.com/2011/03/26/%e9%87%91/" target="_blank">金</a></td>
-<td valign="top" width="200">KIN, KON</td>
-<td valign="top" width="200">kane</td>
-<td valign="top" width="200">gold, metal, money</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">7A7A</td>
-<td style="text-align:center;" valign="top" width="30"><a title="空" href="https://nihongoichiban.com/2011/04/09/%e7%a9%ba/" target="_blank">空</a></td>
-<td valign="top" width="200">KUU</td>
-<td valign="top" width="200">sora, a(keru), kara</td>
-<td valign="top" width="200">sky, to become free, empty</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6708</td>
-<td style="text-align:center;" valign="top" width="30"><a title="月" href="https://nihongoichiban.com/2011/03/24/%e6%9c%88/" target="_blank">月</a></td>
-<td valign="top" width="200">GETSU, GATSU</td>
-<td valign="top" width="200">tsuki</td>
-<td valign="top" width="200">month, moon</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">898B</td>
-<td style="text-align:center;" valign="top" width="30"><a title="見" href="https://nihongoichiban.com/2011/04/03/%e8%a6%8b/" target="_blank">見</a></td>
-<td valign="top" width="200">KEN</td>
-<td valign="top" width="200">mi(ru), mi(eru), mi(seru)</td>
-<td valign="top" width="200">to see, to be visible, to show</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">8A00</td>
-<td style="text-align:center;" valign="top" width="30"><a title="言" href="https://nihongoichiban.com/2011/04/09/%e8%a8%80/" target="_blank">言</a></td>
-<td valign="top" width="200">GEN, GON</td>
-<td valign="top" width="200">i(u)</td>
-<td valign="top" width="200">word, to talk</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">53E4</td>
-<td style="text-align:center;" valign="top" width="30"><a title="古" href="https://nihongoichiban.com/2011/04/09/%e5%8f%a4/" target="_blank">古</a></td>
-<td valign="top" width="200">KO</td>
-<td valign="top" width="200">furu(i)</td>
-<td valign="top" width="200">old, used</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E94</td>
-<td style="text-align:center;" valign="top" width="30"><a title="五" href="https://nihongoichiban.com/2011/03/21/%e4%ba%94/">五</a></td>
-<td valign="top" width="200">GO</td>
-<td valign="top" width="200">itsu(tsu), itsu-</td>
-<td valign="top" width="200">five</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5F8C</td>
-<td style="text-align:center;" valign="top" width="30"><a title="後" href="https://nihongoichiban.com/2011/04/02/%e5%be%8c/" target="_blank">後</a></td>
-<td valign="top" width="200">GO, KOU</td>
-<td valign="top" width="200">ato, oku(reru), nochi</td>
-<td valign="top" width="200">after, later, back, to stay behind</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5348</td>
-<td style="text-align:center;" valign="top" width="30"><a title="午" href="https://nihongoichiban.com/2011/04/02/%e5%8d%88/" target="_blank">午</a></td>
-<td valign="top" width="200">GO</td>
-<td valign="top" width="200">&#8211;</td>
-<td valign="top" width="200">noon</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">8A9E</td>
-<td style="text-align:center;" valign="top" width="30"><a title="語" href="https://nihongoichiban.com/2011/04/05/%e8%aa%9e/" target="_blank">語</a></td>
-<td valign="top" width="200">GO</td>
-<td valign="top" width="200">kata(ru), kata(rau)</td>
-<td valign="top" width="200">word, to talk</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6821</td>
-<td style="text-align:center;" valign="top" width="30"><a title="校" href="https://nihongoichiban.com/2011/04/09/%e6%a0%a1/" target="_blank">校</a></td>
-<td valign="top" width="200">KOU</td>
-<td valign="top" width="200">&#8211;</td>
-<td valign="top" width="200">school</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">53E3</td>
-<td style="text-align:center;" valign="top" width="30"><a title="口" href="https://nihongoichiban.com/2011/04/09/%e5%8f%a3/" target="_blank">口</a></td>
-<td valign="top" width="200">KOU, KU</td>
-<td valign="top" width="200">kuchi</td>
-<td valign="top" width="200">mouth</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">884C</td>
-<td style="text-align:center;" valign="top" width="30"><a title="行" href="https://nihongoichiban.com/2011/04/05/jlpt-kanji-行/" target="_blank">行</a></td>
-<td valign="top" width="200">KOU</td>
-<td valign="top" width="200">i(ku), yu(ku), okona(u)</td>
-<td valign="top" width="200">to walk. to go, to do, to carry out</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">9AD8</td>
-<td style="text-align:center;" valign="top" width="30"><a title="高" href="https://nihongoichiban.com/2011/04/09/%e9%ab%98/" target="_blank">高</a></td>
-<td valign="top" width="200">KOU</td>
-<td valign="top" width="200">taka(i), taka(maru), taka(meru)</td>
-<td valign="top" width="200">high, expensive, increase, quantity</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">56FD</td>
-<td style="text-align:center;" valign="top" width="30"><a title="国" href="https://nihongoichiban.com/2011/03/27/%e5%9b%bd/">国</a></td>
-<td valign="top" width="200">KOKU</td>
-<td valign="top" width="200">kuni</td>
-<td valign="top" width="200">country</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4ECA</td>
-<td style="text-align:center;" valign="top" width="30"><a title="今" href="https://nihongoichiban.com/2011/04/02/%e4%bb%8a/" target="_blank">今</a></td>
-<td valign="top" width="200">KON, KIN</td>
-<td valign="top" width="200">ima</td>
-<td valign="top" width="200">now</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5DE6</td>
-<td style="text-align:center;" valign="top" width="30"><a title="左" href="https://nihongoichiban.com/2011/04/09/%e5%b7%a6/" target="_blank">左</a></td>
-<td valign="top" width="200">SA</td>
-<td valign="top" width="200">hidari</td>
-<td valign="top" width="200">left</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E09</td>
-<td style="text-align:center;" valign="top" width="30"><a title="三" href="https://nihongoichiban.com/2011/03/21/%e4%b8%89/" target="_blank">三</a></td>
-<td valign="top" width="200">SAN</td>
-<td valign="top" width="200">mit(tsu), mi-</td>
-<td valign="top" width="200">three</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5C71</td>
-<td style="text-align:center;" valign="top" width="30"><a title="山" href="https://nihongoichiban.com/2011/03/27/%e5%b1%b1/">山</a></td>
-<td valign="top" width="200">SAN</td>
-<td valign="top" width="200">yama</td>
-<td valign="top" width="200">mountain</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">56DB</td>
-<td style="text-align:center;" valign="top" width="30"><a title="四" href="https://nihongoichiban.com/2011/03/21/%e5%9b%9b/">四</a></td>
-<td valign="top" width="200">SHI</td>
-<td valign="top" width="200">yo(ttsu), yu(tsu), yo-, yon-</td>
-<td valign="top" width="200">four</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5B50</td>
-<td style="text-align:center;" valign="top" width="30"><a title="子" href="https://nihongoichiban.com/2011/04/09/%e5%ad%90/" target="_blank">子</a></td>
-<td valign="top" width="200">SHI, SU</td>
-<td valign="top" width="200">ko</td>
-<td valign="top" width="200">child</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">8033</td>
-<td style="text-align:center;" valign="top" width="30"><a title="耳" href="https://nihongoichiban.com/2011/04/03/%e8%80%b3/" target="_blank">耳</a></td>
-<td valign="top" width="200">JI</td>
-<td valign="top" width="200">mimi</td>
-<td valign="top" width="200">ear</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6642</td>
-<td style="text-align:center;" valign="top" width="30"><a title="時" href="https://nihongoichiban.com/2011/03/27/%e6%99%82/">時</a></td>
-<td valign="top" width="200">JI</td>
-<td valign="top" width="200">toki</td>
-<td valign="top" width="200">time, hour</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E03</td>
-<td style="text-align:center;" valign="top" width="30"><a title="七" href="https://nihongoichiban.com/2011/03/21/%e4%b8%83/" target="_blank">七</a></td>
-<td valign="top" width="200">SHICHI</td>
-<td valign="top" width="200">nana(tsu), nana-, nano-</td>
-<td valign="top" width="200">seven</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">8ECA</td>
-<td style="text-align:center;" valign="top" width="30"><a title="車" href="https://nihongoichiban.com/2011/04/09/%e8%bb%8a/" target="_blank">車</a></td>
-<td valign="top" width="200">SHA</td>
-<td valign="top" width="200">kuruma</td>
-<td valign="top" width="200">car, wheel</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">793E</td>
-<td style="text-align:center;" valign="top" width="30"><a title="社" href="https://nihongoichiban.com/2011/04/09/%e7%a4%be/" target="_blank">社</a></td>
-<td valign="top" width="200">SHA</td>
-<td valign="top" width="200">yashiro</td>
-<td valign="top" width="200">shinto shrine, society</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">624B</td>
-<td style="text-align:center;" valign="top" width="30"><a title="手" href="https://nihongoichiban.com/2011/04/09/%e6%89%8b/" target="_blank">手</a></td>
-<td valign="top" width="200">SHU</td>
-<td valign="top" width="200">te</td>
-<td valign="top" width="200">hand</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">9031</td>
-<td style="text-align:center;" valign="top" width="30"><a title="週" href="https://nihongoichiban.com/2011/04/09/%e9%80%b1/" target="_blank">週</a></td>
-<td valign="top" width="200">SHUU</td>
-<td valign="top" width="200">&#8211;</td>
-<td valign="top" width="200">week</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5341</td>
-<td style="text-align:center;" valign="top" width="30"><a title="十" href="https://nihongoichiban.com/2011/03/21/%e5%8d%81/" target="_blank">十</a></td>
-<td valign="top" width="200">JUU, JI</td>
-<td valign="top" width="200">too, to-</td>
-<td valign="top" width="200">ten, cross</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">51FA</td>
-<td style="text-align:center;" valign="top" width="30"><a title="出" href="https://nihongoichiban.com/2011/04/03/%e5%87%ba/" target="_blank">出</a></td>
-<td valign="top" width="200">SHUTSU</td>
-<td valign="top" width="200">da(su), de(ru)</td>
-<td valign="top" width="200">to leave, to get out. to take out</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">66F8</td>
-<td style="text-align:center;" valign="top" width="30"><a title="書" href="https://nihongoichiban.com/2011/04/09/%e6%9b%b8/" target="_blank">書</a></td>
-<td valign="top" width="200">SHO</td>
-<td valign="top" width="200">ka(ku)</td>
-<td valign="top" width="200">to write</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5073</td>
-<td style="text-align:center;" valign="top" width="30"><a title="女" href="https://nihongoichiban.com/2011/04/09/%e5%a5%b3/" target="_blank">女</a></td>
-<td valign="top" width="200">JO, NYO</td>
-<td valign="top" width="200">onna, me</td>
-<td valign="top" width="200">woman, female</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5C0F</td>
-<td style="text-align:center;" valign="top" width="30"><a title="小" href="https://nihongoichiban.com/2011/04/09/%e5%b0%8f-2/" target="_blank">小</a></td>
-<td valign="top" width="200">SHOU</td>
-<td valign="top" width="200">chii(sai), ko-, o-</td>
-<td valign="top" width="200">small</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5C11</td>
-<td style="text-align:center;" valign="top" width="30"><a title="少" href="https://nihongoichiban.com/2011/04/09/%e5%b0%91/" target="_blank">少</a></td>
-<td valign="top" width="200">SHOU</td>
-<td valign="top" width="200">suko(shi), suku(nai)</td>
-<td valign="top" width="200">a little</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E0A</td>
-<td style="text-align:center;" valign="top" width="30"><a title="上" href="https://nihongoichiban.com/2011/03/27/%e4%b8%8a/" target="_blank">上</a></td>
-<td valign="top" width="200">SHOU, JOU</td>
-<td valign="top" width="200">ue, kami, a(geru), a(garu)</td>
-<td valign="top" width="200">above, upper</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">98DF</td>
-<td style="text-align:center;" valign="top" width="30"><a title="食" href="https://nihongoichiban.com/2011/04/10/%e9%a3%9f/" target="_blank">食</a></td>
-<td valign="top" width="200">SHOKU</td>
-<td valign="top" width="200">ta(beru), ku(ru), ku(rau)</td>
-<td valign="top" width="200">to eat</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">65B0</td>
-<td style="text-align:center;" valign="top" width="30"><a title="新" href="https://nihongoichiban.com/2011/04/10/%e6%96%b0/" target="_blank">新</a></td>
-<td valign="top" width="200">SHIN</td>
-<td valign="top" width="200">atara(shii), ara(ta), nii-</td>
-<td valign="top" width="200">new</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4EBA</td>
-<td style="text-align:center;" valign="top" width="30"><a title="人" href="https://nihongoichiban.com/2011/03/24/%e4%ba%ba/" target="_blank">人</a></td>
-<td valign="top" width="200">JIN, NIN</td>
-<td valign="top" width="200">hito</td>
-<td valign="top" width="200">person</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6C34</td>
-<td style="text-align:center;" valign="top" width="30"><a title="水" href="https://nihongoichiban.com/2011/03/24/%e6%b0%b4/" target="_blank">水</a></td>
-<td valign="top" width="200">SUI</td>
-<td valign="top" width="200">mizu</td>
-<td valign="top" width="200">water</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">751F</td>
-<td style="text-align:center;" valign="top" width="30"><a title="生" href="https://nihongoichiban.com/2011/03/30/%e7%94%9f/" target="_blank">生</a></td>
-<td valign="top" width="200">SEI, SHOU</td>
-<td valign="top" width="200">i(kiru), u(mu), ha(yasu), nama, ki</td>
-<td valign="top" width="200">to live, to grow, to be born, raw</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">897F</td>
-<td style="text-align:center;" valign="top" width="30"><a title="西" href="https://nihongoichiban.com/2011/04/06/%e8%a5%bf/" target="_blank">西</a></td>
-<td valign="top" width="200">SEI, SAI</td>
-<td valign="top" width="200">nishi</td>
-<td valign="top" width="200">west</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5DDD</td>
-<td style="text-align:center;" valign="top" width="30"><a title="川" href="https://nihongoichiban.com/2011/03/27/%e5%b7%9d/">川</a></td>
-<td valign="top" width="200">SEN</td>
-<td valign="top" width="200">kawa</td>
-<td valign="top" width="200">river</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5343</td>
-<td style="text-align:center;" valign="top" width="30"><a title="千" href="https://nihongoichiban.com/2011/03/21/%e5%8d%83/" target="_blank">千</a></td>
-<td valign="top" width="200">SEN</td>
-<td valign="top" width="200">chi</td>
-<td valign="top" width="200">thousand</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5148</td>
-<td style="text-align:center;" valign="top" width="30"><a title="先" href="https://nihongoichiban.com/2011/04/02/%e5%85%88/" target="_blank">先</a></td>
-<td valign="top" width="200">SEN</td>
-<td valign="top" width="200">saki</td>
-<td valign="top" width="200">before, in future</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">524D</td>
-<td style="text-align:center;" valign="top" width="30"><a title="前" href="https://nihongoichiban.com/2011/04/01/%e5%89%8d/" target="_blank">前</a></td>
-<td valign="top" width="200">ZEN</td>
-<td valign="top" width="200">mae</td>
-<td valign="top" width="200">before</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">8DB3</td>
-<td style="text-align:center;" valign="top" width="30"><a title="足" href="https://nihongoichiban.com/2011/04/10/%e8%b6%b3/" target="_blank">足</a></td>
-<td valign="top" width="200">SOKU</td>
-<td valign="top" width="200">ashi, ta(riru), ta(su)</td>
-<td valign="top" width="200">foot, to be sufficient, to add</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">491A</td>
-<td style="text-align:center;" valign="top" width="30"><a title="多" href="https://nihongoichiban.com/2011/04/10/%e5%a4%9a/" target="_blank">多</a></td>
-<td valign="top" width="200">TA</td>
-<td valign="top" width="200">oo(i)</td>
-<td valign="top" width="200">many</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5927</td>
-<td style="text-align:center;" valign="top" width="30"><a title="大" href="https://nihongoichiban.com/2011/03/26/%e5%a4%a7/" target="_blank">大</a></td>
-<td valign="top" width="200">DAI, TAI</td>
-<td valign="top" width="200">ou(kii), oo(i)</td>
-<td valign="top" width="200">big, a lot</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">7537</td>
-<td style="text-align:center;" valign="top" width="30"><a title="男" href="https://nihongoichiban.com/2011/04/09/%e7%94%b7/" target="_blank">男</a></td>
-<td valign="top" width="200">DAN, NAN</td>
-<td valign="top" width="200">otoko</td>
-<td valign="top" width="200">man, male</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E2D</td>
-<td style="text-align:center;" valign="top" width="30"><a title="中" href="https://nihongoichiban.com/2011/03/26/%e4%b8%ad/" target="_blank">中</a></td>
-<td valign="top" width="200">CHUU</td>
-<td valign="top" width="200">naka</td>
-<td valign="top" width="200">inner, center, between</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">9577</td>
-<td style="text-align:center;" valign="top" width="30"><a title="長" href="https://nihongoichiban.com/2011/04/09/%e9%95%b7/" target="_blank">長</a></td>
-<td valign="top" width="200">CHOU</td>
-<td valign="top" width="200">naga(i)</td>
-<td valign="top" width="200">long, leader</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5929</td>
-<td style="text-align:center;" valign="top" width="30"><a title="天" href="https://nihongoichiban.com/2011/04/10/%e5%a4%a9/" target="_blank">天</a></td>
-<td valign="top" width="200">TEN</td>
-<td valign="top" width="200">ame, ama</td>
-<td valign="top" width="200">sky</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5E97</td>
-<td style="text-align:center;" valign="top" width="30"><a title="店" href="https://nihongoichiban.com/2011/04/10/%e5%ba%97/" target="_blank">店</a></td>
-<td valign="top" width="200">TEN</td>
-<td valign="top" width="200">mise</td>
-<td valign="top" width="200">shop</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">96FB</td>
-<td style="text-align:center;" valign="top" width="30"><a title="電" href="https://nihongoichiban.com/2011/04/10/%e9%9b%bb/" target="_blank">電</a></td>
-<td valign="top" width="200">DEN</td>
-<td valign="top" width="200">&#8211;</td>
-<td valign="top" width="200">electricity</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">571F</td>
-<td style="text-align:center;" valign="top" width="30"><a title="土" href="https://nihongoichiban.com/2011/03/26/%e5%9c%9f/" target="_blank">土</a></td>
-<td valign="top" width="200">DO, TO</td>
-<td valign="top" width="200">tsuchi</td>
-<td valign="top" width="200">earth, ground</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6771</td>
-<td style="text-align:center;" valign="top" width="30"><a title="東" href="https://nihongoichiban.com/2011/04/06/jlpt-kanji-東/" target="_blank">東</a></td>
-<td valign="top" width="200">TOU</td>
-<td valign="top" width="200">higashi</td>
-<td valign="top" width="200">east</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">9053</td>
-<td style="text-align:center;" valign="top" width="30"><a title="道" href="https://nihongoichiban.com/2011/04/10/%e9%81%93/" target="_blank">道</a></td>
-<td valign="top" width="200">DOU</td>
-<td valign="top" width="200">michi</td>
-<td valign="top" width="200">street, path</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">8AAD</td>
-<td style="text-align:center;" valign="top" width="30"><a title="読" href="https://nihongoichiban.com/2011/04/10/%e8%aa%ad/" target="_blank">読</a></td>
-<td valign="top" width="200">DOKU</td>
-<td valign="top" width="200">yo(mu)</td>
-<td valign="top" width="200">to read</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5357</td>
-<td style="text-align:center;" valign="top" width="30"><a title="南" href="https://nihongoichiban.com/2011/04/07/%e5%8d%97/" target="_blank">南</a></td>
-<td valign="top" width="200">NAN</td>
-<td valign="top" width="200">minami</td>
-<td valign="top" width="200">south</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E8C</td>
-<td style="text-align:center;" valign="top" width="30"><a title="二" href="https://nihongoichiban.com/2011/03/21/%e4%ba%8c/" target="_blank">ニ</a></td>
-<td valign="top" width="200">NI</td>
-<td valign="top" width="200">futa(tsu), futa-</td>
-<td valign="top" width="200">two</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">65E5</td>
-<td style="text-align:center;" valign="top" width="30"><a title="日" href="https://nihongoichiban.com/2011/03/21/%e6%97%a5/">日</a></td>
-<td valign="top" width="200">NICHI, JITSU</td>
-<td valign="top" width="200">hi, -ka</td>
-<td valign="top" width="200">day, sun</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5165</td>
-<td style="text-align:center;" valign="top" width="30"><a title="入" href="https://nihongoichiban.com/2011/04/02/%e5%85%a5/" target="_blank">入</a></td>
-<td valign="top" width="200">NYUU</td>
-<td valign="top" width="200">hai(ru), i(ru), i(reru)</td>
-<td valign="top" width="200">to enter, to insert</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5E74</td>
-<td style="text-align:center;" valign="top" width="30"><a title="年" href="https://nihongoichiban.com/2011/04/01/%e5%b9%b4/" target="_blank">年</a></td>
-<td valign="top" width="200">NEN</td>
-<td valign="top" width="200">toshi</td>
-<td valign="top" width="200">year</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">8CB7</td>
-<td style="text-align:center;" valign="top" width="30"><a title="買" href="https://nihongoichiban.com/2011/04/10/%e8%b2%b7/" target="_blank">買</a></td>
-<td valign="top" width="200">BAI</td>
-<td valign="top" width="200">ka(u)</td>
-<td valign="top" width="200">to buy</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">767D</td>
-<td style="text-align:center;" valign="top" width="30"><a title="白" href="https://nihongoichiban.com/2011/04/10/%e7%99%bd/" target="_blank">白</a></td>
-<td valign="top" width="200">HAKU, BYAKU</td>
-<td valign="top" width="200">shiro(i), shiro</td>
-<td valign="top" width="200">white</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">516B</td>
-<td style="text-align:center;" valign="top" width="30"><a title="八" href="https://nihongoichiban.com/2011/03/21/%e5%85%ab/">八</a></td>
-<td valign="top" width="200">HACHI</td>
-<td valign="top" width="200">yat(tsu), ya(tsu), ya-, you-</td>
-<td valign="top" width="200">eight</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">534A</td>
-<td style="text-align:center;" valign="top" width="30"><a title="半" href="https://nihongoichiban.com/2011/04/10/%e5%8d%8a/" target="_blank">半</a></td>
-<td valign="top" width="200">HAN</td>
-<td valign="top" width="200">naka(ba)</td>
-<td valign="top" width="200">half, middle, semi-</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">767E</td>
-<td style="text-align:center;" valign="top" width="30"><a title="百" href="https://nihongoichiban.com/2011/03/21/%e7%99%be/">百</a></td>
-<td valign="top" width="200">HYAKU</td>
-<td valign="top" width="200">&#8211;</td>
-<td valign="top" width="200">hundred</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">7236</td>
-<td style="text-align:center;" valign="top" width="30"><a title="父" href="https://nihongoichiban.com/2011/04/10/%e7%88%b6/" target="_blank">父</a></td>
-<td valign="top" width="200">FU</td>
-<td valign="top" width="200">chichi</td>
-<td valign="top" width="200">father</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5206</td>
-<td style="text-align:center;" valign="top" width="30"><a title="分" href="https://nihongoichiban.com/2011/03/27/%e5%88%86/">分</a></td>
-<td valign="top" width="200">BUN, BU, FUN</td>
-<td valign="top" width="200">wa(keru), wa(kareru), wa(karu)</td>
-<td valign="top" width="200">part, minute, to divide, to understand</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">805E</td>
-<td style="text-align:center;" valign="top" width="30"><a title="聞" href="https://nihongoichiban.com/2011/04/03/%e8%81%9e/" target="_blank">聞</a></td>
-<td valign="top" width="200">BUN, MON</td>
-<td valign="top" width="200">ki(ku), ki(koeru)</td>
-<td valign="top" width="200">to hear, to listen, to ask</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6BCD</td>
-<td style="text-align:center;" valign="top" width="30"><a title="母" href="https://nihongoichiban.com/2011/04/10/%e6%af%8d/" target="_blank">母</a></td>
-<td valign="top" width="200">BO</td>
-<td valign="top" width="200">haha</td>
-<td valign="top" width="200">mother</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">5317</td>
-<td style="text-align:center;" valign="top" width="30"><a title="北" href="https://nihongoichiban.com/2011/04/07/%e5%8c%97/" target="_blank">北</a></td>
-<td valign="top" width="200">HOKU</td>
-<td valign="top" width="200">kita</td>
-<td valign="top" width="200">north</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6728</td>
-<td style="text-align:center;" valign="top" width="30"><a title="木" href="https://nihongoichiban.com/2011/03/25/%e6%9c%a8/" target="_blank">木</a></td>
-<td valign="top" width="200">BOKU, MOKU</td>
-<td valign="top" width="200">ki, ko</td>
-<td valign="top" width="200">tree, wood</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">672C</td>
-<td style="text-align:center;" valign="top" width="30"><a title="本" href="https://nihongoichiban.com/2011/03/26/%e6%9c%ac/" target="_blank">本</a></td>
-<td valign="top" width="200">HON</td>
-<td valign="top" width="200">moto</td>
-<td valign="top" width="200">book, source, main-</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6BCE</td>
-<td style="text-align:center;" valign="top" width="30"><a title="毎" href="https://nihongoichiban.com/2011/04/10/%e6%af%8e/" target="_blank">毎</a></td>
-<td valign="top" width="200">MAI</td>
-<td valign="top" width="200">&#8211;</td>
-<td valign="top" width="200">each, every</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">4E07</td>
-<td style="text-align:center;" valign="top" width="30"><a title="万" href="https://nihongoichiban.com/2011/03/21/%e4%b8%87/" target="_blank">万</a></td>
-<td valign="top" width="200">MAN, BAN</td>
-<td valign="top" width="200">&#8211;</td>
-<td valign="top" width="200">ten thousand, all, many</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">540D</td>
-<td style="text-align:center;" valign="top" width="30"><a title="名" href="https://nihongoichiban.com/2011/04/09/%e5%90%8d/" target="_blank">名</a></td>
-<td valign="top" width="200">MEI, MYOU</td>
-<td valign="top" width="200">na</td>
-<td valign="top" width="200">name, reputation</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">76EE</td>
-<td style="text-align:center;" valign="top" width="30"><a title="目" href="https://nihongoichiban.com/2011/04/09/%e7%9b%ae/" target="_blank">目</a></td>
-<td valign="top" width="200">MOKU</td>
-<td valign="top" width="200">me</td>
-<td valign="top" width="200">eye</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">53CB</td>
-<td style="text-align:center;" valign="top" width="30"><a title="友" href="https://nihongoichiban.com/2011/04/09/%e5%8f%8b/" target="_blank">友</a></td>
-<td valign="top" width="200">YUU</td>
-<td valign="top" width="200">tomo</td>
-<td valign="top" width="200">friend</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">6765</td>
-<td style="text-align:center;" valign="top" width="30"><a title="来" href="https://nihongoichiban.com/2011/04/06/%e6%9d%a5/" target="_blank">来</a></td>
-<td valign="top" width="200">RAI</td>
-<td valign="top" width="200">ku(ru), kita(ru), kita(su)</td>
-<td valign="top" width="200">to come</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">7ABC</td>
-<td style="text-align:center;" valign="top" width="30"><a title="立" href="https://nihongoichiban.com/2011/04/09/%e7%ab%8b/" target="_blank">立</a></td>
-<td valign="top" width="200">RITSU</td>
-<td valign="top" width="200">ta(tsu), ta(teru)</td>
-<td valign="top" width="200">to stand, to establish</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">516D</td>
-<td style="text-align:center;" valign="top" width="30"><a title="六" href="https://nihongoichiban.com/2011/03/21/%e5%85%ad/">六</a></td>
-<td valign="top" width="200">ROKU</td>
-<td valign="top" width="200">mutt(su), mu(tsu), mu, mui</td>
-<td valign="top" width="200">six</td>
-</tr>
-<tr>
-<td style="text-align:center;" valign="top" width="20">8A71</td>
-<td style="text-align:center;" valign="top" width="30"><a title="話" href="https://nihongoichiban.com/2011/04/09/%e8%a9%b1/" target="_blank">話</a></td>
-<td valign="top" width="200">WA</td>
-<td valign="top" width="200">hanashi, hana(su)</td>
-<td valign="top" width="200">speech, to talk, story, conversation</td>
-</tr>
-"""
+# Создание CSV
+with open('kanji_n4_ENG.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    writer = csv.writer(csvfile, delimiter=';')
+    writer.writerow(['kanji', 'meaning'])
 
-# Парсим HTML
-soup = BeautifulSoup(html_content, 'html.parser')
+    for row in soup.find_all('tr'):
+        cells = row.find_all('td')
+        if len(cells) >= 5:
+            kanji = cells[1].text.strip()
+            meaning = cells[4].text.strip()
+            writer.writerow([kanji, meaning])
 
-# Ищем все строки таблицы
-rows = soup.find_all('tr')
-
-# Извлечение кандзи и каны
-words = []
-for row in rows:
-    columns = row.find_all('td')  # Находим все ячейки в строке
-    if len(columns) >= 5:  # Проверяем, что ячеек достаточно
-        kanji = columns[1].get_text(strip=True)
-        onyomi = columns[2].get_text(strip=True)
-        kunyomi = columns[3].get_text(strip=True)
-        meaning_en = columns[4].get_text(strip=True)
-        words.append((kanji, onyomi, kunyomi, meaning_en))
-
-# Сохранение в файл
-with open('kanji.txt', 'w', encoding='utf-8') as file:
-    for kanji, onyomi, kunyomi, meaning_en in words:
-        file.write(f"{kanji}\t{onyomi}\t{kunyomi}\t{meaning_en}\n")
-
-print("Данные сохранены в файл kanji.txt")
+print("Файл 'kanji_n4_ENG.csv' успешно создан.")

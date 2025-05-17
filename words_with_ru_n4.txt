@@ -1,0 +1,682 @@
+	あ	interjection	Ah	Ах
+	ああ	interjection	like that, that way	как это, так
+	あいさつ・する		greeting	приветствие
+間	あいだ	noun	space, interval	пространство, интервал
+合う	あう	verb	to fit, to match	чтобы соответствовать, чтобы соответствовать
+	あかちゃん	noun	baby, infant	Ребенок, младенец
+上がる	あがる	verb	to rise, to go up	подняться, чтобы подняться
+赤ん坊	あかんぼう	noun	baby	малыш
+空く	あく	verb	to open, to become empty	открыть, стать пустым
+	アクセサリー	noun	accessory	аксессуар
+	あげる	verb	to give	дать
+浅い	あさい	i-adjective	shallow, superficial	мелкий, поверхностный
+味	あじ	na-adjective	flavor, taste	Вкус, вкус
+	アジア	noun	Asia	Азия
+明日	あす		tomorrow	завтра
+遊び	あそび		play	играть
+集る	あつまる	verb	to gather, to collect	собирать, собирать
+集める	あつめる	verb	to collect, to assemble	собирать, собирать
+	アナウンサー	noun	announcer	диктор
+	アフリカ	noun	Africa	Африка
+	アメリカ	noun	America	Америка
+謝る	あやまる	verb	to apologize	извиниться
+	アルコール	noun	alcohol	алкоголь
+	アルバイト	noun	part-time job	неполная занятость
+安心	あんしん	na-adjective	peace of mind, relief	душевное спокойствие, облегчение
+安全	あんぜん	na-adjective	safety, security	безопасность, безопасность
+	あんな	na-adjective	such, like that	Таким, как это
+案内	あんない・する		information, guidance	Информация, руководство
+以下	いか	noun	less than, below	меньше, чем ниже
+以外	いがい	noun	with the exception of, excepting	за исключением, за исключением
+医学	いがく	noun	medical science	Медицинская наука
+生きる	いきる	verb	to live, to exist	Жить, существовать
+	いくら～ても		however much one may ～	Как многое можно ～
+意見	いけん	noun	opinion, view	мнение, представление
+石	いし	noun	stone	камень
+	いじめる	verb	to tease, to torment	дразнить, мучить
+以上	いじょう		more than, this is all	больше, чем все
+急ぐ	いそぐ	verb	to hurry, to rush	спешить, спешить
+致す	いたす	verb	(hum) to do	(гул) делать
+致す	いたす	verb	(hum) to do	(гул) делать
+	いただく	verb	to receive, to take food or drink (hum)	получать, принимать еду или напиток (гул)
+一度	いちど		once, one time	Однажды, один раз
+一生懸命	いっしょうけんめい	na-adjective	as well as one can, with utmost effort	а также можно, с большими усилиями
+	いっぱい	adverb	full, to the utmost	полный, до максимума
+糸	いと		thread	нить
+以内	いない		within, inside of	внутри, внутри
+田舎	いなか		rural, countryside	сельская местность, сельская местность
+祈る	いのる	verb	to pray, to wish	молиться, желать
+	いらっしゃる		(hon) to be, to come, to go	(Hon) быть, чтобы прийти, идти
+～員	～いん		member of ～	Член ～
+植える	うえる	verb	to plant, to grow	посадить, расти
+	うかがう	verb	to visit	посетить
+	うかがう	verb	to ask	чтобы спросить
+受付	うけつけ	noun	reception (desk), information	Прием (стол), информация
+受ける	うける	verb	to take (lesson, test), to undergo	взять (урок, тестирование), чтобы пройти
+動く	うごく	verb	to move	чтобы двигаться
+	うそ	noun	lie	ложь
+	うち	noun	within	в пределах
+打つ	うつ	verb	to hit, to strike	ударить, ударить
+美しい	うつくしい	i-adjective	beautiful, lovely	Красиво, прекрасно
+写す	うつす	verb	copy, to photograph, to film	копировать, сфотографировать, снимать
+移る	うつる	verb	to move (house), to transfer (department)	переехать (дом), чтобы перевести (отдел)
+腕	うで	noun	arm	рука
+	うまい	i-adjective	delicious	вкусный
+裏	うら	noun	reverse side, wrong side, back	обратная сторона, неправильная сторона, спина
+売り場	うりば		place where things are sold	место, где что -то продано
+	うれしい	i-adjective	happy, glad	счастлив, рад
+	うん	noun	yes (informal), alright	Да (неформально), хорошо
+運転手	うんてんしゅ	noun	driver, chauffeur	Водитель, шоферой
+運転	うんてん・する		driving	вождение
+運動	うんどう・する		exercise	упражнение
+	エスカレーター	noun	escalator	эскалатор
+枝	えだ	noun	branch, twig	ветвь, веточка
+選ぶ	えらぶ		to choose, to select	выбрать, выбрать
+遠慮	えんりょ・する	na-adjective	restraint, reserve	сдержанность, резерв
+	おいでになる	verb	(hon)to be	(Hon) быть
+お祝い	おいわい	noun	congratulation, celebration	поздравляю, празднование
+	オートバイ	noun	motorcycle (lit: auto-bi(ke))	Мотоцикл (горит: Auto-bi (KE))
+	オーバー	na-adjective	overcoat	пальто
+	おかげ	noun	thanks or owing to	Спасибо или из -за
+	おかしい	i-adjective	strange, funny	Странно, смешно
+	～おき		after every ～	После каждого ～
+億	おく	counter	100,000,000, hundred million	100 000 000, сто миллионов миллионов
+屋上	おくじょう	noun	rooftop	крыша
+贈り物	おくりもの	noun	present, gift	настоящий, подарок
+送る	おくる	verb	to send (a thing), to dispatch	отправить (вещь), отправить
+遅れる	おくれる	verb	to be late, to be delayed	быть опоздавшим, чтобы быть отложенным
+お子さん	おこさん	noun	(someone else's) child	(чужой) ребенок
+起こす	おこす	verb	to wake someone	разбудить кого -то
+行う	おこなう	verb	to perform, to do, to carry out	выполнять, выполнять, выполнять
+怒る	おこる	verb	to get angry, to be angry	злиться, злиться
+押し入れ	おしいれ	noun	closet	шкаф
+お嬢さん	おじょうさん	noun	(1) (hon) daughter, (2) young lady	(1) (Hon) дочь, (2) молодая леди
+お宅	おたく	noun	(pol) your house, your home	(Пол) Ваш дом, ваш дом
+落ちる	おちる	verb	to fall, to drop	упасть, упасть
+	おっしゃる		(hon) to say, to speak	(Hon) сказать, говорить
+夫	おっと	noun	husband	муж
+	おつり	noun	change (money), balance	Изменение (деньги), баланс
+音	おと		sound, note	Звук, примечание
+落す	おとす	verb	to drop, to lose	бросить, проиграть
+踊り	おどり	noun	dance	танец
+踊る	おどる	verb	to dance	танцевать
+驚く	おどろく	verb	to be surprised, to be astonished	быть удивленным, чтобы быть удивленным
+お祭り	おまつり		festival	фестиваль
+お見舞い	おみまい	noun	calling on someone who is ill, enquiry	Призывая кого -то, кто болен, запрос
+お土産	おみやげ	noun	souvenir	сувенир
+思い出す	おもいだす	verb	to recall, to remember	вспомнить, помнить
+思う	おもう	verb	to think, to feel	думать, чувствовать
+	おもちゃ	noun	toy	игрушка
+表	おもて		the front, surface, exterior	передняя, ​​поверхность, экстерьер
+親	おや	noun	parents	родители
+下りる	おりる	verb	to descend a mountain, to (descend) go down stairs	Спуститься с горы, (спуститься) спуститься по лестнице
+	おる	verb	to be (polite version of いる)	быть (вежливая версия いる)
+折る	おる	verb	to break, to fold, to pick a flower	сломать, сложить, выбрать цветок
+お礼	おれい	noun	thanking, expression of gratitude	Благодарю, выражение благодарности
+折れる	おれる	verb	to break, to be folded, to give in, to turn (a corner)	чтобы сломать, быть сложенным, сдаться, повернуть (угол)
+終わり	おわり	noun	the end	конец
+	～おわる	suffix	end of ～	конец ～
+～家	～か		professional ～	Профессионал ～
+	カーテン	noun	curtain	занавес
+～会	～かい		～ meeting	～ Встреча
+海岸	かいがん	noun	coast, beach	Побережье, пляж
+会議	かいぎ	noun	meeting, conference	Встреча, конференция
+会議室	かいぎしつ	noun	conference room	конференц -зал
+会場	かいじょう	noun	assembly hall, meeting place, the grounds	Зал сборки, место встречи, территория
+会話	かいわ	noun	conversation	беседа
+帰り	かえり	noun	return, coming back	вернуться, возвращаться
+変える	かえる	verb	to change, to alter, to vary	изменить, изменить, варьироваться
+科学	かがく	noun	science	наука
+鏡	かがみ	noun	mirror	зеркало
+～学部	～がくぶ		department of a university	кафедра университета
+掛ける	かける		to hang, to put on (eg wall)	повесить, надеть (например, стена)
+	かける		to sit down	сесть
+	かける		to begin to	начать
+飾る	かざる	verb	to decorate, to ornament, to adorn	украсить, украшать, украсить
+火事	かじ	noun	fire	огонь
+	ガス	noun	gas	газ
+	ガソリン	noun	gasoline, petrol	Бензин, бензин
+	ガソリンスタンド	noun	gasoline stand, gas station, petrol station	бензиновая стойка, заправочная станция, бензонаторная станция
+方	かた		way of doing	способ сделать
+堅/硬/固い	かたい	i-adjective	solid, hard, firm	твердый, жесткий, твердый
+形	かたち	noun	shape	форма
+片付ける	かたづける	verb	to tidy up, to put in order, to put away	убрать, чтобы подать в порядок, убрать
+課長	かちょう	noun	section manager	Менеджер раздела
+勝つ	かつ	verb	to win, to gain victory	Чтобы победить, одержать победу
+	かっこう		appearance, manner	внешний вид, манера
+家内	かない	noun	housewife	домохозяйка
+悲しい	かなしい	i-adjective	sad, sorrowful	грустно, печально
+必ず	かならず	adverb	certainly, necessarily, invariably	Конечно, обязательно неизменно
+お・金持ち	かねもち/おかねもち	noun	rich man	богатый человек
+彼女	かのじょ	noun	she, girl-friend	Она, подруга
+壁	かべ	noun	wall	стена
+	かまう	verb	to mind, to care about	Нам, чтобы заботиться о
+髪	かみ	noun	hair	волосы
+噛む	かむ	verb	to bite, to chew	кусать, жевать
+通う	かよう	verb	(1) to go back and forth, (2) to commute	(1) отправиться взад -вперед, (2) добраться до
+	ガラス	noun	glass, pane	Стекло, панель
+彼	かれ	noun	he, boyfriend	Он, парень
+彼ら	かれら	noun	they (usually male)	Они (обычно мужчины)
+乾く	かわく	verb	to get dry	чтобы высушить
+代わり	かわり	noun	substitute, alternate	Заменитель, альтернативная
+変わる	かわる	verb	to change, to be transformed, to vary	изменить, быть преобразованным, варьироваться
+考える	かんがえる	verb	to consider	рассмотреть
+関係	かんけい		relation, connection	отношение, связь
+看護婦	かんごふ	noun	(female) nurse	(женщина) медсестра
+簡単	かんたん	na-adjective	simple	простой
+頑張る	がんばる	verb	to try one's best, to persist	Чтобы попробовать себя лучше, упорно
+気	き	noun	spirit, mood	Дух, настроение
+機会	きかい	noun	chance, opportunity	шанс, возможность
+危険	きけん	na-adjective	danger, peril, hazard	опасность, опасность, опасность
+聞こえる	きこえる	verb	to be heard, to be audible	быть услышанным, быть слышимым
+汽車	きしゃ	noun	train (steam)	поезд (пар)
+技術	ぎじゅつ	noun	art, technique, technology, skill	Искусство, техника, технология, навыки
+季節	きせつ	noun	season	сезон
+規則	きそく	noun	rule, regulations	правило, правила
+	きっと	adverb	surely, definitely	Конечно, определенно
+絹	きぬ	noun	silk	шелк
+厳しい	きびしい	i-adjective	strict	строгий
+気分	きぶん	noun	feeling, mood	чувство, настроение
+決る	きまる	verb	to be decided, to be settled	быть решением, быть урегулированным
+君	きみ	suffix	You (masculine term for female)	Вы (мужской термин для женщин)
+決める	きめる	verb	to decide	решить
+気持ち	きもち	noun	feeling, sensation, mood	чувство, ощущение, настроение
+着物	きもの	noun	kimono	кимоно
+客	きゃく	noun	guest, customer	Гость, клиент
+急	きゅう	na-adjective	(1) urgent, sudden, (2) steep	(1) срочный, внезапный, (2) крутой
+急行	きゅうこう	noun	express (eg train that bypasses stations)	Экспресс (например, тренировка, которая обходит станции)
+教育	きょういく		training, education	Обучение, образование
+教会	きょうかい	noun	church	церковь
+競争	きょうそう		competition, contest	Конкурс, конкурс
+興味	きょうみ	noun	interest (in something)	интерес (во что -то)
+近所	きんじょ	noun	neighbourhood	район
+～区	～く	noun	district ～	район ～
+具合	ぐあい	noun	condition, state, health	состояние, состояние, здоровье
+空気	くうき	noun	air, atmosphere	воздух, атмосфера
+空港	くうこう	noun	airport	аэропорт
+草	くさ	noun	grass	трава
+	くださる		(hon) to give, to confer	(Hon) дать, чтобы подать
+首	くび	noun	neck	шея
+雲	くも	noun	cloud	облако
+比べる	くらべる	verb	to compare	сравнить
+	くれる	verb	to give, to do for	дать, сделать для
+暮れる	くれる	verb	to get dark, to come to an end	чтобы погрузиться, подойти к концу
+～君	～くん		Mr (junior) ～, master ～	Мистер (младший) ～, Мастер ～
+毛	け	noun	hair	волосы
+毛	け	noun	fur	шерсть
+計画	けいかく・する		plan, project, schedule	план, проект, график
+経験	けいけん・する		experience	опыт
+経済	けいざい	noun	economics, finance, economy	Экономика, финансы, экономика
+警察	けいさつ	noun	police	полиция
+	けが・する		injury (to animate object), hurt	травма (для оживления объекта), боль
+	ケーキ	noun	cake	торт
+景色	けしき	noun	scenery, scene, landscape	Пейзаж, сцена, пейзаж
+消しゴム	けしゴム	noun	eraser	ластик
+下宿	げしゅく		boarding, lodging, boarding house	Посадка, проживание, пансионат
+決して	けっして	adverb	never	никогда
+	けれど/けれども	conjunction	but, however	Но, однако
+～軒	～けん		counter for houses	счетчик для домов
+原因	げんいん	noun	cause, origin, source	Причина, происхождение, источник
+	けんか・する	noun	quarrel	ссориться
+玄関	げんかん	noun	entrance way (in Japanese house)	Вход (в японском доме)
+研究	けんきゅう		study, research, investigation	Изучение, исследования, исследования
+研究室	けんきゅうしつ	noun	study room, laboratory	Учебная комната, лаборатория
+見物	けんぶつ	noun	a sight, an attraction	зрелище, привлекательность
+子	こ	noun	child	ребенок
+御～	ご～		honourable ～	Почетный ～
+	こう	adverb	like this, this way	Как это, так
+郊外	こうがい	noun	suburb, outskirts	пригород, окраины
+講義	こうぎ		lecture	лекция
+工業	こうぎょう	noun	(manufacturing) industry	(Производство) промышленность
+高校/高等学校	こうこう/こうとうがっこう	noun	high school/senior high school	средняя школа/старшая средняя школа
+高校生	こうこうせい	noun	high school student	старшеклассница
+工場	こうじょう	noun	factory	фабрика
+校長	こうちょう	noun	principal, headmaster	директор, директор
+交通	こうつう	noun	traffic, transportation	Движение, транспорт
+講堂	こうどう	noun	auditorium	зрительный зал
+公務員	こうむいん	noun	government worker, public servant	государственный работник, государственный служащий
+国際	こくさい	noun	international	Международный
+心	こころ	noun	core, heart	ядро, сердце
+	～ございます		to be (polite), to exist	быть (вежливым), существовать
+ご主人	ごしゅじん	noun	your husband, her husband	Твой муж, ее муж
+故障	こしょう・する		break-down	авария
+ご存じ	ごぞんじ	noun	knowing, acquaintance	Зная, знакомство
+答	こたえ	noun	answer, response	ответ, ответ
+	ごちそう		feast, treating (someone)	пируй, лечишься (кое -что)
+	こっち	noun	(1) this person, (2) this direction, (3) this side, (4) thereafter	(1) этот человек, (2) это направление, (3) эта сторона, (4) после этого
+	こと	noun	thing, matter, fact	вещь, материя, факт
+小鳥	ことり	noun	small bird	маленькая птица
+	このあいだ		the other day, recently	На днях недавно
+	このごろ		these days, nowadays	В наши дни, в настоящее время
+細かい	こまかい	i-adjective	(1) small, (2) fine, minute	(1) Маленький, (2) тонкий, минутный
+	ごみ	noun	rubbish, trash, garbage	мусор, мусор, мусор
+込む	こむ	verb	to be crowded	быть переполненным
+米	こめ	noun	uncooked rice	сырый рис
+	ごらんになる		(hon) to see	(Hon) увидеть
+	これから		after this	После этого
+怖い	こわい	i-adjective	scary, frightening	Страшно, пугающий
+壊す	こわす	verb	to break, to break down	сломать, сломаться
+壊れる	こわれる	verb	to be broken, to break	быть сломленным, сломать
+	コンサート	noun	concert	концерт
+今度	こんど		now, next time	Теперь в следующий раз
+	コンピュータ/コンピューター	noun	computer	компьютер
+今夜	こんや		this evening, tonight	Сегодня вечером, сегодня вечером
+最近	さいきん		latest, most recent, nowadays	Последние, самые последние, в наши дни
+最後	さいご	noun	last, end, conclusion	Последнее, конец, заключение
+最初	さいしょ		beginning, first	Начало, первым
+坂	さか	noun	slope, hill	Склон, Хилл
+探す	さがす	verb	to search, to seek, to look for	искать, искать, искать
+下る	さがる	verb	to get down, to descend	чтобы спуститься, спуститься
+盛ん	さかん	na-adjective	popularity, prosperous	Популярность, процветающая
+下げる	さげる	verb	to hang, to lower, to move back	повесить, опуститься, вернуться назад
+差し上げる	さしあげる	verb	(polite) to give, to offer	(вежливо) дать, предложить
+	さっき	noun	some time ago	Некоторое время назад
+寂しい	さびしい	i-adjective	lonely, lonesome	Одинокий, одинокий
+～様	～さま		Mr or Mrs ～	Мистер или миссис
+さ来月	さらいげつ		the month after next	месяц после следующего
+さ来週	さらいしゅう		the week after next	Неделя после следующей
+	サラダ	noun	salad	салат
+騒ぐ	さわぐ	verb	to make noise, to clamor, to be excited	Чтобы шуметь, взволновать, быть взволнованным
+触る	さわる	verb	to touch, to feel	почувствовать, чувствовать
+産業	さんぎょう	noun	industry	промышленность
+	サンダル	noun	sandal	сандалия
+	サンドイッチ	noun	sandwich	сэндвич
+残念	ざんねん	na-adjective	bad luck, disappointment	ПЛОКД, разочарование
+市	し	noun	city	город
+字	じ	noun	character, hand-writing	персонаж, ручной написание
+試合	しあい	noun	match, game, contest	Матч, игра, конкурс
+仕方	しかた	noun	way, method	способ, метод
+	しかる	verb	to scold	чтобы ругать
+～式	～しき		ceremony	церемония
+試験	しけん		examination, test, study	Экспертиза, тест, изучение
+事故	じこ	noun	accident	несчастный случай
+地震	じしん	noun	earthquake	землетрясение
+時代	じだい		period, epoch, era	период, эпоха, эпоха
+下着	したぎ	noun	underwear	нижнее белье
+支度	したく・する		preparation	подготовка
+	しっかり	na-adjective	firmly, tightly, steady	твердо, плотно, устойчиво
+失敗	しっぱい		failure, mistake, blunder	неудача, ошибка, ошибка
+失礼	しつれい	na-adjective	(1) discourtesy, impoliteness, (2) Excuse me, Goodbye	(1) Discourtesy, невежливость, (2) извините, до свидания
+辞典	じてん	noun	dictionary	словарь
+品物	しなもの	noun	goods	товары
+	しばらく	adverb	little while	немного времени
+島	しま	noun	island	остров
+	（～て）しまう	verb	to end up ～	в конечном итоге ～
+市民	しみん	noun	citizen	гражданин
+事務所	じむしょ	noun	office	офис
+社会	しゃかい	noun	society, public	общество, общественное
+社長	しゃちょう	noun	company president, manager, director	Президент компании, менеджер, директор
+	じゃま	na-adjective	hindrance, intrusion	помехи, вторжение
+	ジャム	noun	jam	варень
+自由	じゆう	na-adjective	freedom	свобода
+習慣	しゅうかん	noun	custom, habit, manners	обычай, привычка, манеры
+住所	じゅうしょ	noun	address (eg of house), residence, domicile	адрес (например, дом), резиденция, место жительства
+柔道	じゅうどう	noun	judo	дзюдо
+十分	じゅうぶん		enough , sufficient	Достаточно, достаточно
+出席	しゅっせき・する		attendance, presence	посещаемость, присутствие
+出発	しゅっぱつ・する		departure	отправление
+趣味	しゅみ	noun	hobby	хобби
+準備	じゅんび・する	noun	prepare	подготовить
+紹介	しょうかい		introduction	введение
+正月	しょうがつ	noun	New Year, New Year's Day	Новый год, Новый год
+小学校	しょうがっこう	noun	primary school, elementary school	начальная школа, начальная школа
+小説	しょうせつ	noun	novel, story	Роман, история
+招待	しょうたい・する		invitation	приглашение
+承知	しょうち・する		consent, acceptance	согласие, принятие
+将来	しょうらい		future, prospects	будущее, перспективы
+食事	しょくじ・する		meal	еда
+食料品	しょくりょうひん	noun	foodstuff, groceries	FoodStuff, продукты
+女性	じょせい	noun	woman	женщина
+知らせる	しらせる	verb	to notify, to advise	уведомлять, посоветовать
+調べる	しらべる	verb	to investigate, to check up	исследовать, проверить
+人口	じんこう	noun	population	население
+神社	じんじゃ	noun	Shinto shrine	Синто Храм
+親切	しんせつ	na-adjective	kindness, gentleness	доброта, мягкость
+心配	しんぱい・する	na-adjective	worry, concern	беспокойство, беспокойство
+新聞社	しんぶんしゃ	noun	newspaper company	Газетная компания
+水泳	すいえい		swimming	плавание
+水道	すいどう	noun	water service, water supply	водоснабжение, водоснабжение
+	ずいぶん	na-adjective	extremely	очень сильно
+数学	すうがく	noun	mathematics, arithmetic	Математика, арифметика
+	スーツ	noun	suit	подходить
+	スーツケース	noun	suitcase	чемодан
+	スーパー（マーケット）	noun	super (market)	супермаркет)
+過ぎる	すぎる	verb	to exceed, to go beyond	превзойти, выходить за рамки
+	すく	verb	to become empty	стать пустым
+	すく	verb	to be less crowded	быть менее многолюдным
+	スクリーン	noun	screen	экран
+凄い	すごい	i-adjective	terrific, amazing, to a great extent	потрясающий, удивительный, в значительной степени
+進む	すすむ	verb	to make progress, to advance, to proceed	добиться прогресса, продвигаться, продолжить
+	すっかり	adverb	all, completely, thoroughly	Все, полностью, тщательно
+	ずっと	adverb	straight, quickly, all of a sudden	Прямо, быстро, внезапно
+	ステーキ	noun	steak	стейк
+	ステレオ	noun	stereo	стерео
+捨てる	すてる	verb	to throw away	выбросить
+砂	すな	noun	sand	песок
+	すばらしい	i-adjective	wonderful, splendid	Замечательно, великолепно
+滑る	すべる	verb	to slide, to slip	скользить, скользить
+隅	すみ		corner, nook	Уголок, Укл
+済む	すむ	verb	to finish, to end	чтобы закончить, чтобы закончить
+	すり	noun	pickpocket	карманник
+	すると	conjunction	and, then	а потом
+～製	～せい		made in　～	Сделано в ～
+生活	せいかつ・する		living, life (one's daily existence), livelihood	Жизнь, жизнь (ежедневное существование), средства к существованию
+生産	せいさん・する	verb	production, manufacture	Производство, производство
+政治	せいじ	noun	politics, government	Политика, правительство
+西洋	せいよう	noun	the west, Western countries	Запад, западные страны
+世界	せかい	noun	the world	мир
+席	せき	noun	seat	сиденье
+説明	せつめい		explanation	объяснение
+背中	せなか	noun	back (of body)	назад (тела)
+	ぜひ	adverb	certainly, without fail	Конечно, в обязательном порядке
+世話	せわ・する		looking after, help	Забота, помогите
+線	せん		line, wire	линия, проволока
+	ぜんぜん	adverb	wholly, entirely	полностью, полностью
+戦争	せんそう		war	война
+先輩	せんぱい	noun	senior, superior, elder	Старший, начальник, старший
+専門	せんもん	noun	speciality, study major	Специальность, обучение
+	そう	adverb	really	Действительно
+相談	そうだん・する		consultation, discussion	Консультация, обсуждение
+育てる	そだてる	verb	to raise, to rear, to bring up	поднять, чтобы сзади, поднять
+卒業	そつぎょう		graduation	выпускной
+祖父	そふ	noun	grandfather	дедушка
+	ソフト	noun	soft	мягкий
+祖母	そぼ	noun	grandmother	бабушка
+	それで	conjunction	and, thereupon, because of that	И, после этого, из -за этого
+	それに	conjunction	besides, moreover	Кроме того, более того
+	それほど	adverb	to that degree, extent	В этой степени, степень
+	そろそろ	noun	gradually, steadily, soon	постепенно, скоро, скоро
+	そんな	na-adjective	such, like that, that sort of	Таким же, такого рода
+	そんなに		so much, like that	так много, как это
+～代	～だい		～ age/period	～ Возраст/период
+退院	たいいん・する		leaving hospital	покидая больницу
+大学生	だいがくせい	noun	college student, university student	Студент колледжа, студент университета
+大事	だいじ	na-adjective	important, valuable, serious matter	Важный, ценный, серьезный вопрос
+大体	だいたい	noun	generally, substantially	Как правило, существенно
+	たいてい	na-adjective	generally, usually	обычно обычно
+	タイプ	noun	type, style	Тип, стиль
+大分	だいぶ	adverb	considerably, greatly, a lot	значительно значительно много
+台風	たいふう	noun	typhoon	тайфун
+倒れる	たおれる	verb	to collapse, to break down	рухнуть, сломаться
+	だから	conjunction	so, therefore	Итак
+確か	たしか	na-adjective	certain, sure, definite	уверен, конечно, определенно
+足す	たす	verb	to add (numbers), to do (eg. one's business)	Чтобы добавить (цифры), сделать (например, свой бизнес)
+	～だす		start to ～	Начните до ～
+訪ねる	たずねる	verb	to visit	посетить
+尋ねる	たずねる	verb	to ask	чтобы спросить
+正しい	ただしい	i-adjective	right, just, correct	Правильно, просто правильно
+畳	たたみ	noun	tatami mat (Japanese straw mat)	Tatami Mat (японский соломенной коврик)
+建て	～だて	noun	two storied, separate housing	два легендарных отдельных жилья
+立てる	たてる	verb	to stand (something) up, to erect (something)	встать (что -то), чтобы возвести (что -то)
+建てる	たてる	verb	to build, to construct	построить, построить
+例えば	たとえば	adverb	for example, eg.	Например, например.
+棚	たな	noun	shelves, rack	Полки, стойка
+楽む	たのしむ	verb	to enjoy oneself	Получить себя
+楽しみ	たのしみ	noun	pleasure, joy	удовольствие, радость
+	たまに	adverb	occasionally, once in a while	иногда время от времени
+為	ため	noun	good, advantage, in order to	хорошее, преимущество, чтобы
+	だめ	na-adjective	useless, no good, hopeless	Бесполезно, нет хорошего, безнадежно
+足りる	たりる	verb	to be sufficient, to be enough	быть достаточно, чтобы быть достаточно
+男性	だんせい	noun	male, man	Мужчина, мужчина
+暖房	だんぼう	noun	heating	обогрев
+血	ち	noun	blood	кровь
+	チェック・する	noun	check	проверять
+力	ちから		strength, power	сила, сила
+	ちっとも	adverb	not at all (neg. verb)	вовсе не (глагол негара)
+	～ちゃん	noun	suffix for familiar (female) person	суффикс для знакомого (женского) человека
+注意	ちゅうい		caution, being careful, attention (heed)	Внимание, быть осторожным, внимания (прислушиваться)
+中学校	ちゅうがっこう	noun	junior high school, middle school pupil	средняя школа, ученик средней школы
+注射	ちゅうしゃ		injection	инъекция
+駐車場	ちゅうしゃじょう	noun	parking lot, parking place	парковка, парковка
+～町	～ちょう	noun	～ of the town	～ города
+地理	ちり	noun	geography	География
+	～（に）ついて		about, concerning, regarding	о, относительно, относительно
+捕まえる	つかまえる	verb	to catch, to arrest, to seize	поймать, арестовать, захватить
+	つき		moon	луна
+～月	～つき		month	месяц
+点く	つく	verb	to be started, to be switched on	Начаться, чтобы включить
+	つける	verb	to take	взять
+漬ける	つける	verb	to soak, to moisten, to pickle	впитать, чтобы увлажнить, марировать
+都合	つごう	adverb	circumstances, condition, convenience	обстоятельства, состояние, удобство
+伝える	つたえる	verb	to tell, to report	сказать, сообщить
+続く	つづく	verb	to be continued	продолжение следует
+～続ける	～つづける	verb	to continue doing ～	продолжать делать ～
+続ける	つづける	verb	to continue, to keep up, to keep on	продолжать, не отставать, продолжать
+包む	つつむ	verb	wrap, pack	Обернуть, упаковка
+妻	つま	noun	(hum) wife	(гул) жена
+	つもり	noun	intention, plan	намерение, план
+釣る	つる	verb	to fish	ловить рыбу
+連れる	つれる	verb	to lead, to take (a person)	привести, взять (человек)
+丁寧	ていねい	na-adjective	polite, courteous	Вежливый, вежливый
+	テキスト	noun	(1)text, (2)text book	(1) Текст, (2) учебник
+適当	てきとう	na-adjective	fitness, suitability	Фитнес, пригодность
+	できる	verb	to be able to do	иметь возможность делать
+	できるだけ		if at all possible, as much as possible	Если это вообще возможно, как можно больше
+手伝う	てつだう	verb	to help, to assist, to take part in	помочь, помочь, принять участие в
+	テニス	noun	tennis	теннис
+手袋	てぶくろ	noun	glove	перчатка
+寺	てら	noun	temple	храм
+点	てん		spot, mark, point, dot	Spot, Mark, Point, Dot
+店員	てんいん	noun	shop assistant, employee, clerk, salesperson	Помощник магазина, сотрудник, клерк, продавец
+天気予報	てんきよほう		weather forecast, weather report	Прогноз погоды, отчет о погоде
+電灯	でんとう	noun	electric light	электрический свет
+電報	でんぽう	noun	telegram	телеграмма
+展覧会	てんらんかい	noun	exhibition	выставка
+都	と	noun	metroplitan, municipal	Столичный, муниципалитет
+道具	どうぐ	noun	tool, means	Инструмент, означает
+	とうとう		finally, at last	Наконец, наконец
+動物園	どうぶつえん	noun	zoo	зоопарк
+遠く	とおく		far away, distant	далеко, далекий
+通り	とおり		～ Street, ～ Avenue	～ Улица, ～ Авеню
+通る	とおる	verb	to pass (by), to go through	пройти (мимо), пройти через
+特に	とくに	adverb	particularly, especially	В частности, особенно
+特別	とくべつ	na-adjective	special	особенный
+	とこや	noun	barber	парикмахерский
+途中	とちゅう		on the way, en route, midway	По пути, в пути, на полпути
+特急	とっきゅう	noun	limited express (train, faster than an express)	Limited Express (поезд, быстрее, чем экспресс)
+届ける	とどける	verb	to reach	чтобы достичь
+泊まる	とまる	verb	to stay at (eg. hotel)	остаться в (например, отель)
+止める	とめる	verb	to stop (something)	Чтобы остановиться (что -то)
+取り替える	とりかえる	verb	to exchange, to replace	обмен, чтобы заменить
+泥棒	どろぼう		thief, burglar, robber	Вор, грабитель, грабитель
+	どんどん	adverb	steadily, little by little	неуклонно, немного
+直す	なおす	verb	to fix, to repair	исправить, ремонтировать
+直る	なおる	verb	to be fixed, to be repaired	быть исправленным, чтобы быть отремонтированным
+治る	なおる	verb	to be cured, to heal	быть вылеченным, исцелять
+中々	なかなか	adverb	very, considerably, quite	Очень, значительно, довольно
+泣く	なく	verb	to cry, to weep	плакать, плакать
+無くなる	なくなる	verb	to disappear, to get lost	исчезнуть, чтобы заблудиться
+亡くなる	なくなる	verb	to die	умереть
+投げる	なげる	verb	to throw, to cast away	бросить, отбрасывать
+	なさる		(hon) to do	(Hon) сделать
+鳴る	なる	verb	to sound, to ring, to resound	звучать, звонить, разобраться
+	なるべく	adverb	as much as possible	как можно больше
+	なるほど	adverb	I see, now I understand	Понятно, теперь я понимаю
+慣れる	なれる	verb	to grow accustomed to	привыкнуть к
+	におい	verb	odour, scent, smell	Запах, запах, запах
+苦い	にがい	i-adjective	bitter	горький
+	～にくい	suffix	difficult to do ～	трудно сделать ～
+逃げる	にげる	verb	to escape, to run away	чтобы сбежать, убежать
+日記	にっき	noun	diary, journal	Дневник, журнал
+入院	にゅういん・する		hospitalization	госпитализация
+入学	にゅうがく・する	noun	entry to school or university, matriculation	Поступление в школу или университет, поступок
+似る	にる	verb	to resemble, to be similar	напоминать, быть похожим
+人形	にんぎょう	noun	doll, puppet, figure	Кукла, марионетка, фигура
+盗む	ぬすむ	verb	to steal	украсть
+塗る	ぬる	verb	to paint, to plaster	рисовать, штукатурку
+	ぬれる	verb	to get wet	чтобы промокнуть
+	ねだん	noun	price, cost	цена, стоимость
+熱	ねつ		fever, temperature	лихорадка, температура
+	ねっしん	na-adjective	zeal, enthusiasm	рвение, энтузиазм
+寝坊	ねぼう		sleeping in late	спать в конце
+眠い	ねむい	i-adjective	sleepy, drowsy	сонный, сонный
+眠る	ねむる	verb	to sleep	спать
+残る	のこる	verb	to remain, to be left	остаться, чтобы остаться
+	のど	noun	throat	горло
+乗り換える	のりかえる	verb	to transfer (trains), to change (bus, train)	перенести (поезда), чтобы смениться (автобус, поезд)
+乗り物	のりもの	noun	vehicle	транспортное средство
+葉	は	noun	leaf	лист
+場合	ばあい		case, situation	Дело, ситуация
+	パート（タイム）		part time (esp female part time employees)	неполный рабочий день (ESP Женщины на неполный рабочий день) сотрудники)
+倍	ばい		twice, double	дважды, двойной
+拝見	はいけん・する		(hum) (pol) seeing, look at	(гул) (pol) Взгляды, посмотрите на
+歯医者	はいしゃ	noun	dentist	стоматолог
+	～ばかり	suffix	just did ～, only	только что сделал ～, только
+運ぶ	はこぶ		to transport, to carry	транспортировать, носить
+～始める	～はじめる	verb	to start doing　～, the beginning of ～	Чтобы начать делать ～, начало ～
+始める	はじめる	verb	to start, to begin	начать, чтобы начать
+場所	ばしょ	noun	place, location	место, расположение
+	はず	noun	it should be so	это должно быть так
+恥ずかしい	はずかしい	i-adjective	shy, ashamed, embarrassed	застенчиво, стыдно, смущен
+	パソコン	noun	(personal) computer	(личный) компьютер
+発音	はつおん		pronunciation	произношение
+	はっきり	adverb	clearly, plainly, distinctly	Очевидно, ясно, отчетливо
+花見	はなみ		cherry-blossom viewing, flower viewing	Просмотр вишневого цвета, просмотр цветов
+	パパ	noun	papa, father	Папа, отец
+林	はやし	noun	woods, forester	Вудс, Форестер
+払う	はらう	verb	to pay	заплатить
+番組	ばんぐみ	noun	program (eg. TV)	Программа (например, телевидение)
+反対	はんたい	na-adjective	oppose, opposition, resistance	противостоять, оппозиция, сопротивление
+	ハンバーグ	noun	hamburger (meat, no bun)	Гамбургер (мясо, без булочки)
+日	ひ		sun, sunshine, day	Солнце, солнце, день
+火	ひ		fire, flame, blaze	Огонь, пламя, пламя
+	ピアノ	noun	piano	пианино
+冷える	ひえる	verb	to grow cold, to get chilly, to cool down	простудиться, остыть, остыть
+光る	ひかる	verb	to shine, to glitter	сиять, блеск
+光	ひかり	noun	light	свет
+引き出し	ひきだし	noun	drawer, drawing out	ящик, вытягивание
+	ひげ	noun	beard	борода
+飛行場	ひこうじょう	noun	airport	аэропорт
+久しぶり	ひさしぶり		after a long time	через долгое время
+美術館	びじゅつかん	noun	art gallery, art museum	Художественная галерея, Художественный музей
+非常に	ひじょうに	adverb	very, extremely, exceedingly	Очень, чрезвычайно, чрезвычайно
+	びっくりする		to be surprised	быть удивленным
+引っ越す	ひっこす	verb	to move, to change residence	двигаться, изменить место жительства
+必要	ひつよう	na-adjective	necessary, essential	необходимо, необходимо
+	ひどい	i-adjective	cruel, awful	жестокий, ужасно
+開く	ひらく	verb	to open (eg. a festival)	Открыть (например, фестиваль)
+	ビル	noun	(abbr) building, bill	(ABBR) Здание, Билл
+昼間	ひるま		daytime, during the day	днем, в течение дня
+昼休み	ひるやすみ		lunch break, noon recess, noon rest period	Перерыв на обед, полдень, период отдыха в полдень
+拾う	ひろう	verb	to pick up, to find, to gather	забрать, найти, собрать
+	ファックス	verb	fax	факс
+増える	ふえる	verb	to increase, to multiply	увеличить, размножаться
+深い	ふかい	i-adjective	deep, profound, thick	Глубокий, глубокий, толстый
+複雑	ふくざつ	na-adjective	complexity, complication	Сложность, осложнение
+復習	ふくしゅう		review, revision	Обзор, пересмотр
+部長	ぶちょう		head of a section	глава секции
+普通	ふつう	na-adjective	(1) generally, ordinarily, usually, (2) train that stops at every station	(1) Как правило, обычно, обычно (2) поезд, который останавливается на каждой станции
+	ぶどう	noun	grapes	виноград
+太る	ふとる	verb	to grow fat (stout, plump), to become fat	выращивать жир (толстый, пухлый), стать толстым
+布団	ふとん	noun	bedding (Japanese style), futon	постельное белье (японский стиль), футон
+舟	ふね	noun	ship, boat	Корабль, лодка
+不便	ふべん	na-adjective	inconvenience	неудобство
+踏む	ふむ	verb	to step on, to tread on	наступить, наступить
+	プレゼント	noun	present, gift	настоящий, подарок
+文化	ぶんか	noun	culture, civilization	культура, цивилизация
+文学	ぶんがく	noun	literature	литература
+文法	ぶんぽう	noun	grammar	грамматика
+別	べつ	na-adjective	distinction, different	различие, отличается
+	ベル	noun	bell	колокол
+変	へん	na-adjective	strange, odd, peculiar	Странно, странно, своеобразно
+返事	へんじ		reply, answer	Ответить, ответ
+貿易	ぼうえき	noun	trade (foreign)	торговля (иностранная)
+放送	ほうそう・する		broadcast, broadcasting	вещание, вещание
+法律	ほうりつ	noun	law	закон
+僕	ぼく	noun	(male) I, manservant	(Мужчина) Я, Мансервант
+星	ほし	noun	star	звезда
+	ほど	noun	degree, extent	степень, степень
+	ほとんど		mostly, almost	В основном почти
+	ほめる	verb	to praise	хвалить
+翻訳	ほんやく		translation (written)	перевод (написано)
+参る	まいる	verb	(1) (hum) to go, to come	(1) (гул) идти, в будущем
+負ける	まける	verb	to lose, to be defeated	проиграть, быть побежденным
+	まじめ	na-adjective	diligent, serious	Прилежный, серьезный
+	まず	adverb	first (of all), to start with	сначала (из всех), чтобы начать с
+	または	conjunction	or, otherwise	или иначе
+間違える	まちがえる	verb	to err, to make a mistake	Чтобы ошибаться, допустить ошибку
+間に合う	まにあう	verb	(1) to be in time for	(1) быть вовремя для
+	～まま	noun	as it is	как это есть
+周り	まわり		surroundings, circulation	Окружение, циркуляция
+回る	まわる	verb	to go around, to revolve	обойти, вращаться
+漫画	まんが	noun	comic, cartoon	комикс, мультфильм
+真中	まんなか	noun	middle, centre	Середина, Центр
+見える	みえる	verb	to be seen, to be in sight	Чтобы увидеть, чтобы быть в поле зрения
+湖	みずうみ	noun	lake	озеро
+味噌	みそ	noun	miso, bean paste	Мисо, бобовая паста
+見つかる	みつかる	verb	(uk) to be found, to be discovered	(Великобритания) для обнаружения, чтобы быть обнаруженным
+見つける	みつける	verb	to discover, to find	Чтобы узнать, найти
+皆	みな	adverb	everyone, everybody	Все, все
+港	みなと	noun	harbour, port	Гавань, порт
+迎える	むかえる	verb	to go out to meet	Чтобы пойти на встречу
+向かう	むかう	verb	to face, to go towards	лицом к лицу, чтобы идти к
+昔	むかし		olden days, former	Старые времена, бывшие
+虫	むし	noun	insect	насекомое
+息子	むすこ	noun	(hum) son	(гул) сын
+娘	むすめ	noun	(hum) daughter	(гул) дочь
+無理	むり	na-adjective	unreasonable, impossible	невозможно, невозможно
+～目	～め	suffix	number ～ sequence, ～nd/th	номер ～ последовательность, ～ nd/th
+召し上がる	めしあがる	verb	(pol) to eat	(Пол) поесть
+珍しい	めずらしい	i-adjective	unusual, rare	необычно, редко
+申し上げる	もうしあげる	verb	to say, to tell	сказать, сказать
+申す	もうす	verb	(hum) to be called, to say	(гул) называть, сказать
+	もうすぐ		soon, very soon	Скоро, очень скоро
+	もし	adverb	if	если
+	もちろん	adverb	certainly, of course	Конечно, конечно
+	もっとも	adverb	most, extremely	Большинство, чрезвычайно
+戻る	もどる	verb	to turn back, to return	повернуть назад, чтобы вернуться
+木綿	もめん	noun	cotton	хлопок
+	もらう	verb	to receive	получить
+森	もり	noun	forest	лес
+焼く	やく	verb	to bake, to grill	Выпекать, гриль
+役に立つ	やくにたつ	verb	to be helpful, to be useful	Чтобы быть полезным, быть полезным
+約束	やくそく		arrangement, promise	договоренность, обещание
+焼ける	やける	verb	to burn, to be roasted, to be sunburnt	гореть, быть жареным, быть солнечным ожогом
+優しい	やさしい	i-adjective	kind, gentle	добрый, нежный
+	～やすい		easy to do ～	Легко сделать ～
+	やせる	verb	to become thin, to lose weight	стать худым, похудеть
+	やっと	adverb	at last, at length	Наконец, наконец
+	やはり/やっぱり	adverb	as I thought, absolutely	Как я думал, абсолютно
+	やむ	verb	to cease, to stop	прекратить, чтобы остановиться
+止める	やめる	verb	to end, to stop, to resign	чтобы закончить, остановиться, уйти в отставку
+	やる	verb	(col)to do	(col) делать
+柔らかい	やわらかい	i-adjective	soft, tender	мягкий, нежный
+湯	ゆ	noun	hot water	горячая вода
+夕飯	ゆうはん	noun	evening meal	ужин
+輸出	ゆしゅつ・する		export	экспорт
+輸入	ゆにゅう・する		import	импорт
+指	ゆび	noun	finger	палец
+指輪	ゆびわ	noun	(finger) ring	(пальцем) кольцо
+夢	ゆめ	noun	dream	мечтать
+揺れる	ゆれる	verb	to shake, to sway	Встряхнуть, покачиваться
+様	よう	na-adjective	way, manner, kind	путь, манера, добрый
+用	よう		task, business, use	Задача, бизнес, использование
+用意	ようい		preparation	подготовка
+用事	ようじ	noun	tasks, chores	Задачи, дела
+汚れる	よごれる	verb	to get dirty, to become dirty	испачкаться, стать грязным
+予習	よしゅう		preparation for a lesson	Подготовка к уроку
+予定	よてい		plans, arrangement, schedule	планы, договоренность, график
+予約	よやく		reservation, booking	Бронирование, бронирование
+寄る	よる	verb	to visit, to drop in	посетить, зайти
+	（～に）よると		according to ～	Согласно ～
+喜ぶ	よろこぶ		to be delighted, to be glad	быть в восторге, быть рады
+	よろしい	i-adjective	(hon) good, OK, all right	(Hon) Хорошо, хорошо, хорошо
+理由	りゆう	noun	reason, pretext, motive	Причина, предлог, мотив
+利用	りよう		use, utilization	Использование, использование
+両方	りょうほう	noun	both sides, both parties	Обе стороны, обе стороны
+旅館	りょかん	noun	Japanese hotel, inn	Японский отель, гостиница
+留守	るす	noun	absence, being away from home	Отсутствие, находясь вдали от дома
+冷房	れいぼう	noun	cooling, air conditioning	Охлаждение, кондиционер
+歴史	れきし	noun	history	история
+	レジ	noun	register	зарегистрировать
+	レポート/リポート	noun	report, essay, assignment (aus)	Отчет, эссе, назначение (AUS)
+連絡	れんらく		communication, contact, connection	связь, контакт, соединение
+	ワープロ	noun	word processor	текстовый процессор
+沸かす	わかす	verb	to boil, to heat	кипятить, нагревать
+別れる	わかれる	verb	to be divided, to part from, to separate	быть разделенным, расставаться от, отделить
+沸く	わく	verb	to boil, to grow hot, to get excited	кипятить, горячее, чтобы быть взволнованными
+訳	わけ	noun	meaning, reason	Значение, разум
+忘れ物	わすれもの	noun	lost article, something forgotten	потерянная статья, что -то забытое
+笑う	わらう	verb	to laugh, to smile	смеяться, улыбаться
+割合	わりあい	adverb	rate, ratio, percentage	ставка, соотношение, процент
+割れる	われる	verb	to break	чтобы сломать

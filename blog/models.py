@@ -21,7 +21,7 @@ class Grammar(models.Model):
     
     class Meta:
     # Дополнительно можно указать порядок сортировки или уникальные ограничения
-        ordering = ['title', 'level']
+        ordering = ['level', 'title']
 
 class Word(models.Model):
     level = models.CharField(max_length=1, default="5")
@@ -35,16 +35,23 @@ class Word(models.Model):
         max_length=50, 
         blank=True, 
         null=True, 
-        choices=[
-            ('verb', 'Verb'),
-            ('noun', 'Noun'),
-            ('i-adjective', 'I-Adjective'),
-            ('na-adjective', 'Na-Adjective'),
-            ('adverb', 'Adverb'),
-            ('question-word', 'Question Word'),
-            ('counter', 'Counter'),
-            ('suffix', 'Suffix'),
-        ]
+    choices=[
+        ('verb', 'Verb'),
+        ('noun', 'Noun'),
+        ('i-adjective', 'I-Adjective'),
+        ('na-adjective', 'Na-Adjective'),
+        ('adverb', 'Adverb'),
+        ('conjunction', 'Conjunction'),  # ← добавлен
+        ('particle', 'Particle'),        # ← добавлен
+        ('interjection', 'Interjection'),  # ← для あ, ええ и т.п.
+        ('auxiliary-verb', 'Auxiliary Verb'),  # ← 〜たい, 〜ます
+        ('question-word', 'Question Word'),
+        ('counter', 'Counter'),
+        ('prefix', 'Prefix'),            # ← お〜, ご〜
+        ('suffix', 'Suffix'),
+        ('expression', 'Expression'),    # ← устойчивые выражения
+        ('other', 'Other'),              # ← для редких случаев
+    ]
     )
 
     def __str__(self):

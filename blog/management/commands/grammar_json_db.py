@@ -11,7 +11,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         # Путь к JSON-файлу
-        file_path = os.path.join(settings.BASE_DIR, 'grammar_n5.json')
+        file_path = os.path.join(settings.BASE_DIR, 'grammar_n4.json')
 
         # Проверьте, существует ли файл
         if not os.path.exists(file_path):
@@ -32,7 +32,7 @@ class Command(BaseCommand):
         # Создаём объекты Grammar
         for item in grammar_data:
             Grammar.objects.create(
-                level="5",
+                level="4",
                 author=author,
                 title=item.get('title', ''),
                 formula_ru=item.get('formula_ru', ''),

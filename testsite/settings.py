@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k&0&0tycoqp#o-63p@=xw^2^d8$9b+lf%92^ve%13^%0-=%qwl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
@@ -80,6 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES', NAMES 'utf8mb4'"# Удали!
     }
 }
 

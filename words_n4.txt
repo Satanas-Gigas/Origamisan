@@ -1,0 +1,682 @@
+	あ	Ah	interjection
+	ああ	like that, that way	interjection
+	あいさつ・する	greeting	None
+間	あいだ	space, interval	noun
+合う	あう	to fit, to match	verb
+	あかちゃん	baby, infant	noun
+上がる	あがる	to rise, to go up	verb
+赤ん坊	あかんぼう	baby	noun
+空く	あく	to open, to become empty	verb
+	アクセサリー	accessory	noun
+	あげる	to give	verb
+浅い	あさい	shallow, superficial	i-adjective
+味	あじ	flavor, taste	na-adjective
+	アジア	Asia	noun
+明日	あす	tomorrow	None
+遊び	あそび	play	None
+集る	あつまる	to gather, to collect	verb
+集める	あつめる	to collect, to assemble	verb
+	アナウンサー	announcer	noun
+	アフリカ	Africa	noun
+	アメリカ	America	noun
+謝る	あやまる	to apologize	verb
+	アルコール	alcohol	noun
+	アルバイト	part-time job	noun
+安心	あんしん	peace of mind, relief	na-adjective
+安全	あんぜん	safety, security	na-adjective
+	あんな	such, like that	na-adjective
+案内	あんない・する	information, guidance	None
+以下	いか	less than, below	noun
+以外	いがい	with the exception of, excepting	noun
+医学	いがく	medical science	noun
+生きる	いきる	to live, to exist	verb
+	いくら～ても	however much one may ～	None
+意見	いけん	opinion, view	noun
+石	いし	stone	noun
+	いじめる	to tease, to torment	verb
+以上	いじょう	more than, this is all	None
+急ぐ	いそぐ	to hurry, to rush	verb
+致す	いたす	(hum) to do	verb
+致す	いたす	(hum) to do	verb
+	いただく	to receive, to take food or drink (hum)	verb
+一度	いちど	once, one time	None
+一生懸命	いっしょうけんめい	as well as one can, with utmost effort	na-adjective
+	いっぱい	full, to the utmost	adverb
+糸	いと	thread	None
+以内	いない	within, inside of	None
+田舎	いなか	rural, countryside	None
+祈る	いのる	to pray, to wish	verb
+	いらっしゃる	(hon) to be, to come, to go	None
+～員	～いん	member of ～	None
+植える	うえる	to plant, to grow	verb
+	うかがう	to visit	verb
+	うかがう	to ask	verb
+受付	うけつけ	reception (desk), information	noun
+受ける	うける	to take (lesson, test), to undergo	verb
+動く	うごく	to move	verb
+	うそ	lie	noun
+	うち	within	noun
+打つ	うつ	to hit, to strike	verb
+美しい	うつくしい	beautiful, lovely	i-adjective
+写す	うつす	copy, to photograph, to film	verb
+移る	うつる	to move (house), to transfer (department)	verb
+腕	うで	arm	noun
+	うまい	delicious	i-adjective
+裏	うら	reverse side, wrong side, back	noun
+売り場	うりば	place where things are sold	None
+	うれしい	happy, glad	i-adjective
+	うん	yes (informal), alright	noun
+運転手	うんてんしゅ	driver, chauffeur	noun
+運転	うんてん・する	driving	None
+運動	うんどう・する	exercise	None
+	エスカレーター	escalator	noun
+枝	えだ	branch, twig	noun
+選ぶ	えらぶ	to choose, to select	None
+遠慮	えんりょ・する	restraint, reserve	na-adjective
+	おいでになる	(hon)to be	verb
+お祝い	おいわい	congratulation, celebration	noun
+	オートバイ	motorcycle (lit: auto-bi(ke))	noun
+	オーバー	overcoat	na-adjective
+	おかげ	thanks or owing to	noun
+	おかしい	strange, funny	i-adjective
+	～おき	after every ～	None
+億	おく	100,000,000, hundred million	counter
+屋上	おくじょう	rooftop	noun
+贈り物	おくりもの	present, gift	noun
+送る	おくる	to send (a thing), to dispatch	verb
+遅れる	おくれる	to be late, to be delayed	verb
+お子さん	おこさん	(someone else's) child	noun
+起こす	おこす	to wake someone	verb
+行う	おこなう	to perform, to do, to carry out	verb
+怒る	おこる	to get angry, to be angry	verb
+押し入れ	おしいれ	closet	noun
+お嬢さん	おじょうさん	(1) (hon) daughter, (2) young lady	noun
+お宅	おたく	(pol) your house, your home	noun
+落ちる	おちる	to fall, to drop	verb
+	おっしゃる	(hon) to say, to speak	None
+夫	おっと	husband	noun
+	おつり	change (money), balance	noun
+音	おと	sound, note	None
+落す	おとす	to drop, to lose	verb
+踊り	おどり	dance	noun
+踊る	おどる	to dance	verb
+驚く	おどろく	to be surprised, to be astonished	verb
+お祭り	おまつり	festival	None
+お見舞い	おみまい	calling on someone who is ill, enquiry	noun
+お土産	おみやげ	souvenir	noun
+思い出す	おもいだす	to recall, to remember	verb
+思う	おもう	to think, to feel	verb
+	おもちゃ	toy	noun
+表	おもて	the front, surface, exterior	None
+親	おや	parents	noun
+下りる	おりる	to descend a mountain, to (descend) go down stairs	verb
+	おる	to be (polite version of いる)	verb
+折る	おる	to break, to fold, to pick a flower	verb
+お礼	おれい	thanking, expression of gratitude	noun
+折れる	おれる	to break, to be folded, to give in, to turn (a corner)	verb
+終わり	おわり	the end	noun
+	～おわる	end of ～	suffix
+～家	～か	professional ～	None
+	カーテン	curtain	noun
+～会	～かい	～ meeting	None
+海岸	かいがん	coast, beach	noun
+会議	かいぎ	meeting, conference	noun
+会議室	かいぎしつ	conference room	noun
+会場	かいじょう	assembly hall, meeting place, the grounds	noun
+会話	かいわ	conversation	noun
+帰り	かえり	return, coming back	noun
+変える	かえる	to change, to alter, to vary	verb
+科学	かがく	science	noun
+鏡	かがみ	mirror	noun
+～学部	～がくぶ	department of a university	None
+掛ける	かける	to hang, to put on (eg wall)	None
+	かける	to sit down	None
+	かける	to begin to	None
+飾る	かざる	to decorate, to ornament, to adorn	verb
+火事	かじ	fire	noun
+	ガス	gas	noun
+	ガソリン	gasoline, petrol	noun
+	ガソリンスタンド	gasoline stand, gas station, petrol station	noun
+方	かた	way of doing	None
+堅/硬/固い	かたい	solid, hard, firm	i-adjective
+形	かたち	shape	noun
+片付ける	かたづける	to tidy up, to put in order, to put away	verb
+課長	かちょう	section manager	noun
+勝つ	かつ	to win, to gain victory	verb
+	かっこう	appearance, manner	None
+家内	かない	housewife	noun
+悲しい	かなしい	sad, sorrowful	i-adjective
+必ず	かならず	certainly, necessarily, invariably	adverb
+お・金持ち	かねもち/おかねもち	rich man	noun
+彼女	かのじょ	she, girl-friend	noun
+壁	かべ	wall	noun
+	かまう	to mind, to care about	verb
+髪	かみ	hair	noun
+噛む	かむ	to bite, to chew	verb
+通う	かよう	(1) to go back and forth, (2) to commute	verb
+	ガラス	glass, pane	noun
+彼	かれ	he, boyfriend	noun
+彼ら	かれら	they (usually male)	noun
+乾く	かわく	to get dry	verb
+代わり	かわり	substitute, alternate	noun
+変わる	かわる	to change, to be transformed, to vary	verb
+考える	かんがえる	to consider	verb
+関係	かんけい	relation, connection	None
+看護婦	かんごふ	(female) nurse	noun
+簡単	かんたん	simple	na-adjective
+頑張る	がんばる	to try one's best, to persist	verb
+気	き	spirit, mood	noun
+機会	きかい	chance, opportunity	noun
+危険	きけん	danger, peril, hazard	na-adjective
+聞こえる	きこえる	to be heard, to be audible	verb
+汽車	きしゃ	train (steam)	noun
+技術	ぎじゅつ	art, technique, technology, skill	noun
+季節	きせつ	season	noun
+規則	きそく	rule, regulations	noun
+	きっと	surely, definitely	adverb
+絹	きぬ	silk	noun
+厳しい	きびしい	strict	i-adjective
+気分	きぶん	feeling, mood	noun
+決る	きまる	to be decided, to be settled	verb
+君	きみ	You (masculine term for female)	suffix
+決める	きめる	to decide	verb
+気持ち	きもち	feeling, sensation, mood	noun
+着物	きもの	kimono	noun
+客	きゃく	guest, customer	noun
+急	きゅう	(1) urgent, sudden, (2) steep	na-adjective
+急行	きゅうこう	express (eg train that bypasses stations)	noun
+教育	きょういく	training, education	None
+教会	きょうかい	church	noun
+競争	きょうそう	competition, contest	None
+興味	きょうみ	interest (in something)	noun
+近所	きんじょ	neighbourhood	noun
+～区	～く	district ～	noun
+具合	ぐあい	condition, state, health	noun
+空気	くうき	air, atmosphere	noun
+空港	くうこう	airport	noun
+草	くさ	grass	noun
+	くださる	(hon) to give, to confer	None
+首	くび	neck	noun
+雲	くも	cloud	noun
+比べる	くらべる	to compare	verb
+	くれる	to give, to do for	verb
+暮れる	くれる	to get dark, to come to an end	verb
+～君	～くん	Mr (junior) ～, master ～	None
+毛	け	hair	noun
+毛	け	fur	noun
+計画	けいかく・する	plan, project, schedule	None
+経験	けいけん・する	experience	None
+経済	けいざい	economics, finance, economy	noun
+警察	けいさつ	police	noun
+	けが・する	injury (to animate object), hurt	None
+	ケーキ	cake	noun
+景色	けしき	scenery, scene, landscape	noun
+消しゴム	けしゴム	eraser	noun
+下宿	げしゅく	boarding, lodging, boarding house	None
+決して	けっして	never	adverb
+	けれど/けれども	but, however	conjunction
+～軒	～けん	counter for houses	None
+原因	げんいん	cause, origin, source	noun
+	けんか・する	quarrel	noun
+玄関	げんかん	entrance way (in Japanese house)	noun
+研究	けんきゅう	study, research, investigation	None
+研究室	けんきゅうしつ	study room, laboratory	noun
+見物	けんぶつ	a sight, an attraction	noun
+子	こ	child	noun
+御～	ご～	honourable ～	None
+	こう	like this, this way	adverb
+郊外	こうがい	suburb, outskirts	noun
+講義	こうぎ	lecture	None
+工業	こうぎょう	(manufacturing) industry	noun
+高校/高等学校	こうこう/こうとうがっこう	high school/senior high school	noun
+高校生	こうこうせい	high school student	noun
+工場	こうじょう	factory	noun
+校長	こうちょう	principal, headmaster	noun
+交通	こうつう	traffic, transportation	noun
+講堂	こうどう	auditorium	noun
+公務員	こうむいん	government worker, public servant	noun
+国際	こくさい	international	noun
+心	こころ	core, heart	noun
+	～ございます	to be (polite), to exist	None
+ご主人	ごしゅじん	your husband, her husband	noun
+故障	こしょう・する	break-down	None
+ご存じ	ごぞんじ	knowing, acquaintance	noun
+答	こたえ	answer, response	noun
+	ごちそう	feast, treating (someone)	None
+	こっち	(1) this person, (2) this direction, (3) this side, (4) thereafter	noun
+	こと	thing, matter, fact	noun
+小鳥	ことり	small bird	noun
+	このあいだ	the other day, recently	None
+	このごろ	these days, nowadays	None
+細かい	こまかい	(1) small, (2) fine, minute	i-adjective
+	ごみ	rubbish, trash, garbage	noun
+込む	こむ	to be crowded	verb
+米	こめ	uncooked rice	noun
+	ごらんになる	(hon) to see	None
+	これから	after this	None
+怖い	こわい	scary, frightening	i-adjective
+壊す	こわす	to break, to break down	verb
+壊れる	こわれる	to be broken, to break	verb
+	コンサート	concert	noun
+今度	こんど	now, next time	None
+	コンピュータ/コンピューター	computer	noun
+今夜	こんや	this evening, tonight	None
+最近	さいきん	latest, most recent, nowadays	None
+最後	さいご	last, end, conclusion	noun
+最初	さいしょ	beginning, first	None
+坂	さか	slope, hill	noun
+探す	さがす	to search, to seek, to look for	verb
+下る	さがる	to get down, to descend	verb
+盛ん	さかん	popularity, prosperous	na-adjective
+下げる	さげる	to hang, to lower, to move back	verb
+差し上げる	さしあげる	(polite) to give, to offer	verb
+	さっき	some time ago	noun
+寂しい	さびしい	lonely, lonesome	i-adjective
+～様	～さま	Mr or Mrs ～	None
+さ来月	さらいげつ	the month after next	None
+さ来週	さらいしゅう	the week after next	None
+	サラダ	salad	noun
+騒ぐ	さわぐ	to make noise, to clamor, to be excited	verb
+触る	さわる	to touch, to feel	verb
+産業	さんぎょう	industry	noun
+	サンダル	sandal	noun
+	サンドイッチ	sandwich	noun
+残念	ざんねん	bad luck, disappointment	na-adjective
+市	し	city	noun
+字	じ	character, hand-writing	noun
+試合	しあい	match, game, contest	noun
+仕方	しかた	way, method	noun
+	しかる	to scold	verb
+～式	～しき	ceremony	None
+試験	しけん	examination, test, study	None
+事故	じこ	accident	noun
+地震	じしん	earthquake	noun
+時代	じだい	period, epoch, era	None
+下着	したぎ	underwear	noun
+支度	したく・する	preparation	None
+	しっかり	firmly, tightly, steady	na-adjective
+失敗	しっぱい	failure, mistake, blunder	None
+失礼	しつれい	(1) discourtesy, impoliteness, (2) Excuse me, Goodbye	na-adjective
+辞典	じてん	dictionary	noun
+品物	しなもの	goods	noun
+	しばらく	little while	adverb
+島	しま	island	noun
+	（～て）しまう	to end up ～	verb
+市民	しみん	citizen	noun
+事務所	じむしょ	office	noun
+社会	しゃかい	society, public	noun
+社長	しゃちょう	company president, manager, director	noun
+	じゃま	hindrance, intrusion	na-adjective
+	ジャム	jam	noun
+自由	じゆう	freedom	na-adjective
+習慣	しゅうかん	custom, habit, manners	noun
+住所	じゅうしょ	address (eg of house), residence, domicile	noun
+柔道	じゅうどう	judo	noun
+十分	じゅうぶん	enough , sufficient	None
+出席	しゅっせき・する	attendance, presence	None
+出発	しゅっぱつ・する	departure	None
+趣味	しゅみ	hobby	noun
+準備	じゅんび・する	prepare	noun
+紹介	しょうかい	introduction	None
+正月	しょうがつ	New Year, New Year's Day	noun
+小学校	しょうがっこう	primary school, elementary school	noun
+小説	しょうせつ	novel, story	noun
+招待	しょうたい・する	invitation	None
+承知	しょうち・する	consent, acceptance	None
+将来	しょうらい	future, prospects	None
+食事	しょくじ・する	meal	None
+食料品	しょくりょうひん	foodstuff, groceries	noun
+女性	じょせい	woman	noun
+知らせる	しらせる	to notify, to advise	verb
+調べる	しらべる	to investigate, to check up	verb
+人口	じんこう	population	noun
+神社	じんじゃ	Shinto shrine	noun
+親切	しんせつ	kindness, gentleness	na-adjective
+心配	しんぱい・する	worry, concern	na-adjective
+新聞社	しんぶんしゃ	newspaper company	noun
+水泳	すいえい	swimming	None
+水道	すいどう	water service, water supply	noun
+	ずいぶん	extremely	na-adjective
+数学	すうがく	mathematics, arithmetic	noun
+	スーツ	suit	noun
+	スーツケース	suitcase	noun
+	スーパー（マーケット）	super (market)	noun
+過ぎる	すぎる	to exceed, to go beyond	verb
+	すく	to become empty	verb
+	すく	to be less crowded	verb
+	スクリーン	screen	noun
+凄い	すごい	terrific, amazing, to a great extent	i-adjective
+進む	すすむ	to make progress, to advance, to proceed	verb
+	すっかり	all, completely, thoroughly	adverb
+	ずっと	straight, quickly, all of a sudden	adverb
+	ステーキ	steak	noun
+	ステレオ	stereo	noun
+捨てる	すてる	to throw away	verb
+砂	すな	sand	noun
+	すばらしい	wonderful, splendid	i-adjective
+滑る	すべる	to slide, to slip	verb
+隅	すみ	corner, nook	None
+済む	すむ	to finish, to end	verb
+	すり	pickpocket	noun
+	すると	and, then	conjunction
+～製	～せい	made in　～	None
+生活	せいかつ・する	living, life (one's daily existence), livelihood	None
+生産	せいさん・する	production, manufacture	verb
+政治	せいじ	politics, government	noun
+西洋	せいよう	the west, Western countries	noun
+世界	せかい	the world	noun
+席	せき	seat	noun
+説明	せつめい	explanation	None
+背中	せなか	back (of body)	noun
+	ぜひ	certainly, without fail	adverb
+世話	せわ・する	looking after, help	None
+線	せん	line, wire	None
+	ぜんぜん	wholly, entirely	adverb
+戦争	せんそう	war	None
+先輩	せんぱい	senior, superior, elder	noun
+専門	せんもん	speciality, study major	noun
+	そう	really	adverb
+相談	そうだん・する	consultation, discussion	None
+育てる	そだてる	to raise, to rear, to bring up	verb
+卒業	そつぎょう	graduation	None
+祖父	そふ	grandfather	noun
+	ソフト	soft	noun
+祖母	そぼ	grandmother	noun
+	それで	and, thereupon, because of that	conjunction
+	それに	besides, moreover	conjunction
+	それほど	to that degree, extent	adverb
+	そろそろ	gradually, steadily, soon	noun
+	そんな	such, like that, that sort of	na-adjective
+	そんなに	so much, like that	None
+～代	～だい	～ age/period	None
+退院	たいいん・する	leaving hospital	None
+大学生	だいがくせい	college student, university student	noun
+大事	だいじ	important, valuable, serious matter	na-adjective
+大体	だいたい	generally, substantially	noun
+	たいてい	generally, usually	na-adjective
+	タイプ	type, style	noun
+大分	だいぶ	considerably, greatly, a lot	adverb
+台風	たいふう	typhoon	noun
+倒れる	たおれる	to collapse, to break down	verb
+	だから	so, therefore	conjunction
+確か	たしか	certain, sure, definite	na-adjective
+足す	たす	to add (numbers), to do (eg. one's business)	verb
+	～だす	start to ～	None
+訪ねる	たずねる	to visit	verb
+尋ねる	たずねる	to ask	verb
+正しい	ただしい	right, just, correct	i-adjective
+畳	たたみ	tatami mat (Japanese straw mat)	noun
+建て	～だて	two storied, separate housing	noun
+立てる	たてる	to stand (something) up, to erect (something)	verb
+建てる	たてる	to build, to construct	verb
+例えば	たとえば	for example, eg.	adverb
+棚	たな	shelves, rack	noun
+楽む	たのしむ	to enjoy oneself	verb
+楽しみ	たのしみ	pleasure, joy	noun
+	たまに	occasionally, once in a while	adverb
+為	ため	good, advantage, in order to	noun
+	だめ	useless, no good, hopeless	na-adjective
+足りる	たりる	to be sufficient, to be enough	verb
+男性	だんせい	male, man	noun
+暖房	だんぼう	heating	noun
+血	ち	blood	noun
+	チェック・する	check	noun
+力	ちから	strength, power	None
+	ちっとも	not at all (neg. verb)	adverb
+	～ちゃん	suffix for familiar (female) person	noun
+注意	ちゅうい	caution, being careful, attention (heed)	None
+中学校	ちゅうがっこう	junior high school, middle school pupil	noun
+注射	ちゅうしゃ	injection	None
+駐車場	ちゅうしゃじょう	parking lot, parking place	noun
+～町	～ちょう	～ of the town	noun
+地理	ちり	geography	noun
+	～（に）ついて	about, concerning, regarding	None
+捕まえる	つかまえる	to catch, to arrest, to seize	verb
+	つき	moon	None
+～月	～つき	month	None
+点く	つく	to be started, to be switched on	verb
+	つける	to take	verb
+漬ける	つける	to soak, to moisten, to pickle	verb
+都合	つごう	circumstances, condition, convenience	adverb
+伝える	つたえる	to tell, to report	verb
+続く	つづく	to be continued	verb
+～続ける	～つづける	to continue doing ～	verb
+続ける	つづける	to continue, to keep up, to keep on	verb
+包む	つつむ	wrap, pack	verb
+妻	つま	(hum) wife	noun
+	つもり	intention, plan	noun
+釣る	つる	to fish	verb
+連れる	つれる	to lead, to take (a person)	verb
+丁寧	ていねい	polite, courteous	na-adjective
+	テキスト	(1)text, (2)text book	noun
+適当	てきとう	fitness, suitability	na-adjective
+	できる	to be able to do	verb
+	できるだけ	if at all possible, as much as possible	None
+手伝う	てつだう	to help, to assist, to take part in	verb
+	テニス	tennis	noun
+手袋	てぶくろ	glove	noun
+寺	てら	temple	noun
+点	てん	spot, mark, point, dot	None
+店員	てんいん	shop assistant, employee, clerk, salesperson	noun
+天気予報	てんきよほう	weather forecast, weather report	None
+電灯	でんとう	electric light	noun
+電報	でんぽう	telegram	noun
+展覧会	てんらんかい	exhibition	noun
+都	と	metroplitan, municipal	noun
+道具	どうぐ	tool, means	noun
+	とうとう	finally, at last	None
+動物園	どうぶつえん	zoo	noun
+遠く	とおく	far away, distant	None
+通り	とおり	～ Street, ～ Avenue	None
+通る	とおる	to pass (by), to go through	verb
+特に	とくに	particularly, especially	adverb
+特別	とくべつ	special	na-adjective
+	とこや	barber	noun
+途中	とちゅう	on the way, en route, midway	None
+特急	とっきゅう	limited express (train, faster than an express)	noun
+届ける	とどける	to reach	verb
+泊まる	とまる	to stay at (eg. hotel)	verb
+止める	とめる	to stop (something)	verb
+取り替える	とりかえる	to exchange, to replace	verb
+泥棒	どろぼう	thief, burglar, robber	None
+	どんどん	steadily, little by little	adverb
+直す	なおす	to fix, to repair	verb
+直る	なおる	to be fixed, to be repaired	verb
+治る	なおる	to be cured, to heal	verb
+中々	なかなか	very, considerably, quite	adverb
+泣く	なく	to cry, to weep	verb
+無くなる	なくなる	to disappear, to get lost	verb
+亡くなる	なくなる	to die	verb
+投げる	なげる	to throw, to cast away	verb
+	なさる	(hon) to do	None
+鳴る	なる	to sound, to ring, to resound	verb
+	なるべく	as much as possible	adverb
+	なるほど	I see, now I understand	adverb
+慣れる	なれる	to grow accustomed to	verb
+	におい	odour, scent, smell	verb
+苦い	にがい	bitter	i-adjective
+	～にくい	difficult to do ～	suffix
+逃げる	にげる	to escape, to run away	verb
+日記	にっき	diary, journal	noun
+入院	にゅういん・する	hospitalization	None
+入学	にゅうがく・する	entry to school or university, matriculation	noun
+似る	にる	to resemble, to be similar	verb
+人形	にんぎょう	doll, puppet, figure	noun
+盗む	ぬすむ	to steal	verb
+塗る	ぬる	to paint, to plaster	verb
+	ぬれる	to get wet	verb
+	ねだん	price, cost	noun
+熱	ねつ	fever, temperature	None
+	ねっしん	zeal, enthusiasm	na-adjective
+寝坊	ねぼう	sleeping in late	None
+眠い	ねむい	sleepy, drowsy	i-adjective
+眠る	ねむる	to sleep	verb
+残る	のこる	to remain, to be left	verb
+	のど	throat	noun
+乗り換える	のりかえる	to transfer (trains), to change (bus, train)	verb
+乗り物	のりもの	vehicle	noun
+葉	は	leaf	noun
+場合	ばあい	case, situation	None
+	パート（タイム）	part time (esp female part time employees)	None
+倍	ばい	twice, double	None
+拝見	はいけん・する	(hum) (pol) seeing, look at	None
+歯医者	はいしゃ	dentist	noun
+	～ばかり	just did ～, only	suffix
+運ぶ	はこぶ	to transport, to carry	None
+～始める	～はじめる	to start doing　～, the beginning of ～	verb
+始める	はじめる	to start, to begin	verb
+場所	ばしょ	place, location	noun
+	はず	it should be so	noun
+恥ずかしい	はずかしい	shy, ashamed, embarrassed	i-adjective
+	パソコン	(personal) computer	noun
+発音	はつおん	pronunciation	None
+	はっきり	clearly, plainly, distinctly	adverb
+花見	はなみ	cherry-blossom viewing, flower viewing	None
+	パパ	papa, father	noun
+林	はやし	woods, forester	noun
+払う	はらう	to pay	verb
+番組	ばんぐみ	program (eg. TV)	noun
+反対	はんたい	oppose, opposition, resistance	na-adjective
+	ハンバーグ	hamburger (meat, no bun)	noun
+日	ひ	sun, sunshine, day	None
+火	ひ	fire, flame, blaze	None
+	ピアノ	piano	noun
+冷える	ひえる	to grow cold, to get chilly, to cool down	verb
+光る	ひかる	to shine, to glitter	verb
+光	ひかり	light	noun
+引き出し	ひきだし	drawer, drawing out	noun
+	ひげ	beard	noun
+飛行場	ひこうじょう	airport	noun
+久しぶり	ひさしぶり	after a long time	None
+美術館	びじゅつかん	art gallery, art museum	noun
+非常に	ひじょうに	very, extremely, exceedingly	adverb
+	びっくりする	to be surprised	None
+引っ越す	ひっこす	to move, to change residence	verb
+必要	ひつよう	necessary, essential	na-adjective
+	ひどい	cruel, awful	i-adjective
+開く	ひらく	to open (eg. a festival)	verb
+	ビル	(abbr) building, bill	noun
+昼間	ひるま	daytime, during the day	None
+昼休み	ひるやすみ	lunch break, noon recess, noon rest period	None
+拾う	ひろう	to pick up, to find, to gather	verb
+	ファックス	fax	verb
+増える	ふえる	to increase, to multiply	verb
+深い	ふかい	deep, profound, thick	i-adjective
+複雑	ふくざつ	complexity, complication	na-adjective
+復習	ふくしゅう	review, revision	None
+部長	ぶちょう	head of a section	None
+普通	ふつう	(1) generally, ordinarily, usually, (2) train that stops at every station	na-adjective
+	ぶどう	grapes	noun
+太る	ふとる	to grow fat (stout, plump), to become fat	verb
+布団	ふとん	bedding (Japanese style), futon	noun
+舟	ふね	ship, boat	noun
+不便	ふべん	inconvenience	na-adjective
+踏む	ふむ	to step on, to tread on	verb
+	プレゼント	present, gift	noun
+文化	ぶんか	culture, civilization	noun
+文学	ぶんがく	literature	noun
+文法	ぶんぽう	grammar	noun
+別	べつ	distinction, different	na-adjective
+	ベル	bell	noun
+変	へん	strange, odd, peculiar	na-adjective
+返事	へんじ	reply, answer	None
+貿易	ぼうえき	trade (foreign)	noun
+放送	ほうそう・する	broadcast, broadcasting	None
+法律	ほうりつ	law	noun
+僕	ぼく	(male) I, manservant	noun
+星	ほし	star	noun
+	ほど	degree, extent	noun
+	ほとんど	mostly, almost	None
+	ほめる	to praise	verb
+翻訳	ほんやく	translation (written)	None
+参る	まいる	(1) (hum) to go, to come	verb
+負ける	まける	to lose, to be defeated	verb
+	まじめ	diligent, serious	na-adjective
+	まず	first (of all), to start with	adverb
+	または	or, otherwise	conjunction
+間違える	まちがえる	to err, to make a mistake	verb
+間に合う	まにあう	(1) to be in time for	verb
+	～まま	as it is	noun
+周り	まわり	surroundings, circulation	None
+回る	まわる	to go around, to revolve	verb
+漫画	まんが	comic, cartoon	noun
+真中	まんなか	middle, centre	noun
+見える	みえる	to be seen, to be in sight	verb
+湖	みずうみ	lake	noun
+味噌	みそ	miso, bean paste	noun
+見つかる	みつかる	(uk) to be found, to be discovered	verb
+見つける	みつける	to discover, to find	verb
+皆	みな	everyone, everybody	adverb
+港	みなと	harbour, port	noun
+迎える	むかえる	to go out to meet	verb
+向かう	むかう	to face, to go towards	verb
+昔	むかし	olden days, former	None
+虫	むし	insect	noun
+息子	むすこ	(hum) son	noun
+娘	むすめ	(hum) daughter	noun
+無理	むり	unreasonable, impossible	na-adjective
+～目	～め	number ～ sequence, ～nd/th	suffix
+召し上がる	めしあがる	(pol) to eat	verb
+珍しい	めずらしい	unusual, rare	i-adjective
+申し上げる	もうしあげる	to say, to tell	verb
+申す	もうす	(hum) to be called, to say	verb
+	もうすぐ	soon, very soon	None
+	もし	if	adverb
+	もちろん	certainly, of course	adverb
+	もっとも	most, extremely	adverb
+戻る	もどる	to turn back, to return	verb
+木綿	もめん	cotton	noun
+	もらう	to receive	verb
+森	もり	forest	noun
+焼く	やく	to bake, to grill	verb
+役に立つ	やくにたつ	to be helpful, to be useful	verb
+約束	やくそく	arrangement, promise	None
+焼ける	やける	to burn, to be roasted, to be sunburnt	verb
+優しい	やさしい	kind, gentle	i-adjective
+	～やすい	easy to do ～	None
+	やせる	to become thin, to lose weight	verb
+	やっと	at last, at length	adverb
+	やはり/やっぱり	as I thought, absolutely	adverb
+	やむ	to cease, to stop	verb
+止める	やめる	to end, to stop, to resign	verb
+	やる	(col)to do	verb
+柔らかい	やわらかい	soft, tender	i-adjective
+湯	ゆ	hot water	noun
+夕飯	ゆうはん	evening meal	noun
+輸出	ゆしゅつ・する	export	None
+輸入	ゆにゅう・する	import	None
+指	ゆび	finger	noun
+指輪	ゆびわ	(finger) ring	noun
+夢	ゆめ	dream	noun
+揺れる	ゆれる	to shake, to sway	verb
+様	よう	way, manner, kind	na-adjective
+用	よう	task, business, use	None
+用意	ようい	preparation	None
+用事	ようじ	tasks, chores	noun
+汚れる	よごれる	to get dirty, to become dirty	verb
+予習	よしゅう	preparation for a lesson	None
+予定	よてい	plans, arrangement, schedule	None
+予約	よやく	reservation, booking	None
+寄る	よる	to visit, to drop in	verb
+	（～に）よると	according to ～	None
+喜ぶ	よろこぶ	to be delighted, to be glad	None
+	よろしい	(hon) good, OK, all right	i-adjective
+理由	りゆう	reason, pretext, motive	noun
+利用	りよう	use, utilization	None
+両方	りょうほう	both sides, both parties	noun
+旅館	りょかん	Japanese hotel, inn	noun
+留守	るす	absence, being away from home	noun
+冷房	れいぼう	cooling, air conditioning	noun
+歴史	れきし	history	noun
+	レジ	register	noun
+	レポート/リポート	report, essay, assignment (aus)	noun
+連絡	れんらく	communication, contact, connection	None
+	ワープロ	word processor	noun
+沸かす	わかす	to boil, to heat	verb
+別れる	わかれる	to be divided, to part from, to separate	verb
+沸く	わく	to boil, to grow hot, to get excited	verb
+訳	わけ	meaning, reason	noun
+忘れ物	わすれもの	lost article, something forgotten	noun
+笑う	わらう	to laugh, to smile	verb
+割合	わりあい	rate, ratio, percentage	adverb
+割れる	われる	to break	verb

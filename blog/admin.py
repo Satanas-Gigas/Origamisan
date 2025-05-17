@@ -17,7 +17,7 @@ class WordAdmin(admin.ModelAdmin):
 
 @admin.register(Grammar)
 class GrammarAdmin(admin.ModelAdmin):
-    list_display = ('title', 'formula_ru')
+    list_display = ('level', 'title', 'formula_ru', 'formula_en')
 
 # Регистрация дочерних моделей
 @admin.register(Word_kana_variant)
