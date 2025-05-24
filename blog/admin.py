@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
+from .models import PartOfSpeech, Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
 
 admin.site.register(Example)
 
@@ -8,13 +8,24 @@ admin.site.register(Example)
 class KanjiAdmin(admin.ModelAdmin):
     list_display = ('kanji', 'onyomi', 'kunyomi', 'meaning_ru', 'meaning_en', 'level', 'author')
 
+@admin.register(PartOfSpeech)
+class PartOfSpeechAdmin(admin.ModelAdmin):
+    list_display = ('code',)
+
 
 @admin.register(Word)
 class WordAdmin(admin.ModelAdmin):
-    list_display = ('kanji', 'kana', 'part_of_speech', 'level', 'author', "translate_ru")
-    list_filter = ('part_of_speech', 'level')
-    search_fields = ('kanji', 'kana', 'translate_ru', 'translate_en')    
+    list_display = ('kanji', 'kana', 'romaji', 'level', 'translate_ru', 'get_part_of_speech')
+    search_fields = ('kanji', 'kana', 'romaji', "level", 'translate_en', 'translate_ru')
+    filter_horizontal = ('part_of_speech',)
 
+    @admin.display(description="Part of Speech")
+    def get_part_of_speech(self, obj):
+        return ", ".join(pos.code for pos in obj.part_of_speech.all())
+    # def get_part_of_speech(self, obj):
+    #     return ", ".join([pos.code for pos in obj.part_of_speech.all()])
+    # get_part_of_speech.short_description = "Part of Speech"
+    
 @admin.register(Grammar)
 class GrammarAdmin(admin.ModelAdmin):
     list_display = ('level', 'title', 'formula_ru', 'formula_en')

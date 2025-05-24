@@ -1,0 +1,2730 @@
+[
+    {
+        "kanji": null,
+        "kana": "あ"
+    },
+    {
+        "kanji": null,
+        "kana": "ああ"
+    },
+    {
+        "kanji": null,
+        "kana": "あいさつ・する"
+    },
+    {
+        "kanji": null,
+        "kana": "あかちゃん"
+    },
+    {
+        "kanji": null,
+        "kana": "あげる"
+    },
+    {
+        "kanji": null,
+        "kana": "あんな"
+    },
+    {
+        "kanji": null,
+        "kana": "いくら～ても"
+    },
+    {
+        "kanji": null,
+        "kana": "いじめる"
+    },
+    {
+        "kanji": null,
+        "kana": "いただく"
+    },
+    {
+        "kanji": null,
+        "kana": "いっぱい"
+    },
+    {
+        "kanji": null,
+        "kana": "いらっしゃる"
+    },
+    {
+        "kanji": null,
+        "kana": "うかがう"
+    },
+    {
+        "kanji": null,
+        "kana": "うかがう"
+    },
+    {
+        "kanji": null,
+        "kana": "うそ"
+    },
+    {
+        "kanji": null,
+        "kana": "うち"
+    },
+    {
+        "kanji": null,
+        "kana": "うまい"
+    },
+    {
+        "kanji": null,
+        "kana": "うれしい"
+    },
+    {
+        "kanji": null,
+        "kana": "うん"
+    },
+    {
+        "kanji": null,
+        "kana": "おいでになる"
+    },
+    {
+        "kanji": null,
+        "kana": "おかげ"
+    },
+    {
+        "kanji": null,
+        "kana": "おかしい"
+    },
+    {
+        "kanji": null,
+        "kana": "おっしゃる"
+    },
+    {
+        "kanji": null,
+        "kana": "おつり"
+    },
+    {
+        "kanji": null,
+        "kana": "おもちゃ"
+    },
+    {
+        "kanji": null,
+        "kana": "おる"
+    },
+    {
+        "kanji": null,
+        "kana": "かける"
+    },
+    {
+        "kanji": null,
+        "kana": "かける"
+    },
+    {
+        "kanji": null,
+        "kana": "かっこう"
+    },
+    {
+        "kanji": null,
+        "kana": "かまう"
+    },
+    {
+        "kanji": null,
+        "kana": "きっと"
+    },
+    {
+        "kanji": null,
+        "kana": "くださる"
+    },
+    {
+        "kanji": null,
+        "kana": "くれる"
+    },
+    {
+        "kanji": null,
+        "kana": "けが・する"
+    },
+    {
+        "kanji": null,
+        "kana": "けれど/けれども"
+    },
+    {
+        "kanji": null,
+        "kana": "けんか・する"
+    },
+    {
+        "kanji": null,
+        "kana": "こう"
+    },
+    {
+        "kanji": null,
+        "kana": "こっち"
+    },
+    {
+        "kanji": null,
+        "kana": "こと"
+    },
+    {
+        "kanji": null,
+        "kana": "このあいだ"
+    },
+    {
+        "kanji": null,
+        "kana": "このごろ"
+    },
+    {
+        "kanji": null,
+        "kana": "これから"
+    },
+    {
+        "kanji": null,
+        "kana": "ごちそう"
+    },
+    {
+        "kanji": null,
+        "kana": "ごみ"
+    },
+    {
+        "kanji": null,
+        "kana": "ごらんになる"
+    },
+    {
+        "kanji": null,
+        "kana": "さっき"
+    },
+    {
+        "kanji": null,
+        "kana": "しかる"
+    },
+    {
+        "kanji": null,
+        "kana": "しっかり"
+    },
+    {
+        "kanji": null,
+        "kana": "しばらく"
+    },
+    {
+        "kanji": null,
+        "kana": "じゃま"
+    },
+    {
+        "kanji": null,
+        "kana": "すく"
+    },
+    {
+        "kanji": null,
+        "kana": "すく"
+    },
+    {
+        "kanji": null,
+        "kana": "すっかり"
+    },
+    {
+        "kanji": null,
+        "kana": "すばらしい"
+    },
+    {
+        "kanji": null,
+        "kana": "すり"
+    },
+    {
+        "kanji": null,
+        "kana": "すると"
+    },
+    {
+        "kanji": null,
+        "kana": "ずいぶん"
+    },
+    {
+        "kanji": null,
+        "kana": "ずっと"
+    },
+    {
+        "kanji": null,
+        "kana": "ぜひ"
+    },
+    {
+        "kanji": null,
+        "kana": "ぜんぜん"
+    },
+    {
+        "kanji": null,
+        "kana": "そう"
+    },
+    {
+        "kanji": null,
+        "kana": "それで"
+    },
+    {
+        "kanji": null,
+        "kana": "それに"
+    },
+    {
+        "kanji": null,
+        "kana": "それほど"
+    },
+    {
+        "kanji": null,
+        "kana": "そろそろ"
+    },
+    {
+        "kanji": null,
+        "kana": "そんな"
+    },
+    {
+        "kanji": null,
+        "kana": "そんなに"
+    },
+    {
+        "kanji": null,
+        "kana": "たいてい"
+    },
+    {
+        "kanji": null,
+        "kana": "たまに"
+    },
+    {
+        "kanji": null,
+        "kana": "だから"
+    },
+    {
+        "kanji": null,
+        "kana": "だめ"
+    },
+    {
+        "kanji": null,
+        "kana": "ちっとも"
+    },
+    {
+        "kanji": null,
+        "kana": "つき"
+    },
+    {
+        "kanji": null,
+        "kana": "つける"
+    },
+    {
+        "kanji": null,
+        "kana": "つもり"
+    },
+    {
+        "kanji": null,
+        "kana": "できる"
+    },
+    {
+        "kanji": null,
+        "kana": "できるだけ"
+    },
+    {
+        "kanji": null,
+        "kana": "とうとう"
+    },
+    {
+        "kanji": null,
+        "kana": "とこや"
+    },
+    {
+        "kanji": null,
+        "kana": "どんどん"
+    },
+    {
+        "kanji": null,
+        "kana": "なさる"
+    },
+    {
+        "kanji": null,
+        "kana": "なるべく"
+    },
+    {
+        "kanji": null,
+        "kana": "なるほど"
+    },
+    {
+        "kanji": null,
+        "kana": "におい"
+    },
+    {
+        "kanji": null,
+        "kana": "ぬれる"
+    },
+    {
+        "kanji": null,
+        "kana": "ねだん"
+    },
+    {
+        "kanji": null,
+        "kana": "ねっしん"
+    },
+    {
+        "kanji": null,
+        "kana": "のど"
+    },
+    {
+        "kanji": null,
+        "kana": "はず"
+    },
+    {
+        "kanji": null,
+        "kana": "はっきり"
+    },
+    {
+        "kanji": null,
+        "kana": "ひげ"
+    },
+    {
+        "kanji": null,
+        "kana": "ひどい"
+    },
+    {
+        "kanji": null,
+        "kana": "びっくりする"
+    },
+    {
+        "kanji": null,
+        "kana": "ぶどう"
+    },
+    {
+        "kanji": null,
+        "kana": "ほとんど"
+    },
+    {
+        "kanji": null,
+        "kana": "ほど"
+    },
+    {
+        "kanji": null,
+        "kana": "ほめる"
+    },
+    {
+        "kanji": null,
+        "kana": "まじめ"
+    },
+    {
+        "kanji": null,
+        "kana": "まず"
+    },
+    {
+        "kanji": null,
+        "kana": "または"
+    },
+    {
+        "kanji": null,
+        "kana": "もうすぐ"
+    },
+    {
+        "kanji": null,
+        "kana": "もし"
+    },
+    {
+        "kanji": null,
+        "kana": "もちろん"
+    },
+    {
+        "kanji": null,
+        "kana": "もっとも"
+    },
+    {
+        "kanji": null,
+        "kana": "もらう"
+    },
+    {
+        "kanji": null,
+        "kana": "やせる"
+    },
+    {
+        "kanji": null,
+        "kana": "やっと"
+    },
+    {
+        "kanji": null,
+        "kana": "やはり/やっぱり"
+    },
+    {
+        "kanji": null,
+        "kana": "やむ"
+    },
+    {
+        "kanji": null,
+        "kana": "やる"
+    },
+    {
+        "kanji": null,
+        "kana": "よろしい"
+    },
+    {
+        "kanji": null,
+        "kana": "アクセサリー"
+    },
+    {
+        "kanji": null,
+        "kana": "アジア"
+    },
+    {
+        "kanji": null,
+        "kana": "アナウンサー"
+    },
+    {
+        "kanji": null,
+        "kana": "アフリカ"
+    },
+    {
+        "kanji": null,
+        "kana": "アメリカ"
+    },
+    {
+        "kanji": null,
+        "kana": "アルコール"
+    },
+    {
+        "kanji": null,
+        "kana": "アルバイト"
+    },
+    {
+        "kanji": null,
+        "kana": "エスカレーター"
+    },
+    {
+        "kanji": null,
+        "kana": "オートバイ"
+    },
+    {
+        "kanji": null,
+        "kana": "オーバー"
+    },
+    {
+        "kanji": null,
+        "kana": "カーテン"
+    },
+    {
+        "kanji": null,
+        "kana": "ガス"
+    },
+    {
+        "kanji": null,
+        "kana": "ガソリン"
+    },
+    {
+        "kanji": null,
+        "kana": "ガソリンスタンド"
+    },
+    {
+        "kanji": null,
+        "kana": "ガラス"
+    },
+    {
+        "kanji": null,
+        "kana": "ケーキ"
+    },
+    {
+        "kanji": null,
+        "kana": "コンサート"
+    },
+    {
+        "kanji": null,
+        "kana": "コンピュータ/コンピューター"
+    },
+    {
+        "kanji": null,
+        "kana": "サラダ"
+    },
+    {
+        "kanji": null,
+        "kana": "サンダル"
+    },
+    {
+        "kanji": null,
+        "kana": "サンドイッチ"
+    },
+    {
+        "kanji": null,
+        "kana": "ジャム"
+    },
+    {
+        "kanji": null,
+        "kana": "スクリーン"
+    },
+    {
+        "kanji": null,
+        "kana": "ステレオ"
+    },
+    {
+        "kanji": null,
+        "kana": "ステーキ"
+    },
+    {
+        "kanji": null,
+        "kana": "スーツ"
+    },
+    {
+        "kanji": null,
+        "kana": "スーツケース"
+    },
+    {
+        "kanji": null,
+        "kana": "スーパー（マーケット）"
+    },
+    {
+        "kanji": null,
+        "kana": "ソフト"
+    },
+    {
+        "kanji": null,
+        "kana": "タイプ"
+    },
+    {
+        "kanji": null,
+        "kana": "チェック・する"
+    },
+    {
+        "kanji": null,
+        "kana": "テキスト"
+    },
+    {
+        "kanji": null,
+        "kana": "テニス"
+    },
+    {
+        "kanji": null,
+        "kana": "ハンバーグ"
+    },
+    {
+        "kanji": null,
+        "kana": "パソコン"
+    },
+    {
+        "kanji": null,
+        "kana": "パパ"
+    },
+    {
+        "kanji": null,
+        "kana": "パート（タイム）"
+    },
+    {
+        "kanji": null,
+        "kana": "ビル"
+    },
+    {
+        "kanji": null,
+        "kana": "ピアノ"
+    },
+    {
+        "kanji": null,
+        "kana": "ファックス"
+    },
+    {
+        "kanji": null,
+        "kana": "プレゼント"
+    },
+    {
+        "kanji": null,
+        "kana": "ベル"
+    },
+    {
+        "kanji": null,
+        "kana": "レジ"
+    },
+    {
+        "kanji": null,
+        "kana": "レポート/リポート"
+    },
+    {
+        "kanji": null,
+        "kana": "ワープロ"
+    },
+    {
+        "kanji": null,
+        "kana": "（～て）しまう"
+    },
+    {
+        "kanji": null,
+        "kana": "（～に）よると"
+    },
+    {
+        "kanji": null,
+        "kana": "～おき"
+    },
+    {
+        "kanji": null,
+        "kana": "～おわる"
+    },
+    {
+        "kanji": null,
+        "kana": "～ございます"
+    },
+    {
+        "kanji": null,
+        "kana": "～だす"
+    },
+    {
+        "kanji": null,
+        "kana": "～ちゃん"
+    },
+    {
+        "kanji": null,
+        "kana": "～にくい"
+    },
+    {
+        "kanji": null,
+        "kana": "～ばかり"
+    },
+    {
+        "kanji": null,
+        "kana": "～まま"
+    },
+    {
+        "kanji": null,
+        "kana": "～やすい"
+    },
+    {
+        "kanji": null,
+        "kana": "～（に）ついて"
+    },
+    {
+        "kanji": "お・金持ち",
+        "kana": "かねもち/おかねもち"
+    },
+    {
+        "kanji": "お土産",
+        "kana": "おみやげ"
+    },
+    {
+        "kanji": "お嬢さん",
+        "kana": "おじょうさん"
+    },
+    {
+        "kanji": "お子さん",
+        "kana": "おこさん"
+    },
+    {
+        "kanji": "お宅",
+        "kana": "おたく"
+    },
+    {
+        "kanji": "お礼",
+        "kana": "おれい"
+    },
+    {
+        "kanji": "お祝い",
+        "kana": "おいわい"
+    },
+    {
+        "kanji": "お祭り",
+        "kana": "おまつり"
+    },
+    {
+        "kanji": "お見舞い",
+        "kana": "おみまい"
+    },
+    {
+        "kanji": "ご主人",
+        "kana": "ごしゅじん"
+    },
+    {
+        "kanji": "ご存じ",
+        "kana": "ごぞんじ"
+    },
+    {
+        "kanji": "さ来月",
+        "kana": "さらいげつ"
+    },
+    {
+        "kanji": "さ来週",
+        "kana": "さらいしゅう"
+    },
+    {
+        "kanji": "一度",
+        "kana": "いちど"
+    },
+    {
+        "kanji": "一生懸命",
+        "kana": "いっしょうけんめい"
+    },
+    {
+        "kanji": "丁寧",
+        "kana": "ていねい"
+    },
+    {
+        "kanji": "上がる",
+        "kana": "あがる"
+    },
+    {
+        "kanji": "下げる",
+        "kana": "さげる"
+    },
+    {
+        "kanji": "下りる",
+        "kana": "おりる"
+    },
+    {
+        "kanji": "下る",
+        "kana": "さがる"
+    },
+    {
+        "kanji": "下宿",
+        "kana": "げしゅく"
+    },
+    {
+        "kanji": "下着",
+        "kana": "したぎ"
+    },
+    {
+        "kanji": "不便",
+        "kana": "ふべん"
+    },
+    {
+        "kanji": "世界",
+        "kana": "せかい"
+    },
+    {
+        "kanji": "世話",
+        "kana": "せわ・する"
+    },
+    {
+        "kanji": "両方",
+        "kana": "りょうほう"
+    },
+    {
+        "kanji": "中々",
+        "kana": "なかなか"
+    },
+    {
+        "kanji": "中学校",
+        "kana": "ちゅうがっこう"
+    },
+    {
+        "kanji": "久しぶり",
+        "kana": "ひさしぶり"
+    },
+    {
+        "kanji": "乗り換える",
+        "kana": "のりかえる"
+    },
+    {
+        "kanji": "乗り物",
+        "kana": "のりもの"
+    },
+    {
+        "kanji": "乾く",
+        "kana": "かわく"
+    },
+    {
+        "kanji": "予定",
+        "kana": "よてい"
+    },
+    {
+        "kanji": "予約",
+        "kana": "よやく"
+    },
+    {
+        "kanji": "予習",
+        "kana": "よしゅう"
+    },
+    {
+        "kanji": "事務所",
+        "kana": "じむしょ"
+    },
+    {
+        "kanji": "事故",
+        "kana": "じこ"
+    },
+    {
+        "kanji": "亡くなる",
+        "kana": "なくなる"
+    },
+    {
+        "kanji": "交通",
+        "kana": "こうつう"
+    },
+    {
+        "kanji": "人口",
+        "kana": "じんこう"
+    },
+    {
+        "kanji": "人形",
+        "kana": "にんぎょう"
+    },
+    {
+        "kanji": "今夜",
+        "kana": "こんや"
+    },
+    {
+        "kanji": "今度",
+        "kana": "こんど"
+    },
+    {
+        "kanji": "仕方",
+        "kana": "しかた"
+    },
+    {
+        "kanji": "代わり",
+        "kana": "かわり"
+    },
+    {
+        "kanji": "以上",
+        "kana": "いじょう"
+    },
+    {
+        "kanji": "以下",
+        "kana": "いか"
+    },
+    {
+        "kanji": "以内",
+        "kana": "いない"
+    },
+    {
+        "kanji": "以外",
+        "kana": "いがい"
+    },
+    {
+        "kanji": "会場",
+        "kana": "かいじょう"
+    },
+    {
+        "kanji": "会話",
+        "kana": "かいわ"
+    },
+    {
+        "kanji": "会議",
+        "kana": "かいぎ"
+    },
+    {
+        "kanji": "会議室",
+        "kana": "かいぎしつ"
+    },
+    {
+        "kanji": "伝える",
+        "kana": "つたえる"
+    },
+    {
+        "kanji": "似る",
+        "kana": "にる"
+    },
+    {
+        "kanji": "住所",
+        "kana": "じゅうしょ"
+    },
+    {
+        "kanji": "例えば",
+        "kana": "たとえば"
+    },
+    {
+        "kanji": "倍",
+        "kana": "ばい"
+    },
+    {
+        "kanji": "倒れる",
+        "kana": "たおれる"
+    },
+    {
+        "kanji": "僕",
+        "kana": "ぼく"
+    },
+    {
+        "kanji": "億",
+        "kana": "おく"
+    },
+    {
+        "kanji": "優しい",
+        "kana": "やさしい"
+    },
+    {
+        "kanji": "先輩",
+        "kana": "せんぱい"
+    },
+    {
+        "kanji": "光",
+        "kana": "ひかり"
+    },
+    {
+        "kanji": "光る",
+        "kana": "ひかる"
+    },
+    {
+        "kanji": "入学",
+        "kana": "にゅうがく・する"
+    },
+    {
+        "kanji": "入院",
+        "kana": "にゅういん・する"
+    },
+    {
+        "kanji": "公務員",
+        "kana": "こうむいん"
+    },
+    {
+        "kanji": "具合",
+        "kana": "ぐあい"
+    },
+    {
+        "kanji": "写す",
+        "kana": "うつす"
+    },
+    {
+        "kanji": "冷える",
+        "kana": "ひえる"
+    },
+    {
+        "kanji": "冷房",
+        "kana": "れいぼう"
+    },
+    {
+        "kanji": "凄い",
+        "kana": "すごい"
+    },
+    {
+        "kanji": "出席",
+        "kana": "しゅっせき・する"
+    },
+    {
+        "kanji": "出発",
+        "kana": "しゅっぱつ・する"
+    },
+    {
+        "kanji": "別",
+        "kana": "べつ"
+    },
+    {
+        "kanji": "別れる",
+        "kana": "わかれる"
+    },
+    {
+        "kanji": "利用",
+        "kana": "りよう"
+    },
+    {
+        "kanji": "割れる",
+        "kana": "われる"
+    },
+    {
+        "kanji": "割合",
+        "kana": "わりあい"
+    },
+    {
+        "kanji": "力",
+        "kana": "ちから"
+    },
+    {
+        "kanji": "動く",
+        "kana": "うごく"
+    },
+    {
+        "kanji": "動物園",
+        "kana": "どうぶつえん"
+    },
+    {
+        "kanji": "勝つ",
+        "kana": "かつ"
+    },
+    {
+        "kanji": "包む",
+        "kana": "つつむ"
+    },
+    {
+        "kanji": "医学",
+        "kana": "いがく"
+    },
+    {
+        "kanji": "十分",
+        "kana": "じゅうぶん"
+    },
+    {
+        "kanji": "卒業",
+        "kana": "そつぎょう"
+    },
+    {
+        "kanji": "危険",
+        "kana": "きけん"
+    },
+    {
+        "kanji": "原因",
+        "kana": "げんいん"
+    },
+    {
+        "kanji": "厳しい",
+        "kana": "きびしい"
+    },
+    {
+        "kanji": "参る",
+        "kana": "まいる"
+    },
+    {
+        "kanji": "反対",
+        "kana": "はんたい"
+    },
+    {
+        "kanji": "取り替える",
+        "kana": "とりかえる"
+    },
+    {
+        "kanji": "受ける",
+        "kana": "うける"
+    },
+    {
+        "kanji": "受付",
+        "kana": "うけつけ"
+    },
+    {
+        "kanji": "召し上がる",
+        "kana": "めしあがる"
+    },
+    {
+        "kanji": "台風",
+        "kana": "たいふう"
+    },
+    {
+        "kanji": "合う",
+        "kana": "あう"
+    },
+    {
+        "kanji": "向かう",
+        "kana": "むかう"
+    },
+    {
+        "kanji": "君",
+        "kana": "きみ"
+    },
+    {
+        "kanji": "周り",
+        "kana": "まわり"
+    },
+    {
+        "kanji": "味",
+        "kana": "あじ"
+    },
+    {
+        "kanji": "味噌",
+        "kana": "みそ"
+    },
+    {
+        "kanji": "品物",
+        "kana": "しなもの"
+    },
+    {
+        "kanji": "喜ぶ",
+        "kana": "よろこぶ"
+    },
+    {
+        "kanji": "噛む",
+        "kana": "かむ"
+    },
+    {
+        "kanji": "回る",
+        "kana": "まわる"
+    },
+    {
+        "kanji": "国際",
+        "kana": "こくさい"
+    },
+    {
+        "kanji": "地理",
+        "kana": "ちり"
+    },
+    {
+        "kanji": "地震",
+        "kana": "じしん"
+    },
+    {
+        "kanji": "坂",
+        "kana": "さか"
+    },
+    {
+        "kanji": "堅/硬/固い",
+        "kana": "かたい"
+    },
+    {
+        "kanji": "場合",
+        "kana": "ばあい"
+    },
+    {
+        "kanji": "場所",
+        "kana": "ばしょ"
+    },
+    {
+        "kanji": "塗る",
+        "kana": "ぬる"
+    },
+    {
+        "kanji": "増える",
+        "kana": "ふえる"
+    },
+    {
+        "kanji": "壁",
+        "kana": "かべ"
+    },
+    {
+        "kanji": "壊す",
+        "kana": "こわす"
+    },
+    {
+        "kanji": "壊れる",
+        "kana": "こわれる"
+    },
+    {
+        "kanji": "売り場",
+        "kana": "うりば"
+    },
+    {
+        "kanji": "変",
+        "kana": "へん"
+    },
+    {
+        "kanji": "変える",
+        "kana": "かえる"
+    },
+    {
+        "kanji": "変わる",
+        "kana": "かわる"
+    },
+    {
+        "kanji": "夕飯",
+        "kana": "ゆうはん"
+    },
+    {
+        "kanji": "夢",
+        "kana": "ゆめ"
+    },
+    {
+        "kanji": "大事",
+        "kana": "だいじ"
+    },
+    {
+        "kanji": "大体",
+        "kana": "だいたい"
+    },
+    {
+        "kanji": "大分",
+        "kana": "だいぶ"
+    },
+    {
+        "kanji": "大学生",
+        "kana": "だいがくせい"
+    },
+    {
+        "kanji": "天気予報",
+        "kana": "てんきよほう"
+    },
+    {
+        "kanji": "太る",
+        "kana": "ふとる"
+    },
+    {
+        "kanji": "夫",
+        "kana": "おっと"
+    },
+    {
+        "kanji": "失敗",
+        "kana": "しっぱい"
+    },
+    {
+        "kanji": "失礼",
+        "kana": "しつれい"
+    },
+    {
+        "kanji": "女性",
+        "kana": "じょせい"
+    },
+    {
+        "kanji": "妻",
+        "kana": "つま"
+    },
+    {
+        "kanji": "始める",
+        "kana": "はじめる"
+    },
+    {
+        "kanji": "娘",
+        "kana": "むすめ"
+    },
+    {
+        "kanji": "子",
+        "kana": "こ"
+    },
+    {
+        "kanji": "字",
+        "kana": "じ"
+    },
+    {
+        "kanji": "季節",
+        "kana": "きせつ"
+    },
+    {
+        "kanji": "安全",
+        "kana": "あんぜん"
+    },
+    {
+        "kanji": "安心",
+        "kana": "あんしん"
+    },
+    {
+        "kanji": "客",
+        "kana": "きゃく"
+    },
+    {
+        "kanji": "家内",
+        "kana": "かない"
+    },
+    {
+        "kanji": "寂しい",
+        "kana": "さびしい"
+    },
+    {
+        "kanji": "寄る",
+        "kana": "よる"
+    },
+    {
+        "kanji": "寝坊",
+        "kana": "ねぼう"
+    },
+    {
+        "kanji": "寺",
+        "kana": "てら"
+    },
+    {
+        "kanji": "専門",
+        "kana": "せんもん"
+    },
+    {
+        "kanji": "将来",
+        "kana": "しょうらい"
+    },
+    {
+        "kanji": "尋ねる",
+        "kana": "たずねる"
+    },
+    {
+        "kanji": "小学校",
+        "kana": "しょうがっこう"
+    },
+    {
+        "kanji": "小説",
+        "kana": "しょうせつ"
+    },
+    {
+        "kanji": "小鳥",
+        "kana": "ことり"
+    },
+    {
+        "kanji": "届ける",
+        "kana": "とどける"
+    },
+    {
+        "kanji": "屋上",
+        "kana": "おくじょう"
+    },
+    {
+        "kanji": "展覧会",
+        "kana": "てんらんかい"
+    },
+    {
+        "kanji": "島",
+        "kana": "しま"
+    },
+    {
+        "kanji": "工場",
+        "kana": "こうじょう"
+    },
+    {
+        "kanji": "工業",
+        "kana": "こうぎょう"
+    },
+    {
+        "kanji": "差し上げる",
+        "kana": "さしあげる"
+    },
+    {
+        "kanji": "市",
+        "kana": "し"
+    },
+    {
+        "kanji": "市民",
+        "kana": "しみん"
+    },
+    {
+        "kanji": "布団",
+        "kana": "ふとん"
+    },
+    {
+        "kanji": "席",
+        "kana": "せき"
+    },
+    {
+        "kanji": "帰り",
+        "kana": "かえり"
+    },
+    {
+        "kanji": "店員",
+        "kana": "てんいん"
+    },
+    {
+        "kanji": "建て",
+        "kana": "～だて"
+    },
+    {
+        "kanji": "建てる",
+        "kana": "たてる"
+    },
+    {
+        "kanji": "引き出し",
+        "kana": "ひきだし"
+    },
+    {
+        "kanji": "引っ越す",
+        "kana": "ひっこす"
+    },
+    {
+        "kanji": "形",
+        "kana": "かたち"
+    },
+    {
+        "kanji": "役に立つ",
+        "kana": "やくにたつ"
+    },
+    {
+        "kanji": "彼",
+        "kana": "かれ"
+    },
+    {
+        "kanji": "彼ら",
+        "kana": "かれら"
+    },
+    {
+        "kanji": "彼女",
+        "kana": "かのじょ"
+    },
+    {
+        "kanji": "御～",
+        "kana": "ご～"
+    },
+    {
+        "kanji": "復習",
+        "kana": "ふくしゅう"
+    },
+    {
+        "kanji": "心",
+        "kana": "こころ"
+    },
+    {
+        "kanji": "心配",
+        "kana": "しんぱい・する"
+    },
+    {
+        "kanji": "必ず",
+        "kana": "かならず"
+    },
+    {
+        "kanji": "必要",
+        "kana": "ひつよう"
+    },
+    {
+        "kanji": "忘れ物",
+        "kana": "わすれもの"
+    },
+    {
+        "kanji": "怒る",
+        "kana": "おこる"
+    },
+    {
+        "kanji": "怖い",
+        "kana": "こわい"
+    },
+    {
+        "kanji": "思い出す",
+        "kana": "おもいだす"
+    },
+    {
+        "kanji": "思う",
+        "kana": "おもう"
+    },
+    {
+        "kanji": "急",
+        "kana": "きゅう"
+    },
+    {
+        "kanji": "急ぐ",
+        "kana": "いそぐ"
+    },
+    {
+        "kanji": "急行",
+        "kana": "きゅうこう"
+    },
+    {
+        "kanji": "恥ずかしい",
+        "kana": "はずかしい"
+    },
+    {
+        "kanji": "息子",
+        "kana": "むすこ"
+    },
+    {
+        "kanji": "悲しい",
+        "kana": "かなしい"
+    },
+    {
+        "kanji": "意見",
+        "kana": "いけん"
+    },
+    {
+        "kanji": "慣れる",
+        "kana": "なれる"
+    },
+    {
+        "kanji": "戦争",
+        "kana": "せんそう"
+    },
+    {
+        "kanji": "戻る",
+        "kana": "もどる"
+    },
+    {
+        "kanji": "手伝う",
+        "kana": "てつだう"
+    },
+    {
+        "kanji": "手袋",
+        "kana": "てぶくろ"
+    },
+    {
+        "kanji": "打つ",
+        "kana": "うつ"
+    },
+    {
+        "kanji": "払う",
+        "kana": "はらう"
+    },
+    {
+        "kanji": "承知",
+        "kana": "しょうち・する"
+    },
+    {
+        "kanji": "技術",
+        "kana": "ぎじゅつ"
+    },
+    {
+        "kanji": "投げる",
+        "kana": "なげる"
+    },
+    {
+        "kanji": "折る",
+        "kana": "おる"
+    },
+    {
+        "kanji": "折れる",
+        "kana": "おれる"
+    },
+    {
+        "kanji": "押し入れ",
+        "kana": "おしいれ"
+    },
+    {
+        "kanji": "招待",
+        "kana": "しょうたい・する"
+    },
+    {
+        "kanji": "拝見",
+        "kana": "はいけん・する"
+    },
+    {
+        "kanji": "拾う",
+        "kana": "ひろう"
+    },
+    {
+        "kanji": "指",
+        "kana": "ゆび"
+    },
+    {
+        "kanji": "指輪",
+        "kana": "ゆびわ"
+    },
+    {
+        "kanji": "捕まえる",
+        "kana": "つかまえる"
+    },
+    {
+        "kanji": "捨てる",
+        "kana": "すてる"
+    },
+    {
+        "kanji": "掛ける",
+        "kana": "かける"
+    },
+    {
+        "kanji": "探す",
+        "kana": "さがす"
+    },
+    {
+        "kanji": "揺れる",
+        "kana": "ゆれる"
+    },
+    {
+        "kanji": "支度",
+        "kana": "したく・する"
+    },
+    {
+        "kanji": "放送",
+        "kana": "ほうそう・する"
+    },
+    {
+        "kanji": "政治",
+        "kana": "せいじ"
+    },
+    {
+        "kanji": "故障",
+        "kana": "こしょう・する"
+    },
+    {
+        "kanji": "教会",
+        "kana": "きょうかい"
+    },
+    {
+        "kanji": "教育",
+        "kana": "きょういく"
+    },
+    {
+        "kanji": "数学",
+        "kana": "すうがく"
+    },
+    {
+        "kanji": "文化",
+        "kana": "ぶんか"
+    },
+    {
+        "kanji": "文学",
+        "kana": "ぶんがく"
+    },
+    {
+        "kanji": "文法",
+        "kana": "ぶんぽう"
+    },
+    {
+        "kanji": "新聞社",
+        "kana": "しんぶんしゃ"
+    },
+    {
+        "kanji": "方",
+        "kana": "かた"
+    },
+    {
+        "kanji": "旅館",
+        "kana": "りょかん"
+    },
+    {
+        "kanji": "日",
+        "kana": "ひ"
+    },
+    {
+        "kanji": "日記",
+        "kana": "にっき"
+    },
+    {
+        "kanji": "明日",
+        "kana": "あす"
+    },
+    {
+        "kanji": "昔",
+        "kana": "むかし"
+    },
+    {
+        "kanji": "星",
+        "kana": "ほし"
+    },
+    {
+        "kanji": "昼休み",
+        "kana": "ひるやすみ"
+    },
+    {
+        "kanji": "昼間",
+        "kana": "ひるま"
+    },
+    {
+        "kanji": "時代",
+        "kana": "じだい"
+    },
+    {
+        "kanji": "普通",
+        "kana": "ふつう"
+    },
+    {
+        "kanji": "景色",
+        "kana": "けしき"
+    },
+    {
+        "kanji": "暖房",
+        "kana": "だんぼう"
+    },
+    {
+        "kanji": "暮れる",
+        "kana": "くれる"
+    },
+    {
+        "kanji": "最初",
+        "kana": "さいしょ"
+    },
+    {
+        "kanji": "最後",
+        "kana": "さいご"
+    },
+    {
+        "kanji": "最近",
+        "kana": "さいきん"
+    },
+    {
+        "kanji": "木綿",
+        "kana": "もめん"
+    },
+    {
+        "kanji": "林",
+        "kana": "はやし"
+    },
+    {
+        "kanji": "枝",
+        "kana": "えだ"
+    },
+    {
+        "kanji": "柔らかい",
+        "kana": "やわらかい"
+    },
+    {
+        "kanji": "柔道",
+        "kana": "じゅうどう"
+    },
+    {
+        "kanji": "校長",
+        "kana": "こうちょう"
+    },
+    {
+        "kanji": "案内",
+        "kana": "あんない・する"
+    },
+    {
+        "kanji": "棚",
+        "kana": "たな"
+    },
+    {
+        "kanji": "森",
+        "kana": "もり"
+    },
+    {
+        "kanji": "植える",
+        "kana": "うえる"
+    },
+    {
+        "kanji": "楽しみ",
+        "kana": "たのしみ"
+    },
+    {
+        "kanji": "楽む",
+        "kana": "たのしむ"
+    },
+    {
+        "kanji": "様",
+        "kana": "よう"
+    },
+    {
+        "kanji": "機会",
+        "kana": "きかい"
+    },
+    {
+        "kanji": "止める",
+        "kana": "とめる"
+    },
+    {
+        "kanji": "止める",
+        "kana": "やめる"
+    },
+    {
+        "kanji": "正しい",
+        "kana": "ただしい"
+    },
+    {
+        "kanji": "正月",
+        "kana": "しょうがつ"
+    },
+    {
+        "kanji": "歯医者",
+        "kana": "はいしゃ"
+    },
+    {
+        "kanji": "歴史",
+        "kana": "れきし"
+    },
+    {
+        "kanji": "残る",
+        "kana": "のこる"
+    },
+    {
+        "kanji": "残念",
+        "kana": "ざんねん"
+    },
+    {
+        "kanji": "比べる",
+        "kana": "くらべる"
+    },
+    {
+        "kanji": "毛",
+        "kana": "け"
+    },
+    {
+        "kanji": "毛",
+        "kana": "け"
+    },
+    {
+        "kanji": "気",
+        "kana": "き"
+    },
+    {
+        "kanji": "気分",
+        "kana": "きぶん"
+    },
+    {
+        "kanji": "気持ち",
+        "kana": "きもち"
+    },
+    {
+        "kanji": "水泳",
+        "kana": "すいえい"
+    },
+    {
+        "kanji": "水道",
+        "kana": "すいどう"
+    },
+    {
+        "kanji": "汚れる",
+        "kana": "よごれる"
+    },
+    {
+        "kanji": "決して",
+        "kana": "けっして"
+    },
+    {
+        "kanji": "決める",
+        "kana": "きめる"
+    },
+    {
+        "kanji": "決る",
+        "kana": "きまる"
+    },
+    {
+        "kanji": "汽車",
+        "kana": "きしゃ"
+    },
+    {
+        "kanji": "沸かす",
+        "kana": "わかす"
+    },
+    {
+        "kanji": "沸く",
+        "kana": "わく"
+    },
+    {
+        "kanji": "治る",
+        "kana": "なおる"
+    },
+    {
+        "kanji": "泊まる",
+        "kana": "とまる"
+    },
+    {
+        "kanji": "法律",
+        "kana": "ほうりつ"
+    },
+    {
+        "kanji": "泣く",
+        "kana": "なく"
+    },
+    {
+        "kanji": "泥棒",
+        "kana": "どろぼう"
+    },
+    {
+        "kanji": "注射",
+        "kana": "ちゅうしゃ"
+    },
+    {
+        "kanji": "注意",
+        "kana": "ちゅうい"
+    },
+    {
+        "kanji": "浅い",
+        "kana": "あさい"
+    },
+    {
+        "kanji": "海岸",
+        "kana": "かいがん"
+    },
+    {
+        "kanji": "消しゴム",
+        "kana": "けしゴム"
+    },
+    {
+        "kanji": "深い",
+        "kana": "ふかい"
+    },
+    {
+        "kanji": "済む",
+        "kana": "すむ"
+    },
+    {
+        "kanji": "港",
+        "kana": "みなと"
+    },
+    {
+        "kanji": "湖",
+        "kana": "みずうみ"
+    },
+    {
+        "kanji": "湯",
+        "kana": "ゆ"
+    },
+    {
+        "kanji": "準備",
+        "kana": "じゅんび・する"
+    },
+    {
+        "kanji": "滑る",
+        "kana": "すべる"
+    },
+    {
+        "kanji": "漫画",
+        "kana": "まんが"
+    },
+    {
+        "kanji": "漬ける",
+        "kana": "つける"
+    },
+    {
+        "kanji": "火",
+        "kana": "ひ"
+    },
+    {
+        "kanji": "火事",
+        "kana": "かじ"
+    },
+    {
+        "kanji": "点",
+        "kana": "てん"
+    },
+    {
+        "kanji": "点く",
+        "kana": "つく"
+    },
+    {
+        "kanji": "為",
+        "kana": "ため"
+    },
+    {
+        "kanji": "無くなる",
+        "kana": "なくなる"
+    },
+    {
+        "kanji": "無理",
+        "kana": "むり"
+    },
+    {
+        "kanji": "焼く",
+        "kana": "やく"
+    },
+    {
+        "kanji": "焼ける",
+        "kana": "やける"
+    },
+    {
+        "kanji": "熱",
+        "kana": "ねつ"
+    },
+    {
+        "kanji": "片付ける",
+        "kana": "かたづける"
+    },
+    {
+        "kanji": "特に",
+        "kana": "とくに"
+    },
+    {
+        "kanji": "特別",
+        "kana": "とくべつ"
+    },
+    {
+        "kanji": "特急",
+        "kana": "とっきゅう"
+    },
+    {
+        "kanji": "玄関",
+        "kana": "げんかん"
+    },
+    {
+        "kanji": "珍しい",
+        "kana": "めずらしい"
+    },
+    {
+        "kanji": "理由",
+        "kana": "りゆう"
+    },
+    {
+        "kanji": "生きる",
+        "kana": "いきる"
+    },
+    {
+        "kanji": "生活",
+        "kana": "せいかつ・する"
+    },
+    {
+        "kanji": "生産",
+        "kana": "せいさん・する"
+    },
+    {
+        "kanji": "産業",
+        "kana": "さんぎょう"
+    },
+    {
+        "kanji": "用",
+        "kana": "よう"
+    },
+    {
+        "kanji": "用事",
+        "kana": "ようじ"
+    },
+    {
+        "kanji": "用意",
+        "kana": "ようい"
+    },
+    {
+        "kanji": "田舎",
+        "kana": "いなか"
+    },
+    {
+        "kanji": "申し上げる",
+        "kana": "もうしあげる"
+    },
+    {
+        "kanji": "申す",
+        "kana": "もうす"
+    },
+    {
+        "kanji": "男性",
+        "kana": "だんせい"
+    },
+    {
+        "kanji": "留守",
+        "kana": "るす"
+    },
+    {
+        "kanji": "番組",
+        "kana": "ばんぐみ"
+    },
+    {
+        "kanji": "畳",
+        "kana": "たたみ"
+    },
+    {
+        "kanji": "発音",
+        "kana": "はつおん"
+    },
+    {
+        "kanji": "皆",
+        "kana": "みな"
+    },
+    {
+        "kanji": "盗む",
+        "kana": "ぬすむ"
+    },
+    {
+        "kanji": "盛ん",
+        "kana": "さかん"
+    },
+    {
+        "kanji": "直す",
+        "kana": "なおす"
+    },
+    {
+        "kanji": "直る",
+        "kana": "なおる"
+    },
+    {
+        "kanji": "相談",
+        "kana": "そうだん・する"
+    },
+    {
+        "kanji": "看護婦",
+        "kana": "かんごふ"
+    },
+    {
+        "kanji": "真中",
+        "kana": "まんなか"
+    },
+    {
+        "kanji": "眠い",
+        "kana": "ねむい"
+    },
+    {
+        "kanji": "眠る",
+        "kana": "ねむる"
+    },
+    {
+        "kanji": "着物",
+        "kana": "きもの"
+    },
+    {
+        "kanji": "知らせる",
+        "kana": "しらせる"
+    },
+    {
+        "kanji": "石",
+        "kana": "いし"
+    },
+    {
+        "kanji": "砂",
+        "kana": "すな"
+    },
+    {
+        "kanji": "研究",
+        "kana": "けんきゅう"
+    },
+    {
+        "kanji": "研究室",
+        "kana": "けんきゅうしつ"
+    },
+    {
+        "kanji": "確か",
+        "kana": "たしか"
+    },
+    {
+        "kanji": "社会",
+        "kana": "しゃかい"
+    },
+    {
+        "kanji": "社長",
+        "kana": "しゃちょう"
+    },
+    {
+        "kanji": "祈る",
+        "kana": "いのる"
+    },
+    {
+        "kanji": "祖母",
+        "kana": "そぼ"
+    },
+    {
+        "kanji": "祖父",
+        "kana": "そふ"
+    },
+    {
+        "kanji": "神社",
+        "kana": "じんじゃ"
+    },
+    {
+        "kanji": "科学",
+        "kana": "かがく"
+    },
+    {
+        "kanji": "移る",
+        "kana": "うつる"
+    },
+    {
+        "kanji": "空く",
+        "kana": "あく"
+    },
+    {
+        "kanji": "空気",
+        "kana": "くうき"
+    },
+    {
+        "kanji": "空港",
+        "kana": "くうこう"
+    },
+    {
+        "kanji": "立てる",
+        "kana": "たてる"
+    },
+    {
+        "kanji": "競争",
+        "kana": "きょうそう"
+    },
+    {
+        "kanji": "笑う",
+        "kana": "わらう"
+    },
+    {
+        "kanji": "答",
+        "kana": "こたえ"
+    },
+    {
+        "kanji": "簡単",
+        "kana": "かんたん"
+    },
+    {
+        "kanji": "米",
+        "kana": "こめ"
+    },
+    {
+        "kanji": "糸",
+        "kana": "いと"
+    },
+    {
+        "kanji": "約束",
+        "kana": "やくそく"
+    },
+    {
+        "kanji": "細かい",
+        "kana": "こまかい"
+    },
+    {
+        "kanji": "紹介",
+        "kana": "しょうかい"
+    },
+    {
+        "kanji": "終わり",
+        "kana": "おわり"
+    },
+    {
+        "kanji": "経済",
+        "kana": "けいざい"
+    },
+    {
+        "kanji": "経験",
+        "kana": "けいけん・する"
+    },
+    {
+        "kanji": "絹",
+        "kana": "きぬ"
+    },
+    {
+        "kanji": "続く",
+        "kana": "つづく"
+    },
+    {
+        "kanji": "続ける",
+        "kana": "つづける"
+    },
+    {
+        "kanji": "線",
+        "kana": "せん"
+    },
+    {
+        "kanji": "美しい",
+        "kana": "うつくしい"
+    },
+    {
+        "kanji": "美術館",
+        "kana": "びじゅつかん"
+    },
+    {
+        "kanji": "習慣",
+        "kana": "しゅうかん"
+    },
+    {
+        "kanji": "翻訳",
+        "kana": "ほんやく"
+    },
+    {
+        "kanji": "考える",
+        "kana": "かんがえる"
+    },
+    {
+        "kanji": "聞こえる",
+        "kana": "きこえる"
+    },
+    {
+        "kanji": "育てる",
+        "kana": "そだてる"
+    },
+    {
+        "kanji": "背中",
+        "kana": "せなか"
+    },
+    {
+        "kanji": "腕",
+        "kana": "うで"
+    },
+    {
+        "kanji": "自由",
+        "kana": "じゆう"
+    },
+    {
+        "kanji": "致す",
+        "kana": "いたす"
+    },
+    {
+        "kanji": "致す",
+        "kana": "いたす"
+    },
+    {
+        "kanji": "興味",
+        "kana": "きょうみ"
+    },
+    {
+        "kanji": "舟",
+        "kana": "ふね"
+    },
+    {
+        "kanji": "花見",
+        "kana": "はなみ"
+    },
+    {
+        "kanji": "苦い",
+        "kana": "にがい"
+    },
+    {
+        "kanji": "草",
+        "kana": "くさ"
+    },
+    {
+        "kanji": "落す",
+        "kana": "おとす"
+    },
+    {
+        "kanji": "落ちる",
+        "kana": "おちる"
+    },
+    {
+        "kanji": "葉",
+        "kana": "は"
+    },
+    {
+        "kanji": "虫",
+        "kana": "むし"
+    },
+    {
+        "kanji": "血",
+        "kana": "ち"
+    },
+    {
+        "kanji": "行う",
+        "kana": "おこなう"
+    },
+    {
+        "kanji": "表",
+        "kana": "おもて"
+    },
+    {
+        "kanji": "裏",
+        "kana": "うら"
+    },
+    {
+        "kanji": "複雑",
+        "kana": "ふくざつ"
+    },
+    {
+        "kanji": "西洋",
+        "kana": "せいよう"
+    },
+    {
+        "kanji": "見える",
+        "kana": "みえる"
+    },
+    {
+        "kanji": "見つかる",
+        "kana": "みつかる"
+    },
+    {
+        "kanji": "見つける",
+        "kana": "みつける"
+    },
+    {
+        "kanji": "見物",
+        "kana": "けんぶつ"
+    },
+    {
+        "kanji": "規則",
+        "kana": "きそく"
+    },
+    {
+        "kanji": "親",
+        "kana": "おや"
+    },
+    {
+        "kanji": "親切",
+        "kana": "しんせつ"
+    },
+    {
+        "kanji": "触る",
+        "kana": "さわる"
+    },
+    {
+        "kanji": "計画",
+        "kana": "けいかく・する"
+    },
+    {
+        "kanji": "訪ねる",
+        "kana": "たずねる"
+    },
+    {
+        "kanji": "訳",
+        "kana": "わけ"
+    },
+    {
+        "kanji": "試合",
+        "kana": "しあい"
+    },
+    {
+        "kanji": "試験",
+        "kana": "しけん"
+    },
+    {
+        "kanji": "説明",
+        "kana": "せつめい"
+    },
+    {
+        "kanji": "課長",
+        "kana": "かちょう"
+    },
+    {
+        "kanji": "調べる",
+        "kana": "しらべる"
+    },
+    {
+        "kanji": "講堂",
+        "kana": "こうどう"
+    },
+    {
+        "kanji": "講義",
+        "kana": "こうぎ"
+    },
+    {
+        "kanji": "謝る",
+        "kana": "あやまる"
+    },
+    {
+        "kanji": "警察",
+        "kana": "けいさつ"
+    },
+    {
+        "kanji": "負ける",
+        "kana": "まける"
+    },
+    {
+        "kanji": "貿易",
+        "kana": "ぼうえき"
+    },
+    {
+        "kanji": "贈り物",
+        "kana": "おくりもの"
+    },
+    {
+        "kanji": "赤ん坊",
+        "kana": "あかんぼう"
+    },
+    {
+        "kanji": "起こす",
+        "kana": "おこす"
+    },
+    {
+        "kanji": "趣味",
+        "kana": "しゅみ"
+    },
+    {
+        "kanji": "足す",
+        "kana": "たす"
+    },
+    {
+        "kanji": "足りる",
+        "kana": "たりる"
+    },
+    {
+        "kanji": "踊り",
+        "kana": "おどり"
+    },
+    {
+        "kanji": "踊る",
+        "kana": "おどる"
+    },
+    {
+        "kanji": "踏む",
+        "kana": "ふむ"
+    },
+    {
+        "kanji": "輸入",
+        "kana": "ゆにゅう・する"
+    },
+    {
+        "kanji": "輸出",
+        "kana": "ゆしゅつ・する"
+    },
+    {
+        "kanji": "辞典",
+        "kana": "じてん"
+    },
+    {
+        "kanji": "込む",
+        "kana": "こむ"
+    },
+    {
+        "kanji": "迎える",
+        "kana": "むかえる"
+    },
+    {
+        "kanji": "近所",
+        "kana": "きんじょ"
+    },
+    {
+        "kanji": "返事",
+        "kana": "へんじ"
+    },
+    {
+        "kanji": "退院",
+        "kana": "たいいん・する"
+    },
+    {
+        "kanji": "送る",
+        "kana": "おくる"
+    },
+    {
+        "kanji": "逃げる",
+        "kana": "にげる"
+    },
+    {
+        "kanji": "途中",
+        "kana": "とちゅう"
+    },
+    {
+        "kanji": "通う",
+        "kana": "かよう"
+    },
+    {
+        "kanji": "通り",
+        "kana": "とおり"
+    },
+    {
+        "kanji": "通る",
+        "kana": "とおる"
+    },
+    {
+        "kanji": "連れる",
+        "kana": "つれる"
+    },
+    {
+        "kanji": "連絡",
+        "kana": "れんらく"
+    },
+    {
+        "kanji": "進む",
+        "kana": "すすむ"
+    },
+    {
+        "kanji": "遅れる",
+        "kana": "おくれる"
+    },
+    {
+        "kanji": "遊び",
+        "kana": "あそび"
+    },
+    {
+        "kanji": "運ぶ",
+        "kana": "はこぶ"
+    },
+    {
+        "kanji": "運動",
+        "kana": "うんどう・する"
+    },
+    {
+        "kanji": "運転",
+        "kana": "うんてん・する"
+    },
+    {
+        "kanji": "運転手",
+        "kana": "うんてんしゅ"
+    },
+    {
+        "kanji": "過ぎる",
+        "kana": "すぎる"
+    },
+    {
+        "kanji": "道具",
+        "kana": "どうぐ"
+    },
+    {
+        "kanji": "遠く",
+        "kana": "とおく"
+    },
+    {
+        "kanji": "遠慮",
+        "kana": "えんりょ・する"
+    },
+    {
+        "kanji": "適当",
+        "kana": "てきとう"
+    },
+    {
+        "kanji": "選ぶ",
+        "kana": "えらぶ"
+    },
+    {
+        "kanji": "郊外",
+        "kana": "こうがい"
+    },
+    {
+        "kanji": "部長",
+        "kana": "ぶちょう"
+    },
+    {
+        "kanji": "都",
+        "kana": "と"
+    },
+    {
+        "kanji": "都合",
+        "kana": "つごう"
+    },
+    {
+        "kanji": "釣る",
+        "kana": "つる"
+    },
+    {
+        "kanji": "鏡",
+        "kana": "かがみ"
+    },
+    {
+        "kanji": "開く",
+        "kana": "ひらく"
+    },
+    {
+        "kanji": "間",
+        "kana": "あいだ"
+    },
+    {
+        "kanji": "間に合う",
+        "kana": "まにあう"
+    },
+    {
+        "kanji": "間違える",
+        "kana": "まちがえる"
+    },
+    {
+        "kanji": "関係",
+        "kana": "かんけい"
+    },
+    {
+        "kanji": "隅",
+        "kana": "すみ"
+    },
+    {
+        "kanji": "集める",
+        "kana": "あつめる"
+    },
+    {
+        "kanji": "集る",
+        "kana": "あつまる"
+    },
+    {
+        "kanji": "雲",
+        "kana": "くも"
+    },
+    {
+        "kanji": "電報",
+        "kana": "でんぽう"
+    },
+    {
+        "kanji": "電灯",
+        "kana": "でんとう"
+    },
+    {
+        "kanji": "非常に",
+        "kana": "ひじょうに"
+    },
+    {
+        "kanji": "音",
+        "kana": "おと"
+    },
+    {
+        "kanji": "頑張る",
+        "kana": "がんばる"
+    },
+    {
+        "kanji": "飛行場",
+        "kana": "ひこうじょう"
+    },
+    {
+        "kanji": "食事",
+        "kana": "しょくじ・する"
+    },
+    {
+        "kanji": "食料品",
+        "kana": "しょくりょうひん"
+    },
+    {
+        "kanji": "飾る",
+        "kana": "かざる"
+    },
+    {
+        "kanji": "首",
+        "kana": "くび"
+    },
+    {
+        "kanji": "駐車場",
+        "kana": "ちゅうしゃじょう"
+    },
+    {
+        "kanji": "騒ぐ",
+        "kana": "さわぐ"
+    },
+    {
+        "kanji": "驚く",
+        "kana": "おどろく"
+    },
+    {
+        "kanji": "高校/高等学校",
+        "kana": "こうこう/こうとうがっこう"
+    },
+    {
+        "kanji": "高校生",
+        "kana": "こうこうせい"
+    },
+    {
+        "kanji": "髪",
+        "kana": "かみ"
+    },
+    {
+        "kanji": "鳴る",
+        "kana": "なる"
+    },
+    {
+        "kanji": "～代",
+        "kana": "～だい"
+    },
+    {
+        "kanji": "～会",
+        "kana": "～かい"
+    },
+    {
+        "kanji": "～区",
+        "kana": "～く"
+    },
+    {
+        "kanji": "～君",
+        "kana": "～くん"
+    },
+    {
+        "kanji": "～員",
+        "kana": "～いん"
+    },
+    {
+        "kanji": "～始める",
+        "kana": "～はじめる"
+    },
+    {
+        "kanji": "～学部",
+        "kana": "～がくぶ"
+    },
+    {
+        "kanji": "～家",
+        "kana": "～か"
+    },
+    {
+        "kanji": "～式",
+        "kana": "～しき"
+    },
+    {
+        "kanji": "～月",
+        "kana": "～つき"
+    },
+    {
+        "kanji": "～様",
+        "kana": "～さま"
+    },
+    {
+        "kanji": "～町",
+        "kana": "～ちょう"
+    },
+    {
+        "kanji": "～目",
+        "kana": "～め"
+    },
+    {
+        "kanji": "～続ける",
+        "kana": "～つづける"
+    },
+    {
+        "kanji": "～製",
+        "kana": "～せい"
+    },
+    {
+        "kanji": "～軒",
+        "kana": "～けん"
+    }
+]

@@ -1,48 +1,62 @@
-import csv
-import os
-from django.core.management.base import BaseCommand
-from blog.models import Kanji
-from django.contrib.auth.models import User
-from django.conf import settings
+from blog.models import Word
+from collections import defaultdict
 
+# Словарь: (kanji, kana, level) → список id
+seen = defaultdict(list)
 
-class Command(BaseCommand):
-    help = "Обновление переводов в базе данных на основе CSV-файла"
+for word in Word.objects.filter(level="3"):
+    key = (word.kanji, word.kana, word.level)
+    seen[key].append(word.id)
 
-    def handle(self, *args, **kwargs):
-        # Путь к CSV-файлу
-        file_path = os.path.join(settings.BASE_DIR, 'KanjiList_N5.csv')
+# Удаляем всё, кроме первого
+for ids in seen.values():
+    if len(ids) > 1:
+        Word.objects.filter(id__in=ids[1:]).delete()
 
-        # Проверяем наличие файла
-        if not os.path.exists(file_path):
-            self.stdout.write(self.style.ERROR(f"Файл {file_path} не найден."))
-            return
+print("✅ Дубликаты удалены.")
+# import csv
+# from django.core.management.base import BaseCommand
+# from blog.models import Word
+# from tqdm import tqdm
 
-        # Открываем CSV-файл
-        with open(file_path, mode='r', encoding='utf-8') as file:
-            csv_reader = csv.reader(file, delimiter=',')
-            next(csv_reader)  # Пропускаем первую строку с метаданными (#name и #description)
+# class Command(BaseCommand):
+#     help = 'Обновляет поле translate_ru в модели Word из файла words_with_ru_n3.csv (только для level=3)'
 
-            updated_count = 0
-            for row in csv_reader:
-                # Проверяем, что строка содержит необходимые поля
-                if len(row) < 3:
-                    continue
+#     def handle(self, *args, **kwargs):
+#         updated = 0
+#         not_found = 0
+#         skipped = 0
 
-                kanji, onyomi, kunyomi, meaning = row
+#         try:
+#             with open('words_with_ru_n3.csv', newline='', encoding='utf-8') as csvfile:
+#                 reader = list(csv.DictReader(csvfile, delimiter=';'))
+#                 total = len(reader)
 
-                # Пропускаем пустые строки
-                if not kanji:
-                    continue
+#                 for row in tqdm(reader, total=total, desc="🔄 Обновление перевода"):
+#                     kanji = row['Kanji'].strip()
+#                     translation_ru = row['Translation RU'].strip()
 
-                # Ищем запись в базе данных
-                try:
-                    kanji_entry = Kanji.objects.get(kanji=kanji)
-                    kanji_entry.onyomi = onyomi  # Обновляем перевод
-                    kanji_entry.kunyomi = kunyomi  # Обновляем перевод
-                    kanji_entry.save()
-                    updated_count += 1
-                except Kanji.DoesNotExist:
-                    self.stdout.write(self.style.WARNING(f"Запись не найдена: kanji={kanji}"))
+#                     if not kanji or not translation_ru:
+#                         skipped += 1
+#                         continue
 
-        self.stdout.write(self.style.SUCCESS(f"Обновлено {updated_count} записей в базе данных."))
+#                     # Только level=3
+#                     words = Word.objects.filter(kanji=kanji, level="3")
+
+#                     if words.exists():
+#                         for word in words:
+#                             if word.translate_ru != translation_ru:
+#                                 word.translate_ru = translation_ru
+#                                 word.save()
+#                                 updated += 1
+#                     else:
+#                         not_found += 1
+
+#         except FileNotFoundError:
+#             self.stderr.write("❌ Файл words_with_ru_n3.csv не найден.")
+#             return
+
+#         self.stdout.write(self.style.SUCCESS("\n✅ Обновление завершено"))
+#         self.stdout.write(f"📝 Обновлено переводов: {updated}")
+#         self.stdout.write(f"❌ Не найдено слов с level=3: {not_found}")
+#         self.stdout.write(f"⏭ Пропущено строк (пустые данные): {skipped}")

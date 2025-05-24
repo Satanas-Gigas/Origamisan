@@ -23,39 +23,29 @@ class Grammar(models.Model):
     # Дополнительно можно указать порядок сортировки или уникальные ограничения
         ordering = ['level', 'title']
 
+class PartOfSpeech(models.Model):
+    code = models.CharField(max_length=100, unique=True)  # например, "Noun" или "Transitive verb"
+    description = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        return self.code
+
+
 class Word(models.Model):
     level = models.CharField(max_length=1, default="5")
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    
     kanji = models.CharField(max_length=100, blank=True, null=True)
     kana = models.CharField(max_length=100, blank=True, null=True)
     romaji = models.CharField(max_length=100, blank=True, null=True)
-    translate_ru = models.CharField(max_length=200, blank=True, null=True)
+    
     translate_en = models.CharField(max_length=200, blank=True, null=True)
-    part_of_speech = models.CharField(
-        max_length=50, 
-        blank=True, 
-        null=True, 
-    choices=[
-        ('verb', 'Verb'),
-        ('noun', 'Noun'),
-        ('i-adjective', 'I-Adjective'),
-        ('na-adjective', 'Na-Adjective'),
-        ('adverb', 'Adverb'),
-        ('conjunction', 'Conjunction'),  # ← добавлен
-        ('particle', 'Particle'),        # ← добавлен
-        ('interjection', 'Interjection'),  # ← для あ, ええ и т.п.
-        ('auxiliary-verb', 'Auxiliary Verb'),  # ← 〜たい, 〜ます
-        ('question-word', 'Question Word'),
-        ('counter', 'Counter'),
-        ('prefix', 'Prefix'),            # ← お〜, ご〜
-        ('suffix', 'Suffix'),
-        ('expression', 'Expression'),    # ← устойчивые выражения
-        ('other', 'Other'),              # ← для редких случаев
-    ]
-    )
+    translate_ru = models.CharField(max_length=200, blank=True, null=True)
+    
+    part_of_speech = models.ManyToManyField(PartOfSpeech, blank=True)
 
     def __str__(self):
-        return f'{self.kanji} ({self.kana}) ({self.level})'
+        return f'{self.kanji or self.kana} ({self.level})'
 
     class Meta:
         ordering = ['level', 'kanji', 'kana']

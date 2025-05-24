@@ -6,7 +6,7 @@ from .forms import GrammarForm, ExampleForm, WordForm, KanjiForm,  WordKanaVaria
 from django.forms import inlineformset_factory
 import random
 import re
-from django.db.models import Q, Case, When, F, Func
+from django.db.models import Q, Case, When, F, Func, Count
 
 # def grammar(request):
 #     grammars = Grammar.objects.prefetch_related('examples').filter(level=5)  # Предзагрузка примеров
@@ -178,18 +178,6 @@ def word_detail_view(request):
     }
     return render(request, 'blog/word_detail.html', context)
 
-# def word_edit(request, pk):
-#     word = get_object_or_404(Word, pk=pk)
-#     if request.method == "POST":
-#         form = WordForm(request.POST, instance=word)
-#         if form.is_valid():
-#             word = form.save(commit=False)
-#             word.save()
-#             return redirect('word')
-#     else:
-#         form = WordForm(instance=word)
-#     return render(request, 'blog/word_edit.html', {'form': form})
-
 def word_edit(request, pk):
     word = get_object_or_404(Word, pk=pk)
     KanaFormSet = inlineformset_factory(Word, Word_kana_variant, fields=['add_kana'], extra=1, can_delete=True)
@@ -264,10 +252,6 @@ def handle_hide_mode(request, question_count, level):
         question_count = int(question_count)
 
     while len(correct_kanjis) < question_count:
-        # correct_answer = kanji_list.exclude(
-        #     kanji__in=[entry["answer"].kanji for entry in correct_kanjis]
-        # ).annotate(random_val=Func(F('id'), function='RANDOM')).order_by('random_val').first()
-
         excluded_kanji = [entry["answer"].kanji for entry in correct_kanjis]
         ids = list(kanji_list.exclude(kanji__in=excluded_kanji).values_list('id', flat=True))
 
@@ -310,7 +294,6 @@ def handle_hide_mode(request, question_count, level):
     
     return questions
 
-# def generate_kanji_to_kana_questions(request, question_count):
 def generate_kanji_to_kana_questions(request, question_count, level):
     # Проверка значения question_count
     try:
@@ -333,7 +316,7 @@ def generate_kanji_to_kana_questions(request, question_count, level):
 
     for word in words:
         correct_kana = word.kana
-        part_of_speech = word.part_of_speech
+        part_of_speech_set = word.part_of_speech.all()
 
         # Попытка найти суффикс каны через kanji
         kana_suffix = ""
@@ -344,8 +327,8 @@ def generate_kanji_to_kana_questions(request, question_count, level):
 
         # Формируем запрос для получения фейковых вариантов
         all_kana_query = Word.objects.filter(~Q(kana=correct_kana)).exclude(kanji="''").exclude(kanji=None)  # Исключаем правильный ответ
-        if part_of_speech:
-            all_kana_query = all_kana_query.filter(part_of_speech=part_of_speech)
+        if part_of_speech_set:
+            all_kana_query = all_kana_query.filter(part_of_speech__in=part_of_speech_set)
         if kana_suffix and len(kana_suffix) > 0:
             all_kana_query = all_kana_query.filter(kana__endswith=kana_suffix)
 
@@ -394,7 +377,7 @@ def generate_kana_to_kanji_questions(request, question_count, level):
 
     for word in words:
         correct_kanji = word.kanji
-        part_of_speech = word.part_of_speech
+        part_of_speech_set = word.part_of_speech.all()
 
         # Регулярное выражение для выделения каны и иероглифов
         kana_suffix = ""
@@ -405,8 +388,8 @@ def generate_kana_to_kanji_questions(request, question_count, level):
 
         # Формируем запрос для получения фейковых вариантов
         all_kanji_query = Word.objects.filter(~Q(kanji=correct_kanji)).exclude(kanji="''").exclude(kanji=None)
-        if part_of_speech:  # Учитываем часть речи
-            all_kanji_query = all_kanji_query.filter(part_of_speech=part_of_speech)
+        if part_of_speech_set:  # Учитываем часть речи
+            all_kanji_query = all_kanji_query.filter(part_of_speech__in=part_of_speech_set)
         if kana_suffix:  # Если найден суффикс, фильтруем по нему
             all_kanji_query = all_kanji_query.filter(kana__endswith=kana_suffix)
 
@@ -436,45 +419,130 @@ def generate_kana_to_kanji_questions(request, question_count, level):
 
     return questions
 
+# def generate_kanji_to_trans_questions(request, question_count, level):
+#     if question_count == "all":
+#         question_count = Word.objects.annotate(pos_count=Count('part_of_speech')).filter(
+#             kanji__isnull=False,
+#             level=level,
+#             pos_count__gt=0
+#         ).exclude(kanji="''").exclude(kanji=None).count()
+#     else:
+#         if not str(question_count).isdigit():
+#             return render(request, 'blog/word_test_start.html', {'error': 'Некорректное количество вопросов.'})
+#         question_count = int(question_count)
+
+#     questions = []
+
+
+#     words = Word.objects.annotate(pos_count=Count('part_of_speech')).filter(
+#         kanji__isnull=False,
+#         level=level,
+#         pos_count__gt=0
+#     ).exclude(kanji="''").exclude(kanji=None).order_by('?')[:question_count]
+
+#     for word in words:
+#         correct_trans = word.translate_ru or ""
+#         part_of_speech_set = word.part_of_speech.all()
+
+#         if not correct_trans.strip() or not part_of_speech_set.exists():
+#             continue  # пропустить слово без перевода или части речи
+
+#         all_trans = list(
+#             Word.objects.filter(part_of_speech__in=part_of_speech_set)
+#             .exclude(translate_ru__isnull=True)
+#             .exclude(translate_ru="")
+#             .exclude(translate_ru=correct_trans)
+#             .values_list('translate_ru', flat=True)
+#             .distinct()
+#             .order_by('?')[:10]
+#         )
+
+#         if len(all_trans) < 3:
+#             continue
+
+#         print ("all_trans ", all_trans)
+
+#         fake_trans = random.sample(all_trans, 3)
+#         options = fake_trans + [correct_trans]
+#         random.shuffle(options)
+
+#         questions.append({
+#             'question_word': word.kanji,
+#             'options': options,
+#             'correct': correct_trans,
+#         })
+
+#     return questions
+
+from django.db.models import Count
+
 def generate_kanji_to_trans_questions(request, question_count, level):
     if question_count == "all":
-        question_count = Word.objects.filter(
+        question_count = Word.objects.annotate(pos_count=Count('part_of_speech')).filter(
             kanji__isnull=False,
-            level=level
-            ).exclude(kanji="''").exclude(kanji=None).count()
+            translate_ru__isnull=False,
+            level=level,
+            pos_count__gt=0
+        ).exclude(kanji="").exclude(kanji=None).count()
     else:
         if not str(question_count).isdigit():
             return render(request, 'blog/word_test_start.html', {'error': 'Некорректное количество вопросов.'})
         question_count = int(question_count)
+
     questions = []
 
-    # Получаем случайные слова с kanji
-    words = Word.objects.filter(kanji__isnull=False, level=level).exclude(kanji="''").exclude(kanji=None).order_by('?')[:question_count]
+    words = Word.objects.annotate(pos_count=Count('part_of_speech')).filter(
+        kanji__isnull=False,
+        translate_ru__isnull=False,
+        level=level,
+        pos_count__gt=0
+    ).exclude(kanji="").exclude(kanji=None).order_by('?')[:question_count]
 
     for word in words:
-        correct_trans = word.translate_ru
-        part_of_speech = word.part_of_speech
+        correct_trans = word.translate_ru or ""
+        part_of_speech_set = list(word.part_of_speech.all())
 
-        # Получаем все переводы с такой же частью речи, исключая правильный ответ
-        all_trans = list(
-            Word.objects.filter(part_of_speech=part_of_speech)
-            .exclude(translate_ru__isnull=True)
-            .exclude(translate_ru="")
-            .exclude(translate_ru=correct_trans)
-            .values_list('translate_ru', flat=True)
-            .order_by('?')[:10]  # Больше выборка, чтобы избежать ошибок
-        )
+        print(f"\n▶️ Слово: {word.kanji} → {correct_trans}")
+        print(f"   Части речи: {[p.code for p in part_of_speech_set]}")
 
-        # Если недостаточно вариантов, пропускаем вопрос
+        # Поиск других переводов с совпадающими частями речи
+        all_trans = Word.objects.filter(
+            part_of_speech__in=part_of_speech_set
+        ).exclude(
+            translate_ru__isnull=True
+        ).exclude(
+            translate_ru=""
+        ).exclude(
+            translate_ru=correct_trans
+        ).values_list(
+            'translate_ru', flat=True
+        ).distinct()
+
+        all_trans = list(set(all_trans))  # Убираем дубликаты
+
+        print(f"   🔍 Найдено вариантов перевода: {len(all_trans)}")
+
         if len(all_trans) < 3:
+            # fallback на любые переводы
+            all_trans = Word.objects.exclude(
+                translate_ru__isnull=True
+            ).exclude(
+                translate_ru=""
+            ).exclude(
+                translate_ru=correct_trans
+            ).values_list(
+                'translate_ru', flat=True
+            ).order_by('?')[:10]
+            all_trans = list(set(all_trans))
+
+        if len(all_trans) < 3:
+            print("⛔ Недостаточно вариантов — пропущено")
             continue
 
-        # Выбираем три случайных фейковых перевода
         fake_trans = random.sample(all_trans, 3)
         options = fake_trans + [correct_trans]
         random.shuffle(options)
 
-        # Добавляем вопрос
         questions.append({
             'question_word': word.kanji,
             'options': options,
@@ -509,11 +577,11 @@ def generate_trans_to_kanji_questions(request, question_count, level):
     for word in words:
         # Определяем правильный вариант (kanji или kana)
         correct_kanji = word.kanji if word.kanji != "''" else word.kana
-        part_of_speech = word.part_of_speech
+        part_of_speech_set = word.part_of_speech.all()
 
         # Получаем список всех kanji или заменяем их на kana, если kanji пусто
         all_kanji = list(
-            Word.objects.filter(part_of_speech=part_of_speech)
+            Word.objects.filter(part_of_speech__in=part_of_speech_set)
             .annotate(
                 kanji_or_kana=Case(
                     When(kanji="''", then=F('kana')),  # Если kanji пусто, берём kana
@@ -540,7 +608,7 @@ def generate_trans_to_kanji_questions(request, question_count, level):
             'options': options,
             'correct': correct_kanji,
         })
-
+        
     return questions
 
 def process_request_params(request):
@@ -601,7 +669,7 @@ def word_test_start(request):
         if test_type not in allowed_test_types:
             return render(request, 'blog/word_test_start.html', {'error': 'Некорректный тип теста.'})
 
-        # Передаём level в каждую генерацию вопросов
+        # Генерация вопросов с учётом типа теста
         if test_type == 'hide':
             questions = handle_hide_mode(request, question_count, level)
         elif test_type == 'kanji_to_kana':
@@ -613,8 +681,15 @@ def word_test_start(request):
         elif test_type == 'trans_to_kanji':
             questions = generate_trans_to_kanji_questions(request, question_count, level)
         else:
-            return render(request, 'blog/word_test_start.html', {'error': 'Неизвестный тип теста'})
+            return render(request, 'blog/word_test_start.html', {'error': 'Неизвестный тип теста.'})
 
+        # ✅ Проверка: есть ли вопросы вообще
+        if not questions:
+            return render(request, 'blog/word_test_start.html', {
+                'error': '❌ Не удалось сгенерировать вопросы. Возможно, в базе нет подходящих слов для этого уровня или типа теста.'
+            })
+
+        # Сохраняем данные в сессию
         request.session.update({
             'questions': questions,
             'current_question_index': 0,
@@ -625,6 +700,7 @@ def word_test_start(request):
             'level': level
         })
 
+        # Отображаем первый вопрос
         context = {
             'question': questions[0],
             'total': question_count if question_count != "all" else len(questions),
@@ -635,9 +711,8 @@ def word_test_start(request):
             'extra_option': extra_option,
             'level': level
         }
-
+        
         return render(request, 'blog/word_test_start.html', context)
-
     except ValueError as e:
         return render(request, 'blog/word_test_start.html', {'error': str(e)})
     
@@ -683,6 +758,7 @@ def word_test_next(request):
             'answers_time': answers_time,
             'extra_option': extra_option,  # убрали пробел в ключе
             'level': level,    
+            'test_type': request.session.get('test_type'),  # ⬅️ ЭТО ВАЖН
 
         }
         return render(request, 'blog/word_test_start.html', context)
