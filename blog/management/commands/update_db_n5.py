@@ -4,10 +4,10 @@ from blog.models import Word, PartOfSpeech  # замени 'blog' на свою 
 from tqdm import tqdm
 
 class Command(BaseCommand):
-    help = "🔄 Обновляет part_of_speech у Word из файла words_level5_with_pos_fixed_final_pos.json"
+    help = "🔄 Обновляет part_of_speech у Word из файла words_level5_with_pos_updated_last.json"
 
     def handle(self, *args, **options):
-        INPUT_FILE = "words_level5_with_pos_fixed_final_pos.json"
+        INPUT_FILE = "words_level5_with_pos_updated_last.json"
 
         try:
             with open(INPUT_FILE, "r", encoding="utf-8") as f:

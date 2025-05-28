@@ -1,39 +1,23 @@
-import csv
 from django.core.management.base import BaseCommand
 from blog.models import Word
+import json
 from tqdm import tqdm
 
 class Command(BaseCommand):
-    help = 'Находит строки из CSV, которых нет в базе данных Word (level=3)'
+    help = "Экспортирует слова из Word без part_of_speech в JSON-файл"
 
     def handle(self, *args, **options):
-        missing = []
+        words_without_pos = Word.objects.filter(part_of_speech__isnull=True, level="5").distinct()
+        result = []
 
-        with open('words_with_ru_n3.csv', newline='', encoding='utf-8') as csvfile:
-            reader = csv.DictReader(csvfile, delimiter=';')
-            rows = list(reader)
+        for word in tqdm(words_without_pos, desc="📤 Экспорт без part_of_speech", ncols=100):
+            result.append({
+                "kanji": word.kanji,
+                "kana": word.kana,
+                "part_of_speech": []
+            })
 
-        self.stdout.write(f"🔍 Сравниваем {len(rows)} строк из CSV с базой данных...")
+        with open("words_n5_missing_pos.json", "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=4)
 
-        for row in tqdm(rows, desc="🔄 Проверка записей"):
-            kanji = row['Kanji'].strip()
-            kana = row['Kana'].strip()
-            romaji = row['Romaji'].strip()
-
-            # Ищем по kanji и kana и уровню
-            match = Word.objects.filter(
-                kanji=kanji if kanji else None,
-                kana=kana if kana else None,
-                romaji=romaji if romaji else None,
-                level="3"
-            ).exists()
-
-            if not match:
-                missing.append(row)
-
-        self.stdout.write(f"\n❌ Найдено отсутствующих слов: {len(missing)}\n")
-
-        for row in missing:
-            self.stdout.write(
-                f"{row['Kanji']} | {row['Kana']} | {row['Romaji']} | {row['Translation']} | {row['Translation RU']}"
-            )
+        self.stdout.write(self.style.SUCCESS(f"✅ Экспортировано: {len(result)} записей в words_missing_pos.json"))
