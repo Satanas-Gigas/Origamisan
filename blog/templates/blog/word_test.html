@@ -19,6 +19,12 @@
             {% csrf_token %}
             <input type="hidden" name="level" value="4">
             <button type="submit" class="btn btn-outline-primary {% if level == '4' %}active{% endif %}">N4</button>
+        </form> 
+
+        <form method="post" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="level" value="3">
+            <button type="submit" class="btn btn-outline-primary {% if level == '3' %}active{% endif %}">N3</button>
         </form>
     JLPT {{ level }}
     </h1>
