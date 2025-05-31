@@ -1,52 +1,51 @@
-import csv
+import json
 import time
-from googletrans import Translator
+import openai
 from tqdm import tqdm
 
-translator = Translator()
+openai.api_key = "your-openai-api-key"  # 🔑 Вставь сюда свой ключ
 
-INPUT_FILE = 'word_n3_merged_with_kana_pos.csv'
-OUTPUT_FILE = 'kanji_with_ru_n3.csv'
+INPUT_FILE = "words_n2.json"
+OUTPUT_FILE = "words_n2_translated.json"
 
-def clean(value):
-    return "" if value.strip() in {"–", "-", "None", ""} else value.strip()
+MAX_RETRIES = 3
+DELAY = 1.5  # Секунды между запросами
 
-words_with_translations = []
+def translate_with_gpt(text):
+    """Перевод с английского на русский через OpenAI GPT."""
+    prompt = f"Переведи на русский язык следующую английскую фразу:\n{text}"
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",  # или gpt-4 если нужно
+                messages=[
+                    {"role": "system", "content": "Ты профессиональный переводчик с английского на русский."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.3,
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            print(f"⚠️ Ошибка при переводе '{text}' (попытка {attempt}): {e}")
+            time.sleep(DELAY * attempt)
+    return ""
 
-with open(INPUT_FILE, 'r', encoding='utf-8') as file:
-    reader = csv.reader(file, delimiter=';')
-    header = next(reader)
-    header.append("Translation RU")  # Добавим новую колонку
-    rows = list(reader)
+def main():
+    with open(INPUT_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
 
-for line_number, row in tqdm(enumerate(rows, start=2), total=len(rows), desc="🔁 Перевод"):
-    if len(row) < 4:
-        print(f"⚠️ Строка {line_number} неполная: {';'.join(row)}")
-        continue
+    for word in tqdm(data, desc="🌐 Перевод на русский"):
+        if "translate_ru" not in word or not word["translate_ru"]:
+            en_text = word.get("translate_en", "").strip()
+            if en_text:
+                ru_text = translate_with_gpt(en_text)
+                word["translate_ru"] = ru_text
+                time.sleep(DELAY)
 
-    # Очистка
-    row = [clean(cell) for cell in row]
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
-    # Распаковка
-    try:
-        kanji, kana, romaji, meaning_en, part_of_speech = row
-    except ValueError:
-        print(f"❌ Строка {line_number} не распаковывается корректно: {row}")
-        continue
+    print(f"\n✅ Перевод завершён. Сохранено в {OUTPUT_FILE}")
 
-    try:
-        meaning_ru = translator.translate(meaning_en, src='en', dest='ru').text
-    except Exception as e:
-        print(f"❌ Ошибка перевода строки {line_number}: {e}")
-        meaning_ru = "Перевод недоступен"
-
-    time.sleep(1)
-    words_with_translations.append([kanji, kana, romaji, meaning_en, part_of_speech, meaning_ru])
-
-# Сохраняем в CSV
-with open(OUTPUT_FILE, 'w', encoding='utf-8', newline='') as f:
-    writer = csv.writer(f, delimiter=';')
-    writer.writerow(header)
-    writer.writerows(words_with_translations)
-
-print(f"\n✅ Переводы добавлены. Файл сохранён как: {OUTPUT_FILE}")
+if __name__ == "__main__":
+    main()
