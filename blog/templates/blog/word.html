@@ -9,18 +9,33 @@
 <div class="container py-3">
   <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
         <h1 class="display-4 fw-normal text-body-emphasis">
-            Слова
-            <form method="post" class="d-inline">
-        {% csrf_token %}
-        <input type="hidden" name="level" value="5">
-        <button type="submit" class="btn btn-outline-primary {% if level == '5' %}active{% endif %}">N5</button>
-        </form>
+          Слова
+          <form method="post" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="level" value="5">
+            <button type="submit" class="btn btn-outline-primary {% if level == '5' %}active{% endif %}">N5</button>
+          </form>
 
-        <form method="post" class="d-inline">
-        {% csrf_token %}
-        <input type="hidden" name="level" value="4">
-        <button type="submit" class="btn btn-outline-primary {% if level == '4' %}active{% endif %}">N4</button>
-        </form>
+          <form method="post" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="level" value="4">
+            <button type="submit" class="btn btn-outline-primary {% if level == '4' %}active{% endif %}">N4</button>
+          </form>
+          <form method="post" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="level" value="3">
+            <button type="submit" class="btn btn-outline-primary {% if level == '3' %}active{% endif %}">N3</button>
+          </form>          
+          <form method="post" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="level" value="2">
+            <button type="submit" class="btn btn-outline-primary {% if level == '2' %}active{% endif %}">N2</button>
+          </form>
+          <form method="post" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="level" value="1">
+            <button type="submit" class="btn btn-outline-primary {% if level == '1' %}active{% endif %}">N1</button>
+          </form>
         </h1>
     <p class="fs-5 text-body-secondary">Быстрый набор слов на уровень N{{ level }}</p>
   </div>
