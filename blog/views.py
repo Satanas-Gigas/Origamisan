@@ -65,17 +65,16 @@ def grammar_create(request):
     })
 
 def word_create(request):
-    if request.method == 'POST':
-        word_form = WordForm(request.POST)
-        if word_form.is_valid():
-            word_form.save()
-            url = reverse('word') + f'?level={level}#word-{word.pk}'
-            return redirect(url)
+    if request.method == "POST":
+        form = WordForm(request.POST)
+        if form.is_valid():
+            new_word = form.save()
+            level = new_word.level  # уровень из созданного слова
+            return redirect(reverse('word') + f'?level={level}#word-{new_word.pk}')
     else:
-        word_form = WordForm()
+        form = WordForm()
 
-    context = {'form': word_form,}
-    return render(request, 'blog/word_create.html', context)
+    return render(request, 'blog/word_create.html', {'form': form})
 
 def kanji(request):
     if request.method == "POST":
@@ -176,9 +175,15 @@ def word_detail_view(request):
     }
     return render(request, 'blog/word_detail.html', context)
 
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
+from django.forms import inlineformset_factory
+from .models import Word, Word_kana_variant, Word_kanji_variant, Word_translate_variant
+from .forms import WordForm, WordKanaVariantForm, WordKanjiVariantForm, WordTranslateVariantForm
+
 def word_edit(request, pk):
     word = get_object_or_404(Word, pk=pk)
-    level = request.GET.get("level", "5")  # Получаем уровень из запроса
+    level = request.GET.get("level", "5")
 
     KanaFormSet = inlineformset_factory(Word, Word_kana_variant, fields=['add_kana'], extra=1, can_delete=True)
     KanjiFormSet = inlineformset_factory(Word, Word_kanji_variant, fields=['add_kanji'], extra=1, can_delete=True)
@@ -190,15 +195,14 @@ def word_edit(request, pk):
         kanji_formset = KanjiFormSet(request.POST, instance=word)
         translate_formset = TranslateFormSet(request.POST, instance=word)
 
-        if word_form.is_valid() and kana_formset.is_valid() and kanji_formset.is_valid() and translate_formset.is_valid():
+        if all([word_form.is_valid(), kana_formset.is_valid(), kanji_formset.is_valid(), translate_formset.is_valid()]):
             word_form.save()
             kana_formset.save()
             kanji_formset.save()
             translate_formset.save()
 
-            # Возвращаем на нужный уровень и к карточке
             url = reverse('word') + f'?level={level}#word-{word.pk}'
-            return redirect(reverse('word') + f'?level={level}#word-{word.pk}')
+            return redirect(url)
     else:
         word_form = WordForm(instance=word)
         kana_formset = KanaFormSet(instance=word)
@@ -211,7 +215,7 @@ def word_edit(request, pk):
         'kanji_formset': kanji_formset,
         'translate_formset': translate_formset,
         'level': level,
-        'word': word,  # нужен для кнопки "Отмена"
+        'word': word,
     }
     return render(request, 'blog/word_edit.html', context)
 
