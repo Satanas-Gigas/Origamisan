@@ -82,7 +82,7 @@ def kanji(request):
     else:
         level = request.GET.get('level', '5')
 
-    if level not in ['4', '5']:
+    if level not in ['5', '4', '3', '2', '1']:
         level = '5'
 
     kanjis = Kanji.objects.filter(level=level) # Предзагрузка примеров
