@@ -13,15 +13,11 @@
         height: 100%;
         margin: 0;
         padding: 0;
-        overflow: hidden; /* ОТКЛЮЧАЕМ скролл! */
+        overflow: hidden;
       }
       body {
         height: 100vh;
-        min-height: 100vh;
-        max-height: 100vh;
         width: 100vw;
-        min-width: 100vw;
-        max-width: 100vw;
         display: flex;
         flex-direction: column;
       }
@@ -32,38 +28,22 @@
         width: 100vw;
       }
       .navbar, .footer {
-        flex: 0 0 10vh; /* 10% высоты */
-        min-height: 0;
-        max-height: none;
-        background: #212529 !important; /* ОДИНАКОВЫЙ цвет */
+        flex: 0 0 10vh;
+        background: #212529 !important;
         color: #fff !important;
         z-index: 1;
-      }
-      .navbar * {
-        color: #fff !important;
-      }
-      .header {
-        flex: 0 0 20vh; /* 20% высоты */
         min-height: 0;
         max-height: none;
-        overflow: hidden;
       }
-      .header .carousel,
-      .header .carousel-inner,
-      .header .carousel-item,
-      .header .carousel-item img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-      .main {
-        flex: 1 1 60vh; /* 60% высоты */
-        min-height: 0;
-        max-height: none;
-        overflow: auto; /* Если контент не помещается, скроллится только main! */
-      }
-      
-      /* Убираем внешние отступы/паддинги у всех основных блоков */
+      .navbar * { color: #fff !important; }
+      /* Управление header и main */
+      {% if show_header %}
+        .header { flex: 0 0 20vh; min-height: 0; max-height: none; overflow: hidden; }
+        .main   { flex: 1 1 60vh; min-height: 0; max-height: none; overflow: auto; }
+      {% else %}
+        .header { display: none !important; }
+        .main   { flex: 1 1 80vh; min-height: 0; max-height: none; overflow: auto; }
+      {% endif %}
       .main, .header, .footer, .navbar {
         margin: 0 !important;
         padding: 0 !important;
@@ -74,32 +54,18 @@
         justify-content: center;
         border-top: 1px solid #333;
       }
-
-      .navbar, .footer {
-  flex: 0 0 10vh;
-  min-height: 0;
-  max-height: none;
-  background: #212529 !important;
-  color: #fff !important;
-  z-index: 1;
-}
-.header {
-  flex: 0 0 20vh;
-  min-height: 0;
-  max-height: none;
-  overflow: hidden;
-}
-.main {
-  flex: 1 1 calc(60vh - 2px);  /* <-- уменьшили чуть! */
-  min-height: 0;
-  max-height: none;
-  overflow: auto;
-}
-
+      .header .carousel,
+      .header .carousel-inner,
+      .header .carousel-item,
+      .header .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
       @media (max-width: 600px) {
         .navbar, .footer { flex-basis: 11vh; }
         .header { flex-basis: 20vh; }
-        .main { flex-basis: 58vh; }
+        .main   { flex-basis: {% if show_header %}58vh{% else %}78vh{% endif %}; }
       }
     </style>
   </head>
@@ -151,6 +117,7 @@
         </div>
       </nav>
       <!-- Header (20%) -->
+      {% if show_header %}
       <div class="header d-flex align-items-center justify-content-center position-relative">
         <div id="myCarousel" class="carousel slide w-100 h-100" data-bs-ride="carousel">
           <div class="carousel-inner w-100 h-100">
@@ -172,8 +139,9 @@
           </button>
         </div>
       </div>
-      <!-- Main (60%) -->
-       <div class="main">
+      {% endif %}
+      <!-- Main -->
+      <div class="main">
         <div class="container d-flex justify-content-center">
           {% block content %}
           <!-- Контент из дочернего шаблона -->
