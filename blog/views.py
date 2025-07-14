@@ -38,7 +38,7 @@ def word(request):
     return render(request, 'blog/word.html', {'words': words, 'level': level})
 
 def mainpanel(request):
-    return render(request, 'blog/mainpanel.html', {"show_header": True})
+    return render(request, 'blog/mainpanel.html', {"show_header": False})
 
 def grammar_create(request):
     if request.method == 'POST':
