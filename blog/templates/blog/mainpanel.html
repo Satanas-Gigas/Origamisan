@@ -1,62 +1,180 @@
 {% extends 'blog/base.html' %}
 {% load static %}
-{% block content %}
 {% block extra_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/mainpanel.css' %}">
+<style>
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    min-height: 0;
+    background: transparent;
+  }
+  .main .container {
+    width: 100%;
+    height: auto;
+    padding: 3vh 2vw 3vh 2vw !important;
+    margin: 0 auto;
+    max-width: 100vw !important;
+  }
+  .main-row-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    gap: 2vw;
+  }
+  .main-card-col {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-width: 0;
+  }
+  .main .card.card-fit {
+    width: 95%;
+    max-width: 99%;
+    min-width: 0;
+    border: 0.3vh solid #212529;
+    border-radius: 2vw;
+    background: #fff;
+    margin: 0;
+    padding: 6% 4% 5% 4%;
+    box-shadow: 0 0.7vw 3vw -1vw #0002;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.28s cubic-bezier(0.45, 0.05, 0.55, 0.95), box-shadow 0.22s;
+  }
+  .main .card.card-fit:hover {
+    transform: scale(1.04);
+    box-shadow: 0 2vw 4vw -1vw #0004, 0 0.1vw 2vw 0 #2090e044;
+    z-index: 2;
+  }
+  .main .card.card-fit img {
+    margin-bottom: 2vh;
+    width: 24%;
+    min-width: 90px;
+    max-width: 130px;
+    height: auto;
+    transition: transform 0.2s cubic-bezier(.22,.61,.36,1), box-shadow 0.23s;
+  }
+  .main .card.card-fit:hover img {
+    transform: scale(1.13) rotate(-2.5deg);
+    box-shadow: 0 0.5vw 2vw #1088ee23;
+  }
+  .main .card.card-fit h2 {
+    font-size: 2vw;
+    margin-bottom: 1.2vh;
+    font-weight: bold;
+  }
+  .main .card.card-fit p, .main .card.card-fit strong {
+    font-size: 1.2vw;
+  }
+  .main .card.card-fit .btn {
+    margin-top: auto;
+    min-width: 60%;
+    font-size: 1.1vw;
+  }
+  .hover-text:hover {
+    color: #0072ff;
+    text-shadow: 0 0 12px #2c98ff60, 0 2px 4px #fff9;
+    transition: color 0.2s, text-shadow 0.3s;
+  }
+  @media (max-width: 991px) {
+    .main-row-flex {
+      flex-direction: column;
+      gap: 3vh;
+    }
+    .main-card-col {
+      min-width: 0;
+      width: 100%;
+      margin-bottom: 2vh;
+    }
+    .main .card.card-fit {
+      width: 98%;
+      max-width: 99vw;
+      min-width: 0;
+      padding: 8% 5%;
+    }
+    .main .card.card-fit img {
+      width: 36vw;
+      min-width: 70px;
+      max-width: 160px;
+    }
+    .main .card.card-fit h2,
+    .main .card.card-fit p, .main .card.card-fit strong,
+    .main .card.card-fit .btn {
+      font-size: 2.7vw;
+    }
+  }
+</style>
 {% endblock %}
 
+{% block content %}
 <div class="container">
-    <div class="row text-center justify-content-center">
-        <!-- Карточка 1 -->
-        <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card shadow-lg p-4 w-100">
-                <img src="{% get_media_prefix %}sheep.svg" class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto"
-                 width="140" height="140" alt="Sheep">
-                <h2 class="fw-bold mt-3 hover-text">Грамматика</h2>
-                <strong><p class="flex-grow-1 hover-text">Начать разбор грамматики немедленно!</p></strong>
-                <p><a class="btn btn-primary btn-lg mt-auto" href="{% url 'grammar' %}">Приступить! &raquo;</a></p>
-                          
-            </div>
-        </div>
-        
-        <!-- Карточка 2 -->
-        <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card shadow-lg p-4 w-100">
-                <img src="{% get_media_prefix %}face1.svg" class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto" width="140" height="140" alt="Words">
-                <h2 class="fw-bold mt-3 hover-text">Слова!</h2>
-                <strong><p class="flex-grow-1 hover-text">Начать изучать слова!</p></strong>
-                <p><a class="btn btn-success btn-lg mt-auto" href="{% url 'word' %}">Приступить! &raquo;</a></p>
-                <div class='light x1'></div>
-                <div class='light x2'></div>
-                <div class='light x3'></div>
-                <div class='light x4'></div>
-                <div class='light x5'></div>
-                <div class='light x6'></div>
-                <div class='light x7'></div>
-                <div class='light x8'></div>
-                <div class='light x9'></div>    
-            </div>
-        </div>
-
-        <!-- Карточка 3 -->
-        <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="card shadow-lg p-4 w-100">
-                <img src="{% get_media_prefix %}face2.svg" class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto" width="140" height="140" alt="Tests">
-                <h2 class="fw-bold mt-3 hover-text">Тесты!</h2>
-                <strong><p class="flex-grow-1 hover-text">Проверить себя на знания.</p> </strong>
-                <p><a class="btn btn-danger btn-lg mt-auto" href="{% url 'word_test' %}">Приступить! &raquo;</a></p>
-                <div class='light x1'></div>
-                <div class='light x2'></div>
-                <div class='light x3'></div>
-                <div class='light x4'></div>
-                <div class='light x5'></div>
-                <div class='light x6'></div>
-                <div class='light x7'></div>
-                <div class='light x8'></div>
-                <div class='light x9'></div>    
-            </div>
-        </div>
+  <div class="main-row-flex">
+    <!-- Карточка 1 -->
+    <div class="main-card-col">
+      <div class="card card-fit" data-url="{% url 'grammar' %}">
+        <img src="{% get_media_prefix %}sheep.svg"
+             class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto"
+             alt="Sheep">
+        <h2 class="hover-text">Грамматика</h2>
+        <strong>
+          <p class="hover-text">Начать разбор грамматики немедленно!</p>
+        </strong>
+        <p>
+          <a class="btn btn-primary btn-lg mt-auto" href="{% url 'grammar' %}">Приступить! &raquo;</a>
+        </p>
+      </div>
     </div>
+    <!-- Карточка 2 -->
+    <div class="main-card-col">
+      <div class="card card-fit" data-url="{% url 'word' %}">
+        <img src="{% get_media_prefix %}face1.svg"
+             class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto"
+             alt="Words">
+        <h2 class="hover-text">Слова!</h2>
+        <strong>
+          <p class="hover-text">Начать изучать слова!</p>
+        </strong>
+        <p>
+          <a class="btn btn-success btn-lg mt-auto" href="{% url 'word' %}">Приступить! &raquo;</a>
+        </p>
+      </div>
+    </div>
+    <!-- Карточка 3 -->
+    <div class="main-card-col">
+      <div class="card card-fit" data-url="{% url 'word_test' %}">
+        <img src="{% get_media_prefix %}face2.svg"
+             class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto"
+             alt="Tests">
+        <h2 class="hover-text">Тесты!</h2>
+        <strong>
+          <p class="hover-text">Проверить себя на знания.</p>
+        </strong>
+        <p>
+          <a class="btn btn-danger btn-lg mt-auto" href="{% url 'word_test' %}">Приступить! &raquo;</a>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
-
+<!-- JS для перехода по клику на карточку -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.card.card-fit[data-url]').forEach(function(card) {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function(e) {
+      if (e.target.tagName.toLowerCase() === 'a') return;
+      window.location.href = card.getAttribute('data-url');
+    });
+  });
+});
+</script>
 {% endblock %}
