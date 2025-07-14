@@ -83,24 +83,32 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'grammar' %}">Грамматика</a>
               </li>
+              
               <li class="nav-item">
                 <a class="nav-link toggle-visibility" href="{% url 'grammar_create' %}">Доб_ грамм</a>
               </li>
+                         {% endif %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'word' %}">Слова</a>
               </li>
+              {% if user.is_authenticated %}
               <li class="nav-item">
                 <a class="nav-link toggle-visibility" href="{% url 'word_create' %}">Доб_ Слова</a>
               </li>
+           {% endif %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'kanji' %}">Канджи</a>
               </li>
+
+              {% if user.is_authenticated %}
+
               <li class="nav-item">
                 <a class="nav-link toggle-visibility" href="{% url 'kanji_create' %}">Доб_ Канджи</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link toggle-visibility" href="{% url 'word_detail' %}">Посм_ всё</a>
               </li>
+              {% endif %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'word_test' %}">Тест Канджи - Кана</a>
               </li>
