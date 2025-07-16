@@ -46,9 +46,12 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="text-center">
-							<div class="toggle-visibility">
-								<a class="btn-edit" href="{% url 'kanji_edit' pk=kanji.pk %}">Редактировать</a>
-							</div>
+							{%  if user.is_authenticated  %}
+								<div class="toggle-visibility">
+									<a class="btn-edit" href="{% url 'kanji_edit' pk=kanji.pk %}">Редактировать</a>
+								</div>
+							{%  endif  %}
+
 							<span class="kanji-text" style="font-family: 'Sazanami_Mincho';">{{ kanji.kanji }}</span>
 						</div>
 						<ul class="list-group list-group-flush">

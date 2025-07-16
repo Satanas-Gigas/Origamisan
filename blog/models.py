@@ -89,14 +89,14 @@ class Word_translate_variant(models.Model):
 class Kanji(models.Model):
     level = models.CharField(max_length=1, default="5")
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    kanji = models.CharField(max_length=100)
+    kanji = models.CharField(max_length=1)  # обновлённый размер
     onyomi = models.CharField(max_length=100, blank=True, null=True)
     kunyomi = models.CharField(max_length=100, blank=True, null=True)
     meaning_ru = models.CharField(max_length=200, blank=True, null=True)
     meaning_en = models.CharField(max_length=200, blank=True, null=True)
+    radical = models.CharField(max_length=1, blank=True, null=True)  # новое поле
 
     def __str__(self):
-            return f'{self.kanji} ({self.level})'
+        return f'{self.kanji} ({self.level})'
     class Meta:
-    # Дополнительно можно указать порядок сортировки или уникальные ограничения
         ordering = ['level', 'kanji']

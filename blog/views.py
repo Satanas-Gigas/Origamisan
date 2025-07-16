@@ -10,10 +10,6 @@ from django.db.models import Q, Case, When, F, Func, Count
 from django.urls import reverse
 from django.shortcuts import redirect
 
-# def grammar(request):
-#     grammars = Grammar.objects.prefetch_related('examples').filter(level=5)  # Предзагрузка примеров
-#     return render(request, 'blog/grammar.html', {'grammars': grammars})
-
 def grammar(request):
     if request.method == "POST":
         level = request.POST.get('level', '5')
@@ -31,14 +27,19 @@ def grammar(request):
     })
 
 def word(request):
-    level = request.GET.get('level', '5')
+    # Сначала пробуем из POST, потом из GET, если не указано — '5'
+    level = request.POST.get('level') or request.GET.get('level') or '5'
     if level not in ['1', '2', '3', '4', '5']:
         level = '5'
     words = Word.objects.filter(level=level)
     return render(request, 'blog/word.html', {'words': words, 'level': level})
 
 def mainpanel(request):
-    return render(request, 'blog/mainpanel.html', {"show_header": False})
+    return render(request, 'blog/mainpanel.html', {"show_header": True})
+
+def mama(request):
+    return render(request, 'blog/mama.html', {"show_header": False})
+
 
 def grammar_create(request):
     if request.method == 'POST':
@@ -428,63 +429,6 @@ def generate_kana_to_kanji_questions(request, question_count, level):
         })
 
     return questions
-
-# def generate_kanji_to_trans_questions(request, question_count, level):
-#     if question_count == "all":
-#         question_count = Word.objects.annotate(pos_count=Count('part_of_speech')).filter(
-#             kanji__isnull=False,
-#             level=level,
-#             pos_count__gt=0
-#         ).exclude(kanji="''").exclude(kanji=None).count()
-#     else:
-#         if not str(question_count).isdigit():
-#             return render(request, 'blog/word_test_start.html', {'error': 'Некорректное количество вопросов.'})
-#         question_count = int(question_count)
-
-#     questions = []
-
-
-#     words = Word.objects.annotate(pos_count=Count('part_of_speech')).filter(
-#         kanji__isnull=False,
-#         level=level,
-#         pos_count__gt=0
-#     ).exclude(kanji="''").exclude(kanji=None).order_by('?')[:question_count]
-
-#     for word in words:
-#         correct_trans = word.translate_ru or ""
-#         part_of_speech_set = word.part_of_speech.all()
-
-#         if not correct_trans.strip() or not part_of_speech_set.exists():
-#             continue  # пропустить слово без перевода или части речи
-
-#         all_trans = list(
-#             Word.objects.filter(part_of_speech__in=part_of_speech_set)
-#             .exclude(translate_ru__isnull=True)
-#             .exclude(translate_ru="")
-#             .exclude(translate_ru=correct_trans)
-#             .values_list('translate_ru', flat=True)
-#             .distinct()
-#             .order_by('?')[:10]
-#         )
-
-#         if len(all_trans) < 3:
-#             continue
-
-#         print ("all_trans ", all_trans)
-
-#         fake_trans = random.sample(all_trans, 3)
-#         options = fake_trans + [correct_trans]
-#         random.shuffle(options)
-
-#         questions.append({
-#             'question_word': word.kanji,
-#             'options': options,
-#             'correct': correct_trans,
-#         })
-
-#     return questions
-
-from django.db.models import Count
 
 def generate_kanji_to_trans_questions(request, question_count, level):
     if question_count == "all":

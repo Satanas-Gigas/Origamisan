@@ -6,8 +6,9 @@ from . import views
 # from .views import GrammarUpdateView
 
 urlpatterns = [
-    path('', views.mainpanel, name='mainpanel'),
-    # path('mainpanel/', views.mainpanel, name='mainpanel'),  # Имя пути 'about'
+    path('mama/', views.mama, name='mama'),
+    path('mainpanel/', views.mainpanel, name='mainpanel'), 
+    path('', views.mainpanel, name='mainpanel'), 
     path('word/', views.word, name='word'),# Другие маршруты
     path('word_edit/<int:pk>/edit/', views.word_edit, name='word_edit'),# Другие маршруты
     path('word_create/', views.word_create, name='word_create'),# Другие маршруты

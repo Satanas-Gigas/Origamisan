@@ -1,197 +1,184 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/mainpanel.css' %}">
 <style>
-	.excel-gallery {
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	  gap: 2vw 2vw;
-	  margin-bottom: 3vh;
-	  max-width: 960px;
-	  margin-left: auto;
-	  margin-right: auto;
-	}
-	.excel-gallery-step {
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  width: 210px;
-	  margin-bottom: 1.7em;
-	}
-	.excel-image {
-	  display: block;
-	  cursor: zoom-in;
-	  width: 22vw;
-	  min-width: 160px;
-	  max-width: 240px;
-	  height: auto;
-	  max-height: 28vh;
-	  margin: 0 0 0.5em 0;
-	  border-radius: 12px;
-	  box-shadow: 0 4px 20px -6px #0002;
-	  object-fit: contain;
-	  background: #fafcff;
-	  transition: transform 0.28s cubic-bezier(.47,.27,.51,.94), box-shadow 0.22s, z-index 0.17s;
-	  z-index: 1;
-	}
-	.excel-image.active {
-	  position: fixed;
-	  top: 50%; left: 50%;
-	  transform: translate(-50%, -50%) scale(1);
-	  z-index: 2000;
-	  min-width: unset;
-	  max-width: 98vw;
-	  max-height: 92vh;
-	  width: auto;
-	  height: auto;
-	  cursor: zoom-out;
-	  border: 2px solid #d30000 !important;
-	  border-radius: 0 !important;
-	  background: #fff;
-	  box-shadow: none !important;
-	}
-	.excel-image-overlay {
-	  display: none;
-	  position: fixed;
-	  z-index: 1999;
-	  inset: 0;
-	  background: rgba(0,0,0,0.33);
-	  animation: overlayfade 0.3s;
-	}
-	.excel-image-overlay.active { display: block; }
-	@keyframes overlayfade { from { opacity: 0; } to { opacity: 1; } }
-	.pretty-code {
-	  background: #f5f7fa;
-	  border-radius: 10px;
-	  padding: 18px 20px;
-	  font-size: 1.07em;
-	  font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
-	  margin: 0 0 1.2em 0;
-	  overflow-x: auto;
-	  box-shadow: 0 1px 10px -7px #0002;
-	}
-	.pretty-code .vba-key { color: #2a5d9f; font-weight: bold; }
-	.pretty-code .vba-type { color: #6e60b5; }
-	.pretty-code .vba-ctrl { color: #a06223; }
-	.pretty-code .vba-set { color: #008080; }
-	.excel-step-label {
-	  margin-top: 0.45em;
-	  margin-bottom: 0.2em;
-	  text-align: center;
-	  color: #5c6470;
-	  font-size: 0.96em;
-	  line-height: 1.3;
-	}
+  /* Main всегда по высоте, скролл только если реально не помещается */
+  .main {
+    flex: 1 0 auto;
+    min-height: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: transparent;
+    overflow-y: auto;
+  }
+  .main > .container {
+    padding-top: 3vh !important;
+    padding-bottom: 3vh !important;
+    padding-left: 2vw !important;
+    padding-right: 2vw !important;
+    max-width: 1200px;
+    width: 100%;
+  }
+  .main-row-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vw;
+    width: 100%;
+  }
+  .main-card-col {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-width: 0;
+  }
+  .main .card.card-fit {
+    width: 100%;
+    max-width: 370px;
+    border: 2.5px solid #212529;
+    border-radius: 1.7vw;
+    background: #fff;
+    margin: 0;
+    box-shadow: 0 0.7vw 3vw -1vw #0002;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* ANIMATION! */
+    transition: transform 0.25s cubic-bezier(0.45, 0.05, 0.55, 0.95), box-shadow 0.22s;
+    cursor: pointer; /* Чтобы было видно, что вся карточка кликабельна */
+  }
+  .main .card.card-fit:hover {
+    transform: scale(1.04);
+    box-shadow: 0 2vw 4vw -1vw #0004, 0 0.1vw 2vw 0 #2090e044;
+    z-index: 2;
+  }
+  .main .card.card-fit img {
+    margin-bottom: 2vh;
+    width: 28%;
+    min-width: 80px;
+    max-width: 140px;
+    height: auto;
+    /* ANIMATION! */
+    transition: transform 0.2s cubic-bezier(.22,.61,.36,1), box-shadow 0.23s;
+  }
+  .main .card.card-fit:hover img {
+    transform: scale(1.13) rotate(-2.5deg);
+    box-shadow: 0 0.5vw 2vw #1088ee23;
+  }
+  .main .card.card-fit h2 {
+    font-size: 2vw;
+    margin-bottom: 1.2vh;
+    font-weight: bold;
+  }
+  .main .card.card-fit p, .main .card.card-fit strong {
+    font-size: 1.17vw;
+  }
+  .main .card.card-fit .btn {
+    margin-top: auto;
+    min-width: 60%;
+    font-size: 1.1vw;
+  }
+  .hover-text:hover {
+    color: #0072ff;
+    text-shadow: 0 0 12px #2c98ff60, 0 2px 4px #fff9;
+    transition: color 0.2s, text-shadow 0.3s;
+  }
+
+  /* Мобилки: карточки друг под другом */
+  @media (max-width: 991px) {
+    .main-row-flex {
+      flex-direction: column;
+      gap: 3vh;
+      align-items: center;
+    }
+    .main-card-col {
+      width: 100%;
+      margin-bottom: 2vh;
+    }
+    .main .card.card-fit {
+      width: 96vw;
+      max-width: 98vw;
+      padding: 7vw 3vw;
+    }
+    .main .card.card-fit img {
+      width: 35vw;
+      min-width: 60px;
+      max-width: 170px;
+    }
+    .main .card.card-fit h2,
+    .main .card.card-fit p, .main .card.card-fit strong,
+    .main .card.card-fit .btn {
+      font-size: 3.1vw;
+    }
+  }
 </style>
-{% endblock %}
-{% block content %}
-<div class="container py-4">
-	<div class="card shadow mb-4">
-		<div class="card-body">
-			<h2 class="mb-3 text-success" style="font-weight: 600;">✨Мама, ПРИВЕТ!</h2>
-			<p style="font-size:1.13em;">
-				Скопируй этот код — он суммирует значения из столбцов <b>A</b> и <b>B</b> и выведет результат в столбец <b>C</b>.<br />
-				<span class="text-muted">Если в строке нет чисел — ячейка <b>C</b> останется пустой.</span>
-			</p>
-			<div class="pretty-code">
-<span class="vba-key">Sub</span> <b>SumColumnsAandB</b>()<br>
-&nbsp;&nbsp;<span class="vba-type">Dim</span> ws <span class="vba-type">As</span> Worksheet<br>
-&nbsp;&nbsp;<span class="vba-type">Dim</span> lastRow <span class="vba-type">As Long</span><br>
-&nbsp;&nbsp;<span class="vba-type">Dim</span> i <span class="vba-type">As Long</span><br>
-&nbsp;&nbsp;<span class="vba-type">Dim</span> valA <span class="vba-type">As Variant</span><br>
-&nbsp;&nbsp;<span class="vba-type">Dim</span> valB <span class="vba-type">As Variant</span><br>
-<br>
-&nbsp;&nbsp;<span class="vba-set">Set</span> ws = ActiveSheet<br>
-<br>
-&nbsp;&nbsp;lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row<br>
-&nbsp;&nbsp;<span class="vba-ctrl">If</span> ws.Cells(ws.Rows.Count, "B").End(xlUp).Row &gt; lastRow <span class="vba-ctrl">Then</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;lastRow = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row<br>
-&nbsp;&nbsp;<span class="vba-ctrl">End If</span><br>
-<br>
-&nbsp;&nbsp;<span class="vba-ctrl">For</span> i = 1 <span class="vba-ctrl">To</span> lastRow<br>
-&nbsp;&nbsp;&nbsp;&nbsp;valA = ws.Cells(i, "A").Value<br>
-&nbsp;&nbsp;&nbsp;&nbsp;valB = ws.Cells(i, "B").Value<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="vba-ctrl">If</span> IsNumeric(valA) <span class="vba-ctrl">And</span> IsNumeric(valB) <span class="vba-ctrl">Then</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ws.Cells(i, "C").Value = valA + valB<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="vba-ctrl">Else</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ws.Cells(i, "C").ClearContents<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="vba-ctrl">End If</span><br>
-&nbsp;&nbsp;<span class="vba-ctrl">Next</span> i<br>
-<span class="vba-key">End Sub</span>
-			</div>
-			<p class="mt-3 mb-2 text-muted" style="font-size:0.95em;">
-				Дальнейшие действия написаны в картинках — если не хочешь работать с кодом, просто начни с "Формула &nbsp;1"!
-			</p>
-		</div>
-	</div>
-	<div class="excel-gallery">
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Шаг 1</div>
-			<img src="{% get_media_prefix %}Excel_1.jpg" class="excel-image" />
-		</div>
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Шаг 2</div>
-			<img src="{% get_media_prefix %}Excel_2.jpg" class="excel-image" />
-		</div>
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Шаг 3</div>
-			<img src="{% get_media_prefix %}Excel_3.jpg" class="excel-image" />
-		</div>
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Шаг 4</div>
-			<img src="{% get_media_prefix %}Excel_4.jpg" class="excel-image" />
-		</div>
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Шаг 5</div>
-			<img src="{% get_media_prefix %}Excel_5.jpg" class="excel-image" />
-			<span style="font-size:0.92em;color:#b65a00;">
-				На этом можно закончить.<br/>
-				Если надо через формулу — смотри дальше!
-			</span>
-		</div>
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Формула 1</div>
-			<img src="{% get_media_prefix %}Excel_6.jpg" class="excel-image" />
-		</div>
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Формула 2</div>
-			<img src="{% get_media_prefix %}Excel_7.jpg" class="excel-image" />
-		</div>
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Формула 3</div>
-			<img src="{% get_media_prefix %}Excel_8.jpg" class="excel-image" />
-		</div>
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Формула 4</div>
-			<img src="{% get_media_prefix %}Excel_9.jpg" class="excel-image" />
-		</div>
-		<div class="excel-gallery-step">
-			<div class="excel-step-label">Формула 5 </div>
-			<img src="{% get_media_prefix %}Excel_10.jpg" class="excel-image" />
-		</div>
-	</div>
-	<div class="excel-image-overlay" id="excelImageOverlay"></div>
-</div>
 <script>
-	document.addEventListener('DOMContentLoaded', function() {
-	  const overlay = document.getElementById('excelImageOverlay');
-	  document.querySelectorAll('.excel-image').forEach(function(img) {
-	    img.addEventListener('click', function(e) {
-	      if(img.classList.contains('active')) {
-	        img.classList.remove('active');
-	        overlay.classList.remove('active');
-	        return;
-	      }
-	      document.querySelectorAll('.excel-image.active').forEach(im => im.classList.remove('active'));
-	      img.classList.add('active');
-	      overlay.classList.add('active');
-	    });
-	  });
-	  overlay.addEventListener('click', function() {
-	    document.querySelectorAll('.excel-image.active').forEach(im => im.classList.remove('active'));
-	    overlay.classList.remove('active');
-	  });
-	});
+  // Делает всю карточку кликабельной (кроме если нажали на ссылку)
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.card.card-fit[data-href]').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        // Если клик по кнопке внутри карточки, не обрабатываем
+        if (e.target.tagName === 'A') return;
+        window.location.href = card.getAttribute('data-href');
+      });
+    });
+  });
 </script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="main-row-flex">
+    <!-- Карточка 1 -->
+    <div class="main-card-col">
+      <div class="card card-fit" data-href="{% url 'grammar' %}">
+        <img src="{% get_media_prefix %}sheep.svg"
+             class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto"
+             alt="Sheep">
+        <h2 class="hover-text">Грамматика</h2>
+        <strong>
+          <p class="hover-text">Начать разбор грамматики</p>
+        </strong>
+        <p>
+          <a class="btn btn-primary btn-lg mt-auto" href="{% url 'grammar' %}">Приступить! &raquo;</a>
+        </p>
+      </div>
+    </div>
+    <!-- Карточка 2 -->
+    <div class="main-card-col">
+      <div class="card card-fit" data-href="{% url 'word' %}">
+        <img src="{% get_media_prefix %}face1.svg"
+             class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto"
+             alt="Words">
+        <h2 class="hover-text">Слова!</h2>
+        <strong>
+          <p class="hover-text">Начать изучать слова!</p>
+        </strong>
+        <p>
+          <a class="btn btn-success btn-lg mt-auto" href="{% url 'word' %}">Приступить! &raquo;</a>
+        </p>
+      </div>
+    </div>
+    <!-- Карточка 3 -->
+    <div class="main-card-col">
+      <div class="card card-fit" data-href="{% url 'word_test' %}">
+        <img src="{% get_media_prefix %}face2.svg"
+             class="bd-placeholder-img rounded-circle img-fluid hover-scale mx-auto"
+             alt="Tests">
+        <h2 class="hover-text">Тесты!</h2>
+        <strong>
+          <p class="hover-text">Проверить себя на знания.</p>
+        </strong>
+        <p>
+          <a class="btn btn-danger btn-lg mt-auto" href="{% url 'word_test' %}">Приступить! &raquo;</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

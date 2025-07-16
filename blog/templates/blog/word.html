@@ -1,48 +1,43 @@
 {% extends 'blog/base.html' %}
 {% load static %}
-{% block content %}
 
 {% block extra_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/word.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/word.css' %}">
 {% endblock %}
 
+{% block content %}
 <div class="container py-3">
   <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-
-
     <h1 class="display-4 fw-normal text-body-emphasis">
-			Слова
-      <br>
-			<form method="post" class="d-inline">
-				{% csrf_token %}
-				<input type="hidden" name="level" value="5" />
-				<button type="submit" class="btn btn-outline-primary {% if level == '5' %}active{% endif %}">N5</button>
-			</form>
-
-			<form method="post" class="d-inline">
-				{% csrf_token %}
-				<input type="hidden" name="level" value="4" />
-				<button type="submit" class="btn btn-outline-primary {% if level == '4' %}active{% endif %}">N4</button>
-			</form>
-
-			<form method="post" class="d-inline">
-				{% csrf_token %}
-				<input type="hidden" name="level" value="3" />
-				<button type="submit" class="btn btn-outline-primary {% if level == '3' %}active{% endif %}">N3</button>
-			</form>
-
-			<form method="post" class="d-inline">
-				{% csrf_token %}
-				<input type="hidden" name="level" value="2" />
-				<button type="submit" class="btn btn-outline-primary {% if level == '2' %}active{% endif %}">N2</button>
-			</form>
-
-			<form method="post" class="d-inline">
-				{% csrf_token %}
-				<input type="hidden" name="level" value="1" />
-				<button type="submit" class="btn btn-outline-primary {% if level == '1' %}active{% endif %}">N1</button>
-			</form>
-		</h1>    
+      Слова
+    </h1>
+    <div class="mb-3">
+      <form method="post" class="d-inline">
+        {% csrf_token %}
+        <input type="hidden" name="level" value="5"/>
+        <button type="submit" class="btn btn-outline-primary {% if level == '5' %}active{% endif %}">N5</button>
+      </form>
+      <form method="post" class="d-inline">
+        {% csrf_token %}
+        <input type="hidden" name="level" value="4"/>
+        <button type="submit" class="btn btn-outline-primary {% if level == '4' %}active{% endif %}">N4</button>
+      </form>
+      <form method="post" class="d-inline">
+        {% csrf_token %}
+        <input type="hidden" name="level" value="3"/>
+        <button type="submit" class="btn btn-outline-primary {% if level == '3' %}active{% endif %}">N3</button>
+      </form>
+      <form method="post" class="d-inline">
+        {% csrf_token %}
+        <input type="hidden" name="level" value="2"/>
+        <button type="submit" class="btn btn-outline-primary {% if level == '2' %}active{% endif %}">N2</button>
+      </form>
+      <form method="post" class="d-inline">
+        {% csrf_token %}
+        <input type="hidden" name="level" value="1"/>
+        <button type="submit" class="btn btn-outline-primary {% if level == '1' %}active{% endif %}">N1</button>
+      </form>
+    </div>
     <p class="fs-5 text-body-secondary">Быстрый набор слов на уровень N{{ level }}</p>
   </div>
 
@@ -51,29 +46,31 @@
       <div class="row row-cols-1 row-cols-md-4 g-4">
         {% for word in words %}
         <div class="col">
-            <div class="card" id="word-{{ word.pk }}">
-                {% if not word.kanji or word.kanji == "''" %}
-                <div class="card-header">
-                    {{ word.kana }}
-                </div>
-                {% else %}
-                <div class="card-header">
-                    {{ word.kanji }}
-                </div>
-                {% endif %}
-                <ul class="list-group list-group-flush">
-                    {% if word.kanji %}
-                        <li class="list-group-item"><strong>Кана: </strong> <span class="jap-font">{{ word.kana }}</span></li>
-                    {% endif %}
-                    <hr class="my-1"> <!-- Разделитель -->
-                    <li class="list-group-item"><strong>Ромаджи: </strong> <span class="jap-font">{{ word.romaji }}</span></li>
-                    <hr class="my-1"> <!-- Разделитель -->
-                    <li class="list-group-item"><strong>Перевод: </strong>{{ word.translate_ru }}</li>
-                </ul>
+          <div class="card" id="word-{{ word.pk }}">
+            {% if not word.kanji or word.kanji == "''" %}
+            <div class="card-header">
+              {{ word.kana }}
+            </div>
+            {% else %}
+            <div class="card-header">
+              {{ word.kanji }}
+            </div>
+            {% endif %}
+            <ul class="list-group list-group-flush">
+              {% if word.kanji %}
+              <li class="list-group-item"><strong>Кана: </strong> <span class="jap-font">{{ word.kana }}</span></li>
+              {% endif %}
+              <hr class="my-1"> <!-- Разделитель -->
+              <li class="list-group-item"><strong>Ромаджи: </strong> <span class="jap-font">{{ word.romaji }}</span></li>
+              <hr class="my-1"> <!-- Разделитель -->
+              <li class="list-group-item"><strong>Перевод: </strong>{{ word.translate_ru }}</li>
+            </ul>
+            {% if user.is_authenticated %}
             <div class="card-body text-center toggle-visibility">
               <a class="btn" href="{% url 'word_edit' pk=word.pk %}?level={{ level }}#word-{{ word.pk }}">Редактировать</a>
               <a class="btn" href="{% url 'word_variant_create' pk=word.pk %}">Добавить вариант</a>
             </div>
+            {%  endif  %}
             <div class="card-footer text-muted text-end">
               #{{ forloop.counter }}
             </div>
@@ -84,5 +81,4 @@
     </div>
   </div>
 </div>
-
 {% endblock %}
