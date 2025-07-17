@@ -1,5 +1,8 @@
 from django.contrib import admin
+from django.utils.html import format_html
 from .models import PartOfSpeech, Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
+import json
+import re
 
 admin.site.register(Example)
 
@@ -15,9 +18,28 @@ class PartOfSpeechAdmin(admin.ModelAdmin):
 
 @admin.register(Word)
 class WordAdmin(admin.ModelAdmin):
-    list_display = ('kanji', 'kana', 'romaji', 'level', 'translate_ru', 'get_part_of_speech')
+    list_display = ('kanji', 'kana', 'romaji', 'level', 'translate_ru', 'get_part_of_speech', 'show_examples')
     search_fields = ('kanji', 'kana', 'romaji', "level", 'translate_en', 'translate_ru')
     filter_horizontal = ('part_of_speech',)
+
+    def show_examples(self, obj):
+        if not obj.examples:
+            return '—'
+        try:
+            data = json.loads(obj.examples)
+            if not data or not isinstance(data, list):
+                return '—'
+            lines = []
+            for ex in data[:2]:  # первые 2 предложения
+                jp = ex.get('jp', '') if isinstance(ex, dict) else ''
+                jp = re.sub('<.*?>', '', jp)
+                if len(jp) > 40:
+                    jp = jp[:40] + '…'
+                lines.append(jp)
+            return format_html("<br>".join(lines))
+        except Exception as e:
+            return f"Ошибка: {e}"
+    show_examples.short_description = 'Примеры'
 
     @admin.display(description="Part of Speech")
     def get_part_of_speech(self, obj):

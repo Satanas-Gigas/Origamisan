@@ -44,7 +44,7 @@
                         {% else %}
                         <h1 class="fw-bold black" style="font-family: 'Sazanami_Mincho'">
                         {% endif %}
-                            {{ question.question_word|escape }}
+                            {{ question.question_word|safe }}
                         </h1>
                         <div class="dropdown-center">
                             {% if extra_option == "True" %}

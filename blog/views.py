@@ -4,11 +4,12 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Grammar, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
 from .forms import GrammarForm, ExampleForm, WordForm, KanjiForm,  WordKanaVariantForm, WordKanjiVariantForm, WordTranslateVariantForm
 from django.forms import inlineformset_factory
-import random
 import re
 from django.db.models import Q, Case, When, F, Func, Count
 from django.urls import reverse
 from django.shortcuts import redirect
+import json, random
+import logging
 
 def grammar(request):
     if request.method == "POST":
@@ -176,11 +177,7 @@ def word_detail_view(request):
     }
     return render(request, 'blog/word_detail.html', context)
 
-from django.shortcuts import render, get_object_or_404, redirect
-from django.urls import reverse
-from django.forms import inlineformset_factory
-from .models import Word, Word_kana_variant, Word_kanji_variant, Word_translate_variant
-from .forms import WordForm, WordKanaVariantForm, WordKanjiVariantForm, WordTranslateVariantForm
+
 
 def word_edit(request, pk):
     word = get_object_or_404(Word, pk=pk)
@@ -565,6 +562,178 @@ def generate_trans_to_kanji_questions(request, question_count, level):
         
     return questions
 
+def hide_kanji_with_ruby(text, kanji):
+    """
+    Скрывает первое вхождение кандзи:
+    - если кандзи внутри <ruby>...</ruby> — заменяет весь ruby-блок на ＊＊＊
+    - если кандзи вне ruby — заменяет только первое вхождение на ＊＊＊
+    """
+    ruby_pattern = re.compile(r'<ruby>(.+?)<rt>.*?</rt></ruby>')
+    for m in ruby_pattern.finditer(text):
+        ruby_body = m.group(1)
+        if kanji in ruby_body:
+            start, end = m.span()
+            return text[:start] + '＊＊＊' + text[end:]
+    return text.replace(kanji, '＊＊＊', 1)
+
+def get_ruby_block(text, kanji):
+    """
+    Возвращает (ruby_body, ruby_span)
+    - ruby_body: что между <ruby> и <rt>
+    - ruby_span: tuple индексов (start, end)
+    Если нет — возвращает (None, None)
+    """
+    ruby_pattern = re.compile(r'<ruby>(.+?)<rt>.*?</rt></ruby>')
+    for m in ruby_pattern.finditer(text):
+        ruby_body = m.group(1)
+        if kanji in ruby_body:
+            return ruby_body, m.span()
+    return None, None
+
+
+def strip_ruby_tags(text):
+    """
+    Удаляет ruby/rt и любые другие html-теги, возвращая только видимый текст.
+    """
+    text = re.sub(r'<rt>.*?</rt>', '', text)
+    text = re.sub(r'</?ruby>', '', text)
+    text = re.sub(r'<.*?>', '', text)
+    return text
+
+def generate_kanji_sentence_test(request, question_count, level):
+    logger = logging.getLogger("kanji_sentence_test")
+    logger.setLevel(logging.INFO)
+    handler = logging.StreamHandler()
+    logger.addHandler(handler)
+    
+    logger.info(f"=== Генерация kanji_sentence_test: level={level}, question_count={question_count}")
+
+    try:
+        question_count = int(question_count)
+    except Exception as e:
+        logger.error(f"Ошибка преобразования question_count: {question_count} — {e}")
+        return []
+
+    # Все кандзи этого уровня
+    kanji_list = list(Kanji.objects.filter(level=level).values_list('kanji', flat=True))
+    logger.info(f"Кандзи на уровне {level}: {kanji_list}")
+
+    if not kanji_list:
+        logger.warning("Нет кандзи для выбранного уровня!")
+        return []
+
+    sample_kanji = random.sample(kanji_list, min(question_count, len(kanji_list)))
+    logger.info(f"Выбраны кандзи для вопросов: {sample_kanji}")
+
+    questions = []
+
+    for k in sample_kanji:
+        logger.info(f"\n=== Проверяем кандзи: {k}")
+
+        word_qs = Word.objects.filter(
+            kanji__contains=k, level=level
+        ).exclude(examples__isnull=True).exclude(examples='')
+
+        logger.info(f"Количество Word с этим кандзи и примерами: {word_qs.count()}")
+
+        if not word_qs.exists():
+            logger.warning(f"Нет слов с этим кандзи ({k}) на уровне {level}")
+            continue
+
+        word = word_qs.order_by('?').first()
+        logger.info(f"Случайное слово: {word.kanji} | kana: {word.kana} | examples: {word.examples[:80]+'...'}")
+
+        try:
+            examples = json.loads(word.examples)
+        except Exception as e:
+            logger.error(f"Ошибка загрузки examples для {word.kanji}: {e}")
+            continue
+
+        examples = [e for e in examples if "jp" in e]
+        logger.info(f"Примеров с ключом jp: {len(examples)}")
+
+        if not examples:
+            logger.warning(f"Нет подходящих примеров для {word.kanji}")
+            continue
+
+        ex = random.choice(examples)
+        logger.info(f"Выбранный пример: {ex['jp'][:80]}...")
+
+        # Проверяем, содержится ли сам кандзи в примере
+        if k not in ex["jp"]:
+            logger.warning(f"В примере нет кандзи {k}! Пример: {ex['jp'][:80]}")
+            continue
+
+        # --- Ключевой момент: ищем ruby-блок
+        ruby_body, ruby_span = get_ruby_block(ex["jp"], k)
+        options = []
+        correct_variant = None
+
+        if ruby_body:
+            # Вариант с ruby
+            question_word = ex["jp"][:ruby_span[0]] + '＊＊＊' + ex["jp"][ruby_span[1]:]
+            correct_variant = strip_ruby_tags(ruby_body)  # Текст без тегов
+
+            # Подбор фейковых кандзи по радикалу
+            radical = Kanji.objects.filter(kanji=k).first().radical
+            fake_kanji_qs = Kanji.objects.filter(radical=radical).exclude(kanji=k)
+            fake_kanji_list = list(fake_kanji_qs.values_list('kanji', flat=True))
+
+            # Если фейковых кандзи >=3, используем их, иначе добираем случайными с уровня
+            if len(fake_kanji_list) >= 3:
+                fake_kanji_list = random.sample(fake_kanji_list, 3)
+            else:
+                candidates = [x for x in kanji_list if x != k and x not in fake_kanji_list]
+                while len(fake_kanji_list) < 3 and candidates:
+                    extra = random.choice(candidates)
+                    fake_kanji_list.append(extra)
+                    candidates.remove(extra)
+
+            # Генерируем ложные ответы: заменяем только первое вхождение k на поддельный
+            for fk in fake_kanji_list:
+                fake_text = ruby_body.replace(k, fk, 1)
+                options.append(strip_ruby_tags(fake_text))
+            options.append(correct_variant)
+            random.shuffle(options)
+
+        else:
+            # Нет ruby — просто скрываем символ, ответы — отдельные кандзи
+            question_word = ex["jp"].replace(k, '＊＊＊', 1)
+            correct_variant = k
+
+            # Ложные варианты — по радикалу или случайные
+            radical = Kanji.objects.filter(kanji=k).first().radical
+            fake_kanji_qs = Kanji.objects.filter(radical=radical).exclude(kanji=k)
+            fake_kanji_list = list(fake_kanji_qs.values_list('kanji', flat=True))
+
+            if len(fake_kanji_list) >= 3:
+                fake_kanji_list = random.sample(fake_kanji_list, 3)
+            else:
+                candidates = [x for x in kanji_list if x != k and x not in fake_kanji_list]
+                while len(fake_kanji_list) < 3 and candidates:
+                    extra = random.choice(candidates)
+                    fake_kanji_list.append(extra)
+                    candidates.remove(extra)
+
+            options = fake_kanji_list + [correct_variant]
+            random.shuffle(options)
+
+        logger.info(f"Варианты ответа: {options} (правильный: {correct_variant})")
+
+        questions.append({
+            "question_word": question_word,
+            "options": options,
+            "correct": correct_variant,
+            "kana": word.kana,
+            "en": ex.get("en"),
+            "ru": ex.get("ru"),
+        })
+
+    logger.info(f"\nИтого вопросов сгенерировано: {len(questions)}")
+    return questions
+
+
+
 def process_request_params(request):
     rollback = request.POST.get('rollback')
     test_type = request.GET.get('test_type')    
@@ -614,12 +783,13 @@ def process_request_params(request):
     return test_type, question_count, extra_option, question_time, answers_time
 
 def word_test_start(request):
+
     level = request.POST.get('level') or request.GET.get('level') or '5'
     
     try:
         test_type, question_count, extra_option, question_time, answers_time = process_request_params(request)
 
-        allowed_test_types = {'hide', 'kanji_to_kana', 'kana_to_kanji', 'kanji_to_trans', 'trans_to_kanji'}
+        allowed_test_types = {'hide', 'kanji_to_kana', 'kana_to_kanji', 'kanji_to_trans', 'trans_to_kanji', 'kanji_sent'}
         if test_type not in allowed_test_types:
             return render(request, 'blog/word_test_start.html', {'error': 'Некорректный тип теста.'})
 
@@ -634,6 +804,9 @@ def word_test_start(request):
             questions = generate_kanji_to_trans_questions(request, question_count, level)
         elif test_type == 'trans_to_kanji':
             questions = generate_trans_to_kanji_questions(request, question_count, level)
+        elif test_type == 'kanji_sent':
+            print("PROVERKA")
+            questions = generate_kanji_sentence_test(request, question_count, level)
         else:
             return render(request, 'blog/word_test_start.html', {'error': 'Неизвестный тип теста.'})
 
@@ -747,3 +920,4 @@ def word_test_complete(request):
         'answers_time': answers_time,
     }
     return render(request, 'blog/word_test_complete.html', context)
+

@@ -31,6 +31,10 @@ class PartOfSpeech(models.Model):
         return self.code
 
 
+import json
+from django.db import models
+from django.conf import settings
+
 class Word(models.Model):
     level = models.CharField(max_length=1, default="5")
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -42,13 +46,36 @@ class Word(models.Model):
     translate_en = models.CharField(max_length=200, blank=True, null=True)
     translate_ru = models.CharField(max_length=200, blank=True, null=True)
     
-    part_of_speech = models.ManyToManyField(PartOfSpeech, blank=True)
+    part_of_speech = models.ManyToManyField('PartOfSpeech', blank=True)
+
+    # Заменяем JSONField на TextField
+    examples = models.TextField(blank=True, null=True, help_text="Примеры предложений (сохранять как JSON-строку)")
 
     def __str__(self):
         return f'{self.kanji or self.kana} ({self.level})'
-
+    
     class Meta:
         ordering = ['level', 'kanji', 'kana']
+
+    # Вспомогательные методы для работы с примерами
+    def get_examples(self):
+        if self.examples:
+            try:
+                return json.loads(self.examples)
+            except json.JSONDecodeError:
+                return []
+        return []
+    
+    def set_examples(self, examples_list):
+        self.examples = json.dumps(examples_list, ensure_ascii=False)
+
+    def get_random_example(self):
+        import random
+        examples = self.get_examples()
+        if examples:
+            return random.choice(examples)
+        return None
+
 
 
 class Example(models.Model):

@@ -66,7 +66,7 @@
                                     <div class="row row-cols-1 row-cols-md-5 g-1">
                                         <div class="col">
                                             <div class="card">
-                                            <input type="radio" class="btn-check" name="test_type" value="kanji_to_kana" id="type_kanji_to_kana" autocomplete="off" checked>
+                                            <input type="radio" class="btn-check" name="test_type" value="kanji_to_kana" id="type_kanji_to_kana" autocomplete="off">
                                                 <label class="btn btn-outline-dark align-middle fs-5 w-100 d-flex align-items-center" for="type_kanji_to_kana">
                                                     Канджи Кана
                                                 </label>
@@ -104,20 +104,17 @@
                                                 </label>
                                             </div>                        
                                         </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <input type="radio" class="btn-check" name="test_type" value="kanji_sent" id="type_kanji_sent" autocomplete="off"　 checked> 
+                                                <label class="btn btn-outline-dark fs-5 w-100" for="type_kanji_sent">
+                                                    Предложение_скрытое_слово
+                                                </label>
+                                            </div>                        
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-                            
-
-
                             <div id="extra-options" class="mt-3">
                                 <p class="text-start fs-5">Выберите вариант:</p>                                    
                                 <div class="d-flex justify-content-center">
@@ -310,4 +307,12 @@
         </div>
     </div>
 </div>
+
+<script>
+window.onload = function() {
+    var btn = document.getElementById('start-test-btn');
+    if (btn) btn.focus();
+};
+</script>
+
 {% endblock %}
