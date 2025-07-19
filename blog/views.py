@@ -343,7 +343,7 @@ def generate_kanji_to_kana_questions(request, question_count, level):
         # Получаем список вариантов
         all_kana = list(all_kana_query.values_list('kana', flat=True).order_by('?')[:10])
         if len(all_kana) < 3:
-            print(f'not enough kana {len(all_kana)}')
+            # print(f'not enough kana {len(all_kana)}')
             all_kana = list(Word.objects.filter(~Q(kana=correct_kana)).values_list('kana', flat=True).order_by('?')[:3])
             if len(all_kana) < 3:
                 continue
@@ -453,8 +453,8 @@ def generate_kanji_to_trans_questions(request, question_count, level):
         correct_trans = word.translate_ru or ""
         part_of_speech_set = list(word.part_of_speech.all())
 
-        print(f"\n▶️ Слово: {word.kanji} → {correct_trans}")
-        print(f"   Части речи: {[p.code for p in part_of_speech_set]}")
+        # print(f"\n▶️ Слово: {word.kanji} → {correct_trans}")
+        # print(f"   Части речи: {[p.code for p in part_of_speech_set]}")
 
         # Поиск других переводов с совпадающими частями речи
         all_trans = Word.objects.filter(
@@ -471,7 +471,7 @@ def generate_kanji_to_trans_questions(request, question_count, level):
 
         all_trans = list(set(all_trans))  # Убираем дубликаты
 
-        print(f"   🔍 Найдено вариантов перевода: {len(all_trans)}")
+        # print(f"   🔍 Найдено вариантов перевода: {len(all_trans)}")
 
         if len(all_trans) < 3:
             # fallback на любые переводы
@@ -573,8 +573,8 @@ def hide_kanji_with_ruby(text, kanji):
         ruby_body = m.group(1)
         if kanji in ruby_body:
             start, end = m.span()
-            return text[:start] + '＊＊＊' + text[end:]
-    return text.replace(kanji, '＊＊＊', 1)
+            return text[:start] + ' ____ ' + text[end:]
+    return text.replace(kanji, ' ____ ', 1)
 
 def get_ruby_block(text, kanji):
     """
@@ -671,7 +671,7 @@ def generate_kanji_sentence_test(request, question_count, level):
 
         if ruby_body:
             # Вариант с ruby
-            question_word = ex["jp"][:ruby_span[0]] + '＊＊＊' + ex["jp"][ruby_span[1]:]
+            question_word = ex["jp"][:ruby_span[0]] + ' ____ ' + ex["jp"][ruby_span[1]:]
             correct_variant = strip_ruby_tags(ruby_body)  # Текст без тегов
 
             # Подбор фейковых кандзи по радикалу
@@ -698,7 +698,7 @@ def generate_kanji_sentence_test(request, question_count, level):
 
         else:
             # Нет ruby — просто скрываем символ, ответы — отдельные кандзи
-            question_word = ex["jp"].replace(k, '＊＊＊', 1)
+            question_word = ex["jp"].replace(k, ' ____ ', 1)
             correct_variant = k
 
             # Ложные варианты — по радикалу или случайные
@@ -732,8 +732,6 @@ def generate_kanji_sentence_test(request, question_count, level):
     logger.info(f"\nИтого вопросов сгенерировано: {len(questions)}")
     return questions
 
-
-
 def process_request_params(request):
     rollback = request.POST.get('rollback')
     test_type = request.GET.get('test_type')    
@@ -743,33 +741,31 @@ def process_request_params(request):
     question_count = request.GET.get('questions')
     if not question_count:
         question_count = request.POST.get('questions_p')
-    question_time = request.POST.get('question_time', request.GET.get('question_time', None))  # Значение по умолчанию 4
-    
-    if ((question_time != "None") and (question_time != None)):
-        try:
-            question_time = int(question_time)
-            if question_time <= 0:
-                raise ValueError("Время должно быть больше 0.")
-        except ValueError:
-            return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
+
+    # ВРЕМЯ ПОКАЗА ВОПРОСА
+    question_time_raw = request.POST.get('question_time', request.GET.get('question_time', None))
+    if question_time_raw in [None, "", "None"]:
+        question_time = 0   # <- если "нет" - это именно 0, а не None!
     else:
-        question_time = None        
-    answers_time = request.POST.get('answers_time', request.GET.get('answers_time', 40))  # Значение по умолчанию 4
-    answers_time = int(answers_time) if answers_time else None      
-
-    if answers_time and (answers_time < 1 or answers_time > 60):  # Ограничение в 5 минут
-        return render(request, 'blog/word_test_start.html', {'error': 'Некорректное значение времени.'})
-
-
-    if (answers_time != "None"):
         try:
-            answers_time = int(answers_time)
-            if answers_time <= 0:
-                raise ValueError("Время должно быть больше 0.")
+            question_time = int(question_time_raw)
+            if question_time < 0:
+                question_time = 0
         except ValueError:
-            return render(request, 'blog/word_test_start.html', {'error': 'Неверное значение времени вопроса.'})
+            question_time = 0
+
+    # ВРЕМЯ ПОКАЗА ОТВЕТОВ
+    answers_time_raw = request.POST.get('answers_time', request.GET.get('answers_time', None))
+    if answers_time_raw in [None, "", "None"]:
+        answers_time = 40  # дефолт
     else:
-        answers_time = None
+        try:
+            answers_time = int(answers_time_raw)
+            if answers_time < 1 or answers_time > 60:
+                answers_time = 40
+        except ValueError:
+            answers_time = 40
+    print('question_time', question_time,'  answers_time', answers_time)
 
     request.session.update({
         'question_time': question_time,
@@ -785,9 +781,11 @@ def process_request_params(request):
 def word_test_start(request):
 
     level = request.POST.get('level') or request.GET.get('level') or '5'
+   
     
     try:
         test_type, question_count, extra_option, question_time, answers_time = process_request_params(request)
+        print(f"test_type={test_type}, question_count={question_count}, level={level}")
 
         allowed_test_types = {'hide', 'kanji_to_kana', 'kana_to_kanji', 'kanji_to_trans', 'trans_to_kanji', 'kanji_sent'}
         if test_type not in allowed_test_types:
@@ -805,7 +803,7 @@ def word_test_start(request):
         elif test_type == 'trans_to_kanji':
             questions = generate_trans_to_kanji_questions(request, question_count, level)
         elif test_type == 'kanji_sent':
-            print("PROVERKA")
+            # print("PROVERKA")
             questions = generate_kanji_sentence_test(request, question_count, level)
         else:
             return render(request, 'blog/word_test_start.html', {'error': 'Неизвестный тип теста.'})

@@ -1,0 +1,2564 @@
+[
+    {
+        "kanji": "彼",
+        "onyomi": "ヒ",
+        "kunyomi": "かれ",
+        "meaning_ru": "он, тот",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "的",
+        "onyomi": "テキ",
+        "kunyomi": "まと",
+        "meaning_ru": "цель, суффикс для образования прилагательных",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "無",
+        "onyomi": "ム",
+        "kunyomi": "ない",
+        "meaning_ru": "ничего, без",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "居",
+        "onyomi": "キョ",
+        "kunyomi": "いる",
+        "meaning_ru": "проживать, находиться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "様",
+        "onyomi": "ヨー",
+        "kunyomi": "さま",
+        "meaning_ru": "вид, положение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "御",
+        "onyomi": "ゴ、ギョ",
+        "kunyomi": "—",
+        "meaning_ru": "уважительный префикс",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "身",
+        "onyomi": "シン",
+        "kunyomi": "み",
+        "meaning_ru": "тело",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "実",
+        "onyomi": "ジツ",
+        "kunyomi": "み、みのる",
+        "meaning_ru": "реальность",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "然",
+        "onyomi": "ゼン",
+        "kunyomi": "—",
+        "meaning_ru": "так, суффикс признака",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "感",
+        "onyomi": "カン",
+        "kunyomi": "—",
+        "meaning_ru": "чувство",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "第",
+        "onyomi": "ダイ",
+        "kunyomi": "—",
+        "meaning_ru": "префикс перед числами, указывающий на порядковый номер",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "面",
+        "onyomi": "メン",
+        "kunyomi": "おもて、おも、つら",
+        "meaning_ru": "лицо, поверхность, грань, сторона",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "当",
+        "onyomi": "トー",
+        "kunyomi": "あたる",
+        "meaning_ru": "этот, данный, правильный, выполнять обязанности",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "君",
+        "onyomi": "クン",
+        "kunyomi": "きみ",
+        "meaning_ru": "ты",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "成",
+        "onyomi": "セイ",
+        "kunyomi": "なる",
+        "meaning_ru": "становиться, образовывать, расти, результат",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "取",
+        "onyomi": "シュ",
+        "kunyomi": "とる",
+        "meaning_ru": "брать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "向",
+        "onyomi": "コー",
+        "kunyomi": "むく",
+        "meaning_ru": "направление",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "部",
+        "onyomi": "ブ",
+        "kunyomi": "—",
+        "meaning_ru": "часть, отдел, отделение, экземпляр",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "神",
+        "onyomi": "シン",
+        "kunyomi": "(ジン)",
+        "meaning_ru": "ками",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "内",
+        "onyomi": "ナイ",
+        "kunyomi": "うち",
+        "meaning_ru": "внутри",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "相",
+        "onyomi": "ソー、ショー",
+        "kunyomi": "—",
+        "meaning_ru": "взаимный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "葉",
+        "onyomi": "ヨー",
+        "kunyomi": "は",
+        "meaning_ru": "лист, листва",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "全",
+        "onyomi": "ゼン",
+        "kunyomi": "すべて、まったく",
+        "meaning_ru": "целый",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "現",
+        "onyomi": "ゲン",
+        "kunyomi": "あらわれる",
+        "meaning_ru": "появляться, реальность, нынешний",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "平",
+        "onyomi": "ヘイ",
+        "kunyomi": "たいら、ひらたい",
+        "meaning_ru": "плоский, ровный, обычный, простой",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "笑",
+        "onyomi": "ショー",
+        "kunyomi": "わらう、えむ",
+        "meaning_ru": "смех, улыбка",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "得",
+        "onyomi": "トク",
+        "kunyomi": "える、うる",
+        "meaning_ru": "получать, понимать, прибыль",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "美",
+        "onyomi": "ビ",
+        "kunyomi": "うつくしい",
+        "meaning_ru": "прекрасный, красивый",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "次",
+        "onyomi": "ジ",
+        "kunyomi": "つぎ、つぐ",
+        "meaning_ru": "следующий",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "夫",
+        "onyomi": "フ",
+        "kunyomi": "おっと",
+        "meaning_ru": "муж",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "対",
+        "onyomi": "タイ",
+        "kunyomi": "—",
+        "meaning_ru": "противоположный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "情",
+        "onyomi": "ジョー",
+        "kunyomi": "なさけ",
+        "meaning_ru": "чувства, обстоятельства",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "表",
+        "onyomi": "ヒョー",
+        "kunyomi": "おもて、あらわす",
+        "meaning_ru": "выражать, поверхность, таблица",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "落",
+        "onyomi": "ラク",
+        "kunyomi": "おちる",
+        "meaning_ru": "падать, посёлок, юмор",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "性",
+        "onyomi": "セイ、ショー",
+        "kunyomi": "—",
+        "meaning_ru": "пол, характер, натура",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "最",
+        "onyomi": "サイ",
+        "kunyomi": "もっとも",
+        "meaning_ru": "самый",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "馬",
+        "onyomi": "バ",
+        "kunyomi": "うま",
+        "meaning_ru": "лошадь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "等",
+        "onyomi": "トー、ラ",
+        "kunyomi": "ひとしい",
+        "meaning_ru": "равный, класс, разряд, суффикс множественного числа",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "形",
+        "onyomi": "ケイ",
+        "kunyomi": "(ギョー)",
+        "meaning_ru": "форма, образ",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "変",
+        "onyomi": "ヘン",
+        "kunyomi": "かわる",
+        "meaning_ru": "изменяться, странный, происшествие, несчастный случай",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "込",
+        "onyomi": "—",
+        "kunyomi": "こむ",
+        "meaning_ru": "переполненный, вкладывать, включать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "信",
+        "onyomi": "シン",
+        "kunyomi": "—",
+        "meaning_ru": "доверие, сигнал, сообщение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "初",
+        "onyomi": "ショ",
+        "kunyomi": "はじめ、はつ",
+        "meaning_ru": "первый, начало",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "論",
+        "onyomi": "ロン",
+        "kunyomi": "—",
+        "meaning_ru": "теория, рассуждать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "記",
+        "onyomi": "キ",
+        "kunyomi": "しるす",
+        "meaning_ru": "записывать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "直",
+        "onyomi": "チョク、ジキ",
+        "kunyomi": "なおす",
+        "meaning_ru": "прямой, правильный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "法",
+        "onyomi": "ホー",
+        "kunyomi": "—",
+        "meaning_ru": "закон, метод, религия, мат. операции",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "達",
+        "onyomi": "タツ、タチ",
+        "kunyomi": "—",
+        "meaning_ru": "достигать, доставлять, суффикс множественного числа",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "活",
+        "onyomi": "カツ",
+        "kunyomi": "—",
+        "meaning_ru": "живой, активный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "結",
+        "onyomi": "ケツ",
+        "kunyomi": "むすぶ、ゆう",
+        "meaning_ru": "узел, соединять, формировать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "点",
+        "onyomi": "テン",
+        "kunyomi": "—",
+        "meaning_ru": "точка, место, пункт",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "流",
+        "onyomi": "リュー",
+        "kunyomi": "ながれる",
+        "meaning_ru": "течение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "和",
+        "onyomi": "ワ",
+        "kunyomi": "やわらぐ、なごむ",
+        "meaning_ru": "гармония, мягкий, японский",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "若",
+        "onyomi": "ジャク",
+        "kunyomi": "わかい、もしくは",
+        "meaning_ru": "молодой",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "違",
+        "onyomi": "イ",
+        "kunyomi": "ちがう",
+        "meaning_ru": "отличаться, ошибаться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "底",
+        "onyomi": "テイ",
+        "kunyomi": "そこ",
+        "meaning_ru": "дно",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "想",
+        "onyomi": "ソー",
+        "kunyomi": "—",
+        "meaning_ru": "мысль, представлять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "返",
+        "onyomi": "ヘン",
+        "kunyomi": "かえす",
+        "meaning_ru": "возвращать, ответ",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "愛",
+        "onyomi": "アイ",
+        "kunyomi": "—",
+        "meaning_ru": "любовь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "原",
+        "onyomi": "ゲン",
+        "kunyomi": "はら",
+        "meaning_ru": "луг",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "他",
+        "onyomi": "タ",
+        "kunyomi": "ほか",
+        "meaning_ru": "другой",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "処",
+        "onyomi": "ショ",
+        "kunyomi": "—",
+        "meaning_ru": "распоряжаться, наказание, место",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "置",
+        "onyomi": "チ",
+        "kunyomi": "おく",
+        "meaning_ru": "класть",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "化",
+        "onyomi": "カ",
+        "kunyomi": "ばける",
+        "meaning_ru": "изменяться, превращаться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "命",
+        "onyomi": "メイ",
+        "kunyomi": "いのち",
+        "meaning_ru": "жизнь, приказ",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "数",
+        "onyomi": "スー",
+        "kunyomi": "かず、かぞえる",
+        "meaning_ru": "цифра, число",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "関",
+        "onyomi": "カン",
+        "kunyomi": "かかわる",
+        "meaning_ru": "застава, барьер, иметь отношение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "付",
+        "onyomi": "フ",
+        "kunyomi": "つける",
+        "meaning_ru": "присоединять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "解",
+        "onyomi": "カイ",
+        "kunyomi": "とく",
+        "meaning_ru": "развязывать, разбирать, понимать, разгадывать, расторгать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "石",
+        "onyomi": "セキ",
+        "kunyomi": "いし",
+        "meaning_ru": "камень",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "常",
+        "onyomi": "ジョー",
+        "kunyomi": "つね、とこ",
+        "meaning_ru": "обычный, постоянный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "要",
+        "onyomi": "ヨー",
+        "kunyomi": "いる、かなめ",
+        "meaning_ru": "быть нужным, требоваться, важный, суть",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "苦",
+        "onyomi": "ク",
+        "kunyomi": "くるしい、にがい",
+        "meaning_ru": "страдать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "定",
+        "onyomi": "テイ、ジョー",
+        "kunyomi": "さだめる",
+        "meaning_ru": "определять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "過",
+        "onyomi": "カ",
+        "kunyomi": "すぎる、あやまち",
+        "meaning_ru": "проходить, превышать, ошибка",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "戸",
+        "onyomi": "コ",
+        "kunyomi": "と",
+        "meaning_ru": "дверь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "飛",
+        "onyomi": "ヒ",
+        "kunyomi": "とぶ",
+        "meaning_ru": "летать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "助",
+        "onyomi": "ジョ",
+        "kunyomi": "たすける",
+        "meaning_ru": "помощь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "庫",
+        "onyomi": "コ",
+        "kunyomi": "くら",
+        "meaning_ru": "хранилище, склад",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "在",
+        "onyomi": "ザイ",
+        "kunyomi": "ある",
+        "meaning_ru": "быть, существовать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "供",
+        "onyomi": "キョー、ク",
+        "kunyomi": "とも、そなえる",
+        "meaning_ru": "предоставлять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "申",
+        "onyomi": "シン",
+        "kunyomi": "もうす",
+        "meaning_ru": "говорить, докладывать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "兵",
+        "onyomi": "ヘイ",
+        "kunyomi": "—",
+        "meaning_ru": "солдат",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "機",
+        "onyomi": "キ",
+        "kunyomi": "(はた)",
+        "meaning_ru": "механизм, момент, состояние человека",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "深",
+        "onyomi": "シン",
+        "kunyomi": "ふかい",
+        "meaning_ru": "глубокий",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "草",
+        "onyomi": "ソー",
+        "kunyomi": "くさ",
+        "meaning_ru": "трава",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "決",
+        "onyomi": "ケツ",
+        "kunyomi": "きめる",
+        "meaning_ru": "решать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "張",
+        "onyomi": "チョー",
+        "kunyomi": "はる",
+        "meaning_ru": "натягивать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "戦",
+        "onyomi": "セン",
+        "kunyomi": "たたかう",
+        "meaning_ru": "война, сражение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "覚",
+        "onyomi": "カク",
+        "kunyomi": "おぼえる、さます",
+        "meaning_ru": "помнить, чувство, ощущение, просыпаться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "呼",
+        "onyomi": "コ",
+        "kunyomi": "よぶ",
+        "meaning_ru": "звать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "由",
+        "onyomi": "ユー、ユ",
+        "kunyomi": "よし",
+        "meaning_ru": "причина",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "必",
+        "onyomi": "ヒツ",
+        "kunyomi": "かならず",
+        "meaning_ru": "неизбежный, обязательный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "打",
+        "onyomi": "ダ",
+        "kunyomi": "うつ",
+        "meaning_ru": "ударять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "利",
+        "onyomi": "リ",
+        "kunyomi": "きく",
+        "meaning_ru": "прибыль, выгода, острый",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "連",
+        "onyomi": "レン",
+        "kunyomi": "つれる、つらなる",
+        "meaning_ru": "брать с собой, соединение, группа, компания",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "余",
+        "onyomi": "ヨ",
+        "kunyomi": "あまる",
+        "meaning_ru": "избыток",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "調",
+        "onyomi": "チョー",
+        "kunyomi": "しらべる、ととのう",
+        "meaning_ru": "музыкальный тон, темп, налаживать, исследовать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "皆",
+        "onyomi": "カイ",
+        "kunyomi": "みな",
+        "meaning_ru": "все, всё",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "突",
+        "onyomi": "トツ",
+        "kunyomi": "つく",
+        "meaning_ru": "ударять, неожиданно",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "可",
+        "onyomi": "カ",
+        "kunyomi": "—",
+        "meaning_ru": "одобрять, возможный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "根",
+        "onyomi": "コン",
+        "kunyomi": "ね",
+        "meaning_ru": "корень",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "術",
+        "onyomi": "ジュツ",
+        "kunyomi": "—",
+        "meaning_ru": "искусство, умение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "老",
+        "onyomi": "ロー",
+        "kunyomi": "おいる、ふける",
+        "meaning_ru": "старость",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "治",
+        "onyomi": "チ、ジ",
+        "kunyomi": "おさめる、なおす",
+        "meaning_ru": "управлять, лечить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "受",
+        "onyomi": "ジュ",
+        "kunyomi": "うける",
+        "meaning_ru": "принимать, подвергаться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "念",
+        "onyomi": "ネン",
+        "kunyomi": "—",
+        "meaning_ru": "мысль",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "島",
+        "onyomi": "トー",
+        "kunyomi": "しま",
+        "meaning_ru": "остров",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "種",
+        "onyomi": "シュ",
+        "kunyomi": "たね",
+        "meaning_ru": "семя, биол. вид",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "公",
+        "onyomi": "コー",
+        "kunyomi": "おおやけ",
+        "meaning_ru": "общественный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "座",
+        "onyomi": "ザ",
+        "kunyomi": "すわる",
+        "meaning_ru": "сидеть, место для сидения",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "残",
+        "onyomi": "ザン",
+        "kunyomi": "のこる",
+        "meaning_ru": "остаток",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "殺",
+        "onyomi": "サツ",
+        "kunyomi": "ころす",
+        "meaning_ru": "убить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "船",
+        "onyomi": "セン",
+        "kunyomi": "ふね",
+        "meaning_ru": "корабль",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "恐",
+        "onyomi": "キョー",
+        "kunyomi": "おそれる",
+        "meaning_ru": "страх",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "経",
+        "onyomi": "ケイ",
+        "kunyomi": "へる",
+        "meaning_ru": "управлять, проходить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "観",
+        "onyomi": "カン",
+        "kunyomi": "—",
+        "meaning_ru": "вид, осматривать, взгляд",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "番",
+        "onyomi": "バン",
+        "kunyomi": "—",
+        "meaning_ru": "номер, очерёдность, охрана",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "存",
+        "onyomi": "ソン、ゾン",
+        "kunyomi": "—",
+        "meaning_ru": "полагать, существовать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "師",
+        "onyomi": "シ",
+        "kunyomi": "—",
+        "meaning_ru": "учитель, духовное лицо, суффикс лица по профессии",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "伝",
+        "onyomi": "デン",
+        "kunyomi": "つたわる",
+        "meaning_ru": "передаваться, вдоль",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "式",
+        "onyomi": "シキ",
+        "kunyomi": "—",
+        "meaning_ru": "церемония, стиль, формула",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "寄",
+        "onyomi": "キ",
+        "kunyomi": "よる",
+        "meaning_ru": "приближаться, подходить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "果",
+        "onyomi": "カ",
+        "kunyomi": "はたす",
+        "meaning_ru": "фрукт, выполнять, результат",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "程",
+        "onyomi": "テイ",
+        "kunyomi": "ほど",
+        "meaning_ru": "мера, степень, расстояние, распорядок",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "両",
+        "onyomi": "リョー",
+        "kunyomi": "—",
+        "meaning_ru": "оба",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "横",
+        "onyomi": "オー",
+        "kunyomi": "よこ",
+        "meaning_ru": "горизонтальный, бок",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "識",
+        "onyomi": "シキ",
+        "kunyomi": "—",
+        "meaning_ru": "сознание, знание",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "反",
+        "onyomi": "ハン",
+        "kunyomi": "そる",
+        "meaning_ru": "против, анти-",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "娘",
+        "onyomi": "—",
+        "kunyomi": "むすめ",
+        "meaning_ru": "дочь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "議",
+        "onyomi": "ギ",
+        "kunyomi": "—",
+        "meaning_ru": "обсуждение, предложение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "軍",
+        "onyomi": "グン",
+        "kunyomi": "—",
+        "meaning_ru": "армия",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "能",
+        "onyomi": "ノー",
+        "kunyomi": "—",
+        "meaning_ru": "способность, действие, эффект",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "失",
+        "onyomi": "シツ",
+        "kunyomi": "うしなう",
+        "meaning_ru": "терять, неудача",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "路",
+        "onyomi": "ロ",
+        "kunyomi": "じ",
+        "meaning_ru": "путь, дорога",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "寝",
+        "onyomi": "シン",
+        "kunyomi": "ねる",
+        "meaning_ru": "ложиться спать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "非",
+        "onyomi": "ヒ",
+        "kunyomi": "—",
+        "meaning_ru": "не, плохой, неправильный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "告",
+        "onyomi": "コク",
+        "kunyomi": "つげる",
+        "meaning_ru": "сообщать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "細",
+        "onyomi": "サイ",
+        "kunyomi": "ほそい",
+        "meaning_ru": "тонкий, маленький, детальный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "共",
+        "onyomi": "キョー",
+        "kunyomi": "とも",
+        "meaning_ru": "вместе",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "酒",
+        "onyomi": "シュ",
+        "kunyomi": "さけ",
+        "meaning_ru": "алкоголь, сакэ",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "婦",
+        "onyomi": "フ",
+        "kunyomi": "—",
+        "meaning_ru": "дама",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "加",
+        "onyomi": "カ",
+        "kunyomi": "くわえる",
+        "meaning_ru": "добавлять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "際",
+        "onyomi": "サイ",
+        "kunyomi": "きわ",
+        "meaning_ru": "край",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "息",
+        "onyomi": "ソク",
+        "kunyomi": "いき",
+        "meaning_ru": "дыхание",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "指",
+        "onyomi": "シ",
+        "kunyomi": "ゆび、さす",
+        "meaning_ru": "палец, указывать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "武",
+        "onyomi": "ブ",
+        "kunyomi": "—",
+        "meaning_ru": "военный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "判",
+        "onyomi": "ハン、バン",
+        "kunyomi": "—",
+        "meaning_ru": "судить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "支",
+        "onyomi": "シ",
+        "kunyomi": "ささえる",
+        "meaning_ru": "поддерживать, отделение/филиал, расходы",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "客",
+        "onyomi": "キャク、カク",
+        "kunyomi": "—",
+        "meaning_ru": "гость, клиент",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "片",
+        "onyomi": "ヘン",
+        "kunyomi": "かた",
+        "meaning_ru": "односторонний, один предмет из нескольких, кусок",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "良",
+        "onyomi": "リョー",
+        "kunyomi": "よい",
+        "meaning_ru": "хороший",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "例",
+        "onyomi": "レイ",
+        "kunyomi": "たとえる",
+        "meaning_ru": "пример",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "雪",
+        "onyomi": "セツ",
+        "kunyomi": "ゆき",
+        "meaning_ru": "снег",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "望",
+        "onyomi": "ボー",
+        "kunyomi": "のぞむ",
+        "meaning_ru": "желание, надежда",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "王",
+        "onyomi": "オー",
+        "kunyomi": "—",
+        "meaning_ru": "правитель",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "位",
+        "onyomi": "イ",
+        "kunyomi": "くらい",
+        "meaning_ru": "ранг, позиция, настолько",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "難",
+        "onyomi": "ナン",
+        "kunyomi": "むずかしい、かたい",
+        "meaning_ru": "трудный, бедствие, порицать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "政",
+        "onyomi": "セイ",
+        "kunyomi": "まつりごと",
+        "meaning_ru": "политика",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "芸",
+        "onyomi": "ゲイ",
+        "kunyomi": "—",
+        "meaning_ru": "искусство, мастерство",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "胸",
+        "onyomi": "キョー",
+        "kunyomi": "むね",
+        "meaning_ru": "грудь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "故",
+        "onyomi": "コ",
+        "kunyomi": "ゆえ",
+        "meaning_ru": "обстоятельства",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "勢",
+        "onyomi": "セイ",
+        "kunyomi": "(ゼイ)",
+        "meaning_ru": "сила, мощь, энергия, ход событий",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "準",
+        "onyomi": "ジュン",
+        "kunyomi": "—",
+        "meaning_ru": "стандарт, полу",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "配",
+        "onyomi": "ハイ",
+        "kunyomi": "くばる",
+        "meaning_ru": "распределять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "階",
+        "onyomi": "カイ",
+        "kunyomi": "—",
+        "meaning_ru": "этаж, ступень, уровень",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "幸",
+        "onyomi": "コー",
+        "kunyomi": "しあわせ、さいわい、さち",
+        "meaning_ru": "счастье",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "役",
+        "onyomi": "ヤク、エキ",
+        "kunyomi": "—",
+        "meaning_ru": "роль, служба",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "絶",
+        "onyomi": "ゼツ",
+        "kunyomi": "たえる",
+        "meaning_ru": "прекращаться, абсолютный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "巻",
+        "onyomi": "カン",
+        "kunyomi": "まき、まく",
+        "meaning_ru": "свёртывать, том",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "渡",
+        "onyomi": "ト",
+        "kunyomi": "わたる",
+        "meaning_ru": "переправляться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "段",
+        "onyomi": "ダン",
+        "kunyomi": "—",
+        "meaning_ru": "ступень, стадия",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "勝",
+        "onyomi": "ショー",
+        "kunyomi": "かつ、まさる",
+        "meaning_ru": "побеждать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "角",
+        "onyomi": "カク",
+        "kunyomi": "かど、つの",
+        "meaning_ru": "угол",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "消",
+        "onyomi": "ショー",
+        "kunyomi": "きえる、けす",
+        "meaning_ru": "гасить, тушить, исчезать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "制",
+        "onyomi": "セイ",
+        "kunyomi": "—",
+        "meaning_ru": "контроль, ограничивать, система, строй",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "奥",
+        "onyomi": "オー",
+        "kunyomi": "おく",
+        "meaning_ru": "глубь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "夢",
+        "onyomi": "ム",
+        "kunyomi": "ゆめ",
+        "meaning_ru": "сон, мечта",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "背",
+        "onyomi": "ハイ",
+        "kunyomi": "せ、せい、そむく",
+        "meaning_ru": "сзади, спина, рост, противоречить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "追",
+        "onyomi": "ツイ",
+        "kunyomi": "おう",
+        "meaning_ru": "преследовать, следовать, прогонять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "波",
+        "onyomi": "ハ",
+        "kunyomi": "なみ",
+        "meaning_ru": "волна",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "続",
+        "onyomi": "ゾク",
+        "kunyomi": "つづく",
+        "meaning_ru": "продолжаться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "極",
+        "onyomi": "キョク",
+        "kunyomi": "(ゴク)",
+        "meaning_ru": "крайняя степень, полюса",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "守",
+        "onyomi": "シュ",
+        "kunyomi": "まもる",
+        "meaning_ru": "защищать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "悲",
+        "onyomi": "ヒ",
+        "kunyomi": "かなしい",
+        "meaning_ru": "печальный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "線",
+        "onyomi": "セン",
+        "kunyomi": "—",
+        "meaning_ru": "линия",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "限",
+        "onyomi": "ゲン",
+        "kunyomi": "かぎる",
+        "meaning_ru": "ограничивать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "放",
+        "onyomi": "ホー",
+        "kunyomi": "はなす、ほうる",
+        "meaning_ru": "отпускать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "寺",
+        "onyomi": "ジ",
+        "kunyomi": "てら",
+        "meaning_ru": "буддийский храм",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "蔵",
+        "onyomi": "ゾー",
+        "kunyomi": "くら",
+        "meaning_ru": "кладовая, склад",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "精",
+        "onyomi": "セイ",
+        "kunyomi": "—",
+        "meaning_ru": "старание, тщательность, очищать, дух",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "断",
+        "onyomi": "ダン",
+        "kunyomi": "たつ、ことわる",
+        "meaning_ru": "отрезать, прерывать, утверждение, заключение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "格",
+        "onyomi": "カク",
+        "kunyomi": "—",
+        "meaning_ru": "статус, стандарт, характер, падеж",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "押",
+        "onyomi": "オー",
+        "kunyomi": "おす",
+        "meaning_ru": "надавить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "容",
+        "onyomi": "ヨー",
+        "kunyomi": "—",
+        "meaning_ru": "содержать, допускать, облик",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "類",
+        "onyomi": "ルイ",
+        "kunyomi": "たぐい",
+        "meaning_ru": "сорт, сходство",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "与",
+        "onyomi": "ヨ",
+        "kunyomi": "あたえる",
+        "meaning_ru": "давать, предоставлять, участвовать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "静",
+        "onyomi": "セイ",
+        "kunyomi": "しずか",
+        "meaning_ru": "тихий, спокойный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "鳴",
+        "onyomi": "メイ",
+        "kunyomi": "なく",
+        "meaning_ru": "звучать, чирикать, щебетать, мычать и т. д.",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "宿",
+        "onyomi": "シュク",
+        "kunyomi": "やど",
+        "meaning_ru": "гостиница",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "折",
+        "onyomi": "セツ",
+        "kunyomi": "おり、おる",
+        "meaning_ru": "сгибать, ломать, момент",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "遊",
+        "onyomi": "ユー",
+        "kunyomi": "あそぶ",
+        "meaning_ru": "играть, развлекаться, путешествовать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "浮",
+        "onyomi": "フ",
+        "kunyomi": "うく",
+        "meaning_ru": "плавать, плавающий, нестабильный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "久",
+        "onyomi": "キュー",
+        "kunyomi": "ひさしい",
+        "meaning_ru": "долгий, продолжительный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "庭",
+        "onyomi": "テイ",
+        "kunyomi": "にわ",
+        "meaning_ru": "сад, двор",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "妻",
+        "onyomi": "サイ",
+        "kunyomi": "つま",
+        "meaning_ru": "жена",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "史",
+        "onyomi": "シ",
+        "kunyomi": "—",
+        "meaning_ru": "история",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "忘",
+        "onyomi": "ボー",
+        "kunyomi": "わすれる",
+        "meaning_ru": "забывать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "造",
+        "onyomi": "ゾー",
+        "kunyomi": "つくる",
+        "meaning_ru": "изготовлять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "降",
+        "onyomi": "コー",
+        "kunyomi": "おりる、ふる",
+        "meaning_ru": "спускаться, сдаваться, идти (о дожде, снеге)",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "泣",
+        "onyomi": "キュー",
+        "kunyomi": "なく",
+        "meaning_ru": "плакать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "談",
+        "onyomi": "ダン",
+        "kunyomi": "—",
+        "meaning_ru": "разговор, беседа, рассказ",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "側",
+        "onyomi": "ソク",
+        "kunyomi": "がわ",
+        "meaning_ru": "сторона",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "科",
+        "onyomi": "カ",
+        "kunyomi": "—",
+        "meaning_ru": "отделение, отрасль, преступление",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "舞",
+        "onyomi": "ブ",
+        "kunyomi": "まい、まう",
+        "meaning_ru": "танец",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "像",
+        "onyomi": "ゾー",
+        "kunyomi": "—",
+        "meaning_ru": "статуя, изображение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "交",
+        "onyomi": "コー",
+        "kunyomi": "まじわる",
+        "meaning_ru": "обмениваться, смешивать, пересекаться, отношения",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "頼",
+        "onyomi": "ライ",
+        "kunyomi": "たのむ、たよる",
+        "meaning_ru": "просить, поручать, полагаться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "異",
+        "onyomi": "イ",
+        "kunyomi": "こと",
+        "meaning_ru": "отличаться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "越",
+        "onyomi": "エツ",
+        "kunyomi": "こす",
+        "meaning_ru": "пересекать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "谷",
+        "onyomi": "コク",
+        "kunyomi": "たに",
+        "meaning_ru": "долина",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "志",
+        "onyomi": "シ",
+        "kunyomi": "こころざし、こころざす",
+        "meaning_ru": "намерение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "号",
+        "onyomi": "ゴー",
+        "kunyomi": "—",
+        "meaning_ru": "номер, знак",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "熱",
+        "onyomi": "ネツ",
+        "kunyomi": "あつい",
+        "meaning_ru": "горячий",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "象",
+        "onyomi": "ショー、ゾー",
+        "kunyomi": "—",
+        "meaning_ru": "слон, явление, объект",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "確",
+        "onyomi": "カク",
+        "kunyomi": "たしか",
+        "meaning_ru": "определённый, достоверный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "係",
+        "onyomi": "ケイ",
+        "kunyomi": "かかり、かかる",
+        "meaning_ru": "главный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "似",
+        "onyomi": "ジ",
+        "kunyomi": "にる",
+        "meaning_ru": "похожий",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "血",
+        "onyomi": "ケツ",
+        "kunyomi": "ち",
+        "meaning_ru": "кровь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "参",
+        "onyomi": "サン",
+        "kunyomi": "まいる",
+        "meaning_ru": "участвовать, приходить, идти, посетить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "組",
+        "onyomi": "ソ",
+        "kunyomi": "くみ、くむ",
+        "meaning_ru": "команда",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "逃",
+        "onyomi": "トー",
+        "kunyomi": "にげる、のがれる",
+        "meaning_ru": "убежать, сбежать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "清",
+        "onyomi": "セイ",
+        "kunyomi": "きよい",
+        "meaning_ru": "чистый",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "吹",
+        "onyomi": "スイ",
+        "kunyomi": "ふく",
+        "meaning_ru": "дуть",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "満",
+        "onyomi": "マン",
+        "kunyomi": "みちる",
+        "meaning_ru": "полный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "件",
+        "onyomi": "ケン",
+        "kunyomi": "—",
+        "meaning_ru": "дело, происшествие",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "諸",
+        "onyomi": "ショ",
+        "kunyomi": "—",
+        "meaning_ru": "различные, многие, все",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "腹",
+        "onyomi": "フク",
+        "kunyomi": "はら",
+        "meaning_ru": "живот",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "抜",
+        "onyomi": "バツ",
+        "kunyomi": "ぬく",
+        "meaning_ru": "вытаскивать, превосходить, проходить насквозь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "許",
+        "onyomi": "キョ",
+        "kunyomi": "ゆるす",
+        "meaning_ru": "разрешать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "城",
+        "onyomi": "ジョー",
+        "kunyomi": "しろ",
+        "meaning_ru": "замок, крепость",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "河",
+        "onyomi": "カ",
+        "kunyomi": "かわ",
+        "meaning_ru": "река",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "晩",
+        "onyomi": "バン",
+        "kunyomi": "—",
+        "meaning_ru": "вечер, поздний",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "将",
+        "onyomi": "ショー",
+        "kunyomi": "—",
+        "meaning_ru": "генерал, командир",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "雑",
+        "onyomi": "ザツ",
+        "kunyomi": "(ゾー)",
+        "meaning_ru": "всякие, грубый, беспорядок",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "昔",
+        "onyomi": "セキ",
+        "kunyomi": "むかし",
+        "meaning_ru": "прошлое, в старину",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "示",
+        "onyomi": "ジ",
+        "kunyomi": "(シ)",
+        "meaning_ru": "указывать на что-либо, показывать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "窓",
+        "onyomi": "ソー",
+        "kunyomi": "まど",
+        "meaning_ru": "окно",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "独",
+        "onyomi": "ドク",
+        "kunyomi": "ひとり",
+        "meaning_ru": "один, в одиночку",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "困",
+        "onyomi": "コン",
+        "kunyomi": "こまる",
+        "meaning_ru": "затруднение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "雲",
+        "onyomi": "ウン",
+        "kunyomi": "くも",
+        "meaning_ru": "облако",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "喜",
+        "onyomi": "キ",
+        "kunyomi": "よろこぶ",
+        "meaning_ru": "радоваться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "期",
+        "onyomi": "キ",
+        "kunyomi": "—",
+        "meaning_ru": "период времени",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "官",
+        "onyomi": "カン",
+        "kunyomi": "—",
+        "meaning_ru": "чиновник, орган чувств",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "更",
+        "onyomi": "コー",
+        "kunyomi": "さら、ふける",
+        "meaning_ru": "обновлять, ещё",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "暮",
+        "onyomi": "ボ",
+        "kunyomi": "くらす",
+        "meaning_ru": "сумерки",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "並",
+        "onyomi": "ヘイ",
+        "kunyomi": "なみ、ならべる",
+        "meaning_ru": "ряд, расставлять, обычный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "抱",
+        "onyomi": "ホー",
+        "kunyomi": "だく、いだく、かかえる",
+        "meaning_ru": "обнимать, питать чувства",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "曲",
+        "onyomi": "キョク",
+        "kunyomi": "まがる",
+        "meaning_ru": "мелодия, изгиб",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "冷",
+        "onyomi": "レイ",
+        "kunyomi": "つめたい、ひえる、さめる",
+        "meaning_ru": "холодный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "単",
+        "onyomi": "タン",
+        "kunyomi": "—",
+        "meaning_ru": "простой, отдельный, единичный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "状",
+        "onyomi": "ジョー",
+        "kunyomi": "—",
+        "meaning_ru": "форма, положение, письмо",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "痛",
+        "onyomi": "ツー",
+        "kunyomi": "いたい",
+        "meaning_ru": "боль",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "薄",
+        "onyomi": "ハク",
+        "kunyomi": "うすい",
+        "meaning_ru": "тонкий, слабый, недостаточный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "橋",
+        "onyomi": "キョー",
+        "kunyomi": "はし",
+        "meaning_ru": "мост",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "裏",
+        "onyomi": "リ",
+        "kunyomi": "うら",
+        "meaning_ru": "изнанка, оборотная сторона",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "求",
+        "onyomi": "キュー",
+        "kunyomi": "もとめる",
+        "meaning_ru": "требовать, искать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "差",
+        "onyomi": "サ",
+        "kunyomi": "さす",
+        "meaning_ru": "разница, префикс 差し",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "保",
+        "onyomi": "ホ",
+        "kunyomi": "たもつ",
+        "meaning_ru": "сохранять, поддерживать, заботиться, ручаться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "具",
+        "onyomi": "グ",
+        "kunyomi": "そなえる",
+        "meaning_ru": "инструмент",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "破",
+        "onyomi": "ハ",
+        "kunyomi": "やぶる",
+        "meaning_ru": "ломать, разрушать, преодолевать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "労",
+        "onyomi": "ロー",
+        "kunyomi": "(いたわる)",
+        "meaning_ru": "труд",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "改",
+        "onyomi": "カイ",
+        "kunyomi": "あらためる",
+        "meaning_ru": "менять, переделывать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "散",
+        "onyomi": "サン",
+        "kunyomi": "ちる",
+        "meaning_ru": "разбрасывать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "末",
+        "onyomi": "マツ",
+        "kunyomi": "すえ",
+        "meaning_ru": "конец, окончание, последний, порошок",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "構",
+        "onyomi": "コー",
+        "kunyomi": "かまえる",
+        "meaning_ru": "конструкция",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "途",
+        "onyomi": "ト",
+        "kunyomi": "—",
+        "meaning_ru": "путь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "米",
+        "onyomi": "ベイ、マイ",
+        "kunyomi": "こめ",
+        "meaning_ru": "рис",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "岸",
+        "onyomi": "ガン",
+        "kunyomi": "きし",
+        "meaning_ru": "берег",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "辺",
+        "onyomi": "ヘン",
+        "kunyomi": "あたり、べ",
+        "meaning_ru": "окрестности, берег, граница",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "劇",
+        "onyomi": "ゲキ",
+        "kunyomi": "—",
+        "meaning_ru": "пьеса, драма, интенсивный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "緒",
+        "onyomi": "ショ",
+        "kunyomi": "(チョ)",
+        "meaning_ru": "начало, чувство",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "景",
+        "onyomi": "ケイ",
+        "kunyomi": "—",
+        "meaning_ru": "вид, пейзаж, состояние",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "絵",
+        "onyomi": "エ、カイ",
+        "kunyomi": "—",
+        "meaning_ru": "картина",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "刻",
+        "onyomi": "コク",
+        "kunyomi": "きざむ",
+        "meaning_ru": "гравировать, время",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "条",
+        "onyomi": "ジョー",
+        "kunyomi": "—",
+        "meaning_ru": "статья, параграф, пункт, линия",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "疑",
+        "onyomi": "ギ",
+        "kunyomi": "うたがう",
+        "meaning_ru": "сомневаться, подозревать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "負",
+        "onyomi": "フ",
+        "kunyomi": "まける、おう",
+        "meaning_ru": "минус, нести на себе",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "認",
+        "onyomi": "ニン",
+        "kunyomi": "みとめる",
+        "meaning_ru": "признавать, одобрять",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "殿",
+        "onyomi": "デン",
+        "kunyomi": "との、どの",
+        "meaning_ru": "дворец, суффикс доно",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "丸",
+        "onyomi": "ガン",
+        "kunyomi": "まる",
+        "meaning_ru": "круг",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "案",
+        "onyomi": "アン",
+        "kunyomi": "—",
+        "meaning_ru": "план, идея",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "応",
+        "onyomi": "オー",
+        "kunyomi": "こたえる",
+        "meaning_ru": "реагировать, отвечать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "評",
+        "onyomi": "ヒョー",
+        "kunyomi": "—",
+        "meaning_ru": "оценка, критика, обсуждение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "腰",
+        "onyomi": "ヨー",
+        "kunyomi": "こし",
+        "meaning_ru": "поясница",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "商",
+        "onyomi": "ショー",
+        "kunyomi": "あきなう",
+        "meaning_ru": "торговать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "毛",
+        "onyomi": "モー",
+        "kunyomi": "け",
+        "meaning_ru": "волосы, шерсть",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "争",
+        "onyomi": "ソー",
+        "kunyomi": "あらそう",
+        "meaning_ru": "спор, борьба",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "未",
+        "onyomi": "ミ",
+        "kunyomi": "—",
+        "meaning_ru": "ещё не",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "羽",
+        "onyomi": "ウ",
+        "kunyomi": "は、はね",
+        "meaning_ru": "перо",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "恋",
+        "onyomi": "レン",
+        "kunyomi": "こい",
+        "meaning_ru": "любовь (романтическая)",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "髪",
+        "onyomi": "ハツ",
+        "kunyomi": "かみ",
+        "meaning_ru": "волосы (на голове)",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "伸",
+        "onyomi": "シン",
+        "kunyomi": "のびる",
+        "meaning_ru": "растягиваться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "探",
+        "onyomi": "タン",
+        "kunyomi": "さがす、さぐる",
+        "meaning_ru": "искать, разведывать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "玉",
+        "onyomi": "ギョク",
+        "kunyomi": "たま",
+        "meaning_ru": "драгоценный камень",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "介",
+        "onyomi": "カイ",
+        "kunyomi": "—",
+        "meaning_ru": "посредничать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "察",
+        "onyomi": "サツ",
+        "kunyomi": "—",
+        "meaning_ru": "инспектировать, предполагать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "比",
+        "onyomi": "ヒ",
+        "kunyomi": "くらべる",
+        "meaning_ru": "сравнивать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "版",
+        "onyomi": "ハン",
+        "kunyomi": "—",
+        "meaning_ru": "издание",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "歳",
+        "onyomi": "サイ",
+        "kunyomi": "—",
+        "meaning_ru": "возраст, год",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "煙",
+        "onyomi": "エン",
+        "kunyomi": "けむり、けむる",
+        "meaning_ru": "дым",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "快",
+        "onyomi": "カイ",
+        "kunyomi": "こころよい",
+        "meaning_ru": "приятный, выздоровление",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "福",
+        "onyomi": "フク",
+        "kunyomi": "—",
+        "meaning_ru": "удача, счастье",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "団",
+        "onyomi": "ダン",
+        "kunyomi": "—",
+        "meaning_ru": "объединение, группа",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "優",
+        "onyomi": "ユー",
+        "kunyomi": "やさしい、すぐれる",
+        "meaning_ru": "превосходный, изящный, актёр",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "衣",
+        "onyomi": "イ",
+        "kunyomi": "ころも",
+        "meaning_ru": "одеяние",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "叫",
+        "onyomi": "キョー",
+        "kunyomi": "さけぶ",
+        "meaning_ru": "кричать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "礼",
+        "onyomi": "レイ",
+        "kunyomi": "—",
+        "meaning_ru": "поклон, вежливость, благодарность, церемония",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "岩",
+        "onyomi": "ガン",
+        "kunyomi": "いわ",
+        "meaning_ru": "скала, горная порода",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "器",
+        "onyomi": "キ",
+        "kunyomi": "うつわ",
+        "meaning_ru": "сосуд, инструмент, способности",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "願",
+        "onyomi": "ガン",
+        "kunyomi": "ねがう",
+        "meaning_ru": "просить, желать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "昨",
+        "onyomi": "サク",
+        "kunyomi": "—",
+        "meaning_ru": "прошлый (о времени)",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "腕",
+        "onyomi": "ワン",
+        "kunyomi": "うで",
+        "meaning_ru": "рука (от плеча до кисти), умение",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "投",
+        "onyomi": "トー",
+        "kunyomi": "なげる",
+        "meaning_ru": "бросать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "歴",
+        "onyomi": "レキ",
+        "kunyomi": "—",
+        "meaning_ru": "биография, последовательно",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "候",
+        "onyomi": "コー",
+        "kunyomi": "そうろう",
+        "meaning_ru": "климат, симптом",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "予",
+        "onyomi": "ヨ",
+        "kunyomi": "—",
+        "meaning_ru": "заранее",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "再",
+        "onyomi": "サイ",
+        "kunyomi": "ふたたび",
+        "meaning_ru": "повторный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "報",
+        "onyomi": "ホー",
+        "kunyomi": "むくいる",
+        "meaning_ru": "сообщение, известие, отплачивать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "筆",
+        "onyomi": "ヒツ",
+        "kunyomi": "ふで",
+        "meaning_ru": "кисть",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "倒",
+        "onyomi": "トー",
+        "kunyomi": "たおれる",
+        "meaning_ru": "падать, валиться",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "眠",
+        "onyomi": "ミン",
+        "kunyomi": "ねむる",
+        "meaning_ru": "спать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "留",
+        "onyomi": "リュー",
+        "kunyomi": "とめる",
+        "meaning_ru": "останавливать, задерживать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "退",
+        "onyomi": "タイ",
+        "kunyomi": "しりぞく",
+        "meaning_ru": "отступать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "演",
+        "onyomi": "エン",
+        "kunyomi": "—",
+        "meaning_ru": "выступать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "永",
+        "onyomi": "エイ",
+        "kunyomi": "ながい",
+        "meaning_ru": "вечный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "州",
+        "onyomi": "シュー",
+        "kunyomi": "す",
+        "meaning_ru": "провинция, мель",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "個",
+        "onyomi": "コ",
+        "kunyomi": "—",
+        "meaning_ru": "индивидуальный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "約",
+        "onyomi": "ヤク",
+        "kunyomi": "—",
+        "meaning_ru": "сокращать, приблизительно, обещание",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "囲",
+        "onyomi": "イ",
+        "kunyomi": "かこむ",
+        "meaning_ru": "окружать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "床",
+        "onyomi": "ショー",
+        "kunyomi": "とこ、ゆか",
+        "meaning_ru": "постель, пол",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "罪",
+        "onyomi": "ザイ",
+        "kunyomi": "つみ",
+        "meaning_ru": "преступление, вина, кара",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "仏",
+        "onyomi": "ブツ",
+        "kunyomi": "ほとけ",
+        "meaning_ru": "Будда",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "坂",
+        "onyomi": "ハン",
+        "kunyomi": "さか",
+        "meaning_ru": "холм",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "職",
+        "onyomi": "ショク",
+        "kunyomi": "—",
+        "meaning_ru": "должность",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "育",
+        "onyomi": "イク",
+        "kunyomi": "そだつ、はぐくむ",
+        "meaning_ru": "растить, воспитывать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "骨",
+        "onyomi": "コツ",
+        "kunyomi": "ほね",
+        "meaning_ru": "кость",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "仲",
+        "onyomi": "チュー",
+        "kunyomi": "なか",
+        "meaning_ru": "отношения, посредник",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "涙",
+        "onyomi": "ルイ",
+        "kunyomi": "なみだ",
+        "meaning_ru": "слезы",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "済",
+        "onyomi": "サイ",
+        "kunyomi": "すむ",
+        "meaning_ru": "окончиться, уплачивать, помогать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "焼",
+        "onyomi": "ショー",
+        "kunyomi": "やく",
+        "meaning_ru": "жарить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "徒",
+        "onyomi": "ト",
+        "kunyomi": "—",
+        "meaning_ru": "последователь, ученик, группа людей, человек, напрасный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "節",
+        "onyomi": "セツ",
+        "kunyomi": "ふし",
+        "meaning_ru": "сустав, узел, мотив, отрезок времени, экономить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "枝",
+        "onyomi": "シ",
+        "kunyomi": "えだ",
+        "meaning_ru": "ветвь",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "肩",
+        "onyomi": "ケン",
+        "kunyomi": "かた",
+        "meaning_ru": "плечо",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "乱",
+        "onyomi": "ラン",
+        "kunyomi": "みだれる",
+        "meaning_ru": "беспорядок, злоупотребление",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "陽",
+        "onyomi": "ヨー",
+        "kunyomi": "—",
+        "meaning_ru": "солнце, ян",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "善",
+        "onyomi": "ゼン",
+        "kunyomi": "よい",
+        "meaning_ru": "добро, правильный",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "鼻",
+        "onyomi": "ビ",
+        "kunyomi": "はな",
+        "meaning_ru": "нос",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "富",
+        "onyomi": "フ",
+        "kunyomi": "とみ、とむ",
+        "meaning_ru": "богатство",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "警",
+        "onyomi": "ケイ",
+        "kunyomi": "—",
+        "meaning_ru": "полиция, сторожить",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "香",
+        "onyomi": "コー",
+        "kunyomi": "かおり",
+        "meaning_ru": "аромат",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "壁",
+        "onyomi": "ヘキ",
+        "kunyomi": "かべ",
+        "meaning_ru": "стена",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "任",
+        "onyomi": "ニン",
+        "kunyomi": "まかせる",
+        "meaning_ru": "поручать, доверять, назначать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "戻",
+        "onyomi": "レイ",
+        "kunyomi": "もどす",
+        "meaning_ru": "возвращать",
+        "meaning_en": ""
+    },
+    {
+        "kanji": "給",
+        "onyomi": "キュー",
+        "kunyomi": "—",
+        "meaning_ru": "зарплата, снабжать",
+        "meaning_en": ""
+    }
+]

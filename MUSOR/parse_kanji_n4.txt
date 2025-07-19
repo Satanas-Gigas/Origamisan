@@ -1,0 +1,3061 @@
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">1</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bc%9a-kai-au-meet/" rel="bookmark" title="Learn JLPT N4 Kanji: 会 (kai, au) meet">会</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bc%9a-kai-au-meet/" rel="bookmark" title="Learn JLPT N4 Kanji: 会 (kai, au) meet">
+				kai
+				<p class="mb-0 mt-2">カイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bc%9a-kai-au-meet/" rel="bookmark" title="Learn JLPT N4 Kanji: 会 (kai, au) meet">
+				a(u)
+				<p class="mb-0 mt-2">あ(う)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">meeting; meet</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">2</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%90%8c-dou-onaji-same-agree/" rel="bookmark" title="Learn JLPT N4 Kanji: 同 (dou, onaji) same, agree">同</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%90%8c-dou-onaji-same-agree/" rel="bookmark" title="Learn JLPT N4 Kanji: 同 (dou, onaji) same, agree">
+				dou
+				<p class="mb-0 mt-2">ドウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%90%8c-dou-onaji-same-agree/" rel="bookmark" title="Learn JLPT N4 Kanji: 同 (dou, onaji) same, agree">
+				onaji
+				<p class="mb-0 mt-2">おな(じ)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">same, agree, equal</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">3</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%ba%8b-ji-koto-matter-thing/" rel="bookmark" title="Learn JLPT N4 Kanji: 事 (ji, koto) matter, thing">事</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%ba%8b-ji-koto-matter-thing/" rel="bookmark" title="Learn JLPT N4 Kanji: 事 (ji, koto) matter, thing">
+				ji
+				<p class="mb-0 mt-2">ジ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%ba%8b-ji-koto-matter-thing/" rel="bookmark" title="Learn JLPT N4 Kanji: 事 (ji, koto) matter, thing">
+				koto
+				<p class="mb-0 mt-2">こと</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">matter, thing, fact, business, reason, possibly</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">4</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%87%aa-ji-mizukara-oneself/" rel="bookmark" title="Learn JLPT N4 Kanji: 自 (ji, mizukara) oneself">自</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%87%aa-ji-mizukara-oneself/" rel="bookmark" title="Learn JLPT N4 Kanji: 自 (ji, mizukara) oneself">
+				ji, shi
+				<p class="mb-0 mt-2">ジ、 シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%87%aa-ji-mizukara-oneself/" rel="bookmark" title="Learn JLPT N4 Kanji: 自 (ji, mizukara) oneself">
+				mizuka(ra)
+				<p class="mb-0 mt-2">みずか(ら)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">oneself</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">5</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a4%be-sha-company/" rel="bookmark" title="Learn JLPT N4 Kanji: 社 (sha) company">社</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a4%be-sha-company/" rel="bookmark" title="Learn JLPT N4 Kanji: 社 (sha) company">
+				sha
+				<p class="mb-0 mt-2">シャ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a4%be-sha-company/" rel="bookmark" title="Learn JLPT N4 Kanji: 社 (sha) company">
+				yashiro
+				<p class="mb-0 mt-2">やしろ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">company, firm, office, association, shrine</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">6</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%99%ba-hatsu-departure/" rel="bookmark" title="Learn JLPT N4 Kanji: 発 (hatsu) departure">発</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%99%ba-hatsu-departure/" rel="bookmark" title="Learn JLPT N4 Kanji: 発 (hatsu) departure">
+				hatsu, hotsu
+				<p class="mb-0 mt-2">ハツ、 ホツ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%99%ba-hatsu-departure/" rel="bookmark" title="Learn JLPT N4 Kanji: 発 (hatsu) departure"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">departure, discharge, emit, start from</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">7</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%80%85-sha-mono-someone/" rel="bookmark" title="Learn JLPT N4 Kanji: 者 (sha, mono) someone">者</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%80%85-sha-mono-someone/" rel="bookmark" title="Learn JLPT N4 Kanji: 者 (sha, mono) someone">
+				sha
+				<p class="mb-0 mt-2">シャ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%80%85-sha-mono-someone/" rel="bookmark" title="Learn JLPT N4 Kanji: 者 (sha, mono) someone">
+				mono
+				<p class="mb-0 mt-2">もの</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">someone, person</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">8</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%9c%b0-chi-ji-ground-earth/" rel="bookmark" title="Learn JLPT N4 Kanji: 地 (chi, ji) ground, earth">地</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%9c%b0-chi-ji-ground-earth/" rel="bookmark" title="Learn JLPT N4 Kanji: 地 (chi, ji) ground, earth">
+				chi, ji
+				<p class="mb-0 mt-2">チ、 ジ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%9c%b0-chi-ji-ground-earth/" rel="bookmark" title="Learn JLPT N4 Kanji: 地 (chi, ji) ground, earth"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">ground, earth</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">9</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%a5%ad-gyou-waza-business/" rel="bookmark" title="Learn JLPT N4 Kanji: 業 (gyou, waza) business">業</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%a5%ad-gyou-waza-business/" rel="bookmark" title="Learn JLPT N4 Kanji: 業 (gyou, waza) business">
+				gyou
+				<p class="mb-0 mt-2">ギョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%a5%ad-gyou-waza-business/" rel="bookmark" title="Learn JLPT N4 Kanji: 業 (gyou, waza) business">
+				waza
+				<p class="mb-0 mt-2">わざ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">business, vocation, arts, performance</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">10</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%b9-hou-kata-direction-person/" rel="bookmark" title="Learn JLPT N4 Kanji: 方 (hou, kata) direction, person">方</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%b9-hou-kata-direction-person/" rel="bookmark" title="Learn JLPT N4 Kanji: 方 (hou, kata) direction, person">
+				hou
+				<p class="mb-0 mt-2">ホウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%b9-hou-kata-direction-person/" rel="bookmark" title="Learn JLPT N4 Kanji: 方 (hou, kata) direction, person">
+				kata
+				<p class="mb-0 mt-2">かた</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">direction, person, alternative</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">11</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%b0-shin-atarashii-new/" rel="bookmark" title="Learn JLPT N4 Kanji: 新 (shin, atarashii) new">新</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%b0-shin-atarashii-new/" rel="bookmark" title="Learn JLPT N4 Kanji: 新 (shin, atarashii) new">
+				shin
+				<p class="mb-0 mt-2">シン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%b0-shin-atarashii-new/" rel="bookmark" title="Learn JLPT N4 Kanji: 新 (shin, atarashii) new">
+				atara(shii), ara(ta)
+				<p class="mb-0 mt-2">あたら(しい)、 あら(た)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">new</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">12</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a0%b4-jou-ba-location/" rel="bookmark" title="Learn JLPT N4 Kanji: 場 (jou, ba) location">場</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a0%b4-jou-ba-location/" rel="bookmark" title="Learn JLPT N4 Kanji: 場 (jou, ba) location">
+				jou
+				<p class="mb-0 mt-2">ジョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a0%b4-jou-ba-location/" rel="bookmark" title="Learn JLPT N4 Kanji: 場 (jou, ba) location">
+				ba
+				<p class="mb-0 mt-2">ば</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">location, place</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">13</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%93%a1-in-employee-member/" rel="bookmark" title="Learn JLPT N4 Kanji: 員 (in) employee, member">員</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%93%a1-in-employee-member/" rel="bookmark" title="Learn JLPT N4 Kanji: 員 (in) employee, member">
+				in
+				<p class="mb-0 mt-2">イン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%93%a1-in-employee-member/" rel="bookmark" title="Learn JLPT N4 Kanji: 員 (in) employee, member"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">employee, member, number, the one in charge</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">14</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%ab%8b-ritsu-tatsu-meaning-stand-up/" rel="bookmark" title="Learn JLPT N4 Kanji: 立 (ritsu, tatsu) stand up">立</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%ab%8b-ritsu-tatsu-meaning-stand-up/" rel="bookmark" title="Learn JLPT N4 Kanji: 立 (ritsu, tatsu) stand up">
+				ritsu
+				<p class="mb-0 mt-2">リツ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%ab%8b-ritsu-tatsu-meaning-stand-up/" rel="bookmark" title="Learn JLPT N4 Kanji: 立 (ritsu, tatsu) stand up">
+				ta(tsu)
+				<p class="mb-0 mt-2">た(つ)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">stand up, rise</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">15</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%96%8b-kai-hiraku-open/" rel="bookmark" title="Learn JLPT N4 Kanji: 開 (kai, hiraku) open">開</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%96%8b-kai-hiraku-open/" rel="bookmark" title="Learn JLPT N4 Kanji: 開 (kai, hiraku) open">
+				kai
+				<p class="mb-0 mt-2">カイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%96%8b-kai-hiraku-open/" rel="bookmark" title="Learn JLPT N4 Kanji: 開 (kai, hiraku) open">
+				hira(ku), a(keru)
+				<p class="mb-0 mt-2">ひら(く)、 あ(ける)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">open, unfold, unseal</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">16</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%89%8b-shu-te-hand/" rel="bookmark" title="Learn JLPT N4 Kanji: 手 (shu, te) hand">手</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%89%8b-shu-te-hand/" rel="bookmark" title="Learn JLPT N4 Kanji: 手 (shu, te) hand">
+				shu
+				<p class="mb-0 mt-2">シュ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%89%8b-shu-te-hand/" rel="bookmark" title="Learn JLPT N4 Kanji: 手 (shu, te) hand">
+				te
+				<p class="mb-0 mt-2">て</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">hand</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">17</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8a%9b-ryoku-chikara-power/" rel="bookmark" title="Learn JLPT N4 Kanji: 力 (ryoku, chikara) power">力</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8a%9b-ryoku-chikara-power/" rel="bookmark" title="Learn JLPT N4 Kanji: 力 (ryoku, chikara) power">
+				ryoku, riki
+				<p class="mb-0 mt-2">リョク、 リキ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8a%9b-ryoku-chikara-power/" rel="bookmark" title="Learn JLPT N4 Kanji: 力 (ryoku, chikara) power">
+				chikara
+				<p class="mb-0 mt-2">ちから</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">power, strength, strong, strain, bear up, exert</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">18</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%95%8f-mon-tou-question/" rel="bookmark" title="Learn JLPT N4 Kanji: 問 (mon, tou) question">問</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%95%8f-mon-tou-question/" rel="bookmark" title="Learn JLPT N4 Kanji: 問 (mon, tou) question">
+				mon
+				<p class="mb-0 mt-2">モン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%95%8f-mon-tou-question/" rel="bookmark" title="Learn JLPT N4 Kanji: 問 (mon, tou) question">
+				to(u)
+				<p class="mb-0 mt-2">と(う)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">question, ask, problem</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">19</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bb%a3-dai-kawari-substitute-change/" rel="bookmark" title="Learn JLPT N4 Kanji: 代 (dai, kawari) substitute, change">代</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bb%a3-dai-kawari-substitute-change/" rel="bookmark" title="Learn JLPT N4 Kanji: 代 (dai, kawari) substitute, change">
+				dai
+				<p class="mb-0 mt-2">ダイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bb%a3-dai-kawari-substitute-change/" rel="bookmark" title="Learn JLPT N4 Kanji: 代 (dai, kawari) substitute, change">
+				ka(wari)
+				<p class="mb-0 mt-2">か(わり)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">substitute, change, convert, replace, period</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">20</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%8e-mei-akarui-bright-light/" rel="bookmark" title="Learn JLPT N4 Kanji: 明 (mei, akarui) bright, light">明</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%8e-mei-akarui-bright-light/" rel="bookmark" title="Learn JLPT N4 Kanji: 明 (mei, akarui) bright, light">
+				mei, myou
+				<p class="mb-0 mt-2">メイ、 ミョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%8e-mei-akarui-bright-light/" rel="bookmark" title="Learn JLPT N4 Kanji: 明 (mei, akarui) bright, light">
+				aka(rui)
+				<p class="mb-0 mt-2">あか(るい)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">bright, light</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">21</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8b%95-dou-ugoku-move/" rel="bookmark" title="Learn JLPT N4 Kanji: 動 (dou, ugoku) move">動</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8b%95-dou-ugoku-move/" rel="bookmark" title="Learn JLPT N4 Kanji: 動 (dou, ugoku) move">
+				dou
+				<p class="mb-0 mt-2">ドウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8b%95-dou-ugoku-move/" rel="bookmark" title="Learn JLPT N4 Kanji: 動 (dou, ugoku) move">
+				ugo(ku)
+				<p class="mb-0 mt-2">うご(く)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">move, motion, change</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">22</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%ba%ac-kyou-miyako-meaning-capital/" rel="bookmark" title="Learn JLPT N4 Kanji: 京 (kyou, miyako) meaning: capital">京</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%ba%ac-kyou-miyako-meaning-capital/" rel="bookmark" title="Learn JLPT N4 Kanji: 京 (kyou, miyako) meaning: capital">
+				kyou, kei, kin
+				<p class="mb-0 mt-2">キョウ、 ケイ、 キン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%ba%ac-kyou-miyako-meaning-capital/" rel="bookmark" title="Learn JLPT N4 Kanji: 京 (kyou, miyako) meaning: capital">
+				miyako
+				<p class="mb-0 mt-2">みやこ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">capital</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">23</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9b%ae-moku-me-meaning-eye/" rel="bookmark" title="Learn JLPT N4 Kanji: 目 (moku, me) eye">目</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9b%ae-moku-me-meaning-eye/" rel="bookmark" title="Learn JLPT N4 Kanji: 目 (moku, me) eye">
+				moku, boku
+				<p class="mb-0 mt-2">モク、 ボク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9b%ae-moku-me-meaning-eye/" rel="bookmark" title="Learn JLPT N4 Kanji: 目 (moku, me) eye">
+				me
+				<p class="mb-0 mt-2">め</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">eye, class, look, insight, experience</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">24</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%80%9a-tsuu-tooru-meaning-traffic/" rel="bookmark" title="Learn JLPT N4 Kanji: 通 (tsuu, tooru) traffic">通</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%80%9a-tsuu-tooru-meaning-traffic/" rel="bookmark" title="Learn JLPT N4 Kanji: 通 (tsuu, tooru) traffic">
+				tsuu
+				<p class="mb-0 mt-2">ツウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%80%9a-tsuu-tooru-meaning-traffic/" rel="bookmark" title="Learn JLPT N4 Kanji: 通 (tsuu, tooru) traffic">
+				too(ru), kayo(u)
+				<p class="mb-0 mt-2">とお(る)、かよ(う)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">traffic, pass through, avenue, commute</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">25</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a8%80-gen-koto-meaning-say/" rel="bookmark" title="Learn JLPT N4 Kanji: 言 (gen, koto) say">言</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a8%80-gen-koto-meaning-say/" rel="bookmark" title="Learn JLPT N4 Kanji: 言 (gen, koto) say">
+				gen, gon
+				<p class="mb-0 mt-2">ゲン、 ゴン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a8%80-gen-koto-meaning-say/" rel="bookmark" title="Learn JLPT N4 Kanji: 言 (gen, koto) say">
+				i(u), koto
+				<p class="mb-0 mt-2">い（う）、 こと</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">say, word</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">26</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%90%86-ri-logic/" rel="bookmark" title="Learn JLPT N4 Kanji: 理 (ri) logic">理</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%90%86-ri-logic/" rel="bookmark" title="Learn JLPT N4 Kanji: 理 (ri) logic">
+				ri
+				<p class="mb-0 mt-2">リ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%90%86-ri-logic/" rel="bookmark" title="Learn JLPT N4 Kanji: 理 (ri) logic"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">logic, arrangement, reason, justice, truth</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">27</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%93-tai-karada-body/" rel="bookmark" title="Learn JLPT N4 Kanji: 体 (tai, karada) body">体</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%93-tai-karada-body/" rel="bookmark" title="Learn JLPT N4 Kanji: 体 (tai, karada) body">
+				tai
+				<p class="mb-0 mt-2">タイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%93-tai-karada-body/" rel="bookmark" title="Learn JLPT N4 Kanji: 体 (tai, karada) body">
+				karada
+				<p class="mb-0 mt-2">からだ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">body, substance, object, reality</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">28</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%b0-den-ta-meaning-rice-field/" rel="bookmark" title="Learn JLPT N4 Kanji: 田 (den, ta) meaning: rice field">田</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%b0-den-ta-meaning-rice-field/" rel="bookmark" title="Learn JLPT N4 Kanji: 田 (den, ta) meaning: rice field">
+				den
+				<p class="mb-0 mt-2">デン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%b0-den-ta-meaning-rice-field/" rel="bookmark" title="Learn JLPT N4 Kanji: 田 (den, ta) meaning: rice field">
+				ta
+				<p class="mb-0 mt-2">た</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">rice field, rice paddy</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">29</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%b8%bb-shu-nushi-master/" rel="bookmark" title="Learn JLPT N4 Kanji: 主 (shu, nushi) master">主</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%b8%bb-shu-nushi-master/" rel="bookmark" title="Learn JLPT N4 Kanji: 主 (shu, nushi) master">
+				shu
+				<p class="mb-0 mt-2">シュ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%b8%bb-shu-nushi-master/" rel="bookmark" title="Learn JLPT N4 Kanji: 主 (shu, nushi) master">
+				nushi, omo
+				<p class="mb-0 mt-2">ぬし、 おも</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">lord, chief, master, main thing, principal</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<div class="overflow-auto">
+				<div class="adsense-in-article adsense-cont mt-4"><div id="ezoic-pub-ad-placeholder-142" data-ezoic-video-excluded="1"></div></div>
+			</div>
+		</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">30</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a1%8c-dai-topic-subject/" rel="bookmark" title="Learn JLPT N4 Kanji: 題 (dai) topic, subject">題</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a1%8c-dai-topic-subject/" rel="bookmark" title="Learn JLPT N4 Kanji: 題 (dai) topic, subject">
+				dai
+				<p class="mb-0 mt-2">ダイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a1%8c-dai-topic-subject/" rel="bookmark" title="Learn JLPT N4 Kanji: 題 (dai) topic, subject"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">topic, subject</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">31</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%84%8f-i-idea-mind/" rel="bookmark" title="Learn JLPT N4 Kanji: 意 (i) idea, mind">意</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%84%8f-i-idea-mind/" rel="bookmark" title="Learn JLPT N4 Kanji: 意 (i) idea, mind">
+				i
+				<p class="mb-0 mt-2">イ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%84%8f-i-idea-mind/" rel="bookmark" title="Learn JLPT N4 Kanji: 意 (i) idea, mind"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">idea, mind, heart, taste, thought</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">32</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%b8%8d-fu-negative-non/" rel="bookmark" title="Learn JLPT N4 Kanji: 不 (fu) negative, non-">不</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%b8%8d-fu-negative-non/" rel="bookmark" title="Learn JLPT N4 Kanji: 不 (fu) negative, non-">
+				fu, bu
+				<p class="mb-0 mt-2">フ、 ブ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%b8%8d-fu-negative-non/" rel="bookmark" title="Learn JLPT N4 Kanji: 不 (fu) negative, non-"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">negative, non-, bad</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">33</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%9c-saku-tsukuru-make/" rel="bookmark" title="Learn JLPT N4 Kanji: 作 (saku, tsukuru) make">作</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%9c-saku-tsukuru-make/" rel="bookmark" title="Learn JLPT N4 Kanji: 作 (saku, tsukuru) make">
+				saku, sa
+				<p class="mb-0 mt-2">サク、 サ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%9c-saku-tsukuru-make/" rel="bookmark" title="Learn JLPT N4 Kanji: 作 (saku, tsukuru) make">
+				tsuku(ru)
+				<p class="mb-0 mt-2">つく(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">make, production, prepare, build</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">34</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%a8-you-utilize/" rel="bookmark" title="Learn JLPT N4 Kanji: 用 (you) utilize">用</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%a8-you-utilize/" rel="bookmark" title="Learn JLPT N4 Kanji: 用 (you) utilize">
+				you
+				<p class="mb-0 mt-2">ヨウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%a8-you-utilize/" rel="bookmark" title="Learn JLPT N4 Kanji: 用 (you) utilize">
+				mochi(iru)
+				<p class="mb-0 mt-2">もち(いる)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">utilize, business, service, use, employ</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">35</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ba%a6-do-tabi-degrees/" rel="bookmark" title="Learn JLPT N4 Kanji: 度 (do, tabi) degrees, occurrence">度</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ba%a6-do-tabi-degrees/" rel="bookmark" title="Learn JLPT N4 Kanji: 度 (do, tabi) degrees, occurrence">
+				do, taku
+				<p class="mb-0 mt-2">ド、 タク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ba%a6-do-tabi-degrees/" rel="bookmark" title="Learn JLPT N4 Kanji: 度 (do, tabi) degrees, occurrence">
+				tabi, ta(i)
+				<p class="mb-0 mt-2">たび、 た(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">degrees, occurrence, time, counter for occurrences</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">36</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bc%b7-kyou-tsuyoi-strong/" rel="bookmark" title="Learn JLPT N4 Kanji: 強 (kyou, tsuyoi) strong">強</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bc%b7-kyou-tsuyoi-strong/" rel="bookmark" title="Learn JLPT N4 Kanji: 強 (kyou, tsuyoi) strong">
+				kyou, gou
+				<p class="mb-0 mt-2">キョウ、 ゴウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bc%b7-kyou-tsuyoi-strong/" rel="bookmark" title="Learn JLPT N4 Kanji: 強 (kyou, tsuyoi) strong">
+				tsuyo(i)
+				<p class="mb-0 mt-2">つよ(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">strong</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">37</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%85%ac-kou-public/" rel="bookmark" title="Learn JLPT N4 Kanji: 公 (kou) public">公</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%85%ac-kou-public/" rel="bookmark" title="Learn JLPT N4 Kanji: 公 (kou) public">
+				kou
+				<p class="mb-0 mt-2">コウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%85%ac-kou-public/" rel="bookmark" title="Learn JLPT N4 Kanji: 公 (kou) public"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">public, prince, official, governmental</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">38</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%8c%81-ji-motsu-hold-have/" rel="bookmark" title="Learn JLPT N4 Kanji: 持 (ji, motsu) hold, have">持</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%8c%81-ji-motsu-hold-have/" rel="bookmark" title="Learn JLPT N4 Kanji: 持 (ji, motsu) hold, have">
+				ji
+				<p class="mb-0 mt-2">ジ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%8c%81-ji-motsu-hold-have/" rel="bookmark" title="Learn JLPT N4 Kanji: 持 (ji, motsu) hold, have">
+				mo(tsu)
+				<p class="mb-0 mt-2">も(つ)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">hold, have</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">39</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%87%8e-ya-no-plains/" rel="bookmark" title="Learn JLPT N4 Kanji: 野 (ya, no) plains">野</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%87%8e-ya-no-plains/" rel="bookmark" title="Learn JLPT N4 Kanji: 野 (ya, no) plains">
+				ya
+				<p class="mb-0 mt-2">ヤ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%87%8e-ya-no-plains/" rel="bookmark" title="Learn JLPT N4 Kanji: 野 (ya, no) plains">
+				no
+				<p class="mb-0 mt-2">の</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">plains, field, rustic, civilian life</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">40</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bb%a5-i-meaning-compared-with/" rel="bookmark" title="Learn JLPT N4 Kanji: 以 (i) compared with">以</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bb%a5-i-meaning-compared-with/" rel="bookmark" title="Learn JLPT N4 Kanji: 以 (i) compared with">
+				i
+				<p class="mb-0 mt-2">イ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bb%a5-i-meaning-compared-with/" rel="bookmark" title="Learn JLPT N4 Kanji: 以 (i) compared with">
+				mo(tte)
+				<p class="mb-0 mt-2">もっ(て)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">by means of, because, in view of, compared with</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">41</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%80%9d-shi-omoi-think/" rel="bookmark" title="Learn JLPT N4 Kanji: 思 (shi, omoi) think">思</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%80%9d-shi-omoi-think/" rel="bookmark" title="Learn JLPT N4 Kanji: 思 (shi, omoi) think">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%80%9d-shi-omoi-think/" rel="bookmark" title="Learn JLPT N4 Kanji: 思 (shi, omoi) think">
+				omo(u)
+				<p class="mb-0 mt-2">おも(う)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">think</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">42</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ae%b6-ka-ie-ya-house-family/" rel="bookmark" title="Learn JLPT N4 Kanji: 家 (ka, ie, ya) house, family">家</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ae%b6-ka-ie-ya-house-family/" rel="bookmark" title="Learn JLPT N4 Kanji: 家 (ka, ie, ya) house, family">
+				ka
+				<p class="mb-0 mt-2">カ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ae%b6-ka-ie-ya-house-family/" rel="bookmark" title="Learn JLPT N4 Kanji: 家 (ka, ie, ya) house, family">
+				ie, ya, uchi
+				<p class="mb-0 mt-2">いえ、 や、 うち</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">house, home, family, professional, expert</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">43</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%b8%96-sei-se-yo-meaning-world/" rel="bookmark" title="Learn JLPT N4 Kanji: 世 (sei, se, yo) meaning: world">世</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%b8%96-sei-se-yo-meaning-world/" rel="bookmark" title="Learn JLPT N4 Kanji: 世 (sei, se, yo) meaning: world">
+				sei, se
+				<p class="mb-0 mt-2">セイ、 セ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%b8%96-sei-se-yo-meaning-world/" rel="bookmark" title="Learn JLPT N4 Kanji: 世 (sei, se, yo) meaning: world">
+				yo
+				<p class="mb-0 mt-2">よ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">generation, world, society, public</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">44</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%9a-ta-ooi-many/" rel="bookmark" title="Learn JLPT N4 Kanji: 多 (ta, ooi) many">多</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%9a-ta-ooi-many/" rel="bookmark" title="Learn JLPT N4 Kanji: 多 (ta, ooi) many">
+				ta
+				<p class="mb-0 mt-2">タ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%9a-ta-ooi-many/" rel="bookmark" title="Learn JLPT N4 Kanji: 多 (ta, ooi) many">
+				oo(i)
+				<p class="mb-0 mt-2">おお(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">many, frequent, much</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">45</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%a3-sei-shou-correct/" rel="bookmark" title="Learn JLPT N4 Kanji: 正 (sei, shou) correct">正</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%a3-sei-shou-correct/" rel="bookmark" title="Learn JLPT N4 Kanji: 正 (sei, shou) correct">
+				sei, shou
+				<p class="mb-0 mt-2">セイ、 ショウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%a3-sei-shou-correct/" rel="bookmark" title="Learn JLPT N4 Kanji: 正 (sei, shou) correct">
+				tada(shii), masa(ni)
+				<p class="mb-0 mt-2">ただ(しい)、 まさ(に)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">correct, justice, righteous</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">46</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ae%89-an-yasui-safe-cheap/" rel="bookmark" title="Learn JLPT N4 Kanji: 安 (an, yasui) safe, cheap">安</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ae%89-an-yasui-safe-cheap/" rel="bookmark" title="Learn JLPT N4 Kanji: 安 (an, yasui) safe, cheap">
+				an
+				<p class="mb-0 mt-2">アン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ae%89-an-yasui-safe-cheap/" rel="bookmark" title="Learn JLPT N4 Kanji: 安 (an, yasui) safe, cheap">
+				yasu(i)
+				<p class="mb-0 mt-2">やす(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">safe, peaceful, cheap</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">47</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%99%a2-in-institution/" rel="bookmark" title="Learn JLPT N4 Kanji: 院 (in) institution">院</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%99%a2-in-institution/" rel="bookmark" title="Learn JLPT N4 Kanji: 院 (in) institution">
+				in
+				<p class="mb-0 mt-2">イン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%99%a2-in-institution/" rel="bookmark" title="Learn JLPT N4 Kanji: 院 (in) institution"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">institution, temple, mansion, school</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">48</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bf%83-shin-kokoro-heart/" rel="bookmark" title="Learn JLPT N4 Kanji: 心 (shin, kokoro) heart">心</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bf%83-shin-kokoro-heart/" rel="bookmark" title="Learn JLPT N4 Kanji: 心 (shin, kokoro) heart">
+				shin
+				<p class="mb-0 mt-2">シン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bf%83-shin-kokoro-heart/" rel="bookmark" title="Learn JLPT N4 Kanji: 心 (shin, kokoro) heart">
+				kokoro
+				<p class="mb-0 mt-2">こころ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">heart, mind, spirit</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">49</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%95%8c-kai-world-boundary/" rel="bookmark" title="Learn JLPT N4 Kanji: 界 (kai) world, boundary">界</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%95%8c-kai-world-boundary/" rel="bookmark" title="Learn JLPT N4 Kanji: 界 (kai) world, boundary">
+				kai
+				<p class="mb-0 mt-2">カイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%95%8c-kai-world-boundary/" rel="bookmark" title="Learn JLPT N4 Kanji: 界 (kai) world, boundary"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">world, boundary</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">50</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%95%99-kyou-oshieru-teach-faith/" rel="bookmark" title="Learn JLPT N4 Kanji: 教 (kyou, oshieru) teach, faith">教</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%95%99-kyou-oshieru-teach-faith/" rel="bookmark" title="Learn JLPT N4 Kanji: 教 (kyou, oshieru) teach, faith">
+				kyou
+				<p class="mb-0 mt-2">キョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%95%99-kyou-oshieru-teach-faith/" rel="bookmark" title="Learn JLPT N4 Kanji: 教 (kyou, oshieru) teach, faith">
+				oshi(eru), oso(waru)
+				<p class="mb-0 mt-2">おし(える)、 おそ(わる)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">teach, faith, doctrine</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">51</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%87-bun/" rel="bookmark" title="Learn JLPT N4 Kanji: 文 (bun) sentence, art">文</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%87-bun/" rel="bookmark" title="Learn JLPT N4 Kanji: 文 (bun) sentence, art">
+				bun, mon
+				<p class="mb-0 mt-2">ブン、 モン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%87-bun/" rel="bookmark" title="Learn JLPT N4 Kanji: 文 (bun) sentence, art">
+				fumi
+				<p class="mb-0 mt-2">ふみ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">sentence, literature, style, art</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">52</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%85%83-gen-moto-beginning-origin/" rel="bookmark" title="Learn JLPT N4 Kanji: 元 (gen, moto) beginning, origin">元</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%85%83-gen-moto-beginning-origin/" rel="bookmark" title="Learn JLPT N4 Kanji: 元 (gen, moto) beginning, origin">
+				gen, gan
+				<p class="mb-0 mt-2">ゲン、 ガン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%85%83-gen-moto-beginning-origin/" rel="bookmark" title="Learn JLPT N4 Kanji: 元 (gen, moto) beginning, origin">
+				moto
+				<p class="mb-0 mt-2">もと</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">beginning, former time, origin</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">53</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%87%8d-juu-omoi-heavy-important/" rel="bookmark" title="Learn JLPT N4 Kanji: 重 (juu, omoi) heavy, important">重</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%87%8d-juu-omoi-heavy-important/" rel="bookmark" title="Learn JLPT N4 Kanji: 重 (juu, omoi) heavy, important">
+				juu, chou
+				<p class="mb-0 mt-2">ジュウ、 チョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%87%8d-juu-omoi-heavy-important/" rel="bookmark" title="Learn JLPT N4 Kanji: 重 (juu, omoi) heavy, important">
+				omo(i), kasa(neru)
+				<p class="mb-0 mt-2">おも(い)、 かさ(ねる)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">heavy, important, esteem, respect</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">54</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%bf%91-kin-chikai-near/" rel="bookmark" title="Learn JLPT N4 Kanji: 近 (kin, chikai) near">近</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%bf%91-kin-chikai-near/" rel="bookmark" title="Learn JLPT N4 Kanji: 近 (kin, chikai) near">
+				kin
+				<p class="mb-0 mt-2">キン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%bf%91-kin-chikai-near/" rel="bookmark" title="Learn JLPT N4 Kanji: 近 (kin, chikai) near">
+				chika(i)
+				<p class="mb-0 mt-2">ちか(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">near, early, akin, tantamount</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">55</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%80%83-kou-kangaeru-consider/" rel="bookmark" title="Learn JLPT N4 Kanji: 考 (kou, kangaeru) consider">考</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%80%83-kou-kangaeru-consider/" rel="bookmark" title="Learn JLPT N4 Kanji: 考 (kou, kangaeru) consider">
+				kou
+				<p class="mb-0 mt-2">コウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%80%83-kou-kangaeru-consider/" rel="bookmark" title="Learn JLPT N4 Kanji: 考 (kou, kangaeru) consider">
+				kanga(eru)
+				<p class="mb-0 mt-2">かんが(える)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">consider, think over</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">56</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%bb-ga-kaku-picture/" rel="bookmark" title="Learn JLPT N4 Kanji: 画 (ga, kaku) picture">画</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%bb-ga-kaku-picture/" rel="bookmark" title="Learn JLPT N4 Kanji: 画 (ga, kaku) picture">
+				ga, kaku
+				<p class="mb-0 mt-2">ガ、 カク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%bb-ga-kaku-picture/" rel="bookmark" title="Learn JLPT N4 Kanji: 画 (ga, kaku) picture">
+				kaku(suru)
+				<p class="mb-0 mt-2">かく(する)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">brush-stroke, picture</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">57</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%b5%b7-kai-umi-sea-ocean/" rel="bookmark" title="Learn JLPT N4 Kanji: 海 (kai, umi) sea, ocean">海</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%b5%b7-kai-umi-sea-ocean/" rel="bookmark" title="Learn JLPT N4 Kanji: 海 (kai, umi) sea, ocean">
+				kai
+				<p class="mb-0 mt-2">カイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%b5%b7-kai-umi-sea-ocean/" rel="bookmark" title="Learn JLPT N4 Kanji: 海 (kai, umi) sea, ocean">
+				umi
+				<p class="mb-0 mt-2">うみ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">sea, ocean</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">58</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a3%b2-bai-uru-sell/" rel="bookmark" title="Learn JLPT N4 Kanji: 売 (bai, uru) sell">売</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a3%b2-bai-uru-sell/" rel="bookmark" title="Learn JLPT N4 Kanji: 売 (bai, uru) sell">
+				bai
+				<p class="mb-0 mt-2">バイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a3%b2-bai-uru-sell/" rel="bookmark" title="Learn JLPT N4 Kanji: 売 (bai, uru) sell">
+				u(ru)
+				<p class="mb-0 mt-2">う(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">sell</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">59</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9f%a5-chi-shiru-know/" rel="bookmark" title="Learn JLPT N4 Kanji: 知 (chi, shiru) know">知</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9f%a5-chi-shiru-know/" rel="bookmark" title="Learn JLPT N4 Kanji: 知 (chi, shiru) know">
+				chi
+				<p class="mb-0 mt-2">チ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9f%a5-chi-shiru-know/" rel="bookmark" title="Learn JLPT N4 Kanji: 知 (chi, shiru) know">
+				shi(ru)
+				<p class="mb-0 mt-2">し(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">know, wisdom</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<div class="overflow-auto"><div class="adsense-in-article adsense-cont mt-4"></div></div>
+		</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">60</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%81%93-dou-michi-road-course/" rel="bookmark" title="Learn JLPT N4 Kanji: 道 (dou, michi) road, course">道</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%81%93-dou-michi-road-course/" rel="bookmark" title="Learn JLPT N4 Kanji: 道 (dou, michi) road, course">
+				dou
+				<p class="mb-0 mt-2">ドウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%81%93-dou-michi-road-course/" rel="bookmark" title="Learn JLPT N4 Kanji: 道 (dou, michi) road, course">
+				michi
+				<p class="mb-0 mt-2">みち</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">road-way, street, district, journey, course</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">61</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%9b%86-shuu-atsumeru-gather/" rel="bookmark" title="Learn JLPT N4 Kanji: 集 (shuu, atsumeru) gather">集</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%9b%86-shuu-atsumeru-gather/" rel="bookmark" title="Learn JLPT N4 Kanji: 集 (shuu, atsumeru) gather">
+				shuu
+				<p class="mb-0 mt-2">シュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%9b%86-shuu-atsumeru-gather/" rel="bookmark" title="Learn JLPT N4 Kanji: 集 (shuu, atsumeru) gather">
+				atsu(meru)
+				<p class="mb-0 mt-2">あつ(める)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">gather, meet</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">62</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%88%a5-betsu-separate/" rel="bookmark" title="Learn JLPT N4 Kanji: 別 (betsu, wakeru) separate">別</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%88%a5-betsu-separate/" rel="bookmark" title="Learn JLPT N4 Kanji: 別 (betsu, wakeru) separate">
+				betsu
+				<p class="mb-0 mt-2">ベツ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%88%a5-betsu-separate/" rel="bookmark" title="Learn JLPT N4 Kanji: 別 (betsu, wakeru) separate">
+				waka(reru), wa(keru)
+				<p class="mb-0 mt-2">わか(れる)、 わ(ける)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">separate, branch off, diverge</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">63</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%89%a9-butsu-mono-thing-object/" rel="bookmark" title="Learn JLPT N4 Kanji: 物 (butsu, mono) thing, object">物</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%89%a9-butsu-mono-thing-object/" rel="bookmark" title="Learn JLPT N4 Kanji: 物 (butsu, mono) thing, object">
+				butsu, motsu
+				<p class="mb-0 mt-2">ブツ、 モツ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%89%a9-butsu-mono-thing-object/" rel="bookmark" title="Learn JLPT N4 Kanji: 物 (butsu, mono) thing, object">
+				mono
+				<p class="mb-0 mt-2">もの</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">thing, object, matter</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">64</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%bf-shi-tsukau-use/" rel="bookmark" title="Learn JLPT N4 Kanji: 使 (shi, tsukau) use">使</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%bf-shi-tsukau-use/" rel="bookmark" title="Learn JLPT N4 Kanji: 使 (shi, tsukau) use">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%bf-shi-tsukau-use/" rel="bookmark" title="Learn JLPT N4 Kanji: 使 (shi, tsukau) use">
+				tsuka(u)
+				<p class="mb-0 mt-2">つか(う)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">use, order, messenger, ambassador</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">65</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%93%81-hin-shina-goods/" rel="bookmark" title="Learn JLPT N4 Kanji: 品 (hin, shina) goods">品</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%93%81-hin-shina-goods/" rel="bookmark" title="Learn JLPT N4 Kanji: 品 (hin, shina) goods">
+				hin
+				<p class="mb-0 mt-2">ヒン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%93%81-hin-shina-goods/" rel="bookmark" title="Learn JLPT N4 Kanji: 品 (hin, shina) goods">
+				shina
+				<p class="mb-0 mt-2">しな</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">goods, refinement, dignity, article</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">66</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a8%88-kei-hakaru-plan-measure/" rel="bookmark" title="Learn JLPT N4 Kanji: 計 (kei, hakaru) plan, measure">計</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a8%88-kei-hakaru-plan-measure/" rel="bookmark" title="Learn JLPT N4 Kanji: 計 (kei, hakaru) plan, measure">
+				kei
+				<p class="mb-0 mt-2">ケイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a8%88-kei-hakaru-plan-measure/" rel="bookmark" title="Learn JLPT N4 Kanji: 計 (kei, hakaru) plan, measure">
+				haka(ru)
+				<p class="mb-0 mt-2">はか(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">plot, plan, scheme, measure</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">67</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%bb-shi-death/" rel="bookmark" title="Learn JLPT N4 Kanji: 死 (shi) death">死</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%bb-shi-death/" rel="bookmark" title="Learn JLPT N4 Kanji: 死 (shi) death">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%bb-shi-death/" rel="bookmark" title="Learn JLPT N4 Kanji: 死 (shi) death">
+				shi(nu)
+				<p class="mb-0 mt-2">し(ぬ)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">death, die</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">68</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%89%b9-toku-special/" rel="bookmark" title="Learn JLPT N4 Kanji: 特 (toku) special">特</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%89%b9-toku-special/" rel="bookmark" title="Learn JLPT N4 Kanji: 特 (toku) special">
+				toku
+				<p class="mb-0 mt-2">トク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%89%b9-toku-special/" rel="bookmark" title="Learn JLPT N4 Kanji: 特 (toku) special"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">special</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">69</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a7%81-shi-watashi-meaning-private/" rel="bookmark" title="Learn JLPT N4 Kanji: 私 (shi, watashi) meaning: private">私</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a7%81-shi-watashi-meaning-private/" rel="bookmark" title="Learn JLPT N4 Kanji: 私 (shi, watashi) meaning: private">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a7%81-shi-watashi-meaning-private/" rel="bookmark" title="Learn JLPT N4 Kanji: 私 (shi, watashi) meaning: private">
+				watakushi, watashi
+				<p class="mb-0 mt-2">わたくし、 わたし</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">private, I, me</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">70</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a7%8b-shi-hajimeru-begin/" rel="bookmark" title="Learn JLPT N4 Kanji: 始 (shi, hajimeru) begin">始</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a7%8b-shi-hajimeru-begin/" rel="bookmark" title="Learn JLPT N4 Kanji: 始 (shi, hajimeru) begin">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a7%8b-shi-hajimeru-begin/" rel="bookmark" title="Learn JLPT N4 Kanji: 始 (shi, hajimeru) begin">
+				haji(meru)
+				<p class="mb-0 mt-2">はじ(める)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">commence, begin</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">71</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9c%9d-chou-asa-morning/" rel="bookmark" title="Learn JLPT N4 Kanji: 朝 (chou, asa) morning">朝</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9c%9d-chou-asa-morning/" rel="bookmark" title="Learn JLPT N4 Kanji: 朝 (chou, asa) morning">
+				chou
+				<p class="mb-0 mt-2">チョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9c%9d-chou-asa-morning/" rel="bookmark" title="Learn JLPT N4 Kanji: 朝 (chou, asa) morning">
+				asa
+				<p class="mb-0 mt-2">あさ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">morning</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">72</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%81%8b-un-hakobu-carry/" rel="bookmark" title="Learn JLPT N4 Kanji: 運 (un, hakobu) carry">運</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%81%8b-un-hakobu-carry/" rel="bookmark" title="Learn JLPT N4 Kanji: 運 (un, hakobu) carry">
+				un
+				<p class="mb-0 mt-2">ウン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%81%8b-un-hakobu-carry/" rel="bookmark" title="Learn JLPT N4 Kanji: 運 (un, hakobu) carry">
+				hako(bu)
+				<p class="mb-0 mt-2">はこ(ぶ)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">carry, luck, destiny, fate, transport</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">73</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%b5%82-shuu-owaru-end-finish/" rel="bookmark" title="Learn JLPT N4 Kanji: 終 (shuu, owaru) end, finish">終</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%b5%82-shuu-owaru-end-finish/" rel="bookmark" title="Learn JLPT N4 Kanji: 終 (shuu, owaru) end, finish">
+				shuu
+				<p class="mb-0 mt-2">シュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%b5%82-shuu-owaru-end-finish/" rel="bookmark" title="Learn JLPT N4 Kanji: 終 (shuu, owaru) end, finish">
+				o(waru)
+				<p class="mb-0 mt-2">お(わる)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">end, finish</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">74</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8f%b0-dai-tai-meaning-pedestal/" rel="bookmark" title="Learn JLPT N4 Kanji: 台 (dai, tai) meaning: pedestal">台</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8f%b0-dai-tai-meaning-pedestal/" rel="bookmark" title="Learn JLPT N4 Kanji: 台 (dai, tai) meaning: pedestal">
+				dai, tai
+				<p class="mb-0 mt-2">ダイ、 タイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8f%b0-dai-tai-meaning-pedestal/" rel="bookmark" title="Learn JLPT N4 Kanji: 台 (dai, tai) meaning: pedestal">
+				utena
+				<p class="mb-0 mt-2">うてな</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">pedestal, a stand, counter for machines and vehicles</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">75</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ba%83-kou-hiroi-meaning-wide/" rel="bookmark" title="Learn JLPT N4 Kanji: 広 (kou, hiroi) meaning: wide">広</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ba%83-kou-hiroi-meaning-wide/" rel="bookmark" title="Learn JLPT N4 Kanji: 広 (kou, hiroi) meaning: wide">
+				kou
+				<p class="mb-0 mt-2">コウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ba%83-kou-hiroi-meaning-wide/" rel="bookmark" title="Learn JLPT N4 Kanji: 広 (kou, hiroi) meaning: wide">
+				hiro(i)
+				<p class="mb-0 mt-2">ひろ(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">wide, broad, spacious</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">76</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%8f-juu-sumu-reside/" rel="bookmark" title="Learn JLPT N4 Kanji: 住 (juu, sumu) reside">住</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%8f-juu-sumu-reside/" rel="bookmark" title="Learn JLPT N4 Kanji: 住 (juu, sumu) reside">
+				juu, chuu
+				<p class="mb-0 mt-2">ジュウ、 チュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bd%8f-juu-sumu-reside/" rel="bookmark" title="Learn JLPT N4 Kanji: 住 (juu, sumu) reside">
+				su(mu)
+				<p class="mb-0 mt-2">す(む)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">dwell, reside, live, inhabit</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">77</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%84%a1-mu-nai-nothing/" rel="bookmark" title="Learn JLPT N4 Kanji: 無 (mu, nai) nothing">無</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%84%a1-mu-nai-nothing/" rel="bookmark" title="Learn JLPT N4 Kanji: 無 (mu, nai) nothing">
+				mu, bu
+				<p class="mb-0 mt-2">ム、 ブ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%84%a1-mu-nai-nothing/" rel="bookmark" title="Learn JLPT N4 Kanji: 無 (mu, nai) nothing">
+				na(i)
+				<p class="mb-0 mt-2">な(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">nothingness, none, ain't, nothing, nil, not</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">78</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9c%9f-shin-ma-true/" rel="bookmark" title="Learn JLPT N4 Kanji: 真 (shin, ma) true">真</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9c%9f-shin-ma-true/" rel="bookmark" title="Learn JLPT N4 Kanji: 真 (shin, ma) true">
+				shin
+				<p class="mb-0 mt-2">シン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9c%9f-shin-ma-true/" rel="bookmark" title="Learn JLPT N4 Kanji: 真 (shin, ma) true">
+				ma, makoto
+				<p class="mb-0 mt-2">ま、 まこと</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">true, reality, Buddhist sect</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">79</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9c%89-yuu-aru-have-exist/" rel="bookmark" title="Learn JLPT N4 Kanji: 有 (yuu, aru) have, exist">有</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9c%89-yuu-aru-have-exist/" rel="bookmark" title="Learn JLPT N4 Kanji: 有 (yuu, aru) have, exist">
+				yuu, u
+				<p class="mb-0 mt-2">ユウ、 ウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9c%89-yuu-aru-have-exist/" rel="bookmark" title="Learn JLPT N4 Kanji: 有 (yuu, aru) have, exist">
+				a(ru)
+				<p class="mb-0 mt-2">あ(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">possess, have, exist, happen</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">80</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8f%a3-kou-kuchi-mouth/" rel="bookmark" title="Learn JLPT N4 Kanji: 口 (kou, kuchi) mouth">口</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8f%a3-kou-kuchi-mouth/" rel="bookmark" title="Learn JLPT N4 Kanji: 口 (kou, kuchi) mouth">
+				kou
+				<p class="mb-0 mt-2">コウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8f%a3-kou-kuchi-mouth/" rel="bookmark" title="Learn JLPT N4 Kanji: 口 (kou, kuchi) mouth">
+				kuchi
+				<p class="mb-0 mt-2">くち</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">mouth</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">81</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%b0%91-shou-sukoshi-few-little/" rel="bookmark" title="Learn JLPT N4 Kanji: 少 (shou, sukoshi) few, little">少</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%b0%91-shou-sukoshi-few-little/" rel="bookmark" title="Learn JLPT N4 Kanji: 少 (shou, sukoshi) few, little">
+				shou
+				<p class="mb-0 mt-2">ショウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%b0%91-shou-sukoshi-few-little/" rel="bookmark" title="Learn JLPT N4 Kanji: 少 (shou, sukoshi) few, little">
+				suku(nai), suko(shi)
+				<p class="mb-0 mt-2">すく(ない)、 すこ(し)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">few, little</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">82</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%ba-chou-machi-meaning-town/" rel="bookmark" title="Learn JLPT N4 Kanji: 町 (chou, machi) town">町</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%ba-chou-machi-meaning-town/" rel="bookmark" title="Learn JLPT N4 Kanji: 町 (chou, machi) town">
+				chou
+				<p class="mb-0 mt-2">チョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%94%ba-chou-machi-meaning-town/" rel="bookmark" title="Learn JLPT N4 Kanji: 町 (chou, machi) town">
+				machi
+				<p class="mb-0 mt-2">まち</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">town, village, block, street</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">83</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%99-ryou-fee-materials/" rel="bookmark" title="Learn JLPT N4 Kanji: 料 (ryou) fee, materials">料</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%99-ryou-fee-materials/" rel="bookmark" title="Learn JLPT N4 Kanji: 料 (ryou) fee, materials">
+				ryou
+				<p class="mb-0 mt-2">リョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%96%99-ryou-fee-materials/" rel="bookmark" title="Learn JLPT N4 Kanji: 料 (ryou) fee, materials"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">fee, materials</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">84</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%b7%a5-kou-ku-meaning-craft/" rel="bookmark" title="Learn JLPT N4 Kanji: 工 (kou, ku) meaning: craft">工</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%b7%a5-kou-ku-meaning-craft/" rel="bookmark" title="Learn JLPT N4 Kanji: 工 (kou, ku) meaning: craft">
+				kou, ku, gu
+				<p class="mb-0 mt-2">コウ、 ク、 グ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%b7%a5-kou-ku-meaning-craft/" rel="bookmark" title="Learn JLPT N4 Kanji: 工 (kou, ku) meaning: craft"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">craft, construction</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">85</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bb%ba-ken-tateru-meaning-build/" rel="bookmark" title="Learn JLPT N4 Kanji: 建 (ken, tateru) meaning: build">建</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bb%ba-ken-tateru-meaning-build/" rel="bookmark" title="Learn JLPT N4 Kanji: 建 (ken, tateru) meaning: build">
+				ken, kon
+				<p class="mb-0 mt-2">ケン、 コン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bb%ba-ken-tateru-meaning-build/" rel="bookmark" title="Learn JLPT N4 Kanji: 建 (ken, tateru) meaning: build">
+				ta(teru)
+				<p class="mb-0 mt-2">た(てる)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">build</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">86</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a9%ba-kuu-sora-empty-sky/" rel="bookmark" title="Learn JLPT N4 Kanji: 空 (kuu, sora) empty, sky">空</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a9%ba-kuu-sora-empty-sky/" rel="bookmark" title="Learn JLPT N4 Kanji: 空 (kuu, sora) empty, sky">
+				kuu
+				<p class="mb-0 mt-2">クウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a9%ba-kuu-sora-empty-sky/" rel="bookmark" title="Learn JLPT N4 Kanji: 空 (kuu, sora) empty, sky">
+				sora, kara, a(ku), su(ku), muna(shii)
+				<p class="mb-0 mt-2">そら、 から、 あ(く)、 す(く)、 むな(しい)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">empty, sky, void, vacant, vacuum</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">87</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%80%a5-kyuu-isogu-hurry/" rel="bookmark" title="Learn JLPT N4 Kanji: 急 (kyuu, isogu) hurry">急</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%80%a5-kyuu-isogu-hurry/" rel="bookmark" title="Learn JLPT N4 Kanji: 急 (kyuu, isogu) hurry">
+				kyuu
+				<p class="mb-0 mt-2">キュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%80%a5-kyuu-isogu-hurry/" rel="bookmark" title="Learn JLPT N4 Kanji: 急 (kyuu, isogu) hurry">
+				iso(gu)
+				<p class="mb-0 mt-2">いそ(ぐ)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">hurry, emergency, sudden, steep</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">88</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%a2-shi-tomaru-stop/" rel="bookmark" title="Learn JLPT N4 Kanji: 止 (shi, tomaru) stop">止</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%a2-shi-tomaru-stop/" rel="bookmark" title="Learn JLPT N4 Kanji: 止 (shi, tomaru) stop">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%a2-shi-tomaru-stop/" rel="bookmark" title="Learn JLPT N4 Kanji: 止 (shi, tomaru) stop">
+				to(maru), todo(maru), ya(meru), yo(su)
+				<p class="mb-0 mt-2">と(まる)、 とど(まる)、 や(める)、 よ(す)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">stop, halt</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">89</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%80%81-sou-okuru-send/" rel="bookmark" title="Learn JLPT N4 Kanji: 送 (sou, okuru) send">送</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%80%81-sou-okuru-send/" rel="bookmark" title="Learn JLPT N4 Kanji: 送 (sou, okuru) send">
+				sou
+				<p class="mb-0 mt-2">ソウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%80%81-sou-okuru-send/" rel="bookmark" title="Learn JLPT N4 Kanji: 送 (sou, okuru) send">
+				oku(ru)
+				<p class="mb-0 mt-2">おく(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">escort, send</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<div class="overflow-auto"><div class="adsense-in-article adsense-cont mt-4"></div></div>
+		</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">90</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%88%87-setsu-kiru-cut/" rel="bookmark" title="Learn JLPT N4 Kanji: 切 (setsu, kiru) cut">切</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%88%87-setsu-kiru-cut/" rel="bookmark" title="Learn JLPT N4 Kanji: 切 (setsu, kiru) cut">
+				setsu, sai
+				<p class="mb-0 mt-2">セツ、 サイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%88%87-setsu-kiru-cut/" rel="bookmark" title="Learn JLPT N4 Kanji: 切 (setsu, kiru) cut">
+				ki(ru)
+				<p class="mb-0 mt-2">き(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">cut, cutoff, be sharp</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">91</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%bb%a2-ten-korogaru-revolve/" rel="bookmark" title="Learn JLPT N4 Kanji: 転 (ten, korogaru) revolve">転</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%bb%a2-ten-korogaru-revolve/" rel="bookmark" title="Learn JLPT N4 Kanji: 転 (ten, korogaru) revolve">
+				ten
+				<p class="mb-0 mt-2">テン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%bb%a2-ten-korogaru-revolve/" rel="bookmark" title="Learn JLPT N4 Kanji: 転 (ten, korogaru) revolve">
+				koro(garu)
+				<p class="mb-0 mt-2">ころ(がる)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">revolve, turn around, change</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">92</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a0%94-ken-meaning-study-of/" rel="bookmark" title="Learn JLPT N4 Kanji: 研 (ken) meaning: study of">研</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a0%94-ken-meaning-study-of/" rel="bookmark" title="Learn JLPT N4 Kanji: 研 (ken) meaning: study of">
+				ken
+				<p class="mb-0 mt-2">ケン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a0%94-ken-meaning-study-of/" rel="bookmark" title="Learn JLPT N4 Kanji: 研 (ken) meaning: study of">
+				to(gu)
+				<p class="mb-0 mt-2">と(ぐ)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">polish, study of, sharpen</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">93</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b6%b3-ashi-tariru-leg-sufficient/" rel="bookmark" title="Learn JLPT N4 Kanji: 足 (ashi, tariru) leg, sufficient">足</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b6%b3-ashi-tariru-leg-sufficient/" rel="bookmark" title="Learn JLPT N4 Kanji: 足 (ashi, tariru) leg, sufficient">
+				soku
+				<p class="mb-0 mt-2">ソク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b6%b3-ashi-tariru-leg-sufficient/" rel="bookmark" title="Learn JLPT N4 Kanji: 足 (ashi, tariru) leg, sufficient">
+				ashi, ta(riru)
+				<p class="mb-0 mt-2">あし、 た(りる)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">leg, foot, be sufficient</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">94</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a9%b6-kyuu-meaning-research/" rel="bookmark" title="Learn JLPT N4 Kanji: 究 (kyuu) meaning: research">究</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a9%b6-kyuu-meaning-research/" rel="bookmark" title="Learn JLPT N4 Kanji: 究 (kyuu) meaning: research">
+				kyuu
+				<p class="mb-0 mt-2">キュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a9%b6-kyuu-meaning-research/" rel="bookmark" title="Learn JLPT N4 Kanji: 究 (kyuu) meaning: research"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">research, study</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">95</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%a5%bd-raku-tanoshii-meaning-music-comfort/" rel="bookmark" title="Learn JLPT N4 Kanji: 楽 (raku, tanoshii) meaning: music; comfort">
+				楽
+			</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%a5%bd-raku-tanoshii-meaning-music-comfort/" rel="bookmark" title="Learn JLPT N4 Kanji: 楽 (raku, tanoshii) meaning: music; comfort">
+				gaku, raku
+				<p class="mb-0 mt-2">ガク、 ラク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%a5%bd-raku-tanoshii-meaning-music-comfort/" rel="bookmark" title="Learn JLPT N4 Kanji: 楽 (raku, tanoshii) meaning: music; comfort">
+				tano(shii)
+				<p class="mb-0 mt-2">たの(しい)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">music, comfort, ease</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">96</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b5%b7-ki-okiru-get-up/" rel="bookmark" title="Learn JLPT N4 Kanji: 起 (ki, okiru) get up">起</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b5%b7-ki-okiru-get-up/" rel="bookmark" title="Learn JLPT N4 Kanji: 起 (ki, okiru) get up">
+				ki
+				<p class="mb-0 mt-2">キ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b5%b7-ki-okiru-get-up/" rel="bookmark" title="Learn JLPT N4 Kanji: 起 (ki, okiru) get up">
+				o(kiru), oko(su)
+				<p class="mb-0 mt-2">お(きる)、 おこ(す)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">wake up, get up; rouse</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">97</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9d%80-chaku-kiru-tsuku-arrive-wear/" rel="bookmark" title="Learn JLPT N4 Kanji: 着 (chaku, kiru, tsuku) arrive; wear">着</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9d%80-chaku-kiru-tsuku-arrive-wear/" rel="bookmark" title="Learn JLPT N4 Kanji: 着 (chaku, kiru, tsuku) arrive; wear">
+				chaku
+				<p class="mb-0 mt-2">チャク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%9d%80-chaku-kiru-tsuku-arrive-wear/" rel="bookmark" title="Learn JLPT N4 Kanji: 着 (chaku, kiru, tsuku) arrive; wear">
+				ki(ru), tsu(ku)
+				<p class="mb-0 mt-2">き(る)、つ(く)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">arrive, wear, counter for suits of clothing</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">98</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ba%97-ten-mise-store/" rel="bookmark" title="Learn JLPT N4 Kanji: 店 (ten, mise) store">店</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ba%97-ten-mise-store/" rel="bookmark" title="Learn JLPT N4 Kanji: 店 (ten, mise) store">
+				ten
+				<p class="mb-0 mt-2">テン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ba%97-ten-mise-store/" rel="bookmark" title="Learn JLPT N4 Kanji: 店 (ten, mise) store">
+				mise
+				<p class="mb-0 mt-2">みせ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">store, shop</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">99</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%97%85-byou-ya-meaning-sick/" rel="bookmark" title="Learn JLPT N4 Kanji: 病 (byou, ya) sick">病</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%97%85-byou-ya-meaning-sick/" rel="bookmark" title="Learn JLPT N4 Kanji: 病 (byou, ya) sick">
+				byou
+				<p class="mb-0 mt-2">ビョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%97%85-byou-ya-meaning-sick/" rel="bookmark" title="Learn JLPT N4 Kanji: 病 (byou, ya) sick">
+				ya(mu)
+				<p class="mb-0 mt-2">や(む)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">ill, sick</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">100</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b3%aa-shitsu-meaning-quality/" rel="bookmark" title="Learn JLPT N4 Kanji: 質 (shitsu) meaning: quality">質</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b3%aa-shitsu-meaning-quality/" rel="bookmark" title="Learn JLPT N4 Kanji: 質 (shitsu) meaning: quality">
+				shitsu, shichi
+				<p class="mb-0 mt-2">シツ、 シチ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b3%aa-shitsu-meaning-quality/" rel="bookmark" title="Learn JLPT N4 Kanji: 質 (shitsu) meaning: quality">
+				tachi, tada(su)
+				<p class="mb-0 mt-2">たち、 ただ(す)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">substance, quality, matter, temperament</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">101</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%be%85-tai-matsu-wait/" rel="bookmark" title="Learn JLPT N4 Kanji: 待 (tai, matsu) wait">待</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%be%85-tai-matsu-wait/" rel="bookmark" title="Learn JLPT N4 Kanji: 待 (tai, matsu) wait">
+				tai
+				<p class="mb-0 mt-2">タイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%be%85-tai-matsu-wait/" rel="bookmark" title="Learn JLPT N4 Kanji: 待 (tai, matsu) wait">
+				ma(tsu)
+				<p class="mb-0 mt-2">ま(つ)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">wait, depend on</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">102</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a9%a6-shi-tamesu-test/" rel="bookmark" title="Learn JLPT N4 Kanji: 試 (shi, tamesu) test">試</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a9%a6-shi-tamesu-test/" rel="bookmark" title="Learn JLPT N4 Kanji: 試 (shi, tamesu) test">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a9%a6-shi-tamesu-test/" rel="bookmark" title="Learn JLPT N4 Kanji: 試 (shi, tamesu) test">
+				kokoro(miru), tame(su)
+				<p class="mb-0 mt-2">こころ(みる)、 ため(す)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">test, try, attempt, experiment</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">103</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%97%8f-zoku-family/" rel="bookmark" title="Learn JLPT N4 Kanji: 族 (zoku) family">族</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%97%8f-zoku-family/" rel="bookmark" title="Learn JLPT N4 Kanji: 族 (zoku) family">
+				zoku
+				<p class="mb-0 mt-2">ゾク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%97%8f-zoku-family/" rel="bookmark" title="Learn JLPT N4 Kanji: 族 (zoku) family"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">tribe, family</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">104</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%8a%80-gin-meaning-silver/" rel="bookmark" title="Learn JLPT N4 Kanji: 銀 (gin) silver">銀</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%8a%80-gin-meaning-silver/" rel="bookmark" title="Learn JLPT N4 Kanji: 銀 (gin) silver">
+				gin
+				<p class="mb-0 mt-2">ギン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%8a%80-gin-meaning-silver/" rel="bookmark" title="Learn JLPT N4 Kanji: 銀 (gin) silver"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">silver</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">105</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%97%a9-sou-hayai-early-fast/" rel="bookmark" title="Learn JLPT N4 Kanji: 早 (sou, hayai) early, fast">早</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%97%a9-sou-hayai-early-fast/" rel="bookmark" title="Learn JLPT N4 Kanji: 早 (sou, hayai) early, fast">
+				sou, sa
+				<p class="mb-0 mt-2">ソウ、 サッ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%97%a9-sou-hayai-early-fast/" rel="bookmark" title="Learn JLPT N4 Kanji: 早 (sou, hayai) early, fast">
+				haya(i)
+				<p class="mb-0 mt-2">はや(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">early, fast</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">106</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%a0-ei-utsuru-reflection/" rel="bookmark" title="Learn JLPT N4 Kanji: 映 (ei, utsuru) reflection">映</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%a0-ei-utsuru-reflection/" rel="bookmark" title="Learn JLPT N4 Kanji: 映 (ei, utsuru) reflection">
+				ei
+				<p class="mb-0 mt-2">エイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%a0-ei-utsuru-reflection/" rel="bookmark" title="Learn JLPT N4 Kanji: 映 (ei, utsuru) reflection">
+				utsu(ru), ha(eru)
+				<p class="mb-0 mt-2">うつ(る)、 は(える)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">reflect, reflection, projection</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">107</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a6%aa-shin-oya-parent/" rel="bookmark" title="Learn JLPT N4 Kanji: 親 (shin, oya) parent">親</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a6%aa-shin-oya-parent/" rel="bookmark" title="Learn JLPT N4 Kanji: 親 (shin, oya) parent">
+				shin
+				<p class="mb-0 mt-2">シン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%a6%aa-shin-oya-parent/" rel="bookmark" title="Learn JLPT N4 Kanji: 親 (shin, oya) parent">
+				oya, shita(shii)
+				<p class="mb-0 mt-2">おや、 した(しい)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">parent, intimacy, relative, familiarity</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">108</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a8%93-ken-meaning-verification/" rel="bookmark" title="Learn JLPT N4 Kanji: 験 (ken) meaning: verification">験</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a8%93-ken-meaning-verification/" rel="bookmark" title="Learn JLPT N4 Kanji: 験 (ken) meaning: verification">
+				ken
+				<p class="mb-0 mt-2">ケン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a8%93-ken-meaning-verification/" rel="bookmark" title="Learn JLPT N4 Kanji: 験 (ken) meaning: verification"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">verification, effect, testing</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">109</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%8b%b1-ei-meaning-english/" rel="bookmark" title="Learn JLPT N4 Kanji: 英 (ei) meaning: English">英</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%8b%b1-ei-meaning-english/" rel="bookmark" title="Learn JLPT N4 Kanji: 英 (ei) meaning: English">
+				ei
+				<p class="mb-0 mt-2">エイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%8b%b1-ei-meaning-english/" rel="bookmark" title="Learn JLPT N4 Kanji: 英 (ei) meaning: English"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">England, English, hero, outstanding</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">110</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8c%bb-i-doctor-medicine/" rel="bookmark" title="Learn JLPT N4 Kanji: 医 (i) doctor, medicine">医</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8c%bb-i-doctor-medicine/" rel="bookmark" title="Learn JLPT N4 Kanji: 医 (i) doctor, medicine">
+				i
+				<p class="mb-0 mt-2">イ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8c%bb-i-doctor-medicine/" rel="bookmark" title="Learn JLPT N4 Kanji: 医 (i) doctor, medicine"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">doctor, medicine</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">111</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bb%95-shi-attend-doing/" rel="bookmark" title="Learn JLPT N4 Kanji: 仕 (shi) attend, doing">仕</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bb%95-shi-attend-doing/" rel="bookmark" title="Learn JLPT N4 Kanji: 仕 (shi) attend, doing">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e4%bb%95-shi-attend-doing/" rel="bookmark" title="Learn JLPT N4 Kanji: 仕 (shi) attend, doing"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">attend, doing, official, serve</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">112</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8e%bb-kyo-ko-saru-meaning-gone/" rel="bookmark" title="Learn JLPT N4 Kanji: 去 (kyo, ko, saru) gone">去</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8e%bb-kyo-ko-saru-meaning-gone/" rel="bookmark" title="Learn JLPT N4 Kanji: 去 (kyo, ko, saru) gone">
+				kyo, ko
+				<p class="mb-0 mt-2">キョ、 コ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8e%bb-kyo-ko-saru-meaning-gone/" rel="bookmark" title="Learn JLPT N4 Kanji: 去 (kyo, ko, saru) gone">
+				sa(ru)
+				<p class="mb-0 mt-2">さ(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">gone, past, quit, leave, elapse, eliminate</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">113</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%91%b3-mi-aji-taste/" rel="bookmark" title="Learn JLPT N4 Kanji: 味 (mi, aji) taste">味</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%91%b3-mi-aji-taste/" rel="bookmark" title="Learn JLPT N4 Kanji: 味 (mi, aji) taste">
+				mi
+				<p class="mb-0 mt-2">ミ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%91%b3-mi-aji-taste/" rel="bookmark" title="Learn JLPT N4 Kanji: 味 (mi, aji) taste">
+				aji
+				<p class="mb-0 mt-2">あじ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">flavor, taste</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">114</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%86%99-sha-utsuru-meaning-copy/" rel="bookmark" title="Learn JLPT N4 Kanji: 写 (sha, utsuru) meaning: copy">写</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%86%99-sha-utsuru-meaning-copy/" rel="bookmark" title="Learn JLPT N4 Kanji: 写 (sha, utsuru) meaning: copy">
+				sha
+				<p class="mb-0 mt-2">シャ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%86%99-sha-utsuru-meaning-copy/" rel="bookmark" title="Learn JLPT N4 Kanji: 写 (sha, utsuru) meaning: copy">
+				utsuru
+				<p class="mb-0 mt-2">うつ(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">copy, be photographed, describe</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">115</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ad%97-ji-character/" rel="bookmark" title="Learn JLPT N4 Kanji: 字 (ji) character">字</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ad%97-ji-character/" rel="bookmark" title="Learn JLPT N4 Kanji: 字 (ji) character">
+				ji
+				<p class="mb-0 mt-2">ジ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ad%97-ji-character/" rel="bookmark" title="Learn JLPT N4 Kanji: 字 (ji) character"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">character, letter, word</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">116</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%ad%94-tou-kotaeru-meaning-answer/" rel="bookmark" title="Learn JLPT N4 Kanji: 答 (tou, kotaeru) meaning: answer">答</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%ad%94-tou-kotaeru-meaning-answer/" rel="bookmark" title="Learn JLPT N4 Kanji: 答 (tou, kotaeru) meaning: answer">
+				tou
+				<p class="mb-0 mt-2">トウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%ad%94-tou-kotaeru-meaning-answer/" rel="bookmark" title="Learn JLPT N4 Kanji: 答 (tou, kotaeru) meaning: answer">
+				kota(eru)
+				<p class="mb-0 mt-2">こた(える)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">solution, answer</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">117</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%9c-ya-yoru-night/" rel="bookmark" title="Learn JLPT N4 Kanji: 夜 (ya, yoru) night">夜</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%9c-ya-yoru-night/" rel="bookmark" title="Learn JLPT N4 Kanji: 夜 (ya, yoru) night">
+				ya
+				<p class="mb-0 mt-2">ヤ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%9c-ya-yoru-night/" rel="bookmark" title="Learn JLPT N4 Kanji: 夜 (ya, yoru) night">
+				yo, yoru
+				<p class="mb-0 mt-2">よ、 よる</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">night, evening</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">118</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%9f%b3-on-oto-sound-noise/" rel="bookmark" title="Learn JLPT N4 Kanji: 音 (on, oto) sound, noise">音</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%9f%b3-on-oto-sound-noise/" rel="bookmark" title="Learn JLPT N4 Kanji: 音 (on, oto) sound, noise">
+				on
+				<p class="mb-0 mt-2">オン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%9f%b3-on-oto-sound-noise/" rel="bookmark" title="Learn JLPT N4 Kanji: 音 (on, oto) sound, noise">
+				oto, ne
+				<p class="mb-0 mt-2">おと、 ね</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">sound, noise</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">119</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%b3%a8-chuu-pour-concentrate/" rel="bookmark" title="Learn JLPT N4 Kanji: 注 (chuu) pour, concentrate">注</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%b3%a8-chuu-pour-concentrate/" rel="bookmark" title="Learn JLPT N4 Kanji: 注 (chuu) pour, concentrate">
+				chuu
+				<p class="mb-0 mt-2">チュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%b3%a8-chuu-pour-concentrate/" rel="bookmark" title="Learn JLPT N4 Kanji: 注 (chuu) pour, concentrate">
+				soso(gu), sa(su), tsu(gu)
+				<p class="mb-0 mt-2">そそ(ぐ)、 さ(す)、 つ(ぐ)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">pour, irrigate, shed (tears), flow into, concentrate on</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<div class="overflow-auto">
+				<div class="adsense-in-article adsense-cont mt-4"><div id="ezoic-pub-ad-placeholder-142" data-ezoic-video-excluded="1"></div></div>
+			</div>
+		</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">120</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/jlpt-n4-kanji-%e5%b8%b0-chou-tori-meaning-homecoming/" rel="bookmark" title="Learn JLPT N4 Kanji: 帰 (chou, tori) meaning: homecoming">
+				帰
+			</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/jlpt-n4-kanji-%e5%b8%b0-chou-tori-meaning-homecoming/" rel="bookmark" title="Learn JLPT N4 Kanji: 帰 (chou, tori) meaning: homecoming">
+				ki
+				<p class="mb-0 mt-2">キ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/jlpt-n4-kanji-%e5%b8%b0-chou-tori-meaning-homecoming/" rel="bookmark" title="Learn JLPT N4 Kanji: 帰 (chou, tori) meaning: homecoming">
+				kae(ru), kae(su)
+				<p class="mb-0 mt-2">かえ(る)、 かえ(す)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">homecoming, arrive at, lead to, result in</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">121</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8f%a4-ko-furui-meaning-old/" rel="bookmark" title="Learn JLPT N4 Kanji: 古 (ko, furui) meaning: old">古</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8f%a4-ko-furui-meaning-old/" rel="bookmark" title="Learn JLPT N4 Kanji: 古 (ko, furui) meaning: old">
+				ko
+				<p class="mb-0 mt-2">コ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8f%a4-ko-furui-meaning-old/" rel="bookmark" title="Learn JLPT N4 Kanji: 古 (ko, furui) meaning: old">
+				furu(i)
+				<p class="mb-0 mt-2">ふる(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">old</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">122</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%8c-ka-uta-meaning-song/" rel="bookmark" title="Learn JLPT N4 Kanji: 歌 (ka, uta) meaning: song">歌</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%8c-ka-uta-meaning-song/" rel="bookmark" title="Learn JLPT N4 Kanji: 歌 (ka, uta) meaning: song">
+				ka
+				<p class="mb-0 mt-2">カ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%8c-ka-uta-meaning-song/" rel="bookmark" title="Learn JLPT N4 Kanji: 歌 (ka, uta) meaning: song">
+				uta, uta(u)
+				<p class="mb-0 mt-2">うた、 うた(う)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">song, sing</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">123</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b2%b7-bai-kau-buy/" rel="bookmark" title="Learn JLPT N4 Kanji: 買 (bai, kau) buy">買</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b2%b7-bai-kau-buy/" rel="bookmark" title="Learn JLPT N4 Kanji: 買 (bai, kau) buy">
+				bai
+				<p class="mb-0 mt-2">バイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b2%b7-bai-kau-buy/" rel="bookmark" title="Learn JLPT N4 Kanji: 買 (bai, kau) buy">
+				ka(u)
+				<p class="mb-0 mt-2">か(う)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">buy</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">124</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%82%aa-aku-warui-bad-evil/" rel="bookmark" title="Learn JLPT N4 Kanji: 悪 (aku, warui) bad, evil">悪</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%82%aa-aku-warui-bad-evil/" rel="bookmark" title="Learn JLPT N4 Kanji: 悪 (aku, warui) bad, evil">
+				aku
+				<p class="mb-0 mt-2">アク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%82%aa-aku-warui-bad-evil/" rel="bookmark" title="Learn JLPT N4 Kanji: 悪 (aku, warui) bad, evil">
+				waru(i)
+				<p class="mb-0 mt-2">わる(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">bad, evil, wrong</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">125</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%9b%b3-zu-to-map/" rel="bookmark" title="Learn JLPT N4 Kanji: 図 (zu, to) map">図</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%9b%b3-zu-to-map/" rel="bookmark" title="Learn JLPT N4 Kanji: 図 (zu, to) map">
+				zu, to
+				<p class="mb-0 mt-2">ズ、 ト</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%9b%b3-zu-to-map/" rel="bookmark" title="Learn JLPT N4 Kanji: 図 (zu, to) map">
+				haka(ru)
+				<p class="mb-0 mt-2">はか(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">map, drawing, plan, extraordinary</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">126</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%80%b1-shuu-week/" rel="bookmark" title="Learn JLPT N4 Kanji: 週 (shuu) week">週</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%80%b1-shuu-week/" rel="bookmark" title="Learn JLPT N4 Kanji: 週 (shuu) week">
+				shuu
+				<p class="mb-0 mt-2">シュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%80%b1-shuu-week/" rel="bookmark" title="Learn JLPT N4 Kanji: 週 (shuu) week"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">week</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">127</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ae%a4-shitsu-muro-meaning-room/" rel="bookmark" title="Learn JLPT N4 Kanji: 室 (shitsu, muro) room">室</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ae%a4-shitsu-muro-meaning-room/" rel="bookmark" title="Learn JLPT N4 Kanji: 室 (shitsu, muro) room">
+				shitsu
+				<p class="mb-0 mt-2">シツ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%ae%a4-shitsu-muro-meaning-room/" rel="bookmark" title="Learn JLPT N4 Kanji: 室 (shitsu, muro) room">
+				muro
+				<p class="mb-0 mt-2">むろ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">room, apartment, chamber, greenhouse, cellar</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">128</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%a9-ho-aruku-walk/" rel="bookmark" title="Learn JLPT N4 Kanji: 歩 (ho, aruku) walk">歩</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%a9-ho-aruku-walk/" rel="bookmark" title="Learn JLPT N4 Kanji: 歩 (ho, aruku) walk">
+				ho, bu
+				<p class="mb-0 mt-2">ホ、 ブ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%ad%a9-ho-aruku-walk/" rel="bookmark" title="Learn JLPT N4 Kanji: 歩 (ho, aruku) walk">
+				aru(ku), ayu(mu)
+				<p class="mb-0 mt-2">ある(く)、 あゆ(む)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">walk, counter for steps</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">129</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a2%a8-fuu-kaze-wind-style/" rel="bookmark" title="Learn JLPT N4 Kanji: 風 (fuu, kaze) wind, style">風</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a2%a8-fuu-kaze-wind-style/" rel="bookmark" title="Learn JLPT N4 Kanji: 風 (fuu, kaze) wind, style">
+				fuu, fu
+				<p class="mb-0 mt-2">フウ、 フ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a2%a8-fuu-kaze-wind-style/" rel="bookmark" title="Learn JLPT N4 Kanji: 風 (fuu, kaze) wind, style">
+				kaze, kaza-
+				<p class="mb-0 mt-2">かぜ、 かざ-</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">wind, air, style, manner</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">130</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%b4%99-shi-kami-meaning-paper/" rel="bookmark" title="Learn JLPT N4 Kanji: 紙 (shi, kami) meaning: paper">紙</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%b4%99-shi-kami-meaning-paper/" rel="bookmark" title="Learn JLPT N4 Kanji: 紙 (shi, kami) meaning: paper">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%b4%99-shi-kami-meaning-paper/" rel="bookmark" title="Learn JLPT N4 Kanji: 紙 (shi, kami) meaning: paper">
+				kami
+				<p class="mb-0 mt-2">かみ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">paper</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">131</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%bb%92-koku-kuro-meaning-black/" rel="bookmark" title="Learn JLPT N4 Kanji: 黒 (koku, kuro) meaning: black">黒</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%bb%92-koku-kuro-meaning-black/" rel="bookmark" title="Learn JLPT N4 Kanji: 黒 (koku, kuro) meaning: black">
+				koku
+				<p class="mb-0 mt-2">コク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%bb%92-koku-kuro-meaning-black/" rel="bookmark" title="Learn JLPT N4 Kanji: 黒 (koku, kuro) meaning: black">
+				kuro
+				<p class="mb-0 mt-2">くろ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">black</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">132</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%8a%b1-ka-hana-flower/" rel="bookmark" title="Learn JLPT N4 Kanji: 花 (ka, hana) flower">花</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%8a%b1-ka-hana-flower/" rel="bookmark" title="Learn JLPT N4 Kanji: 花 (ka, hana) flower">
+				ka, ke
+				<p class="mb-0 mt-2">カ、 ケ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%8a%b1-ka-hana-flower/" rel="bookmark" title="Learn JLPT N4 Kanji: 花 (ka, hana) flower">
+				hana
+				<p class="mb-0 mt-2">はな</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">flower</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">133</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%a5-shun-haru-meaning-spring/" rel="bookmark" title="Learn JLPT N4 Kanji: 春 (shun, haru) spring">春</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%a5-shun-haru-meaning-spring/" rel="bookmark" title="Learn JLPT N4 Kanji: 春 (shun, haru) spring">
+				shun
+				<p class="mb-0 mt-2">シュン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%a5-shun-haru-meaning-spring/" rel="bookmark" title="Learn JLPT N4 Kanji: 春 (shun, haru) spring">
+				haru
+				<p class="mb-0 mt-2">はる</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">spring</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">134</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b5%a4-seki-aka-red/" rel="bookmark" title="Learn JLPT N4 Kanji: 赤 (seki, aka) red">赤</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b5%a4-seki-aka-red/" rel="bookmark" title="Learn JLPT N4 Kanji: 赤 (seki, aka) red">
+				seki, shaku
+				<p class="mb-0 mt-2">セキ、 シャク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b5%a4-seki-aka-red/" rel="bookmark" title="Learn JLPT N4 Kanji: 赤 (seki, aka) red">
+				aka(i)
+				<p class="mb-0 mt-2">あか(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">red</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">135</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%9d%92-sei-aoi-blue/" rel="bookmark" title="Learn JLPT N4 Kanji: 青 (sei, aoi) blue">青</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%9d%92-sei-aoi-blue/" rel="bookmark" title="Learn JLPT N4 Kanji: 青 (sei, aoi) blue">
+				sei, shou
+				<p class="mb-0 mt-2">セイ、 ショウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%9d%92-sei-aoi-blue/" rel="bookmark" title="Learn JLPT N4 Kanji: 青 (sei, aoi) blue">
+				ao(i)
+				<p class="mb-0 mt-2">あお(い)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">blue</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">136</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a4%a8-kan-building/" rel="bookmark" title="Learn JLPT N4 Kanji: 館 (kan) building">館</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a4%a8-kan-building/" rel="bookmark" title="Learn JLPT N4 Kanji: 館 (kan) building">
+				kan
+				<p class="mb-0 mt-2">カン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a4%a8-kan-building/" rel="bookmark" title="Learn JLPT N4 Kanji: 館 (kan) building">
+				yakata
+				<p class="mb-0 mt-2">やかた</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">building, mansion, large building, palace</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">137</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%b1%8b-oku-ya-roof-house/" rel="bookmark" title="Learn JLPT N4 Kanji: 屋 (oku, ya) roof, house">屋</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%b1%8b-oku-ya-roof-house/" rel="bookmark" title="Learn JLPT N4 Kanji: 屋 (oku, ya) roof, house">
+				oku
+				<p class="mb-0 mt-2">オク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%b1%8b-oku-ya-roof-house/" rel="bookmark" title="Learn JLPT N4 Kanji: 屋 (oku, ya) roof, house">
+				ya
+				<p class="mb-0 mt-2">や</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">roof, house, shop, dealer, seller</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">138</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%89%b2-shoku-iro-color/" rel="bookmark" title="Learn JLPT N4 Kanji: 色 (shoku, iro) color">色</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%89%b2-shoku-iro-color/" rel="bookmark" title="Learn JLPT N4 Kanji: 色 (shoku, iro) color">
+				shoku, shiki
+				<p class="mb-0 mt-2">ショク、 シキ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%89%b2-shoku-iro-color/" rel="bookmark" title="Learn JLPT N4 Kanji: 色 (shoku, iro) color">
+				iro
+				<p class="mb-0 mt-2">いろ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">color</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">139</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b5%b0-sou-hashiru-run/" rel="bookmark" title="Learn JLPT N4 Kanji: 走 (sou, hashiru) run">走</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b5%b0-sou-hashiru-run/" rel="bookmark" title="Learn JLPT N4 Kanji: 走 (sou, hashiru) run">
+				sou
+				<p class="mb-0 mt-2">ソウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b5%b0-sou-hashiru-run/" rel="bookmark" title="Learn JLPT N4 Kanji: 走 (sou, hashiru) run">
+				hashi(ru)
+				<p class="mb-0 mt-2">はし(る)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">run</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">140</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a7%8b-shuu-aki-autumn/" rel="bookmark" title="Learn JLPT N4 Kanji: 秋 (shuu, aki) autumn">秋</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a7%8b-shuu-aki-autumn/" rel="bookmark" title="Learn JLPT N4 Kanji: 秋 (shuu, aki) autumn">
+				shuu
+				<p class="mb-0 mt-2">シュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%a7%8b-shuu-aki-autumn/" rel="bookmark" title="Learn JLPT N4 Kanji: 秋 (shuu, aki) autumn">
+				aki
+				<p class="mb-0 mt-2">あき</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">autumn, fall</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">141</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%8f-ka-ge-natsu-summer/" rel="bookmark" title="Learn JLPT N4 Kanji: 夏 (ka, ge, natsu) summer">夏</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%8f-ka-ge-natsu-summer/" rel="bookmark" title="Learn JLPT N4 Kanji: 夏 (ka, ge, natsu) summer">
+				ka, ge
+				<p class="mb-0 mt-2">カ、 ゲ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%8f-ka-ge-natsu-summer/" rel="bookmark" title="Learn JLPT N4 Kanji: 夏 (ka, ge, natsu) summer">
+				natsu
+				<p class="mb-0 mt-2">なつ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">summer</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">142</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%bf%92-shu-narau-learn/" rel="bookmark" title="Learn JLPT N4 Kanji: 習 (shu, narau) learn">習</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%bf%92-shu-narau-learn/" rel="bookmark" title="Learn JLPT N4 Kanji: 習 (shu, narau) learn">
+				shuu
+				<p class="mb-0 mt-2">シュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%bf%92-shu-narau-learn/" rel="bookmark" title="Learn JLPT N4 Kanji: 習 (shu, narau) learn">
+				nara(u)
+				<p class="mb-0 mt-2">なら(う)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">learn</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">143</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a7%85-eki-meaning-station/" rel="bookmark" title="Learn JLPT N4 Kanji: 駅 (eki) meaning: station">駅</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a7%85-eki-meaning-station/" rel="bookmark" title="Learn JLPT N4 Kanji: 駅 (eki) meaning: station">
+				eki
+				<p class="mb-0 mt-2">エキ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a7%85-eki-meaning-station/" rel="bookmark" title="Learn JLPT N4 Kanji: 駅 (eki) meaning: station"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">station</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">144</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%b4%8b-you-ocean-foreign/" rel="bookmark" title="Learn JLPT N4 Kanji: 洋 (you) ocean, foreign">洋</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%b4%8b-you-ocean-foreign/" rel="bookmark" title="Learn JLPT N4 Kanji: 洋 (you) ocean, foreign">
+				you
+				<p class="mb-0 mt-2">ヨウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%b4%8b-you-ocean-foreign/" rel="bookmark" title="Learn JLPT N4 Kanji: 洋 (you) ocean, foreign"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">ocean, sea, foreign, Western style</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">145</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%97%85-ryo-tabi-meaning-travel/" rel="bookmark" title="Learn JLPT N4 Kanji: 旅 (ryo, tabi) travel">旅</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%97%85-ryo-tabi-meaning-travel/" rel="bookmark" title="Learn JLPT N4 Kanji: 旅 (ryo, tabi) travel">
+				ryo
+				<p class="mb-0 mt-2">リョ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%97%85-ryo-tabi-meaning-travel/" rel="bookmark" title="Learn JLPT N4 Kanji: 旅 (ryo, tabi) travel">
+				tabi
+				<p class="mb-0 mt-2">たび</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">trip, travel</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">146</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9c%8d-fuku-clothing/" rel="bookmark" title="Learn JLPT N4 Kanji: 服 (fuku) clothing">服</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9c%8d-fuku-clothing/" rel="bookmark" title="Learn JLPT N4 Kanji: 服 (fuku) clothing">
+				fuku
+				<p class="mb-0 mt-2">フク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9c%8d-fuku-clothing/" rel="bookmark" title="Learn JLPT N4 Kanji: 服 (fuku) clothing"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">clothing, admit, obey</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">147</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%95-seki-yuu-evening/" rel="bookmark" title="Learn JLPT N4 Kanji: 夕 (yuu) evening">夕</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%95-seki-yuu-evening/" rel="bookmark" title="Learn JLPT N4 Kanji: 夕 (yuu) evening"><p class="mb-0 mt-2">(none)</p></a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a4%95-seki-yuu-evening/" rel="bookmark" title="Learn JLPT N4 Kanji: 夕 (yuu) evening">
+				yuu
+				<p class="mb-0 mt-2">ゆう</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">evening</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">148</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%80%9f-shaku-kariru-borrow/" rel="bookmark" title="Learn JLPT N4 Kanji: 借 (shaku, kariru) borrow">借</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%80%9f-shaku-kariru-borrow/" rel="bookmark" title="Learn JLPT N4 Kanji: 借 (shaku, kariru) borrow">
+				shaku
+				<p class="mb-0 mt-2">シャク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%80%9f-shaku-kariru-borrow/" rel="bookmark" title="Learn JLPT N4 Kanji: 借 (shaku, kariru) borrow">
+				ka(riru)
+				<p class="mb-0 mt-2">か(りる)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">borrow, rent</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">149</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9b%9c-you-weekday/" rel="bookmark" title="Learn JLPT N4 Kanji: 曜 (you) weekday">曜</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9b%9c-you-weekday/" rel="bookmark" title="Learn JLPT N4 Kanji: 曜 (you) weekday">
+				you
+				<p class="mb-0 mt-2">ヨウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%9b%9c-you-weekday/" rel="bookmark" title="Learn JLPT N4 Kanji: 曜 (you) weekday"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">weekday</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+			<div class="overflow-auto"><div class="adsense-in-article adsense-cont mt-4"></div></div>
+		</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">150</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a3%b2-in-nomu-meaning-drink/" rel="bookmark" title="Learn JLPT N4 Kanji: 飲 (in, nomu) meaning: drink">飲</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a3%b2-in-nomu-meaning-drink/" rel="bookmark" title="Learn JLPT N4 Kanji: 飲 (in, nomu) meaning: drink">
+				in
+				<p class="mb-0 mt-2">イン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a3%b2-in-nomu-meaning-drink/" rel="bookmark" title="Learn JLPT N4 Kanji: 飲 (in, nomu) meaning: drink">
+				no(mu)
+				<p class="mb-0 mt-2">の(む)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">drink</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">151</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%82%89-niku-meat/" rel="bookmark" title="Learn JLPT N4 Kanji: 肉 (niku) meat">肉</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%82%89-niku-meat/" rel="bookmark" title="Learn JLPT N4 Kanji: 肉 (niku) meat">
+				niku
+				<p class="mb-0 mt-2">ニク</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%82%89-niku-meat/" rel="bookmark" title="Learn JLPT N4 Kanji: 肉 (niku) meat"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">meat</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">152</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b2%b8-tai-kasu-kashi-meaning-lend/" rel="bookmark" title="Learn JLPT N4 Kanji: 貸 (tai, kasu, kashi) meaning: lend">貸</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b2%b8-tai-kasu-kashi-meaning-lend/" rel="bookmark" title="Learn JLPT N4 Kanji: 貸 (tai, kasu, kashi) meaning: lend">
+				tai
+				<p class="mb-0 mt-2">タイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%b2%b8-tai-kasu-kashi-meaning-lend/" rel="bookmark" title="Learn JLPT N4 Kanji: 貸 (tai, kasu, kashi) meaning: lend">
+				ka(su), kashi
+				<p class="mb-0 mt-2">か(す)、 かし</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">lend</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">153</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a0%82-dou-meaning-hall/" rel="bookmark" title="Learn JLPT N4 Kanji: 堂 (dou) meaning: hall">堂</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a0%82-dou-meaning-hall/" rel="bookmark" title="Learn JLPT N4 Kanji: 堂 (dou) meaning: hall">
+				dou
+				<p class="mb-0 mt-2">ドウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a0%82-dou-meaning-hall/" rel="bookmark" title="Learn JLPT N4 Kanji: 堂 (dou) meaning: hall"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">public chamber, hall</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">154</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%b3%a5-chou-tori-meaning-bird/" rel="bookmark" title="Learn JLPT N4 Kanji: 鳥 (chou, tori) meaning: bird">鳥</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%b3%a5-chou-tori-meaning-bird/" rel="bookmark" title="Learn JLPT N4 Kanji: 鳥 (chou, tori) meaning: bird">
+				chou
+				<p class="mb-0 mt-2">チョウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%b3%a5-chou-tori-meaning-bird/" rel="bookmark" title="Learn JLPT N4 Kanji: 鳥 (chou, tori) meaning: bird">
+				tori
+				<p class="mb-0 mt-2">とり</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">bird, chicken</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">155</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a3%af-han-meshi-meal-rice/" rel="bookmark" title="Learn JLPT N4 Kanji: 飯 (han, meshi) meal, rice">飯</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a3%af-han-meshi-meal-rice/" rel="bookmark" title="Learn JLPT N4 Kanji: 飯 (han, meshi) meal, rice">
+				han
+				<p class="mb-0 mt-2">ハン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%a3%af-han-meshi-meal-rice/" rel="bookmark" title="Learn JLPT N4 Kanji: 飯 (han, meshi) meal, rice">
+				meshi
+				<p class="mb-0 mt-2">めし</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">meal, rice</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">156</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8b%89-ben-meaning-effort/" rel="bookmark" title="Learn JLPT N4 Kanji: 勉 (ben) meaning: effort">勉</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8b%89-ben-meaning-effort/" rel="bookmark" title="Learn JLPT N4 Kanji: 勉 (ben) meaning: effort">
+				ben
+				<p class="mb-0 mt-2">ベン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%8b%89-ben-meaning-effort/" rel="bookmark" title="Learn JLPT N4 Kanji: 勉 (ben) meaning: effort">
+				tsuto(meru)
+				<p class="mb-0 mt-2">つと(める)</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">exertion, endeavor, effort</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">157</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%86%ac-tou-fuyu-winter/" rel="bookmark" title="Learn JLPT N4 Kanji: 冬 (tou, fuyu) winter">冬</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%86%ac-tou-fuyu-winter/" rel="bookmark" title="Learn JLPT N4 Kanji: 冬 (tou, fuyu) winter">
+				tou
+				<p class="mb-0 mt-2">トウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%86%ac-tou-fuyu-winter/" rel="bookmark" title="Learn JLPT N4 Kanji: 冬 (tou, fuyu) winter">
+				fuyu
+				<p class="mb-0 mt-2">ふゆ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">winter</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">158</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%bc-chuu-hiru-daytime-noon/" rel="bookmark" title="Learn JLPT N4 Kanji: 昼 (chuu, hiru) daytime, noon">昼</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%bc-chuu-hiru-daytime-noon/" rel="bookmark" title="Learn JLPT N4 Kanji: 昼 (chuu, hiru) daytime, noon">
+				chuu
+				<p class="mb-0 mt-2">チュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%98%bc-chuu-hiru-daytime-noon/" rel="bookmark" title="Learn JLPT N4 Kanji: 昼 (chuu, hiru) daytime, noon">
+				hiru
+				<p class="mb-0 mt-2">ひる</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">daytime, noon</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">159</td>
+		<td class="jl-td-k align-middle text-center"><a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e8%8c%b6-cha-sa-tea/" rel="bookmark" title="Learn JLPT N4 Kanji: 茶 (cha, sa) tea">茶</a></td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%8c%b6-cha-sa-tea/" rel="bookmark" title="Learn JLPT N4 Kanji: 茶 (cha, sa) tea">
+				cha, sa
+				<p class="mb-0 mt-2">チャ、 サ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e8%8c%b6-cha-sa-tea/" rel="bookmark" title="Learn JLPT N4 Kanji: 茶 (cha, sa) tea"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">tea</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">160</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bc%9f-tei-otouto-meaning-younger-brother/" rel="bookmark" title="Learn JLPT N4 Kanji: 弟 (tei, otouto) younger brother">弟</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bc%9f-tei-otouto-meaning-younger-brother/" rel="bookmark" title="Learn JLPT N4 Kanji: 弟 (tei, otouto) younger brother">
+				tei, dai, de
+				<p class="mb-0 mt-2">テイ、 ダイ、 デ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%bc%9f-tei-otouto-meaning-younger-brother/" rel="bookmark" title="Learn JLPT N4 Kanji: 弟 (tei, otouto) younger brother">
+				otouto
+				<p class="mb-0 mt-2">おとうと</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">younger brother</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">161</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%89%9b-gyuu-ushi-meaning-cow/" rel="bookmark" title="Learn JLPT N4 Kanji: 牛 (gyuu, ushi) meaning: cow">牛</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%89%9b-gyuu-ushi-meaning-cow/" rel="bookmark" title="Learn JLPT N4 Kanji: 牛 (gyuu, ushi) meaning: cow">
+				gyuu
+				<p class="mb-0 mt-2">ギュウ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%89%9b-gyuu-ushi-meaning-cow/" rel="bookmark" title="Learn JLPT N4 Kanji: 牛 (gyuu, ushi) meaning: cow">
+				ushi
+				<p class="mb-0 mt-2">うし</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">cow</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">162</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e9%ad%9a-gyo-sakana-meaning-fish/" rel="bookmark" title="Learn JLPT N4 Kanji: 魚 (gyo, sakana) meaning: fish">魚</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%ad%9a-gyo-sakana-meaning-fish/" rel="bookmark" title="Learn JLPT N4 Kanji: 魚 (gyo, sakana) meaning: fish">
+				gyo
+				<p class="mb-0 mt-2">ギョ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e9%ad%9a-gyo-sakana-meaning-fish/" rel="bookmark" title="Learn JLPT N4 Kanji: 魚 (gyo, sakana) meaning: fish">
+				uo, sakana
+				<p class="mb-0 mt-2">うお、 さかな</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">fish</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">163</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%85%84-kyou-ani-elder-brother/" rel="bookmark" title="Learn JLPT N4 Kanji: 兄 (kyou, ani) elder brother">兄</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%85%84-kyou-ani-elder-brother/" rel="bookmark" title="Learn JLPT N4 Kanji: 兄 (kyou, ani) elder brother">
+				kyou, kei
+				<p class="mb-0 mt-2">キョウ、 ケイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%85%84-kyou-ani-elder-brother/" rel="bookmark" title="Learn JLPT N4 Kanji: 兄 (kyou, ani) elder brother">
+				ani
+				<p class="mb-0 mt-2">あに</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">elder brother</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">164</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e7%8a%ac-ken-inu-meaning-dog/" rel="bookmark" title="Learn JLPT N4 Kanji: 犬 (ken, inu) meaning: dog">犬</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%8a%ac-ken-inu-meaning-dog/" rel="bookmark" title="Learn JLPT N4 Kanji: 犬 (ken, inu) meaning: dog">
+				ken
+				<p class="mb-0 mt-2">ケン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e7%8a%ac-ken-inu-meaning-dog/" rel="bookmark" title="Learn JLPT N4 Kanji: 犬 (ken, inu) meaning: dog">
+				inu
+				<p class="mb-0 mt-2">いぬ</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">dog</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">165</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a6%b9-mai-imouto-meaning-younger-sister/" rel="bookmark" title="Learn JLPT N4 Kanji: 妹 (mai, imouto) meaning: younger sister">妹</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a6%b9-mai-imouto-meaning-younger-sister/" rel="bookmark" title="Learn JLPT N4 Kanji: 妹 (mai, imouto) meaning: younger sister">
+				mai
+				<p class="mb-0 mt-2">マイ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a6%b9-mai-imouto-meaning-younger-sister/" rel="bookmark" title="Learn JLPT N4 Kanji: 妹 (mai, imouto) meaning: younger sister">
+				imouto
+				<p class="mb-0 mt-2">いもうと</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">younger sister</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">166</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a7%89-shi-ane-elder-sister/" rel="bookmark" title="Learn JLPT N4 Kanji: 姉 (shi, ane) elder sister">姉</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a7%89-shi-ane-elder-sister/" rel="bookmark" title="Learn JLPT N4 Kanji: 姉 (shi, ane) elder sister">
+				shi
+				<p class="mb-0 mt-2">シ</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e5%a7%89-shi-ane-elder-sister/" rel="bookmark" title="Learn JLPT N4 Kanji: 姉 (shi, ane) elder sister">
+				ane
+				<p class="mb-0 mt-2">あね</p>
+			</a>
+		</td>
+		<td class="jl-td-m align-middle">elder sister</td>
+	</tr>
+	<tr class="jl-row">
+		<td class="jl-td-num align-middle text-center">167</td>
+		<td class="jl-td-k align-middle text-center">
+			<a target="_blank" class="jl-link jp" href="https://jlptsensei.com/learn-japanese-kanji/%e6%bc%a2-kan-meaning-china/" rel="bookmark" title="Learn JLPT N4 Kanji: 漢 (kan) meaning: China">漢</a>
+		</td>
+		<td class="jl-td-on align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%bc%a2-kan-meaning-china/" rel="bookmark" title="Learn JLPT N4 Kanji: 漢 (kan) meaning: China">
+				kan
+				<p class="mb-0 mt-2">カン</p>
+			</a>
+		</td>
+		<td class="jl-td-kun align-middle">
+			<a target="_blank" class="jl-link" href="https://jlptsensei.com/learn-japanese-kanji/%e6%bc%a2-kan-meaning-china/" rel="bookmark" title="Learn JLPT N4 Kanji: 漢 (kan) meaning: China"><p class="mb-0 mt-2"></p></a>
+		</td>
+		<td class="jl-td-m align-middle">China</td>
+	</tr>

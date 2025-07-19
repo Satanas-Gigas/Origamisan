@@ -66,7 +66,7 @@ html, body {
 }   
 .header {
 /* margin-top: 8.1vh !important; */
-flex: 0 0 28.2vh;   
+flex: 0 0 20vh;   
 }
 .main {
 flex: 0 0 60vh;

@@ -1,0 +1,713 @@
+	ああ	ah	Ah!	ах
+会う	あう	au	to meet	встретиться
+青い	あおい	aoi	blue	синий
+赤い	あかい	akai	red	красный
+明るい	あかるい	akarui	light, bright	яркий
+秋	あき	aki	autumn, fall	осень
+開く	あく	aku	open	открыть
+開ける	あける	akeru	to open	открыть
+	あげる	ageru	to give	давать
+朝	あさ	asa	morning	утро
+朝ご飯	あさごはん	asagohan	breakfast	Завтрак
+''	あさって	asatte	the day after tomorrow	Через мгновение
+足	あし	ashi	leg, foot	ноги
+明日	あした	ashita	tomorrow	завтра
+''	あそこ	asoko	over there	вон там
+遊ぶ	あそぶ	asobu	to play	играть
+温かい	あたたかい	atatakai	warm	теплый
+頭	あたま	atama	head	голова
+新しい	あたらしい	atarashii	new	новый
+''	あちら	achira	over there (polite)	там
+暑い	あつい	atsui	hot (air)	горячий
+厚い	あつい	atsui	thick	толстый
+後	あと	ato	later, after	задний
+貴方	あなた	anata	you	ты
+兄	あに	ani	older brother	старший брат
+姉	あね	ane	older sister	сестра
+''	あの	ano	that (over there)	что
+''	あの	ano	well, then	что
+''	アパート	apaato	apartment	Квартира
+浴びる	あびる	abiru	to take a shower	купать, купаться, принимать душ
+危ない	あぶない	abunai	dangerous	опасный
+甘い	あまい	amai	sweet	сладкий
+''	あまり	amari	not so	немного
+雨	あめ	ame	rain	дождь
+洗う	あらう	arau	to wash	стирать
+有る	ある	aru	to be, to exist	Иметь
+''	ある	aru	to possess	быть
+歩く	あるく	aruku	to walk	ходить
+''	あれ	are	that one	Что
+Kanji	Furigana	Romaji	Meaning	Чувство
+良い	いい / よい	ii, yoi	good	хороший
+''	いいえ	iie	no	нет
+言う	いう	iu	to say, to tell	сказать
+家	いえ	ie	house, home	дом
+行く	いく	iku	to go	идти
+''	いくつ	ikutsu	how many, how old	Сколько
+''	いくら	ikura	how much	сколько?
+池	いけ	ike	pond	пруд
+医者	いしゃ	isha	doctor	доктор
+椅子	いす	isu	chair	стул, кресло
+忙しい	いそがしい	isogashii	to be busy	занятый
+痛い	いたい	itai	to be painful	это больно
+一	いち	ichi	one	один
+一日	いちにち	ichinichi	one day	Один день
+一番	いちばん	ichiban	No. 1, the best, the first	самый, лучший, первый номер
+''	いつ	itsu	when	когда
+五日	いつか	itsuka	the 5th day of the month, 5 days	Пять дней
+一緒	いっしょ	issho	together	вместе
+五つ	いつつ	itsutsu	five	Пять
+''	いつも	itsumo	always	каждый раз
+今	いま	ima	now	сейчас
+意味	いみ	imi	meaning	значение
+妹	いもうと	imouto	someone’s younger sister	младшая сестра
+''	いや	iya	not likable, unpleasant	нет
+入口	いりぐち	iriguchi	entrance	вход
+	いる	iru	need, must have, be required	Быть
+	いる	iru	to exist	Быть
+入れる	いれる	ireru	to insert, to put in	вставить
+色	いろ	iro	color	цвет, краска, окраска
+色々	いろいろ	iroiro	various	различный
+Kanji	Furigana	Romaji	Meaning	Чувство
+上	うえ	ue	top, on, above	выше
+後ろ	うしろ	ushiro	back, rear, behind	позади
+薄い	うすい	usui	thin	тонкий
+歌	うた	uta	song	песня
+歌う	うたう	utau	to sing	петь
+内	うち	uchi	home	Внутри
+生まれる	うまれる	umareru	to be born	Быть рожденным
+海	うみ	umi	sea	море
+売る	うる	uru	to sell	продавать
+上着	うわぎ	uwagi	coat, jacket	Куртка
+Kanji	Furigana	Romaji	Meaning	Чувство
+絵	え	e	picture	картина
+映画	えいが	eiga	movie	фильм
+映画館	えいがかん	eigakan	cinema	кинотеатр
+英語	えいご	eigo	English language	Английский
+''	ええ	ee	Yes, I see	Ага
+駅	えき	eki	station	станция
+''	エレベータ	erebeeta	elevator	Лифт
+円	えん	en	Yen	круг
+鉛筆	えんぴつ	enpitsu	pencil	карандаш
+Kanji	Furigana	Romaji	Meaning	Чувство
+御	お	o	honorific prefix	Ты
+美味しい	おいしい	oishii	tasty, delicious	вкусный
+大きい	おおきい	ookii	big	большой
+	おおぜい	oozei	many people	Все
+お母さん	おかあさん	okaasan	my own mother	мать
+お菓子	おかし	okashi	confectionary, cake	конфета, сладость, сласть
+お金	おかね	okane	money	деньги
+起きる	おきる	okiru	to get up, to stand up	вставать
+置く	おく	oku	to put, to place	помещать
+奥さん	おくさん	okusan	someone’s wife	Жена
+送る	おくる	okuru	to send	отправлять
+お酒	おさけ	osake	alcohol, sake	Алкоголь
+お皿	おさら	osara	plate	Тарелка
+伯父さん	おじさん	ojisan	uncle	дядя
+''	おじいさん	ojiisan	grand father	Дедушка
+押す	おす	osu	to push	толкать
+遅い	おそい	osoi	late, slow	медленный
+お茶	おちゃ	ocha	tea	чай
+お手洗い	おてあらい	otearai	toilet, lavatory	Туалет
+お父さん	おとうさん	otousan	father	отец
+弟	おとうと	otouto	someone’s younger brother	младший брат
+男	おとこ	otoko	man	мужчина
+男の子	おとこのこ	otokonoko	boy	мальчик
+一昨日	おととい	ototoi	the day before yesterday	за день до вчерашнего дня
+一昨年	おととし	ototoshi	the year before last	Два года назад
+大人	おとな	otona	adult	взрослый
+お腹	おなか	onaka	stomach	желудок
+同じ	おなじ	onaji	same	такой же
+お兄さん	おにいさん	oniisan	someone’s elder brother	Старший брат
+お姉さん	おねえさん	oneesan	someone’s elder sister	Старшая сестра
+伯母さん	おばさん	obasan	aunt	тетя
+	おばあさん	obaasan	grandmother	Бабушка
+お弁当	おべんとう	obentou	lunchbox	Обед
+覚える	おぼえる	oboeru	to memorize, to remember	Учиться наизусть
+重い	おもい	omoi	heavy	тяжелый
+面白い	おもしろい	omoshiroi	interesting, funny	интересный
+泳ぐ	およぐ	oyogu	to swim	плавать
+降りる	おりる	oriru	to get off	Отправиться
+終わる	おわる	owaru	to end	Конец
+音楽	おんがく	ongaku	music	музыка
+女	おんな	onna	woman	женщина
+女の子	おんなのこ	onnanoko	girl	девочка
+Kanji	Furigana	Romaji	Meaning	Чувство
+〜回	〜かい	~kai	~times	~ раз
+〜階	〜かい	~kai	~floor	~ Пол
+外国	がいこく	gaikoku	foreign country	иностранная страна
+外国人	がいこくじん	gaikokujin	foreigner	иностранец
+会社	かいしゃ	kaisha	company, enterprise	компания
+階段	かいだん	kaidan	stairs	Лестница
+買物	かいもの	kaimono	shopping	покупки
+買う	かう	kau	to buy	купить
+返す	かえす	kaesu	to return an object	возвращаться
+帰る	かえる	kaeru	to return home	Вернуться домой
+顔	かお	kao	face	лицо
+	かかる	kakaru	to take time, money	Быть
+鍵	かぎ	kagi	key	ключ
+書く	かく	kaku	to write	писать
+学生	がくせい	gakusei	student	Студент
+〜か月	〜かげつ	~kagetsu	~ number of months	Месяц
+	かける	kakeru	to wear	надевать
+	かける	kakeru	to make a phone call	надевать
+傘	かさ	kasa	umbrella	зонтик
+貸す	かす	kasu	to lend	одалживать
+風	かぜ	kaze	wind	ветер
+風邪	かぜ	kaze	a cold	холодный
+家族	かぞく	kazoku	family	семья
+方	かた	kata	person (polite)	направление
+片仮名	かたかな	katakana	Katakana	Катакана
+一月	いちがつ	ichigatsu	January	Январь
+二月	にがつ	nigatsu	February	Февраль
+三月	さんがつ	sangatsu	March	Маршировать
+四月	しがつ	shigatsu	April	Апрель
+五月	ごがつ	gogatsu	May	Может
+六月	ろくがつ	rokugatsu	June	Июнь
+七月	しちがつ	shichigatsu	July	Июль
+八月	はちがつ	hachigatsu	August	Август
+九月	くがつ	kugatsu	September	Сентябрь
+十月	じゅうがつ	juugatsu	October	Октябрь
+十一月	じゅういちがつ	juuichigatsu	November	Ноябрь
+十二月	じゅうにがつ	juunigatsu	December	Декабрь
+学校	がっこう	gakkou	school	школа
+角	かど	kado	corner	угол
+家内	かない	kanai	my wife	Дом
+鞄	かばん	kaban	bag	сумка
+花瓶	かびん	kabin	vase	ваза
+冠る	かぶる	kaburu	to put on a hat	Быть коронованным
+紙	かみ	kami	paper	бумага
+カメラ	かめら	kamera	camera	камера
+火曜日	かようび	kayoubi	Tuesday	Вторник
+辛い	からい	karai	hot, spicy	жесткий
+体	からだ	karada	body	тело
+借りる	かりる	kariru	to borrow	занимать
+	〜がります	~garimasu	3rd person wants to	~
+軽い	かるい	karui	light (not heavy)	свет
+''	カレンダー	karendaa	calendar	календарь
+川	かわ	kawa	river	река
+〜側	~がわ	~gawa	~side	~ сторона
+可愛い	かわいい	kawaii	cute, pretty	милый
+漢字	かんじ	kanji	Kanji character	Кандзи
+Kanji	Furigana	Romaji	Meaning	Чувство
+木	き	ki	tree	дерево
+黄色い	きいろい	kiiroi	yellow	желтый
+消える	きえる	kieru	to go out, to vanish	пропадать
+聞く	きく	kiku	to hear, to listen, to ask	слушать
+北	きた	kita	north	Север
+''	ギター	gitaa	guitar	гитара
+汚い	きたない	kitanai	dirty	грязный
+喫茶店	きっさてん	kissaten	coffee shop	Кофейный магазин
+切手	きって	kitte	stamp	штамп
+切符	きっぷ	kippu	ticket	билет
+昨日	きのう	kinou	yesterday	вчера
+九	きゅう	kyuu	nine	Девять
+牛肉	ぎゅうにく	gyuuniku	beef	говядина
+牛乳	ぎゅうにゅう	gyuunyuu	milk	молоко
+今日	きょう	kyou	today	сегодня
+教室	きょうしつ	kyoushitsu	class room	классная комната
+兄弟	きょうだい	kyoudai	siblings	Братья
+去年	きょねん	kyonen	last year	в прошлом году
+嫌い	きらい	kirai	unpleasant, not likable	неприязнь
+切る	きる	kiru	to cut	Отрезать
+着る	きる	kiru	to wear, to put on	носить
+来る	くる	kuru	to come	приходить
+	きれい	kirei	beautiful, clean	красивый
+''	キロ	kiro	kg	Километр
+''	キロ	kiro	km	Километр
+銀行	ぎんこう	ginkou	bank	банк
+金曜日	きんようび	kinyoubi	Friday	Пятница
+Kanji	Furigana	Romaji	Meaning	Чувство
+九	く	ku	nine	Девять
+薬	くすり	kusuri	medicine	лекарство
+下さい	ください	kudasai	give me…	Пожалуйста
+果物	くだもの	kudamono	fruit	фрукт, плод, фрукты
+口	くち	kuchi	mouth	рот
+靴	くつ	kutsu	shoe	обувь
+靴下	くつした	kutsushita	socks	носки
+国	くに	kuni	country	страна
+曇り	くもり	kumori	cloudy weather	облачный
+暗い	くらい	kurai	dark	темный
+''	ぐらい	gurai	about	О
+''	クラス	kurasu	class	сорт
+''	グラム	guramu	gram	Грамм
+車	くるま	kuruma	car	машина
+黒い	くろい	kuroi	black	черный
+Kanji	Furigana	Romaji	Meaning	Чувство
+今朝	けさ	kesa	this morning	Сегодня утром
+消す	けす	kesu	to turn off, switch off	стереть
+	けっこう	kekkou	fine, all right	Симпатичный
+結婚	けっこん	kekkon	marriage	свадьба
+月曜日	げつようび	getsuyoubi	Monday	Понедельник
+玄関	げんかん	genkan	entrance of a house	вход
+元気	げんき	genki	vigor, health, vitality	отлично
+Kanji	Furigana	Romaji	Meaning	Чувство
+〜個	〜こ	~ko	counterfor small objects	штука
+五	ご	go	five	Пять
+〜語	〜ご	~go	~ language	~ слово
+公園	こうえん	kouen	park, large garden	парк
+交番	こうばん	kouban	police box	Полицейская коробка
+声	こえ	koe	voice	голос
+''	コート	kooto	coat	Пальто
+''	ここ	koko	here	здесь
+午後	ごご	gogo	afternoon	полдень
+九日	ここのか	kokonoka	9th day of a month, 9 days	Девятый день
+九つ	ここのつ	kokonotsu	nine	девять
+ご主人	ごしゅじん	goshujin	someone else’s husband	Муж
+午前	ごぜん	gozen	morning, a.m.	утро
+答える	こたえる	kotaeru	to answer	отвечать
+''	こちら	kochira	this side, this place	Здесь
+''	コップ	koppu	cup, glass	Чашка
+今年	ことし	kotoshi	this year	в этом году
+言葉	ことば	kotoba	phrase, language	слова
+子供	こども	kodomo	child	ребенок
+''	この	kono	this…	этот
+御飯	ごはん	gohan	meal, cooked rice	рис
+困る	こまる	komaru	to be in trouble	в беде
+''	これ	kore	this	этот
+''	ごろ	goro	around…	Время
+今月	こんげつ	kongetsu	this month	в этом месяце
+今週	こんしゅう	konshuu	this week	На этой неделе
+''	こんな	konna	this sort of, this kind of	Такой
+今晩	こんばん	konban	this evening	сегодня вечером
+''	さあ	saa	well…	вот так, ну же
+〜歳	〜さい	~sai	years old	~ лет
+魚	さかな	sakana	fish	рыба
+先	さき	saki	earlier, former	Приоритет
+咲く	さく	saku	to blossom	цвести
+作文	さくぶん	sakubun	composition	композиция, сочинение
+	さす	sasu	to open an umbrella	Сдвиг
+冊	〜さつ	~satsu	counterfor books	Книга
+雑誌	ざっし	zasshi	magazine	журнал
+砂糖	さとう	satou	sugar	сахар
+寒い	さむい	samui	cold	холодный
+再来年	さらいねん	sarainen	the year after next year	В следующем году
+三	さん	san	three	три
+''	〜さん	~san	Mr., Mrs.	~ MR
+散歩	さんぽ	sanpo	to take a walk	прогулка
+Kanji	Furigana	Romaji	Meaning	Перевод недоступен
+四	し	shi	four	четыре
+〜時	〜じ	~ji	o’clock	~ время
+塩	しお	shio	salt	соль
+''	しかし	shikashi	however, but	но
+時間	じかん	jikan	time	время
+〜時間	〜じかん	~jikan	~hours (classificator)	~ время
+仕事	しごと	shigoto	work	работа
+辞書	じしょ	jisho	dictionary	словарь
+静か	しずか	shizuka	quiet	тихий
+下	した	shita	under, below	под
+質問	しつもん	shitsumon	question	вопрос
+自転車	じてんしゃ	jitensha	bicycle	велосипед
+自動車	じどうしゃ	jidousha	car, vehicle	машина
+死ぬ	しぬ	shinu	to die, to pas away	умирать
+字引	じびき	jibiki	dictionary	словарь
+自分	じぶん	jibun	oneself	сам
+閉まる	しまる	shimaru	to close	Быть закрытым
+閉める	しめる	shimeru	to close	закрывать
+締める	しめる	shimeru	to fasten a seatbelt	Затянуть
+''	じゃ	ja	well, then	хорошо
+写真	しゃしん	shashin	photo	фотография
+''	シャツ	shatsu	shirt	рубашка
+十	じゅう	juu	ten	Десять
+~週間	〜しゅうかん	~shuukan	… weeks	~ Неделя
+授業	じゅぎょう	jugyou	lesson, class	сорт
+宿題	しゅくだい	shukudai	homework	Перевод недоступен
+上手	じょうず	jouzu	to be good at something	хороший
+丈夫	じょうぶ	joubu	to be strong, durable	Долговечный
+醤油	しょうゆ	shouyu	soy sauce	соевый соус
+食堂	しょくどう	shokudou	dining room, canteen	столовая
+知る	しる	shiru	to know	знать
+白い	しろい	shiroi	white	белый
+〜人	〜じん	~jin	~an, ~ese (nationality)	~ люди
+新聞	しんぶん	shinbun	newspaper	газета
+Kanji	Furigana	Romaji	Meaning	Чувство
+水曜日	すいようび	suiyoubi	Wednesday	Среда
+吸う	すう	suu	to breathe, to smoke	вдыхать
+''	スカート	sukaato	skirt	юбка
+好き	すき	suki	to like	нравиться
+〜過ぎ	〜すぎ	~sugi	past, over	~
+''	すぐに	sugu ni	at once	немедленно
+少し	すこし	sukoshi	a little	немного
+涼しい	すずしい	suzushii	cool	прохладный
+''	〜ずつ	~zutsu	each	~
+''	ストーブ	sutoobu	stove, heater	Печь
+''	スプーン	supuun	spoon	ложка
+''	スポーツ	supootsu	sports	Спорт
+''	ズボン	zubon	trousers	брюки
+住む	すむ	sumu	to live, to reside somewhere	жить
+''	スリッパ	surippa	slipper	Тапочки
+''	する	suru	to do	делать
+座る	すわる	suwaru	to sit	сидеть
+Kanji	Furigana	Romaji	Meaning	Чувство
+背	せい	sei	height	Назад
+生徒	せいと	seito	student	студент
+''	セーター	seetaa	sweater	свитер
+石鹸	せっけん	sekken	soap	мыло
+背広	せびろ	sebiro	jacket, suit	Подходить
+狭い	せまい	semai	narrow	узкий
+''	ゼロ	zero	zero	ноль
+千	せん	sen	1,000, thousand	тысяча
+先月	せんげつ	sengetsu	last month	в прошлом месяце
+先週	せんしゅう	senshuu	last week	на прошлой неделе
+先生	せんせい	sensei	teacher	учитель
+洗濯	せんたく	sentaku	washing, to wash	прачечная
+全部	ぜんぶ	zenbu	all	Все
+Kanji	Furigana	Romaji	Meaning	Чувство
+''	そう	sou	so	да
+掃除	そうじ	souji	to clean	уборка
+''	そうして	soushite	and then	Так
+''	そこ	soko	there	Там
+''	そちら	sochira	there (polite)	там
+外	そと	soto	outside	Снаружи
+''	その	sono	that…	а
+''	そば	soba	next to	гречка
+空	そら	sora	sky	Небо
+''	それ	sore	that	что
+''	それから	sorekara	after that	после этого
+''	それでは	soredewa	then, well	Так
+Kanji	Furigana	Romaji	Meaning	Чувство
+〜台	〜だい	~dai	counter for machines	~ Стоять
+大学	だいがく	daigaku	university	Университет
+大使館	たいしかん	taishikan	embassy	посольство
+大丈夫	だいじょうぶ	daijoubu	OK	Ты в порядке
+大好き	だいすき	daisuki	to be very fond of	Очень нравится
+大切	たいせつ	taisetsu	very important	важный
+	たいてい	taitei	mostly, usually	в целом
+台所	だいどころ	daidokoro	kitchen	кухня
+大変	たいへん	taihen	very, serious	жесткий
+高い	たかい	takai	high, expensive	дорогой
+沢山	たくさん	takusan	many, much	много
+''	タクシー	takushii	taxi	такси
+出す	だす	dasu	to take out, hand in	Перевод недоступен
+~達	〜たち	~tachi	more than one, and others	~
+立つ	たつ	tatsu	to stand	стоять
+建物	たてもの	tatemono	building	здание
+楽しい	たのしい	tanoshii	pleasant, enjoyable	веселье
+頼む	たのむ	tanomu	to ask, to request	просить
+''	たばこ	tabako	cigarette	Сигарета
+多分	たぶん	tabun	perhaps, probably	возможно
+食べ物	たべもの	tabemono	food	еда
+食べる	たべる	taberu	to eat	есть
+卵	たまご	tamago	egg	яйцо
+誰	だれ	dare	who?	Перевод недоступен
+誕生日	たんじょうび	tanjoubi	birthday	день рождения
+''	だんだん	dandan	gradually	постепенно
+Kanji	Furigana	Romaji	Meaning	Чувство
+小さい	ちいさい	chiisai	small	маленький
+近い	ちかい	chikai	near, close	закрывать
+違う	ちがう	chigau	different	другой
+地下鉄	ちかてつ	chikatetsu	subway	метро
+地図	ちず	chizu	map	карта
+父	ちち	chichi	my father	отец
+茶色	ちゃいろ	chairo	brown	коричневый
+茶碗	ちゃわん	chawan	rice bowl	Чайная чаша
+〜中	〜ちゅう	~chuu	in the middle of	~ Середина
+''	ちょうど	choudo	just	только
+''	ちょっと	chotto	a little	немного
+Kanji	Furigana	Romaji	Meaning	Чувство
+一日	ついたち	tsuitachi	the 1st day of a month	Один день
+使う	つかう	tsukau	to use	использовать
+疲れる	つかれる	tsukareru	to get tired	Устать
+次	つぎ	tsugi	next	Следующий
+着く	つく	tsuku	to arrive	приезжать
+机	つくえ	tsukue	table	Перевод недоступен
+作る	つくる	tsukuru	to make, to produce	делать
+点ける	つける	tsukeru	to turn on	Продолжать
+勤める	つとめる	tsutomeru	to work for someone	служить
+詰らない	つまらない	tsumaranai	uninteresting	Неразличимый
+冷たい	つめたい	tsumetai	cold	холодный
+強い	つよい	tsuyoi	strong	сильный
+Kanji	Furigana	Romaji	Meaning	Чувство
+手	て	te	hand	рука
+''	テープ	teepu	tape	лента
+''	テープレコーダー	teepu rekoodaa	tape recorder	Магнитофон
+''	テーブル	teeburu	table	стол
+出かける	でかける	dekakeru	to go out	выходить
+手紙	てがみ	tegami	letter	письмо
+出来る	できる	dekiru	can	Будьте готовы
+出口	でぐち	deguchi	exit	Выход
+''	テスト	tesuto	test	тест
+''	では	dewa	then, well	Затем
+''	デパート	depaato	department store	Универмаг
+''	でも	demo	but	но
+出ます	でます	demasu	to leave	Перевод недоступен
+''	テレビ	terebi	TV	телевизор
+天気	てんき	tenki	weather	погода
+電気	でんき	denki	electricity	электричество
+電車	でんしゃ	densha	train	тренироваться
+電話	でんわ	denwa	phone	телефон
+Kanji	Furigana	Romaji	Meaning	Чувство
+戸	と	to	door	дверь
+〜度	〜ど	~do	~times, ~degree	~
+''	ドア	doa	door	дверь
+''	トイレ	toire	toilet, lavatory	туалет
+''	どう	dou	how?	медь
+''	どうして	doushite	why?	Почему
+''	どうぞ	douzo	please, here you are	пожалуйста
+動物	どうぶつ	doubutsu	animal	животное
+''	どうも	doumo	thanks	Спасибо
+十	とお	too	ten	Десять
+遠い	とおい	tooi	far	далеко
+十日	とおか	tooka	the 10th day of a month, 10 days	Десять дней
+時々	ときどき	tokidoki	sometimes	иногда
+時計	とけい	tokei	watch, clock	часы
+''	どこ	doko	where?	где
+所	ところ	tokoro	place	Место
+図書館	としょかん	toshokan	library	библиотека
+''	どちら	dochira	which, where (polite)	Или
+''	とても	totemo	very much, quiet	очень
+''	どなた	donata	who (polite)	кто это
+隣り	となり	tonari	next to	Следующий
+''	どの	dono	which?	Который
+飛ぶ	とぶ	tobu	to fly	прыгать
+止まる	とまる	tomaru	to stop	Останавливаться
+友達	ともだち	tomodachi	friend	друг
+土曜日	どようび	doyoubi	Saturday	Суббота
+鳥	とり	tori	bird	птица
+鶏肉	とりにく	toriniku	chicken meat	куриное мясо
+取る	とる	toru	to take	брать
+撮る	とる	toru	to take a photo	Сделайте снимок
+''	どれ	dore	which?	который из
+''	どんな	donna	what kind of?	Перевод недоступен
+Kanji	Furigana	Romaji	Meaning	Чувство
+''	ナイフ	naifu	knife	нож
+中	なか	naka	inside	Середина
+長い	ながい	nagai	long	длинный
+鳴く	なく	naku	to sing, mew, moo	Раздавить
+夏	なつ	natsu	summer	лето
+夏休み	なつやすみ	natsuyasumi	summer vacation	Летние каникулы
+''	〜など	~nado	and so on	~
+七つ	ななつ	nanatsu	seven	Семь
+何	なに	nani	what?	что
+七日	なのか	nanoka	the 7th of a month, 7 days	Семь дней
+名前	なまえ	namae	name	имя
+習う	ならう	narau	to learn	Перевод недоступен
+並ぶ	ならぶ	narabu	to form a line	расстановка
+並べる	ならべる	naraberu	to line up	Быть устроенным
+	なる	naru	to become	Быть
+Kanji	Furigana	Romaji	Meaning	Чувство
+二	に	ni	two	Перевод недоступен
+賑やか	にぎやか	nigiyaka	lively	занятый
+お肉	おにく	oniku	meat	Мясо
+西	にし	nishi	west	Западный
+〜日	〜にち	~nichi	…st, ..nd, ..th	~ день
+日曜日	にちようび	nichiyoubi	Sunday	Воскресенье
+荷物	にもつ	nimotsu	luggage	багаж
+''	ニュース	nyuusu	news	новости
+庭	にわ	niwa	garden	сад
+〜人	~にん	~nin	… people	~ люди
+Kanji	Furigana	Romaji	Meaning	Чувство
+脱ぐ	ぬぐ	nugu	to take off clothes	Снимать
+Kanji	Furigana	Romaji	Meaning	Перевод недоступен
+''	ネクタイ	nekutai	necktie	галстук
+寝る	ねる	neru	to go to bed	Перевод недоступен
+〜年	〜ねん	~nen	~years	~ год
+Kanji	Furigana	Romaji	Meaning	Чувство
+''	ノート	nooto	notebook	Блокнот
+登る	のぼる	noboru	to climb up	взбираться
+飲物	のみもの	nomimono	drinks	напиток
+飲む	のむ	nomu	to drink	Перевод недоступен
+乗る	のる	noru	to take, to ride	ладить
+Kanji	Furigana	Romaji	Meaning	Чувство
+歯	は	ha	teeth	зубы
+''	パーテイー	paateii	party	Вечеринка
+''	はい	hai	yes	да
+''	〜はい	~hai	cups of ~	~ Да
+灰皿	はいざら	haizara	ashtray	пепельница
+入る	はいる	hairu	to enter	входить
+葉書	はがき	hagaki	postcard	открытка
+履く	はく	haku	to put on shoes	носить
+箱	はこ	hako	box	коробка
+橋	はし	hashi	bridge	мост
+箸	はし	hashi	chopsticks	палочки для еды
+始まる	はじまる	hajimaru	to begin, to start	Начинать
+始め	はじめ	hajime	start, the beginning	Начало
+初めて	はじめて	hajimete	for the first time	в первый раз
+走る	はしる	hashiru	to run	бегать
+''	バス	basu	bus	автобус
+''	バター	bataa	butter	масло
+二十歳	はたち	hatachi	20 years old	20 лет
+働く	はたらく	hataraku	to work	работа
+八	はち	hachi	eight	Восемь
+二十日	はつか	hatsuka	the 20th of the month, 20 days	20th
+花	はな	hana	flower	цветок
+鼻	はな	hana	nose	нос
+話	はなし	hanashi	conversation, tale	Перевод недоступен
+話す	はなす	hanasu	to talk, to speak, to tell	разговаривать
+母	はは	haha	my mother	мать
+早い	はやい	hayai	early	рано
+速い	はやい	hayai	fast, quick	быстрый
+春	はる	haru	spring	весна
+張る	はる	haru	to put something on, to stick	Перевод недоступен
+晴れる	はれる	hareru	to clear up	Прозрачный
+〜半	〜はん	~han	Half~	~ половина
+晩	ばん	ban	evening	ночь
+~番	〜ばん	~ban	No.~, ranking	~
+''	パン	pan	bread	хлеб
+''	ハンカチ	hankachi	handkerchief	носовой платок
+番号	ばんごう	bangou	number	число
+晩ご飯	ばんごはん	bangohan	dinner	Ужин
+半分	はんぶん	hanbun	half	половина
+Kanji	Furigana	Romaji	Meaning	Чувство
+東	ひがし	higashi	east	восток
+〜匹	〜ひき	~hiki	counter for animals	~
+引く	ひく	hiku	to pull	Тянуть
+弾く	ひく	hiku	to play (an instrument)	играть
+低い	ひくい	hikui	low	низкий
+飛行機	ひこうき	hikouki	plane	самолет
+左	ひだり	hidari	left	левый
+人	ひと	hito	person	люди
+一つ	ひとつ	hitotsu	one	один
+一月	ひとつき	hitotsuki	one month	Январь
+一人	ひとり	hitori	one person	Один человек
+暇	ひま	hima	free time, leisure	свободное время
+百	ひゃく	hyaku	hundred	сотня
+病院	びょういん	byouin	hospital	больница
+病気	びょうき	byouki	ill, sick	болезнь
+平仮名	ひらがな	hiragana	hiragana characters	хирагана
+昼	ひる	hiru	noon	полдень
+昼ご飯	ひるごはん	hirugohan	lunch	Обед
+広い	ひろい	hiroi	wide, spacious	широкий
+Kanji	Furigana	Romaji	Meaning	Чувство
+''	フィルム	firumu	film	фильм
+封筒	ふうとう	fuutou	envelope	конверт
+''	プール	puuru	pool	Бассейн
+''	フォーク	fooku	fork	вилка
+吹く	ふく	fuku	to blow (wind)	Дуть
+服	ふく	fuku	clothes	одежда
+二つ	ふたつ	futatsu	two	два
+豚肉	ぶたにく	butaniku	pork	свинина
+二人	ふたり	futari	two people	Два человека
+二日	ふつか	futsuka	2nd day of the month, 2 days	Два дня
+太い	ふとい	futoi	thick, fat	толстый
+降る	ふる	furu	to fall (rain, snow)	Спуститься
+古い	ふるい	furui	old	старый
+お風呂	おふろ	ofuro	bath	Ванна
+〜分	〜ふん	~fun	~minutes	~
+Kanji	Furigana	Romaji	Meaning	Чувство
+''	ページ	peeji	page	Перевод недоступен
+下手	へた	heta	not good at something	бедный
+''	ベッド	beddo	bed	кровать
+部屋	へや	heya	room	комната
+辺	へん	hen	side, part, area	Сторона
+ペン	ぺん	pen	pen	ручка
+勉強	べんきょう	benkyou	to study	изучать
+便利	べんり	benri	convenient	Перевод недоступен
+Kanji	Furigana	Romaji	Meaning	Чувство
+方	ほう	hou	~より〜のほうが〜	направление
+帽子	ぼうし	boushi	hat	шляп
+''	ボールペン	boorupen	ballpen	Шариковая ручка
+他	ほか	hoka	another, other	Другой
+''	ポケット	poketto	pocket	карман
+欲しい	ほしい	hoshii	to want something	хотеть
+細い	ほそい	hosoi	thin, fine	тонкий
+''	ボタン	botan	button	кнопка
+''	ホテル	hoteru	hotel	Отель
+本	ほん	hon	book	Книга
+〜本	~ほん	~hon	counter for long objects	Перевод недоступен
+本棚	ほんだな	hondana	bookshelf	Книжная полка
+本当に	ほんとうに	hontouni	really	Действительно
+Kanji	Furigana	Romaji	Meaning	Чувство
+〜枚	〜まい	~mai	counter for thin objects	~
+毎朝	まいあさ	maiasa	every morning	Перевод недоступен
+毎月	まいつき/まいげつ	maitsuki/maigetsu	every month	ежемесячно
+毎週	まいしゅう	maishuu	every week	Еженедельно
+毎日	まいにち	mainichi	every day	каждый день
+毎年	まいとし/まいねん	maitoshi/mainen	every year	Каждый год
+毎晩	まいばん	maiban	every evening	каждую ночь
+前	まえ	mae	front	до
+〜前	〜まえ	~mae	before, in front of	~ до
+曲がる	まがる	magaru	to turn	Сгибать
+不味い	まずい	mazui	bad tasting	Перевод недоступен
+''	また	mata	also, again	Также
+''	まだ	mada	not yet	все еще
+町	まち	machi	city, town	город
+待つ	まつ	matsu	to wait	ждать
+真直ぐに	まっすぐに	massugu ni	straight ahead	Прямой
+''	マッチ	machi	matches	Соответствовать
+窓	まど	mado	window	окно
+丸い	まるい	marui	round	круглый
+万	まん	man	ten thousand	Десять тысяч
+万年筆	まんねんひつ	mannenhitsu	fountain pen	авторучка
+Kanji	Furigana	Romaji	Meaning	Чувство
+磨く	みがく	migaku	to polish, to brush	лак
+右	みぎ	migi	right	верно
+短い	みじかい	mijikai	short	короткий
+お水	おみず	omizu	water	Перевод недоступен
+店	みせ	mise	shop	магазин
+見せる	みせる	miseru	to look, to watch	показывать
+道	みち	michi	road	дорога
+三日	みっか	mikka	3rd day of a month, 3 days	Три дня
+三つ	みっつ	mittsu	three	три
+皆さん	みなさん	minsan	everyone	каждый
+南	みなみ	minami	south	Юг
+耳	みみ	mimi	ear	ухо
+見る	みる	miru	to see, to watch	смотреть
+皆	みんな	minna	all, everyone	все
+Kanji	Furigana	Romaji	Meaning	Чувство
+六日	むいか	muika	the 6th day of a month, 6 days	Шесть дней
+向こう	むこう	mukou	over there	Через
+難しい	むずかしい	muzukashii	difficult	трудный
+六つ	むっつ	muttsu	six	шесть
+Kanji	Furigana	Romaji	Meaning	Чувство
+目	め	me	eye	глаз
+''	メートル	meetoru	meter	Метр
+''	めがね	megane	a pair of glasses	Очки
+Kanji	Furigana	Romaji	Meaning	Чувство
+''	もう	mou	already, yet	уже
+''	もう	mou	(one) more	уже
+木曜日	もくようび	mokuyoubi	Thursday	Четверг
+''	もしもし	moshimoshi	hello on the phone	привет
+勿論	もちろん	mochiron	of course	Конечно
+持つ	もつ	motsu	to have, to own	Держать
+''	もっと	motto	more	более
+物	もの	mono	thing	вещь
+門	もん	mon	gate	ворота
+問題	もんだい	mondai	problem, question	проблема
+Kanji	Furigana	Romaji	Meaning	Чувство
+〜屋	〜や	~ya	shop. store	~
+八百屋	やおや	yaoya	vegetable shop	Greengrocer
+野菜	やさい	yasai	vegetable	овощи
+優しい	やさしい	yasashii	gentle	добрый
+安い	やすい	yasui	cheap, inexpensive	дешевый
+休み	やすみ	yasumi	holiday, vacation	праздничный день
+休む	やすむ	yasumu	to rest	отдых
+八つ	やっつ	yattsu	eight	восемь
+山	やま	yama	mountain	гора
+	やる	yaru	to do	делать
+Kanji	Furigana	Romaji	Meaning	Чувство
+八日	ようか	youka	8th day of the month, 8 days	Восемь дней
+洋服	ようふく	youfuku	western style clothing	одежда
+''	よく	yoku	often	часто
+横	よこ	yoko	horizontal	рядом
+四日	よっか	yokka	4th day of the month, 4 days	Четыре дня
+四つ	よっつ	yottsu	four	четыре
+呼ぶ	よぶ	yobu	to call	Вызов
+読む	よむ	yomu	to read	читать
+夜	よる	yoru	night	ночь
+Kanji	Furigana	Romaji	Meaning	Чувство
+来月	らいげつ	raigetsu	next month	в следующем месяце
+来週	らいしゅう	raishuu	next week	на следующей неделе
+来年	らいねん	rainen	next year	в следующем году
+''	ラジオ	rajio	radio	радио
+Kanji	Furigana	Romaji	Meaning	Чувство
+立派	りっぱ	rippa	splendid	отлично
+留学生	りゅうがくせい	ryuugakusei	foreign student	Международный студент
+両親	りょうしん	ryoushin	parents	родители
+料理	りょうり	ryouri	cooking	кулинария
+旅行	りょこう	ryokou	travel	путешествие
+Kanji	Furigana	Romaji	Meaning	Чувство
+	れい	rei	zero	дух
+冷蔵庫	れいぞうこ	reizouko	refrigerator	холодильник
+''	レコード	rekoodo	record	записывать
+''	レストラン	resutoran	restaurant	ресторан
+練習	れんしゅう	renshuu	practice	упражняться
+六	ろく	roku	six	Шесть
+''	ワイシャツ	waishatsu	white shirt	рубашка
+若い	わかい	wakai	young	молодой
+分かる	わかる	wakaru	to know, to understand	Понимать
+忘れる	わすれる	wasureru	to forget	забывать
+私	わたし	watashi	me, I	я
+渡す	わたす	watasu	to hand over	сдавать
+渡る	わたる	wataru	to cross	Быть перегруженным
+悪い	わるい	warui	bad	плохой

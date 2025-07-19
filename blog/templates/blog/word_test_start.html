@@ -9,7 +9,9 @@
 {% block content %}
 <script src="{% static 'js/word_test_start.js' %}"></script>
 
-<div class="container py-5">
+
+<div class="container py-5" data-question-time="{{ question_time }}" data-answers-time="{{ answers_time }}">
+    <p>DEBUG: question_time = {{ question_time }}, answers_time = {{ answers_time }}</p>
     <h1 class="text-center mb-4 style-red" >Тестирование N{{ level }}</h1>
     <form id="quiz-form" method="post" action="{% url 'word_test_next' %}">
         {% csrf_token %}

@@ -1,0 +1,2620 @@
+[
+    {
+        "kanji": "党",
+        "onyomi": "トウ",
+        "kunyomi": "なかま、 むら",
+        "meaning_ru": "",
+        "meaning_en": "party, faction, clique"
+    },
+    {
+        "kanji": "協",
+        "onyomi": "キョウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "co-, cooperation"
+    },
+    {
+        "kanji": "総",
+        "onyomi": "ソウ",
+        "kunyomi": "すべ(て)、 ふさ",
+        "meaning_ru": "",
+        "meaning_en": "general, whole, all"
+    },
+    {
+        "kanji": "区",
+        "onyomi": "ク",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "ward, district"
+    },
+    {
+        "kanji": "領",
+        "onyomi": "リョウ",
+        "kunyomi": "えり",
+        "meaning_ru": "",
+        "meaning_en": "jurisdiction, dominion"
+    },
+    {
+        "kanji": "県",
+        "onyomi": "ケン",
+        "kunyomi": "か(ける)",
+        "meaning_ru": "",
+        "meaning_en": "prefecture"
+    },
+    {
+        "kanji": "設",
+        "onyomi": "セツ",
+        "kunyomi": "もう(ける)",
+        "meaning_ru": "",
+        "meaning_en": "establishment, provision"
+    },
+    {
+        "kanji": "保",
+        "onyomi": "ホ、ホウ",
+        "kunyomi": "たも(つ)",
+        "meaning_ru": "",
+        "meaning_en": "protect, guarantee, keep"
+    },
+    {
+        "kanji": "改",
+        "onyomi": "カイ",
+        "kunyomi": "あらた(める)",
+        "meaning_ru": "",
+        "meaning_en": "reformation, change, modify"
+    },
+    {
+        "kanji": "第",
+        "onyomi": "ダイ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "No., number"
+    },
+    {
+        "kanji": "結",
+        "onyomi": "ケツ",
+        "kunyomi": "むす(ぶ)、ゆ(う)",
+        "meaning_ru": "",
+        "meaning_en": "tie, bind, contract"
+    },
+    {
+        "kanji": "派",
+        "onyomi": "ハ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "faction, group, party"
+    },
+    {
+        "kanji": "府",
+        "onyomi": "フ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "borough, urban prefecture, govt office"
+    },
+    {
+        "kanji": "査",
+        "onyomi": "サ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "investigate"
+    },
+    {
+        "kanji": "委",
+        "onyomi": "イ",
+        "kunyomi": "ゆだ(ねる)",
+        "meaning_ru": "",
+        "meaning_en": "committee, entrust to"
+    },
+    {
+        "kanji": "軍",
+        "onyomi": "グン",
+        "kunyomi": "いくさ",
+        "meaning_ru": "",
+        "meaning_en": "army, force, troops"
+    },
+    {
+        "kanji": "案",
+        "onyomi": "アン",
+        "kunyomi": "つくえ",
+        "meaning_ru": "",
+        "meaning_en": "plan, suggestion, draft"
+    },
+    {
+        "kanji": "策",
+        "onyomi": "サク",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "scheme, plan, policy"
+    },
+    {
+        "kanji": "団",
+        "onyomi": "ダン、トン",
+        "kunyomi": "かたまり、 まる(い)",
+        "meaning_ru": "",
+        "meaning_en": "group, association"
+    },
+    {
+        "kanji": "各",
+        "onyomi": "カク",
+        "kunyomi": "おのおの",
+        "meaning_ru": "",
+        "meaning_en": "each; every; either"
+    },
+    {
+        "kanji": "島",
+        "onyomi": "トウ",
+        "kunyomi": "しま",
+        "meaning_ru": "",
+        "meaning_en": "island"
+    },
+    {
+        "kanji": "革",
+        "onyomi": "カク",
+        "kunyomi": "かわ",
+        "meaning_ru": "",
+        "meaning_en": "leather; skin; reform; become serious"
+    },
+    {
+        "kanji": "村",
+        "onyomi": "ソン",
+        "kunyomi": "むら",
+        "meaning_ru": "",
+        "meaning_en": "village; town"
+    },
+    {
+        "kanji": "勢",
+        "onyomi": "セイ",
+        "kunyomi": "いきお(い)",
+        "meaning_ru": "",
+        "meaning_en": "forces; energy; military strength"
+    },
+    {
+        "kanji": "減",
+        "onyomi": "ゲン",
+        "kunyomi": "へ(る)",
+        "meaning_ru": "",
+        "meaning_en": "dwindle; decrease; reduce"
+    },
+    {
+        "kanji": "再",
+        "onyomi": "サイ、 サ",
+        "kunyomi": "ふたた(び)",
+        "meaning_ru": "",
+        "meaning_en": "again, twice, second time"
+    },
+    {
+        "kanji": "税",
+        "onyomi": "ゼイ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "tax; duty"
+    },
+    {
+        "kanji": "営",
+        "onyomi": "エイ",
+        "kunyomi": "いとな(む)",
+        "meaning_ru": "",
+        "meaning_en": "occupation; camp; perform; build; conduct (business)"
+    },
+    {
+        "kanji": "比",
+        "onyomi": "ヒ",
+        "kunyomi": "くら(べる)",
+        "meaning_ru": "",
+        "meaning_en": "compare; race; ratio"
+    },
+    {
+        "kanji": "防",
+        "onyomi": "ボウ",
+        "kunyomi": "ふせ(ぐ)",
+        "meaning_ru": "",
+        "meaning_en": "ward off; defend; protect; resist"
+    },
+    {
+        "kanji": "補",
+        "onyomi": "ホ",
+        "kunyomi": "おぎな(う)",
+        "meaning_ru": "",
+        "meaning_en": "supplement; supply; offset; compensate"
+    },
+    {
+        "kanji": "境",
+        "onyomi": "キョウ",
+        "kunyomi": "さかい",
+        "meaning_ru": "",
+        "meaning_en": "boundary, border, region"
+    },
+    {
+        "kanji": "導",
+        "onyomi": "ドウ",
+        "kunyomi": "みちび(く)",
+        "meaning_ru": "",
+        "meaning_en": "guidance; leading; conduct; usher"
+    },
+    {
+        "kanji": "副",
+        "onyomi": "フク",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "vice-; assistant; aide; duplicate; copy"
+    },
+    {
+        "kanji": "算",
+        "onyomi": "サン",
+        "kunyomi": "そろ",
+        "meaning_ru": "",
+        "meaning_en": "calculate; divining; number; probability"
+    },
+    {
+        "kanji": "輸",
+        "onyomi": "ユ、 シュ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "transport, send, be inferior"
+    },
+    {
+        "kanji": "述",
+        "onyomi": "ジュツ",
+        "kunyomi": "の(べる)",
+        "meaning_ru": "",
+        "meaning_en": "mention; state; speak"
+    },
+    {
+        "kanji": "線",
+        "onyomi": "セン",
+        "kunyomi": "すじ",
+        "meaning_ru": "",
+        "meaning_en": "line; track"
+    },
+    {
+        "kanji": "農",
+        "onyomi": "ノウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "agriculture; farmers"
+    },
+    {
+        "kanji": "州",
+        "onyomi": "シュウ",
+        "kunyomi": "す",
+        "meaning_ru": "",
+        "meaning_en": "state; province"
+    },
+    {
+        "kanji": "武",
+        "onyomi": "ブ、 ム",
+        "kunyomi": "たけ(し)",
+        "meaning_ru": "",
+        "meaning_en": "warrior; military; chivalry; arms"
+    },
+    {
+        "kanji": "象",
+        "onyomi": "ショウ、 ゾウ",
+        "kunyomi": "かたど(る)",
+        "meaning_ru": "",
+        "meaning_en": "elephant; pattern after; image; shape"
+    },
+    {
+        "kanji": "域",
+        "onyomi": "イキ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "range; region; limits; stage; level"
+    },
+    {
+        "kanji": "額",
+        "onyomi": "ガク",
+        "kunyomi": "ひたい",
+        "meaning_ru": "",
+        "meaning_en": "forehead; tablet; framed picture; sum; amount; volume"
+    },
+    {
+        "kanji": "欧",
+        "onyomi": "オウ",
+        "kunyomi": "うた(う)、 は(く)",
+        "meaning_ru": "",
+        "meaning_en": "Europe"
+    },
+    {
+        "kanji": "担",
+        "onyomi": "タン",
+        "kunyomi": "かつ(ぐ)、 にな(う)",
+        "meaning_ru": "",
+        "meaning_en": "shouldering; carry; raise; bear"
+    },
+    {
+        "kanji": "準",
+        "onyomi": "ジュン",
+        "kunyomi": "じゅん(じる)、 なぞら(える)",
+        "meaning_ru": "",
+        "meaning_en": "semi-; correspond to; imitate"
+    },
+    {
+        "kanji": "賞",
+        "onyomi": "ショウ",
+        "kunyomi": "ほ(める)",
+        "meaning_ru": "",
+        "meaning_en": "prize; reward; praise"
+    },
+    {
+        "kanji": "辺",
+        "onyomi": "ヘン",
+        "kunyomi": "あた(り)、 ほと(り)",
+        "meaning_ru": "",
+        "meaning_en": "environs; boundary; border; vicinity"
+    },
+    {
+        "kanji": "造",
+        "onyomi": "ゾウ",
+        "kunyomi": "つく(る)",
+        "meaning_ru": "",
+        "meaning_en": "create; make; structure; physique"
+    },
+    {
+        "kanji": "被",
+        "onyomi": "ヒ",
+        "kunyomi": "こうむ(る)、 かぶ(る)",
+        "meaning_ru": "",
+        "meaning_en": "incur; cover; shelter; wear; put on"
+    },
+    {
+        "kanji": "技",
+        "onyomi": "ギ",
+        "kunyomi": "わざ",
+        "meaning_ru": "",
+        "meaning_en": "skill; art; craft; ability; vocation; arts"
+    },
+    {
+        "kanji": "低",
+        "onyomi": "テイ",
+        "kunyomi": "ひく(い)",
+        "meaning_ru": "",
+        "meaning_en": "lower; short; humble"
+    },
+    {
+        "kanji": "復",
+        "onyomi": "フク",
+        "kunyomi": "また",
+        "meaning_ru": "",
+        "meaning_en": "restore, return to, revert"
+    },
+    {
+        "kanji": "移",
+        "onyomi": "イ",
+        "kunyomi": "うつ(る)",
+        "meaning_ru": "",
+        "meaning_en": "shift, move, change"
+    },
+    {
+        "kanji": "個",
+        "onyomi": "コ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "individual; counter for articles"
+    },
+    {
+        "kanji": "門",
+        "onyomi": "モン",
+        "kunyomi": "かど、 と",
+        "meaning_ru": "",
+        "meaning_en": "gate"
+    },
+    {
+        "kanji": "課",
+        "onyomi": "カ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "chapter, lesson, section, department"
+    },
+    {
+        "kanji": "脳",
+        "onyomi": "ノウ",
+        "kunyomi": "のうずる",
+        "meaning_ru": "",
+        "meaning_en": "brain; memory"
+    },
+    {
+        "kanji": "極",
+        "onyomi": "キョク、 ゴク",
+        "kunyomi": "きわ(める)",
+        "meaning_ru": "",
+        "meaning_en": "poles; settlement; conclusion; end"
+    },
+    {
+        "kanji": "含",
+        "onyomi": "ガン",
+        "kunyomi": "ふく(む)",
+        "meaning_ru": "",
+        "meaning_en": "contain; include"
+    },
+    {
+        "kanji": "蔵",
+        "onyomi": "ゾウ",
+        "kunyomi": "くら",
+        "meaning_ru": "",
+        "meaning_en": "storehouse; hide; own; have; possess"
+    },
+    {
+        "kanji": "量",
+        "onyomi": "リョウ",
+        "kunyomi": "はか(る)",
+        "meaning_ru": "",
+        "meaning_en": "quantity; measure; weight; amount"
+    },
+    {
+        "kanji": "型",
+        "onyomi": "ケイ",
+        "kunyomi": "かた",
+        "meaning_ru": "",
+        "meaning_en": "type; model"
+    },
+    {
+        "kanji": "況",
+        "onyomi": "キョウ",
+        "kunyomi": "まし(て)",
+        "meaning_ru": "",
+        "meaning_en": "condition; situation"
+    },
+    {
+        "kanji": "針",
+        "onyomi": "シン",
+        "kunyomi": "はり",
+        "meaning_ru": "",
+        "meaning_en": "needle; pin; staple; stinger"
+    },
+    {
+        "kanji": "専",
+        "onyomi": "セン",
+        "kunyomi": "もっぱ(ら)",
+        "meaning_ru": "",
+        "meaning_en": "specialty; exclusive; mainly; solely"
+    },
+    {
+        "kanji": "谷",
+        "onyomi": "コク",
+        "kunyomi": "たに、 きわ(まる)",
+        "meaning_ru": "",
+        "meaning_en": "valley"
+    },
+    {
+        "kanji": "史",
+        "onyomi": "シ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "history; chronicle"
+    },
+    {
+        "kanji": "階",
+        "onyomi": "カイ",
+        "kunyomi": "きざはし",
+        "meaning_ru": "",
+        "meaning_en": "stair; counter for building story"
+    },
+    {
+        "kanji": "管",
+        "onyomi": "カン",
+        "kunyomi": "くだ",
+        "meaning_ru": "",
+        "meaning_en": "pipe; tube; wind instrument; control; jurisdiction"
+    },
+    {
+        "kanji": "兵",
+        "onyomi": "ヘイ、 ヒョウ",
+        "kunyomi": "つわもの",
+        "meaning_ru": "",
+        "meaning_en": "soldier; private; troops; army"
+    },
+    {
+        "kanji": "接",
+        "onyomi": "セツ",
+        "kunyomi": "つ(ぐ)",
+        "meaning_ru": "",
+        "meaning_en": "touch; contact; adjoin; piece together"
+    },
+    {
+        "kanji": "細",
+        "onyomi": "サイ",
+        "kunyomi": "ほそ(い)、 こま(かい)",
+        "meaning_ru": "",
+        "meaning_en": "slender; narrow; detailed; precise"
+    },
+    {
+        "kanji": "効",
+        "onyomi": "コウ",
+        "kunyomi": "き(く)",
+        "meaning_ru": "",
+        "meaning_en": "merit; efficacy; efficiency; benefit"
+    },
+    {
+        "kanji": "丸",
+        "onyomi": "ガン",
+        "kunyomi": "まる、まる(い)",
+        "meaning_ru": "",
+        "meaning_en": "round; full (month); perfection"
+    },
+    {
+        "kanji": "湾",
+        "onyomi": "ワン",
+        "kunyomi": "いりえ",
+        "meaning_ru": "",
+        "meaning_en": "gulf; bay; inlet"
+    },
+    {
+        "kanji": "録",
+        "onyomi": "ロク",
+        "kunyomi": "と(る)",
+        "meaning_ru": "",
+        "meaning_en": "record"
+    },
+    {
+        "kanji": "省",
+        "onyomi": "セイ、 ショウ",
+        "kunyomi": "かえり(みる)、 はぶ(く)",
+        "meaning_ru": "",
+        "meaning_en": "focus; government ministry; conserve"
+    },
+    {
+        "kanji": "旧",
+        "onyomi": "キュウ",
+        "kunyomi": "ふる(い)、 もと",
+        "meaning_ru": "",
+        "meaning_en": "old times; old things; former; ex-"
+    },
+    {
+        "kanji": "橋",
+        "onyomi": "キョウ",
+        "kunyomi": "はし",
+        "meaning_ru": "",
+        "meaning_en": "bridge"
+    },
+    {
+        "kanji": "岸",
+        "onyomi": "ガン",
+        "kunyomi": "きし",
+        "meaning_ru": "",
+        "meaning_en": "beach"
+    },
+    {
+        "kanji": "周",
+        "onyomi": "シュウ",
+        "kunyomi": "まわ(り)",
+        "meaning_ru": "",
+        "meaning_en": "circumference; circuit; lap"
+    },
+    {
+        "kanji": "材",
+        "onyomi": "ザイ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "lumber, log, timber, wood"
+    },
+    {
+        "kanji": "戸",
+        "onyomi": "コ",
+        "kunyomi": "と",
+        "meaning_ru": "",
+        "meaning_en": "door; counter for houses"
+    },
+    {
+        "kanji": "央",
+        "onyomi": "オウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "center; middle"
+    },
+    {
+        "kanji": "券",
+        "onyomi": "ケン",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "ticket"
+    },
+    {
+        "kanji": "編",
+        "onyomi": "ヘン",
+        "kunyomi": "あ(む)",
+        "meaning_ru": "",
+        "meaning_en": "compilation; knit; braid; twist; editing"
+    },
+    {
+        "kanji": "捜",
+        "onyomi": "ソウ",
+        "kunyomi": "さが(す)",
+        "meaning_ru": "",
+        "meaning_en": "search; look for; locate"
+    },
+    {
+        "kanji": "竹",
+        "onyomi": "チク",
+        "kunyomi": "たけ",
+        "meaning_ru": "",
+        "meaning_en": "bamboo"
+    },
+    {
+        "kanji": "超",
+        "onyomi": "チョウ",
+        "kunyomi": "こ(える)",
+        "meaning_ru": "",
+        "meaning_en": "transcend; super-; ultra-"
+    },
+    {
+        "kanji": "並",
+        "onyomi": "ヘイ",
+        "kunyomi": "な(み)、なみ、なら(べる)",
+        "meaning_ru": "",
+        "meaning_en": "row, and, besides"
+    },
+    {
+        "kanji": "療",
+        "onyomi": "リョウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "heal; cure"
+    },
+    {
+        "kanji": "採",
+        "onyomi": "サイ",
+        "kunyomi": "と(る)",
+        "meaning_ru": "",
+        "meaning_en": "pick; take; fetch; take up"
+    },
+    {
+        "kanji": "森",
+        "onyomi": "シン",
+        "kunyomi": "もり",
+        "meaning_ru": "",
+        "meaning_en": "forest, woods"
+    },
+    {
+        "kanji": "競",
+        "onyomi": "キョウ、 ケイ",
+        "kunyomi": "きそ(う)、 せ(る)",
+        "meaning_ru": "",
+        "meaning_en": "compete with; bid; contest; race"
+    },
+    {
+        "kanji": "介",
+        "onyomi": "カイ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "jammed in; shellfish; mediate"
+    },
+    {
+        "kanji": "根",
+        "onyomi": "コン",
+        "kunyomi": "ね",
+        "meaning_ru": "",
+        "meaning_en": "root; radical"
+    },
+    {
+        "kanji": "販",
+        "onyomi": "ハン",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "marketing, sell, trade"
+    },
+    {
+        "kanji": "歴",
+        "onyomi": "レキ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "curriculum; continuation; passage of time"
+    },
+    {
+        "kanji": "将",
+        "onyomi": "ショウ",
+        "kunyomi": "まさ(に)、 はた",
+        "meaning_ru": "",
+        "meaning_en": "leader; commander; general; admiral"
+    },
+    {
+        "kanji": "幅",
+        "onyomi": "フク",
+        "kunyomi": "はば",
+        "meaning_ru": "",
+        "meaning_en": "hanging scroll; width"
+    },
+    {
+        "kanji": "般",
+        "onyomi": "ハン",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "carrier; carry; all; general; sort; kind"
+    },
+    {
+        "kanji": "貿",
+        "onyomi": "ボウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "trade; exchange"
+    },
+    {
+        "kanji": "講",
+        "onyomi": "コウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "lecture; club; association"
+    },
+    {
+        "kanji": "林",
+        "onyomi": "リン",
+        "kunyomi": "はやし",
+        "meaning_ru": "",
+        "meaning_en": "grove; forest"
+    },
+    {
+        "kanji": "装",
+        "onyomi": "ソウ、 ショウ",
+        "kunyomi": "よそお(う)",
+        "meaning_ru": "",
+        "meaning_en": "attire; dress; pretend; disguise"
+    },
+    {
+        "kanji": "諸",
+        "onyomi": "ショ",
+        "kunyomi": "もろ",
+        "meaning_ru": "",
+        "meaning_en": "various; many; several; together"
+    },
+    {
+        "kanji": "劇",
+        "onyomi": "ゲキ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "drama; play"
+    },
+    {
+        "kanji": "河",
+        "onyomi": "カ",
+        "kunyomi": "かわ",
+        "meaning_ru": "",
+        "meaning_en": "river"
+    },
+    {
+        "kanji": "航",
+        "onyomi": "コウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "navigate; sail; cruise; fly"
+    },
+    {
+        "kanji": "鉄",
+        "onyomi": "テツ",
+        "kunyomi": "くろがね",
+        "meaning_ru": "",
+        "meaning_en": "iron"
+    },
+    {
+        "kanji": "児",
+        "onyomi": "ジ",
+        "kunyomi": "こ",
+        "meaning_ru": "",
+        "meaning_en": "newborn babe; child"
+    },
+    {
+        "kanji": "禁",
+        "onyomi": "キン",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "prohibition; ban; forbid"
+    },
+    {
+        "kanji": "印",
+        "onyomi": "イン",
+        "kunyomi": "しるし",
+        "meaning_ru": "",
+        "meaning_en": "stamp; seal; mark; symbol; trademark"
+    },
+    {
+        "kanji": "逆",
+        "onyomi": "ギャク",
+        "kunyomi": "さか(らう)",
+        "meaning_ru": "",
+        "meaning_en": "inverted; reverse; opposite"
+    },
+    {
+        "kanji": "換",
+        "onyomi": "カン",
+        "kunyomi": "か(える)",
+        "meaning_ru": "",
+        "meaning_en": "interchange; period; change; convert; replace; renew"
+    },
+    {
+        "kanji": "久",
+        "onyomi": "キュウ、 ク",
+        "kunyomi": "ひさ(しい)",
+        "meaning_ru": "",
+        "meaning_en": "long time; old story"
+    },
+    {
+        "kanji": "短",
+        "onyomi": "タン",
+        "kunyomi": "みじか(い)",
+        "meaning_ru": "",
+        "meaning_en": "short; fault; defect; weak point"
+    },
+    {
+        "kanji": "油",
+        "onyomi": "ユ",
+        "kunyomi": "あぶら",
+        "meaning_ru": "",
+        "meaning_en": "oil; fat"
+    },
+    {
+        "kanji": "暴",
+        "onyomi": "ボウ、 バク",
+        "kunyomi": "あば(く)",
+        "meaning_ru": "",
+        "meaning_en": "outburst; force; violence"
+    },
+    {
+        "kanji": "輪",
+        "onyomi": "リン",
+        "kunyomi": "わ",
+        "meaning_ru": "",
+        "meaning_en": "wheel; ring; circle; link; loop; counter for wheels and flowers"
+    },
+    {
+        "kanji": "占",
+        "onyomi": "セン",
+        "kunyomi": "し(める)、 うらな(う)",
+        "meaning_ru": "",
+        "meaning_en": "fortune-telling; divining; forecasting"
+    },
+    {
+        "kanji": "植",
+        "onyomi": "ショク",
+        "kunyomi": "う(える)",
+        "meaning_ru": "",
+        "meaning_en": "plant"
+    },
+    {
+        "kanji": "清",
+        "onyomi": "セイ",
+        "kunyomi": "きよ(い)",
+        "meaning_ru": "",
+        "meaning_en": "pure; purify; cleanse"
+    },
+    {
+        "kanji": "倍",
+        "onyomi": "バイ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "double; twice; times; fold"
+    },
+    {
+        "kanji": "均",
+        "onyomi": "キン",
+        "kunyomi": "なら(す)",
+        "meaning_ru": "",
+        "meaning_en": "level; average"
+    },
+    {
+        "kanji": "億",
+        "onyomi": "オク",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "hundred million; 10**8"
+    },
+    {
+        "kanji": "圧",
+        "onyomi": "アツ",
+        "kunyomi": "お(す)",
+        "meaning_ru": "",
+        "meaning_en": "pressure; push; overwhelm; oppress"
+    },
+    {
+        "kanji": "芸",
+        "onyomi": "ゲイ",
+        "kunyomi": "う(える)、 のり、 わざ",
+        "meaning_ru": "",
+        "meaning_en": "technique; art; craft; performance; acting"
+    },
+    {
+        "kanji": "署",
+        "onyomi": "ショ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "signature; govt office; police station"
+    },
+    {
+        "kanji": "伸",
+        "onyomi": "シン",
+        "kunyomi": "の(びる)",
+        "meaning_ru": "",
+        "meaning_en": "expand; stretch; extend"
+    },
+    {
+        "kanji": "停",
+        "onyomi": "テイ",
+        "kunyomi": "と(める)",
+        "meaning_ru": "",
+        "meaning_en": "halt; stopping"
+    },
+    {
+        "kanji": "爆",
+        "onyomi": "バク",
+        "kunyomi": "は(ぜる)",
+        "meaning_ru": "",
+        "meaning_en": "bomb; burst open"
+    },
+    {
+        "kanji": "陸",
+        "onyomi": "リク、 ロク",
+        "kunyomi": "おか",
+        "meaning_ru": "",
+        "meaning_en": "land; six"
+    },
+    {
+        "kanji": "玉",
+        "onyomi": "ギョク",
+        "kunyomi": "たま",
+        "meaning_ru": "",
+        "meaning_en": "jewel; ball"
+    },
+    {
+        "kanji": "波",
+        "onyomi": "ハ",
+        "kunyomi": "なみ",
+        "meaning_ru": "",
+        "meaning_en": "waves; billows"
+    },
+    {
+        "kanji": "帯",
+        "onyomi": "タイ",
+        "kunyomi": "お(びる)",
+        "meaning_ru": "",
+        "meaning_en": "sash; belt; obi; zone; region"
+    },
+    {
+        "kanji": "延",
+        "onyomi": "エン",
+        "kunyomi": "の(びる)",
+        "meaning_ru": "",
+        "meaning_en": "prolong; stretching"
+    },
+    {
+        "kanji": "羽",
+        "onyomi": "ウ",
+        "kunyomi": "は、 わ、 はね",
+        "meaning_ru": "",
+        "meaning_en": "feathers; counter for birds, rabbits"
+    },
+    {
+        "kanji": "固",
+        "onyomi": "コ",
+        "kunyomi": "かた(める)",
+        "meaning_ru": "",
+        "meaning_en": "harden; set; clot; curdle"
+    },
+    {
+        "kanji": "則",
+        "onyomi": "ソク",
+        "kunyomi": "のっと(る)",
+        "meaning_ru": "",
+        "meaning_en": "rule; follow; based on"
+    },
+    {
+        "kanji": "乱",
+        "onyomi": "ラン",
+        "kunyomi": "みだ(れる)",
+        "meaning_ru": "",
+        "meaning_en": "riot; war; disorder; disturb"
+    },
+    {
+        "kanji": "普",
+        "onyomi": "フ",
+        "kunyomi": "あまね(く)",
+        "meaning_ru": "",
+        "meaning_en": "universal; generally"
+    },
+    {
+        "kanji": "測",
+        "onyomi": "ソク",
+        "kunyomi": "はか(る)",
+        "meaning_ru": "",
+        "meaning_en": "fathom; plan; scheme; measure"
+    },
+    {
+        "kanji": "豊",
+        "onyomi": "ホウ、 ブ",
+        "kunyomi": "ゆた(か)、 とよ",
+        "meaning_ru": "",
+        "meaning_en": "bountiful; excellent; rich"
+    },
+    {
+        "kanji": "厚",
+        "onyomi": "コウ",
+        "kunyomi": "あつ(い)",
+        "meaning_ru": "",
+        "meaning_en": "thick; heavy; rich"
+    },
+    {
+        "kanji": "齢",
+        "onyomi": "レイ",
+        "kunyomi": "よわい、 とし",
+        "meaning_ru": "",
+        "meaning_en": "age"
+    },
+    {
+        "kanji": "囲",
+        "onyomi": "イ",
+        "kunyomi": "かこ(む)",
+        "meaning_ru": "",
+        "meaning_en": "surround; enclosure; preserve; keep"
+    },
+    {
+        "kanji": "卒",
+        "onyomi": "ソツ",
+        "kunyomi": "そっ(する)",
+        "meaning_ru": "",
+        "meaning_en": "graduate; soldier; private; die"
+    },
+    {
+        "kanji": "略",
+        "onyomi": "リャク",
+        "kunyomi": "ほぼ",
+        "meaning_ru": "",
+        "meaning_en": "abbreviation; omission; outline; shorten"
+    },
+    {
+        "kanji": "承",
+        "onyomi": "ショウ",
+        "kunyomi": "うけたまわ(る)",
+        "meaning_ru": "",
+        "meaning_en": "hear; listen to; be informed; receive"
+    },
+    {
+        "kanji": "順",
+        "onyomi": "ジュン",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "obey; order; turn; occasion"
+    },
+    {
+        "kanji": "岩",
+        "onyomi": "ガン",
+        "kunyomi": "いわ",
+        "meaning_ru": "",
+        "meaning_en": "boulder; rock; cliff"
+    },
+    {
+        "kanji": "練",
+        "onyomi": "レン",
+        "kunyomi": "ね(る)",
+        "meaning_ru": "",
+        "meaning_en": "practice, gloss, train, drill, polish, refine"
+    },
+    {
+        "kanji": "軽",
+        "onyomi": "ケイ",
+        "kunyomi": "かる(い)",
+        "meaning_ru": "",
+        "meaning_en": "lightly; trifling; unimportant"
+    },
+    {
+        "kanji": "了",
+        "onyomi": "リョウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "complete; finish"
+    },
+    {
+        "kanji": "庁",
+        "onyomi": "チョウ",
+        "kunyomi": "やくしょ",
+        "meaning_ru": "",
+        "meaning_en": "government office"
+    },
+    {
+        "kanji": "城",
+        "onyomi": "ジョウ、 セイ",
+        "kunyomi": "しろ",
+        "meaning_ru": "",
+        "meaning_en": "castle"
+    },
+    {
+        "kanji": "患",
+        "onyomi": "カン",
+        "kunyomi": "わずら(う)",
+        "meaning_ru": "",
+        "meaning_en": "afflicted; disease; suffer from; be ill"
+    },
+    {
+        "kanji": "層",
+        "onyomi": "ソウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "stratum; social class; layer; story; floor"
+    },
+    {
+        "kanji": "版",
+        "onyomi": "ハン",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "printing block; edition; impression; label"
+    },
+    {
+        "kanji": "令",
+        "onyomi": "レイ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "orders; command; decree"
+    },
+    {
+        "kanji": "角",
+        "onyomi": "カク",
+        "kunyomi": "かど、 つの",
+        "meaning_ru": "",
+        "meaning_en": "angle; corner; square"
+    },
+    {
+        "kanji": "絡",
+        "onyomi": "ラク",
+        "kunyomi": "から(む)",
+        "meaning_ru": "",
+        "meaning_en": "entwine; coil around; get caught in"
+    },
+    {
+        "kanji": "損",
+        "onyomi": "ソン",
+        "kunyomi": "そこ(なう)",
+        "meaning_ru": "",
+        "meaning_en": "damage; loss; disadvantage; hurt; injure"
+    },
+    {
+        "kanji": "募",
+        "onyomi": "ボ",
+        "kunyomi": "つの(る)",
+        "meaning_ru": "",
+        "meaning_en": "recruit; campaign"
+    },
+    {
+        "kanji": "裏",
+        "onyomi": "リ",
+        "kunyomi": "うら",
+        "meaning_ru": "",
+        "meaning_en": "back; reverse; inside; rear"
+    },
+    {
+        "kanji": "仏",
+        "onyomi": "ブツ",
+        "kunyomi": "ほとけ",
+        "meaning_ru": "",
+        "meaning_en": "Buddha, the dead, France"
+    },
+    {
+        "kanji": "績",
+        "onyomi": "セキ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "exploits; achievements"
+    },
+    {
+        "kanji": "築",
+        "onyomi": "チク",
+        "kunyomi": "きず(く)",
+        "meaning_ru": "",
+        "meaning_en": "fabricate; build; construct"
+    },
+    {
+        "kanji": "貨",
+        "onyomi": "カ",
+        "kunyomi": "たから",
+        "meaning_ru": "",
+        "meaning_en": "freight; goods; property"
+    },
+    {
+        "kanji": "混",
+        "onyomi": "コン",
+        "kunyomi": "ま(じる)",
+        "meaning_ru": "",
+        "meaning_en": "mix; blend; confuse"
+    },
+    {
+        "kanji": "昇",
+        "onyomi": "ショウ",
+        "kunyomi": "のぼ(る)",
+        "meaning_ru": "",
+        "meaning_en": "rise up"
+    },
+    {
+        "kanji": "池",
+        "onyomi": "チ",
+        "kunyomi": "いけ",
+        "meaning_ru": "",
+        "meaning_en": "pond; pool; reservoir"
+    },
+    {
+        "kanji": "血",
+        "onyomi": "ケツ",
+        "kunyomi": "ち",
+        "meaning_ru": "",
+        "meaning_en": "blood"
+    },
+    {
+        "kanji": "温",
+        "onyomi": "オン",
+        "kunyomi": "あたた(かい)、ぬく",
+        "meaning_ru": "",
+        "meaning_en": "warm"
+    },
+    {
+        "kanji": "季",
+        "onyomi": "キ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "seasons"
+    },
+    {
+        "kanji": "星",
+        "onyomi": "セイ",
+        "kunyomi": "ほし",
+        "meaning_ru": "",
+        "meaning_en": "star"
+    },
+    {
+        "kanji": "永",
+        "onyomi": "エイ",
+        "kunyomi": "なが(い)",
+        "meaning_ru": "",
+        "meaning_en": "eternity; long; lengthy"
+    },
+    {
+        "kanji": "著",
+        "onyomi": "チョ、 チャク",
+        "kunyomi": "あらわ(す)、 いちじる(しい)",
+        "meaning_ru": "",
+        "meaning_en": "renowned; publish; write"
+    },
+    {
+        "kanji": "誌",
+        "onyomi": "シ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "document; records"
+    },
+    {
+        "kanji": "庫",
+        "onyomi": "コ、 ク",
+        "kunyomi": "くら",
+        "meaning_ru": "",
+        "meaning_en": "warehouse; storehouse"
+    },
+    {
+        "kanji": "刊",
+        "onyomi": "カン",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "publish; carve; engrave"
+    },
+    {
+        "kanji": "像",
+        "onyomi": "ゾウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "statue; picture; image; figure"
+    },
+    {
+        "kanji": "香",
+        "onyomi": "コウ、 キョウ",
+        "kunyomi": "かお(り)",
+        "meaning_ru": "",
+        "meaning_en": "incense; smell; perfume"
+    },
+    {
+        "kanji": "坂",
+        "onyomi": "ハン",
+        "kunyomi": "さか",
+        "meaning_ru": "",
+        "meaning_en": "slope; incline; hill"
+    },
+    {
+        "kanji": "底",
+        "onyomi": "テイ",
+        "kunyomi": "そこ",
+        "meaning_ru": "",
+        "meaning_en": "bottom; sole; depth; bottom price"
+    },
+    {
+        "kanji": "布",
+        "onyomi": "フ",
+        "kunyomi": "ぬの、 し(く)",
+        "meaning_ru": "",
+        "meaning_en": "linen; cloth; spread; distribute"
+    },
+    {
+        "kanji": "寺",
+        "onyomi": "ジ",
+        "kunyomi": "てら",
+        "meaning_ru": "",
+        "meaning_en": "Buddhist temple"
+    },
+    {
+        "kanji": "宇",
+        "onyomi": "ウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "eaves; roof; house; heaven"
+    },
+    {
+        "kanji": "巨",
+        "onyomi": "キョ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "gigantic; big; large; great"
+    },
+    {
+        "kanji": "震",
+        "onyomi": "シン",
+        "kunyomi": "ふる(う)",
+        "meaning_ru": "",
+        "meaning_en": "quake; shake; tremble; quiver"
+    },
+    {
+        "kanji": "希",
+        "onyomi": "キ",
+        "kunyomi": "まれ、 こいねが(う)",
+        "meaning_ru": "",
+        "meaning_en": "hope; beg; request; pray"
+    },
+    {
+        "kanji": "触",
+        "onyomi": "ショク",
+        "kunyomi": "ふ(れる)、 さわ(る)",
+        "meaning_ru": "",
+        "meaning_en": "contact; touch; feel; hit; proclaim; announce"
+    },
+    {
+        "kanji": "依",
+        "onyomi": "イ、 エ",
+        "kunyomi": "よ(る)",
+        "meaning_ru": "",
+        "meaning_en": "reliant; depend on; consequently; therefore; due to"
+    },
+    {
+        "kanji": "籍",
+        "onyomi": "セキ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "enroll; register; membership"
+    },
+    {
+        "kanji": "汚",
+        "onyomi": "オ",
+        "kunyomi": "よご(す)、 きたな(い)、 けが(す)",
+        "meaning_ru": "",
+        "meaning_en": "dirty; pollute; disgrace; defile"
+    },
+    {
+        "kanji": "枚",
+        "onyomi": "マイ、 バイ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "sheet of...; counter for flat thin objects"
+    },
+    {
+        "kanji": "複",
+        "onyomi": "フク",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "duplicate; double; compound; multiple"
+    },
+    {
+        "kanji": "郵",
+        "onyomi": "ユウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "mail; stagecoach stop"
+    },
+    {
+        "kanji": "仲",
+        "onyomi": "チュウ",
+        "kunyomi": "なか",
+        "meaning_ru": "",
+        "meaning_en": "go-between; relationship"
+    },
+    {
+        "kanji": "栄",
+        "onyomi": "エイ",
+        "kunyomi": "さか(える)",
+        "meaning_ru": "",
+        "meaning_en": "flourish; prosperity; honor"
+    },
+    {
+        "kanji": "札",
+        "onyomi": "サツ",
+        "kunyomi": "ふだ",
+        "meaning_ru": "",
+        "meaning_en": "ticket; paper money; banknote; note"
+    },
+    {
+        "kanji": "板",
+        "onyomi": "ハン、 バン",
+        "kunyomi": "いた",
+        "meaning_ru": "",
+        "meaning_en": "plank; board; plate; stage"
+    },
+    {
+        "kanji": "骨",
+        "onyomi": "コツ",
+        "kunyomi": "ほね",
+        "meaning_ru": "",
+        "meaning_en": "skeleton; bone; remains; frame"
+    },
+    {
+        "kanji": "傾",
+        "onyomi": "ケイ",
+        "kunyomi": "かたむ(く)",
+        "meaning_ru": "",
+        "meaning_en": "lean; incline; tilt; trend; bias"
+    },
+    {
+        "kanji": "届",
+        "onyomi": "カイ",
+        "kunyomi": "とど(ける)",
+        "meaning_ru": "",
+        "meaning_en": "deliver; reach; arrive; report"
+    },
+    {
+        "kanji": "巻",
+        "onyomi": "カン",
+        "kunyomi": "ま(く)、 まき",
+        "meaning_ru": "",
+        "meaning_en": "scroll; volume; book; part; roll up; wind up; coil; counter for texts (or book scrolls)"
+    },
+    {
+        "kanji": "燃",
+        "onyomi": "ネン",
+        "kunyomi": "も(える)",
+        "meaning_ru": "",
+        "meaning_en": "burn; blaze; glow"
+    },
+    {
+        "kanji": "跡",
+        "onyomi": "セキ",
+        "kunyomi": "あと",
+        "meaning_ru": "",
+        "meaning_en": "tracks; mark; print; impression"
+    },
+    {
+        "kanji": "包",
+        "onyomi": "ホウ",
+        "kunyomi": "つつ(む)、 くる(む)",
+        "meaning_ru": "",
+        "meaning_en": "wrap; pack up; cover; conceal"
+    },
+    {
+        "kanji": "駐",
+        "onyomi": "チュウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "stop-over; reside in; resident"
+    },
+    {
+        "kanji": "弱",
+        "onyomi": "ジャク",
+        "kunyomi": "よわ(い)",
+        "meaning_ru": "",
+        "meaning_en": "weak; frail"
+    },
+    {
+        "kanji": "紹",
+        "onyomi": "ショウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "introduce; inherit; help"
+    },
+    {
+        "kanji": "雇",
+        "onyomi": "コ",
+        "kunyomi": "やと(う)",
+        "meaning_ru": "",
+        "meaning_en": "employ; hire"
+    },
+    {
+        "kanji": "替",
+        "onyomi": "タイ",
+        "kunyomi": "か(わる)",
+        "meaning_ru": "",
+        "meaning_en": "exchange, spare, substitute"
+    },
+    {
+        "kanji": "預",
+        "onyomi": "ヨ",
+        "kunyomi": "あず(ける)",
+        "meaning_ru": "",
+        "meaning_en": "deposit; custody; leave with; entrust to"
+    },
+    {
+        "kanji": "焼",
+        "onyomi": "ショウ",
+        "kunyomi": "や(く)",
+        "meaning_ru": "",
+        "meaning_en": "bake; burning"
+    },
+    {
+        "kanji": "簡",
+        "onyomi": "カン",
+        "kunyomi": "ふだ、 えら(ぶ)",
+        "meaning_ru": "",
+        "meaning_en": "simplicity; brevity"
+    },
+    {
+        "kanji": "章",
+        "onyomi": "ショウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "badge; chapter; composition; poem"
+    },
+    {
+        "kanji": "臓",
+        "onyomi": "ゾウ",
+        "kunyomi": "はらわた",
+        "meaning_ru": "",
+        "meaning_en": "entrails; viscera; bowels"
+    },
+    {
+        "kanji": "律",
+        "onyomi": "リツ、 リチ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "rhythm; law; regulation; control"
+    },
+    {
+        "kanji": "贈",
+        "onyomi": "ゾウ",
+        "kunyomi": "おく(る)",
+        "meaning_ru": "",
+        "meaning_en": "presents; send; give to; award to"
+    },
+    {
+        "kanji": "照",
+        "onyomi": "ショウ",
+        "kunyomi": "て(る)",
+        "meaning_ru": "",
+        "meaning_en": "illuminate; shine; compare"
+    },
+    {
+        "kanji": "薄",
+        "onyomi": "ハク",
+        "kunyomi": "うす(い)",
+        "meaning_ru": "",
+        "meaning_en": "dilute; thin; weak (tea)"
+    },
+    {
+        "kanji": "群",
+        "onyomi": "グン",
+        "kunyomi": "む(れる)、 むら(がる)",
+        "meaning_ru": "",
+        "meaning_en": "flock; group; crowd; herd"
+    },
+    {
+        "kanji": "秒",
+        "onyomi": "ビョウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "second"
+    },
+    {
+        "kanji": "奥",
+        "onyomi": "オウ",
+        "kunyomi": "おく",
+        "meaning_ru": "",
+        "meaning_en": "heart; interior"
+    },
+    {
+        "kanji": "詰",
+        "onyomi": "キツ",
+        "kunyomi": "つ(める)",
+        "meaning_ru": "",
+        "meaning_en": "packed; close; rebuke; blame"
+    },
+    {
+        "kanji": "双",
+        "onyomi": "ソウ",
+        "kunyomi": "ふた",
+        "meaning_ru": "",
+        "meaning_en": "pair; set; comparison; counter for pairs"
+    },
+    {
+        "kanji": "刺",
+        "onyomi": "シ",
+        "kunyomi": "さ(す)、 さし、 とげ",
+        "meaning_ru": "",
+        "meaning_en": "thorn, pierce, stab, prick, sting"
+    },
+    {
+        "kanji": "純",
+        "onyomi": "ジュン",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "genuine; purity; innocence"
+    },
+    {
+        "kanji": "翌",
+        "onyomi": "ヨク",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "the following; next"
+    },
+    {
+        "kanji": "快",
+        "onyomi": "カイ",
+        "kunyomi": "こころよ(い)",
+        "meaning_ru": "",
+        "meaning_en": "cheerful; pleasant; agreeable; comfortable"
+    },
+    {
+        "kanji": "片",
+        "onyomi": "ヘン",
+        "kunyomi": "かた",
+        "meaning_ru": "",
+        "meaning_en": "one-sided; piece"
+    },
+    {
+        "kanji": "敬",
+        "onyomi": "ケイ",
+        "kunyomi": "うやま(う)",
+        "meaning_ru": "",
+        "meaning_en": "awe; respect; honor; revere"
+    },
+    {
+        "kanji": "悩",
+        "onyomi": "ノウ",
+        "kunyomi": "なや(む)",
+        "meaning_ru": "",
+        "meaning_en": "trouble; worry; in pain; distress; illness"
+    },
+    {
+        "kanji": "泉",
+        "onyomi": "セン",
+        "kunyomi": "いずみ",
+        "meaning_ru": "",
+        "meaning_en": "spring; fountain"
+    },
+    {
+        "kanji": "皮",
+        "onyomi": "ヒ",
+        "kunyomi": "かわ",
+        "meaning_ru": "",
+        "meaning_en": "skin; hide; leather"
+    },
+    {
+        "kanji": "漁",
+        "onyomi": "ギョ、 リョウ",
+        "kunyomi": "あさ(る)",
+        "meaning_ru": "",
+        "meaning_en": "fishing; fishery"
+    },
+    {
+        "kanji": "荒",
+        "onyomi": "コウ",
+        "kunyomi": "あら(い)、あ(れる)",
+        "meaning_ru": "",
+        "meaning_en": "rough; wild"
+    },
+    {
+        "kanji": "貯",
+        "onyomi": "チョ",
+        "kunyomi": "た(める)",
+        "meaning_ru": "",
+        "meaning_en": "savings; store"
+    },
+    {
+        "kanji": "硬",
+        "onyomi": "コウ",
+        "kunyomi": "かた(い)",
+        "meaning_ru": "",
+        "meaning_en": "stiff; hard"
+    },
+    {
+        "kanji": "埋",
+        "onyomi": "マイ",
+        "kunyomi": "う(める)",
+        "meaning_ru": "",
+        "meaning_en": "bury; be filled up; embedded"
+    },
+    {
+        "kanji": "柱",
+        "onyomi": "チュウ",
+        "kunyomi": "はしら",
+        "meaning_ru": "",
+        "meaning_en": "pillar; post; cylinder; support"
+    },
+    {
+        "kanji": "祭",
+        "onyomi": "サイ",
+        "kunyomi": "まつり",
+        "meaning_ru": "",
+        "meaning_en": "ritual; offer prayers; celebrate"
+    },
+    {
+        "kanji": "袋",
+        "onyomi": "タイ",
+        "kunyomi": "ふくろ",
+        "meaning_ru": "",
+        "meaning_en": "sack; bag; pouch"
+    },
+    {
+        "kanji": "筆",
+        "onyomi": "ヒツ",
+        "kunyomi": "ふで",
+        "meaning_ru": "",
+        "meaning_en": "writing brush; writing; painting brush; handwriting"
+    },
+    {
+        "kanji": "訓",
+        "onyomi": "クン",
+        "kunyomi": "よ(む)、くん(ずる)",
+        "meaning_ru": "",
+        "meaning_en": "instruction, explanation, read"
+    },
+    {
+        "kanji": "浴",
+        "onyomi": "ヨク",
+        "kunyomi": "あ(びる)",
+        "meaning_ru": "",
+        "meaning_en": "bathe; be favored with; bask in"
+    },
+    {
+        "kanji": "童",
+        "onyomi": "ドウ",
+        "kunyomi": "わらべ",
+        "meaning_ru": "",
+        "meaning_en": "juvenile; child"
+    },
+    {
+        "kanji": "宝",
+        "onyomi": "ホウ",
+        "kunyomi": "たから",
+        "meaning_ru": "",
+        "meaning_en": "treasure; wealth; valuables"
+    },
+    {
+        "kanji": "封",
+        "onyomi": "フウ、 ホウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "seal; closing"
+    },
+    {
+        "kanji": "胸",
+        "onyomi": "キョウ",
+        "kunyomi": "むね",
+        "meaning_ru": "",
+        "meaning_en": "bosom; breast; chest; heart; feelings"
+    },
+    {
+        "kanji": "砂",
+        "onyomi": "サ、 シャ",
+        "kunyomi": "すな",
+        "meaning_ru": "",
+        "meaning_en": "sand"
+    },
+    {
+        "kanji": "塩",
+        "onyomi": "エン",
+        "kunyomi": "しお",
+        "meaning_ru": "",
+        "meaning_en": "salt"
+    },
+    {
+        "kanji": "賢",
+        "onyomi": "ケン",
+        "kunyomi": "かしこ(い)",
+        "meaning_ru": "",
+        "meaning_en": "intelligent; wise; wisdom; cleverness"
+    },
+    {
+        "kanji": "腕",
+        "onyomi": "ワン",
+        "kunyomi": "うで",
+        "meaning_ru": "",
+        "meaning_en": "arm; ability; talent"
+    },
+    {
+        "kanji": "兆",
+        "onyomi": "チョウ",
+        "kunyomi": "きざ(す)",
+        "meaning_ru": "",
+        "meaning_en": "trillion; sign; omen; symptoms"
+    },
+    {
+        "kanji": "床",
+        "onyomi": "ショウ",
+        "kunyomi": "とこ、 ゆか",
+        "meaning_ru": "",
+        "meaning_en": "bed; counter for beds; floor; padding; tatami"
+    },
+    {
+        "kanji": "毛",
+        "onyomi": "モウ",
+        "kunyomi": "け",
+        "meaning_ru": "",
+        "meaning_en": "fur; hair; feather"
+    },
+    {
+        "kanji": "緑",
+        "onyomi": "リョク、 ロク",
+        "kunyomi": "みどり",
+        "meaning_ru": "",
+        "meaning_en": "green"
+    },
+    {
+        "kanji": "尊",
+        "onyomi": "ソン",
+        "kunyomi": "とうと(い)",
+        "meaning_ru": "",
+        "meaning_en": "revered; valuable; precious; noble"
+    },
+    {
+        "kanji": "祝",
+        "onyomi": "シュク",
+        "kunyomi": "いわ(う)",
+        "meaning_ru": "",
+        "meaning_en": "celebrate; congratulate"
+    },
+    {
+        "kanji": "柔",
+        "onyomi": "ジュウ、 ニュウ",
+        "kunyomi": "やわ(らかい)",
+        "meaning_ru": "",
+        "meaning_en": "tender; weakness; gentleness; softness"
+    },
+    {
+        "kanji": "殿",
+        "onyomi": "デン",
+        "kunyomi": "との、 どの",
+        "meaning_ru": "",
+        "meaning_en": "Mr.; hall; mansion; palace; temple; lord"
+    },
+    {
+        "kanji": "濃",
+        "onyomi": "ノウ",
+        "kunyomi": "こ(い)",
+        "meaning_ru": "",
+        "meaning_en": "concentrated; thick; dark; undiluted"
+    },
+    {
+        "kanji": "液",
+        "onyomi": "エキ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "fluid; liquid; juice; sap; secretion"
+    },
+    {
+        "kanji": "衣",
+        "onyomi": "イ、 エ",
+        "kunyomi": "ころも、 きぬ",
+        "meaning_ru": "",
+        "meaning_en": "garment; clothes; dressing"
+    },
+    {
+        "kanji": "肩",
+        "onyomi": "ケン",
+        "kunyomi": "かた",
+        "meaning_ru": "",
+        "meaning_en": "shoulder"
+    },
+    {
+        "kanji": "零",
+        "onyomi": "レイ",
+        "kunyomi": "ぜろ",
+        "meaning_ru": "",
+        "meaning_en": "zero; spill; overflow; nothing"
+    },
+    {
+        "kanji": "幼",
+        "onyomi": "ヨウ",
+        "kunyomi": "おさな(い)",
+        "meaning_ru": "",
+        "meaning_en": "infancy; childhood"
+    },
+    {
+        "kanji": "荷",
+        "onyomi": "カ",
+        "kunyomi": "に",
+        "meaning_ru": "",
+        "meaning_en": "baggage; load; cargo; freight"
+    },
+    {
+        "kanji": "泊",
+        "onyomi": "ハク",
+        "kunyomi": "と(まる)",
+        "meaning_ru": "",
+        "meaning_en": "overnight stay"
+    },
+    {
+        "kanji": "黄",
+        "onyomi": "コウ、 オウ",
+        "kunyomi": "き",
+        "meaning_ru": "",
+        "meaning_en": "yellow"
+    },
+    {
+        "kanji": "甘",
+        "onyomi": "カン",
+        "kunyomi": "あま(い)",
+        "meaning_ru": "",
+        "meaning_en": "sweet; coax; pamper; sugary"
+    },
+    {
+        "kanji": "臣",
+        "onyomi": "シン、 ジン",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "retainer; subject"
+    },
+    {
+        "kanji": "浅",
+        "onyomi": "セン",
+        "kunyomi": "あさ(い)",
+        "meaning_ru": "",
+        "meaning_en": "shallow; superficial; frivolous"
+    },
+    {
+        "kanji": "掃",
+        "onyomi": "ソウ",
+        "kunyomi": "は(く)",
+        "meaning_ru": "",
+        "meaning_en": "sweep; brush"
+    },
+    {
+        "kanji": "雲",
+        "onyomi": "ウン",
+        "kunyomi": "くも",
+        "meaning_ru": "",
+        "meaning_en": "cloud"
+    },
+    {
+        "kanji": "掘",
+        "onyomi": "クツ",
+        "kunyomi": "ほ(る)",
+        "meaning_ru": "",
+        "meaning_en": "dig; delve; excavate"
+    },
+    {
+        "kanji": "捨",
+        "onyomi": "シャ",
+        "kunyomi": "す(てる)",
+        "meaning_ru": "",
+        "meaning_en": "discard; throw away; abandon"
+    },
+    {
+        "kanji": "軟",
+        "onyomi": "ナン",
+        "kunyomi": "やわ(らかい)",
+        "meaning_ru": "",
+        "meaning_en": "soft"
+    },
+    {
+        "kanji": "沈",
+        "onyomi": "チン、 ジン",
+        "kunyomi": "しず(む)",
+        "meaning_ru": "",
+        "meaning_en": "sink; be submerged; subside; be depressed"
+    },
+    {
+        "kanji": "凍",
+        "onyomi": "トウ",
+        "kunyomi": "こお(る)、 こご(える)",
+        "meaning_ru": "",
+        "meaning_en": "frozen; refrigerate"
+    },
+    {
+        "kanji": "乳",
+        "onyomi": "ニュウ",
+        "kunyomi": "ちち、ち",
+        "meaning_ru": "",
+        "meaning_en": "milk, breasts"
+    },
+    {
+        "kanji": "恋",
+        "onyomi": "レン",
+        "kunyomi": "こい(しい)",
+        "meaning_ru": "",
+        "meaning_en": "romance; in love; yearn for; miss"
+    },
+    {
+        "kanji": "紅",
+        "onyomi": "コウ、 ク",
+        "kunyomi": "べに、 くれない",
+        "meaning_ru": "",
+        "meaning_en": "crimson; deep red"
+    },
+    {
+        "kanji": "郊",
+        "onyomi": "コウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "outskirts, suburbs, rural area"
+    },
+    {
+        "kanji": "腰",
+        "onyomi": "ヨウ",
+        "kunyomi": "こし",
+        "meaning_ru": "",
+        "meaning_en": "loins; hips; waist"
+    },
+    {
+        "kanji": "炭",
+        "onyomi": "タン",
+        "kunyomi": "すみ",
+        "meaning_ru": "",
+        "meaning_en": "charcoal; coal"
+    },
+    {
+        "kanji": "踊",
+        "onyomi": "ヨウ",
+        "kunyomi": "おど(る)",
+        "meaning_ru": "",
+        "meaning_en": "jump; dance; leap; skip"
+    },
+    {
+        "kanji": "冊",
+        "onyomi": "サツ",
+        "kunyomi": "ふみ",
+        "meaning_ru": "",
+        "meaning_en": "counter for books; volume"
+    },
+    {
+        "kanji": "勇",
+        "onyomi": "ユウ",
+        "kunyomi": "いさ(む)",
+        "meaning_ru": "",
+        "meaning_en": "courage; cheer up; bravery; heroism"
+    },
+    {
+        "kanji": "械",
+        "onyomi": "カイ",
+        "kunyomi": "かせ",
+        "meaning_ru": "",
+        "meaning_en": "contraption; machine; instrument"
+    },
+    {
+        "kanji": "菜",
+        "onyomi": "サイ",
+        "kunyomi": "な",
+        "meaning_ru": "",
+        "meaning_en": "vegetable; side dish; greens"
+    },
+    {
+        "kanji": "珍",
+        "onyomi": "チン",
+        "kunyomi": "めずら(しい)",
+        "meaning_ru": "",
+        "meaning_en": "rare; curious; strange"
+    },
+    {
+        "kanji": "卵",
+        "onyomi": "ラン",
+        "kunyomi": "たまご",
+        "meaning_ru": "",
+        "meaning_en": "egg"
+    },
+    {
+        "kanji": "湖",
+        "onyomi": "コ",
+        "kunyomi": "みずうみ",
+        "meaning_ru": "",
+        "meaning_en": "lake"
+    },
+    {
+        "kanji": "喫",
+        "onyomi": "キツ",
+        "kunyomi": "の(む)",
+        "meaning_ru": "",
+        "meaning_en": "consume, eat, drink, smoke, receive"
+    },
+    {
+        "kanji": "干",
+        "onyomi": "カン",
+        "kunyomi": "ほ(す)、 ひ(る)",
+        "meaning_ru": "",
+        "meaning_en": "dry; parch"
+    },
+    {
+        "kanji": "虫",
+        "onyomi": "チュウ、 キ",
+        "kunyomi": "むし",
+        "meaning_ru": "",
+        "meaning_en": "insect; bug"
+    },
+    {
+        "kanji": "刷",
+        "onyomi": "サツ",
+        "kunyomi": "す(る)、 は(く)",
+        "meaning_ru": "",
+        "meaning_en": "printing; print; brush"
+    },
+    {
+        "kanji": "湯",
+        "onyomi": "トウ",
+        "kunyomi": "ゆ",
+        "meaning_ru": "",
+        "meaning_en": "hot water; bath; hot spring"
+    },
+    {
+        "kanji": "溶",
+        "onyomi": "ヨウ",
+        "kunyomi": "と(ける)",
+        "meaning_ru": "",
+        "meaning_en": "melt; dissolve; thaw"
+    },
+    {
+        "kanji": "鉱",
+        "onyomi": "コウ",
+        "kunyomi": "あらがね",
+        "meaning_ru": "",
+        "meaning_en": "mineral; ore"
+    },
+    {
+        "kanji": "涙",
+        "onyomi": "ルイ",
+        "kunyomi": "なみだ",
+        "meaning_ru": "",
+        "meaning_en": "tears; sympathy"
+    },
+    {
+        "kanji": "匹",
+        "onyomi": "ヒツ",
+        "kunyomi": "ひき",
+        "meaning_ru": "",
+        "meaning_en": "counter for small animals"
+    },
+    {
+        "kanji": "孫",
+        "onyomi": "ソン",
+        "kunyomi": "まご",
+        "meaning_ru": "",
+        "meaning_en": "grandchild; descendants"
+    },
+    {
+        "kanji": "鋭",
+        "onyomi": "エイ",
+        "kunyomi": "するど(い)",
+        "meaning_ru": "",
+        "meaning_en": "pointed; sharpness; edge; weapon; sharp; violent"
+    },
+    {
+        "kanji": "枝",
+        "onyomi": "シ",
+        "kunyomi": "えだ",
+        "meaning_ru": "",
+        "meaning_en": "bough; branch; twig; limb; counter for branches"
+    },
+    {
+        "kanji": "塗",
+        "onyomi": "ト",
+        "kunyomi": "ぬ(る)、 ぬ(り)",
+        "meaning_ru": "",
+        "meaning_en": "paint; smear; coating"
+    },
+    {
+        "kanji": "軒",
+        "onyomi": "ケン",
+        "kunyomi": "のき",
+        "meaning_ru": "",
+        "meaning_en": "flats; counter for houses"
+    },
+    {
+        "kanji": "毒",
+        "onyomi": "ドク",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "poison; germ; harm"
+    },
+    {
+        "kanji": "叫",
+        "onyomi": "キョウ",
+        "kunyomi": "さけ(ぶ)",
+        "meaning_ru": "",
+        "meaning_en": "shout; exclaim; yell"
+    },
+    {
+        "kanji": "拝",
+        "onyomi": "ハイ",
+        "kunyomi": "おが(む)",
+        "meaning_ru": "",
+        "meaning_en": "worship; adore; pray to"
+    },
+    {
+        "kanji": "氷",
+        "onyomi": "ヒョウ",
+        "kunyomi": "こおり、 ひ",
+        "meaning_ru": "",
+        "meaning_en": "ice; hail; freeze"
+    },
+    {
+        "kanji": "乾",
+        "onyomi": "カン",
+        "kunyomi": "かわ(く)",
+        "meaning_ru": "",
+        "meaning_en": "drought; dry; drink up; heaven"
+    },
+    {
+        "kanji": "棒",
+        "onyomi": "ボウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "rod; stick; cane; pole"
+    },
+    {
+        "kanji": "祈",
+        "onyomi": "キ",
+        "kunyomi": "いの(る)",
+        "meaning_ru": "",
+        "meaning_en": "pray; wish"
+    },
+    {
+        "kanji": "拾",
+        "onyomi": "シュウ",
+        "kunyomi": "ひろ(う)",
+        "meaning_ru": "",
+        "meaning_en": "pick up; gather; find"
+    },
+    {
+        "kanji": "粉",
+        "onyomi": "フン",
+        "kunyomi": "こ、 こな",
+        "meaning_ru": "",
+        "meaning_en": "flour; powder; dust"
+    },
+    {
+        "kanji": "糸",
+        "onyomi": "シ",
+        "kunyomi": "いと",
+        "meaning_ru": "",
+        "meaning_en": "thread"
+    },
+    {
+        "kanji": "綿",
+        "onyomi": "メン",
+        "kunyomi": "わた",
+        "meaning_ru": "",
+        "meaning_en": "cotton"
+    },
+    {
+        "kanji": "汗",
+        "onyomi": "カン",
+        "kunyomi": "あせ",
+        "meaning_ru": "",
+        "meaning_en": "sweat; perspire"
+    },
+    {
+        "kanji": "銅",
+        "onyomi": "ドウ",
+        "kunyomi": "あかがね",
+        "meaning_ru": "",
+        "meaning_en": "copper"
+    },
+    {
+        "kanji": "湿",
+        "onyomi": "シツ",
+        "kunyomi": "しめ(る)",
+        "meaning_ru": "",
+        "meaning_en": "damp; wet; moist"
+    },
+    {
+        "kanji": "瓶",
+        "onyomi": "ビン",
+        "kunyomi": "かめ、 へい",
+        "meaning_ru": "",
+        "meaning_en": "bottle; jar; jug; urn"
+    },
+    {
+        "kanji": "咲",
+        "onyomi": "ショウ",
+        "kunyomi": "さ(く)",
+        "meaning_ru": "",
+        "meaning_en": "blossom; bloom"
+    },
+    {
+        "kanji": "召",
+        "onyomi": "ショウ",
+        "kunyomi": "め(す)",
+        "meaning_ru": "",
+        "meaning_en": "call; send for; wear; buy, to eat, to drink"
+    },
+    {
+        "kanji": "缶",
+        "onyomi": "カン",
+        "kunyomi": "かま",
+        "meaning_ru": "",
+        "meaning_en": "tin can; container"
+    },
+    {
+        "kanji": "隻",
+        "onyomi": "セキ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "vessels; counter for ships; fish; one of a pair"
+    },
+    {
+        "kanji": "脂",
+        "onyomi": "シ",
+        "kunyomi": "あぶら",
+        "meaning_ru": "",
+        "meaning_en": "fat; grease; lard"
+    },
+    {
+        "kanji": "蒸",
+        "onyomi": "ジョウ、 セイ",
+        "kunyomi": "む(す)",
+        "meaning_ru": "",
+        "meaning_en": "steam; heat; foment"
+    },
+    {
+        "kanji": "肌",
+        "onyomi": "キ",
+        "kunyomi": "はだ",
+        "meaning_ru": "",
+        "meaning_en": "texture; skin; body; grain"
+    },
+    {
+        "kanji": "耕",
+        "onyomi": "コウ",
+        "kunyomi": "たがや(す)",
+        "meaning_ru": "",
+        "meaning_en": "till; plow; cultivate"
+    },
+    {
+        "kanji": "鈍",
+        "onyomi": "ドン",
+        "kunyomi": "にぶ(い)、 なまく(ら)",
+        "meaning_ru": "",
+        "meaning_en": "dull; slow; foolish; blunt"
+    },
+    {
+        "kanji": "泥",
+        "onyomi": "デイ",
+        "kunyomi": "どろ",
+        "meaning_ru": "",
+        "meaning_en": "mud; adhere to; be attached to"
+    },
+    {
+        "kanji": "隅",
+        "onyomi": "グウ",
+        "kunyomi": "すみ",
+        "meaning_ru": "",
+        "meaning_en": "corner; nook"
+    },
+    {
+        "kanji": "灯",
+        "onyomi": "トウ",
+        "kunyomi": "ひ、とも(す)",
+        "meaning_ru": "",
+        "meaning_en": "lamp; a light; counter for lights"
+    },
+    {
+        "kanji": "辛",
+        "onyomi": "シン",
+        "kunyomi": "から(い)、 つら(い)",
+        "meaning_ru": "",
+        "meaning_en": "spicy; hot"
+    },
+    {
+        "kanji": "磨",
+        "onyomi": "マ",
+        "kunyomi": "みが(く)",
+        "meaning_ru": "",
+        "meaning_en": "grind; polish; improve; brush (teeth)"
+    },
+    {
+        "kanji": "麦",
+        "onyomi": "バク",
+        "kunyomi": "むぎ",
+        "meaning_ru": "",
+        "meaning_en": "barley; wheat"
+    },
+    {
+        "kanji": "姓",
+        "onyomi": "セイ、 ショウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "surname"
+    },
+    {
+        "kanji": "筒",
+        "onyomi": "トウ",
+        "kunyomi": "つつ",
+        "meaning_ru": "",
+        "meaning_en": "cylinder; pipe; tube"
+    },
+    {
+        "kanji": "鼻",
+        "onyomi": "ビ",
+        "kunyomi": "はな",
+        "meaning_ru": "",
+        "meaning_en": "nose; snout"
+    },
+    {
+        "kanji": "粒",
+        "onyomi": "リュウ",
+        "kunyomi": "つぶ",
+        "meaning_ru": "",
+        "meaning_en": "grains; drop; counter for tiny particles"
+    },
+    {
+        "kanji": "詞",
+        "onyomi": "シ",
+        "kunyomi": "ことば",
+        "meaning_ru": "",
+        "meaning_en": "part of speech; words"
+    },
+    {
+        "kanji": "胃",
+        "onyomi": "イ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "stomach; crop"
+    },
+    {
+        "kanji": "畳",
+        "onyomi": "ジョウ、 チョウ",
+        "kunyomi": "たたみ",
+        "meaning_ru": "",
+        "meaning_en": "tatami mat; fold"
+    },
+    {
+        "kanji": "机",
+        "onyomi": "キ",
+        "kunyomi": "つくえ",
+        "meaning_ru": "",
+        "meaning_en": "desk; table"
+    },
+    {
+        "kanji": "膚",
+        "onyomi": "フ",
+        "kunyomi": "はだ",
+        "meaning_ru": "",
+        "meaning_en": "skin; body; texture"
+    },
+    {
+        "kanji": "濯",
+        "onyomi": "タク",
+        "kunyomi": "すす(ぐ)",
+        "meaning_ru": "",
+        "meaning_en": "laundry; wash; rinse"
+    },
+    {
+        "kanji": "塔",
+        "onyomi": "トウ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "pagoda; tower; steeple"
+    },
+    {
+        "kanji": "沸",
+        "onyomi": "フツ",
+        "kunyomi": "わ(く)",
+        "meaning_ru": "",
+        "meaning_en": "seethe; boil; ferment"
+    },
+    {
+        "kanji": "灰",
+        "onyomi": "カイ",
+        "kunyomi": "はい",
+        "meaning_ru": "",
+        "meaning_en": "ashes; cremate"
+    },
+    {
+        "kanji": "菓",
+        "onyomi": "カ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "candy; cakes; fruit"
+    },
+    {
+        "kanji": "帽",
+        "onyomi": "ボウ",
+        "kunyomi": "ずきん、 おお(う)",
+        "meaning_ru": "",
+        "meaning_en": "cap; headgear"
+    },
+    {
+        "kanji": "枯",
+        "onyomi": "コ",
+        "kunyomi": "か(れる)",
+        "meaning_ru": "",
+        "meaning_en": "wither; die; dry up; be seasoned"
+    },
+    {
+        "kanji": "涼",
+        "onyomi": "リョウ",
+        "kunyomi": "すず(しい)",
+        "meaning_ru": "",
+        "meaning_en": "refreshing; nice and cool"
+    },
+    {
+        "kanji": "舟",
+        "onyomi": "シュウ",
+        "kunyomi": "ふね",
+        "meaning_ru": "",
+        "meaning_en": "boat; ship"
+    },
+    {
+        "kanji": "貝",
+        "onyomi": "バイ",
+        "kunyomi": "かい",
+        "meaning_ru": "",
+        "meaning_en": "shellfish"
+    },
+    {
+        "kanji": "符",
+        "onyomi": "フ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "token; sign; mark"
+    },
+    {
+        "kanji": "憎",
+        "onyomi": "ゾウ",
+        "kunyomi": "にく(む)",
+        "meaning_ru": "",
+        "meaning_en": "hate; detest"
+    },
+    {
+        "kanji": "皿",
+        "onyomi": "ベイ",
+        "kunyomi": "さら、 ざら",
+        "meaning_ru": "",
+        "meaning_en": "dish; a helping; plate"
+    },
+    {
+        "kanji": "肯",
+        "onyomi": "コウ",
+        "kunyomi": "がえんじ(る)",
+        "meaning_ru": "",
+        "meaning_en": "agreement; consent; comply with"
+    },
+    {
+        "kanji": "燥",
+        "onyomi": "ソウ",
+        "kunyomi": "はしゃ(ぐ)",
+        "meaning_ru": "",
+        "meaning_en": "parch; dry up"
+    },
+    {
+        "kanji": "畜",
+        "onyomi": "チク",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "livestock; domestic fowl and animals"
+    },
+    {
+        "kanji": "坊",
+        "onyomi": "ボウ、 ボッ",
+        "kunyomi": "",
+        "meaning_ru": "",
+        "meaning_en": "boy, priest"
+    },
+    {
+        "kanji": "挟",
+        "onyomi": "キョウ",
+        "kunyomi": "はさ(む)",
+        "meaning_ru": "",
+        "meaning_en": "pinch; between"
+    },
+    {
+        "kanji": "曇",
+        "onyomi": "ドン",
+        "kunyomi": "くも(る)",
+        "meaning_ru": "",
+        "meaning_en": "cloudy weather"
+    },
+    {
+        "kanji": "滴",
+        "onyomi": "テキ",
+        "kunyomi": "しずく、 したた(る)",
+        "meaning_ru": "",
+        "meaning_en": "drip; drop"
+    },
+    {
+        "kanji": "伺",
+        "onyomi": "シ",
+        "kunyomi": "うかが(う)",
+        "meaning_ru": "",
+        "meaning_en": "visit; ask; inquire; question"
+    }
+]
