@@ -5,7 +5,6 @@
 {% block extra_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/word_test_premium.css' %}">
 {% endblock %}
-
 <div class="container py-5">
     <h1 class="text-center mb-5" >Тест на знание Иероглифов</h1>
     <div class="row justify-content-center">
@@ -123,8 +122,7 @@
                                             <input type="radio" class="btn-check" name="extra_option" value=True id="option_with_hints" autocomplete="off">
                                             <label class="btn btn-outline-dark fs-5 w-100" for="option_with_hints">С подсказками</label>
                                         </div>
-                                    </div>
-                        
+                                    </div>                        
                                     <div class="col">
                                         <div class="card">        
                                             <input type="radio" class="btn-check" name="extra_option" value=None id="option_without_hints" autocomplete="off" checked>
@@ -133,9 +131,7 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <script src="{% static 'js/word_test_premium.js' %}"></script>
-                            
+                            <script src="{% static 'js/word_test_premium.js' %}"></script>                            
                             <hr class="my-10"> <!-- Разделитель -->
                             <p class="text-start fs-5 mb-4">
                                 Количество вопросов, на которое текущий индекс сместится назад, в случае неправильного ответа:
@@ -307,12 +303,10 @@
         </div>
     </div>
 </div>
-
 <script>
 window.onload = function() {
     var btn = document.getElementById('start-test-btn');
     if (btn) btn.focus();
 };
 </script>
-
 {% endblock %}

@@ -8,10 +8,7 @@
 
 {% block content %}
 <script src="{% static 'js/word_test_start.js' %}"></script>
-
-
 <div class="container py-5" data-question-time="{{ question_time }}" data-answers-time="{{ answers_time }}">
-    <p>DEBUG: question_time = {{ question_time }}, answers_time = {{ answers_time }}</p>
     <h1 class="text-center mb-4 style-red" >Тестирование N{{ level }}</h1>
     <form id="quiz-form" method="post" action="{% url 'word_test_next' %}">
         {% csrf_token %}
@@ -53,8 +50,7 @@
                                  <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Подсказка
                                 </button>
-                            {% endif %}        
-
+                            {% endif %}      
                             <ul class="dropdown-menu">
                                 <li>
                                     <div class="d-flex justify-content-center align-items-center">
@@ -73,7 +69,6 @@
                                     value="{{ option }}"
                                     data-correct="{% if option == question.correct %}true{% else %}false{% endif %}" 
                                     class="btn btn-lg w-100 answer-btn">
-
                                     {% if test_type == "kanji_to_trans" %}
                                     <span class="fw-bold black">
                                     {% else %}
