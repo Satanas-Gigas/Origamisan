@@ -803,7 +803,6 @@ def word_test_start(request):
         elif test_type == 'trans_to_kanji':
             questions = generate_trans_to_kanji_questions(request, question_count, level)
         elif test_type == 'kanji_sent':
-            # print("PROVERKA")
             questions = generate_kanji_sentence_test(request, question_count, level)
         else:
             return render(request, 'blog/word_test_start.html', {'error': 'Неизвестный тип теста.'})
