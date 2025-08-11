@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+import json
 
 class Grammar(models.Model):
     level = models.CharField(max_length=1,default="5")
@@ -31,9 +32,6 @@ class PartOfSpeech(models.Model):
         return self.code
 
 
-import json
-from django.db import models
-from django.conf import settings
 
 class Word(models.Model):
     level = models.CharField(max_length=1, default="5")
@@ -47,6 +45,7 @@ class Word(models.Model):
     translate_ru = models.CharField(max_length=200, blank=True, null=True)
     
     part_of_speech = models.ManyToManyField('PartOfSpeech', blank=True)
+    auto_translated_ru = models.BooleanField(default=False)
 
     # Заменяем JSONField на TextField
     examples = models.TextField(blank=True, null=True, help_text="Примеры предложений (сохранять как JSON-строку)")

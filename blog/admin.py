@@ -18,8 +18,8 @@ class PartOfSpeechAdmin(admin.ModelAdmin):
 
 @admin.register(Word)
 class WordAdmin(admin.ModelAdmin):
-    list_display = ('kanji', 'kana', 'romaji', 'level', 'translate_ru', 'get_part_of_speech', 'show_examples')
-    search_fields = ('kanji', 'kana', 'romaji', "level", 'translate_en', 'translate_ru')
+    list_display = ('kanji', 'kana', 'romaji', 'level', 'translate_ru', 'translate_en', 'show_examples')
+    search_fields = ('kanji', 'kana', 'romaji', "level", 'translate_ru', 'translate_en')
     filter_horizontal = ('part_of_speech',)
 
     def show_examples(self, obj):
