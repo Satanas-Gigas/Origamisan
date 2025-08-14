@@ -6,7 +6,6 @@ from . import views
 # from .views import GrammarUpdateView
 
 urlpatterns = [
-    path('mama/', views.mama, name='mama'),
     path('mainpanel/', views.mainpanel, name='mainpanel'), 
     path('', views.mainpanel, name='mainpanel'), 
     path('word/', views.word, name='word'),# Другие маршруты

@@ -38,10 +38,6 @@ def word(request):
 def mainpanel(request):
     return render(request, 'blog/mainpanel.html', {"show_header": True})
 
-def mama(request):
-    return render(request, 'blog/mama.html', {"show_header": False})
-
-
 def grammar_create(request):
     if request.method == 'POST':
         grammar_form = GrammarForm(request.POST)
@@ -225,6 +221,7 @@ def word_test(request):
         ('kana_to_kanji', 'вопрос: Кана, ответы: Канджи', 'success'),
         ('kanji_to_trans', 'вопрос: Канджи, ответы: Перевод', 'danger'),
         ('trans_to_kanji', 'вопрос: Перевод, ответы: Канджи', 'dark'),
+        ('kanji_sent', 'вопрос: Текст, ответы: Канджи', 'info'),
     ]
     questions_list = [20, 30, 50]
 
@@ -765,7 +762,7 @@ def process_request_params(request):
                 answers_time = 40
         except ValueError:
             answers_time = 40
-    print('question_time', question_time,'  answers_time', answers_time)
+    # print('question_time', question_time,'  answers_time', answers_time)
 
     request.session.update({
         'question_time': question_time,
@@ -785,7 +782,7 @@ def word_test_start(request):
     
     try:
         test_type, question_count, extra_option, question_time, answers_time = process_request_params(request)
-        print(f"test_type={test_type}, question_count={question_count}, level={level}")
+        # print(f"test_type={test_type}, question_count={question_count}, level={level}")
 
         allowed_test_types = {'hide', 'kanji_to_kana', 'kana_to_kanji', 'kanji_to_trans', 'trans_to_kanji', 'kanji_sent'}
         if test_type not in allowed_test_types:
