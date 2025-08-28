@@ -34,7 +34,7 @@ class PartOfSpeech(models.Model):
 
 
 class Word(models.Model):
-    level = models.CharField(max_length=1, default="5")
+    level = models.CharField(max_length=1, default="5", db_index=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     
     kanji = models.CharField(max_length=100, blank=True, null=True)
@@ -113,16 +113,73 @@ class Word_translate_variant(models.Model):
    
 
 class Kanji(models.Model):
-    level = models.CharField(max_length=1, default="5")
+    level = models.CharField(max_length=1, db_index=True)
+    radical = models.CharField(max_length=10, blank=True, null=True, db_index=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     kanji = models.CharField(max_length=1)  # обновлённый размер
     onyomi = models.CharField(max_length=100, blank=True, null=True)
     kunyomi = models.CharField(max_length=100, blank=True, null=True)
     meaning_ru = models.CharField(max_length=200, blank=True, null=True)
     meaning_en = models.CharField(max_length=200, blank=True, null=True)
-    radical = models.CharField(max_length=1, blank=True, null=True)  # новое поле
 
     def __str__(self):
         return f'{self.kanji} ({self.level})'
     class Meta:
         ordering = ['level', 'kanji']
+
+JLPT_LEVELS = (
+    (1, "N1"),
+    (2, "N2"),
+    (3, "N3"),
+    (4, "N4"),
+    (5, "N5"),
+)
+
+class KanjiSentenceQuestion(models.Model):
+    level = models.PositiveSmallIntegerField(choices=JLPT_LEVELS, db_index=True)
+
+    # Полный пример предложения
+    sentence_kanji = models.TextField()
+    sentence_kana  = models.TextField()
+
+    # Что прячем и подсказка
+    question_kanji = models.CharField(max_length=64)
+    question_kana  = models.CharField(max_length=64)
+
+    # Переводы (раздельно, без JSON — дружелюбно к MySQL)
+    translation_en = models.TextField(blank=True, default="")
+    translation_ru = models.TextField(blank=True, default="")
+
+    # Служебное
+    created_at = models.DateTimeField(auto_now_add=True)
+    created_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL, related_name="created_ksq"
+    )
+
+    class Meta:
+        indexes = [models.Index(fields=["level"])]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["sentence_kanji", "question_kanji"],
+                name="uniq_sentence_question_pair"
+            )
+        ]
+
+    def __str__(self):
+        return f"[N{self.level}] {self.question_kanji} in: {self.sentence_kanji[:18]}…"
+
+
+class KanjiSentenceFake(models.Model):
+    """
+    Отдельная таблица фейков (по одному в строке).
+    """
+    question = models.ForeignKey(KanjiSentenceQuestion, on_delete=models.CASCADE, related_name="fakes")
+    text = models.CharField(max_length=64)
+    order = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        unique_together = ("question", "text")
+        ordering = ["order", "id"]
+
+    def __str__(self):
+        return self.text

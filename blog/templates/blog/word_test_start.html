@@ -8,6 +8,7 @@
 
 {% block content %}
 <script src="{% static 'js/word_test_start.js' %}"></script>
+<script src="{% static 'js/extra_option.js' %}"></script>
 <div class="container py-5" data-question-time="{{ question_time }}" data-answers-time="{{ answers_time }}">
     <h1 class="text-center mb-4 style-red" >Тестирование N{{ level }}</h1>
     <form id="quiz-form" method="post" action="{% url 'word_test_next' %}">

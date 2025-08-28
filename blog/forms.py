@@ -1,6 +1,12 @@
 from django import forms
 from .models import Grammar, Example, Word, Kanji, Word_kana_variant, Word_kanji_variant, Word_translate_variant
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
+from django.forms import inlineformset_factory
+import re
+
+from .models import KanjiSentenceQuestion, KanjiSentenceFake
+
     
 class GrammarForm(forms.ModelForm):
     class Meta:
@@ -130,3 +136,95 @@ class WordTranslateVariantForm(forms.ModelForm):
             'add_translate_ru': forms.TextInput(attrs={'class': 'form-control'}),
             'add_translate_en': forms.TextInput(attrs={'class': 'form-control'}),
         }
+
+# new forms
+
+KANJI_RANGE = r"[\u4E00-\u9FFF]"  # базовый CJK диапазон
+
+class KanjiSentenceQuestionForm(forms.ModelForm):
+    class Meta:
+        model = KanjiSentenceQuestion
+        fields = (
+            "level",
+            "sentence_kanji",
+            "sentence_kana",
+            "question_kanji",
+            "question_kana",
+            "translation_en",
+            "translation_ru",
+        )
+        widgets = {
+            "sentence_kanji": forms.Textarea(attrs={"rows": 3}),
+            "sentence_kana":  forms.Textarea(attrs={"rows": 3}),
+            "translation_en": forms.Textarea(attrs={"rows": 2}),
+            "translation_ru": forms.Textarea(attrs={"rows": 2}),
+        }
+
+    def clean(self):
+        cleaned = super().clean()
+        s_kanji = (cleaned.get("sentence_kanji") or "").strip()
+        q_kanji = (cleaned.get("question_kanji") or "").strip()
+        s_kana  = (cleaned.get("sentence_kana") or "").strip()
+        q_kana  = (cleaned.get("question_kana") or "").strip()
+
+        if not s_kanji or not q_kanji:
+            raise ValidationError("Заполните предложение и целевое слово (кандзи).")
+
+        if q_kanji not in s_kanji:
+            raise ValidationError("`question_kanji` не найден в `sentence_kanji`.")
+
+        if not s_kana or not q_kana:
+            raise ValidationError("Заполните поля каны (предложение и целевое слово).")
+
+        return cleaned
+
+
+class KanjiSentenceFakeForm(forms.ModelForm):
+    class Meta:
+        model = KanjiSentenceFake
+        fields = ("text", "order")
+        widgets = {
+            "text": forms.TextInput(attrs={"placeholder": "Фейковый вариант (кандзи)", "class": "form-control"}),
+            "order": forms.NumberInput(attrs={"class": "form-control", "min": 0}),
+        }
+
+    def clean_text(self):
+        txt = (self.cleaned_data.get("text") or "").strip()
+        if not txt:
+            raise ValidationError("Укажите фейковый вариант.")
+        if not re.search(KANJI_RANGE, txt):
+            raise ValidationError("Фейковый вариант должен содержать хотя бы один кандзи.")
+        return txt
+
+
+FakeFormSet = inlineformset_factory(
+    parent_model=KanjiSentenceQuestion,
+    model=KanjiSentenceFake,
+    form=KanjiSentenceFakeForm,
+    extra=3,              # при загрузке отображаем 3 пустые формы
+    can_delete=True,
+    min_num=3,            # минимум 3 фейка
+    validate_min=True,
+    max_num=20,
+    validate_max=True,
+)
+
+def clean_fake_formset(formset: FakeFormSet, q_kanji: str):
+    """
+    Дополнительная валидация formset: уникальность, не равны правильному ответу.
+    """
+    texts = []
+    for form in formset:
+        if form.cleaned_data.get("DELETE"):
+            continue
+        txt = (form.cleaned_data.get("text") or "").strip()
+        if not txt:
+            # базовая форма бросит ошибку сама
+            continue
+        if txt == q_kanji:
+            form.add_error("text", "Фейк не должен совпадать с правильным ответом.")
+        if txt in texts:
+            form.add_error("text", "Дубликат фейкового варианта.")
+        texts.append(txt)
+    if len(texts) < 3:
+        raise ValidationError("Нужно минимум 3 различных фейковых варианта.")

@@ -1,0 +1,176 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+  <h1 class="mb-4">Dev: добавить Kanji Sentence Question</h1>
+
+  {% if messages %}
+    {% for m in messages %}
+      <div class="alert alert-{{ m.tags }}">{{ m }}</div>
+    {% endfor %}
+  {% endif %}
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+
+    <div class="row g-3">
+      <div class="col-md-2">{{ form.level.label_tag }} {{ form.level }}</div>
+      <div class="col-12">
+        {{ form.sentence_kanji.label_tag }} {{ form.sentence_kanji }}
+      </div>
+      <div class="col-12">
+        {{ form.sentence_kana.label_tag }} {{ form.sentence_kana }}
+      </div>
+
+      <div class="col-md-6">
+        {{ form.question_kanji.label_tag }} {{ form.question_kanji }}
+      </div>
+      <div class="col-md-6">
+        {{ form.question_kana.label_tag }} {{ form.question_kana }}
+      </div>
+
+      <div class="col-md-6">
+        {{ form.translation_en.label_tag }} {{ form.translation_en }}
+      </div>
+      <div class="col-md-6">
+        {{ form.translation_ru.label_tag }} {{ form.translation_ru }}
+      </div>
+
+      <hr class="mt-4">
+
+      <div class="col-12">
+        <h5 class="mb-3">Фейковые варианты (минимум 3)</h5>
+
+        {{ formset.management_form }}
+        <div id="fake-formset" class="vstack gap-2">
+          {% for f in formset.forms %}
+            <div class="card p-3 fake-form-row">
+              <div class="row g-2 align-items-end">
+                <div class="col-md-8">
+                  {{ f.text.label_tag }} {{ f.text }}
+                </div>
+                <div class="col-md-3">
+                  {{ f.order.label_tag }} {{ f.order }}
+                </div>
+                <div class="col-md-1 text-end">
+                  {% if f.instance.pk %}
+                    {{ f.DELETE }} <button type="button" class="btn btn-outline-danger btn-sm js-remove-existing">Удалить</button>
+                  {% else %}
+                    <button type="button" class="btn btn-outline-danger btn-sm js-remove">Удалить</button>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        {% if formset.non_form_errors %}
+          <div class="alert alert-danger mt-2">{{ formset.non_form_errors }}</div>
+        {% endif %}
+
+        <!-- шаблон пустой формы -->
+        <template id="fake-empty-form">
+          <div class="card p-3 fake-form-row">
+            <div class="row g-2 align-items-end">
+              <div class="col-md-8">
+                <label for="id_fakes-__prefix__-text">Фейковый вариант (кандзи):</label>
+                <input type="text" name="fakes-__prefix__-text" class="form-control" id="id_fakes-__prefix__-text" placeholder="Фейковый вариант (кандзи)" />
+              </div>
+              <div class="col-md-3">
+                <label for="id_fakes-__prefix__-order">Порядок:</label>
+                <input type="number" name="fakes-__prefix__-order" class="form-control" id="id_fakes-__prefix__-order" value="0" min="0" />
+              </div>
+              <div class="col-md-1 text-end">
+                <button type="button" class="btn btn-outline-danger btn-sm js-remove">Удалить</button>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <button type="button" class="btn btn-outline-primary mt-2" id="add-fake">Добавить ещё</button>
+      </div>
+
+      <div class="col-12 mt-4">
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+(function(){
+  const formsetPrefix = "{{ formset.prefix }}"; // обычно "fakes"
+  const container = document.getElementById("fake-formset");
+  const addBtn = document.getElementById("add-fake");
+  const emptyTpl = document.getElementById("fake-empty-form");
+  const totalFormsInput = document.getElementById("id_" + formsetPrefix + "-TOTAL_FORMS");
+  const maxFormsInput = document.getElementById("id_" + formsetPrefix + "-MAX_NUM_FORMS");
+
+  function currentCount(){
+    // считаем только «живые» карточки, которые не помечены на удаление
+    return container.querySelectorAll(".fake-form-row").length;
+  }
+
+  function addForm(){
+    const total = parseInt(totalFormsInput.value, 10);
+    const max = parseInt(maxFormsInput.value || "1000", 10);
+    if (total >= max) return;
+
+    const html = emptyTpl.innerHTML.replace(/__prefix__/g, total);
+    const frag = document.createElement("div");
+    frag.innerHTML = html.trim();
+
+    container.appendChild(frag.firstElementChild);
+    totalFormsInput.value = String(total + 1);
+  }
+
+  function removeForm(btn){
+    const row = btn.closest(".fake-form-row");
+    if (!row) return;
+
+    // Если это существующая форма (есть скрытый DELETE checkbox)
+    const deleteInput = row.querySelector('input[type="checkbox"][name$="-DELETE"]');
+    if (deleteInput){
+      // отмечаем на удаление и скрываем строку
+      deleteInput.checked = true;
+      row.style.display = "none";
+      return;
+    }
+
+    // Иначе — это новая форма: удаляем ноду и пересчитываем индексы
+    row.remove();
+
+    // Перепакуем индексы только для динамически добавленных (простая реализация):
+    const rows = container.querySelectorAll(".fake-form-row");
+    let i = 0;
+    rows.forEach(r => {
+      // обновляем id/name у input'ов text/order по маске
+      const textInput = r.querySelector('input[name^="'+formsetPrefix+'-"][name$="-text"]');
+      const orderInput = r.querySelector('input[name^="'+formsetPrefix+'-"][name$="-order"]');
+      if (textInput){
+        textInput.name = formsetPrefix + "-" + i + "-text";
+        textInput.id = "id_" + formsetPrefix + "-" + i + "-text";
+      }
+      if (orderInput){
+        orderInput.name = formsetPrefix + "-" + i + "-order";
+        orderInput.id = "id_" + formsetPrefix + "-" + i + "-order";
+      }
+      i += 1;
+    });
+    totalFormsInput.value = String(i);
+  }
+
+  addBtn.addEventListener("click", addForm);
+
+  container.addEventListener("click", function(e){
+    if (e.target.classList.contains("js-remove")){
+      removeForm(e.target);
+    }
+    if (e.target.classList.contains("js-remove-existing")){
+      removeForm(e.target);
+    }
+  });
+})();
+</script>
+{% endblock %}

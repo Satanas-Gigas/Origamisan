@@ -24,6 +24,7 @@ urlpatterns = [
     path('word_test_next/', views.word_test_next, name='word_test_next'),
     path('word_test_complete/', views.word_test_complete, name='word_test_complete'),
     path('word_test_premium/', views.word_test_premium, name='word_test_premium'),
+    path("dev/add-ksq/", views.dev_add_ksq, name="dev_add_ksq"),
 ]
 
 if settings.DEBUG:
